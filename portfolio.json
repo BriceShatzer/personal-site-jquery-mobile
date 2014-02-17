@@ -1,0 +1,25 @@
+{
+	"portfolioItems":[
+
+		{	"name":"test item 1",
+			"attributes":["HTML","CSS","JavaScript","jQuery","underscore"],
+			"client":"Full name of a business or group",
+			"context":"Links Technology",
+			"notes":"This is an area where notes can be provided pertaining to a particular item. Potentially make this area able to accept some form of markup?"
+		},
+		{	"name":"test item 2",
+			"attributes":["HTML","CSS","JavaScript","jQuery","underscore"],
+			"client":"Full name of a business or group",
+			"context":"Freelance",
+			"notes":"This is an area where notes can be provided pertaining to a particular item. Potentially make this area able to accept some form of markup?"
+		},
+		{	"name":"test item 3",
+			"attributes":["HTML","CSS","JavaScript","jQuery","underscore"],
+			"client":"Full name of a business or group",
+			"context":"Carthage",
+			"notes":""
+		}	
+	
+
+	]
+}

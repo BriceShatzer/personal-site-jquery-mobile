@@ -1,0 +1,19 @@
+{
+	"skills":[
+		
+		{	"name":"HTML5",
+			"rank": 3,
+			"notes":""
+		},
+		{	"name":"CSS",
+			"rank": 3,
+			"notes":"Well versed in dealing with..."
+		},
+
+
+
+
+
+	]
+
+}
