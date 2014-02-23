@@ -1,19 +1,100 @@
 {
-	"skills":[
-		
-		{	"name":"HTML5",
-			"rank": 3,
-			"notes":""
-		},
-		{	"name":"CSS",
-			"rank": 3,
-			"notes":"Well versed in dealing with..."
-		},
-
-
-
-
-
-	]
-
+    "skills":[
+			{	"name":"HTML5",
+				"rank": 3,
+				"notes":"Comfortable working with HTML5, HTML 4.01 Strict/Transitional, and XHTML 1.0 Strict/Transitional"
+			},
+			{	"name":"Email",
+				"rank": 2,
+				"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
+			},
+			{"Frameworks":[
+				{	"name":"Bootstrap",
+					"rank":3,
+					"notes":""
+				},
+				{	"name":"HTML5 Boilerplate",
+					"rank":1.5,
+					"notes":""
+				},
+				{	"name":"jQuery Mobile",
+					"rank":1.5,
+					"notes":""
+				}
+			]},			
+			{"Styling":[
+				{	"name":"CSS",
+					"rank": 3,
+					"notes":"Comfortable working in with both CSS 2.1 and 3. Competent in testing and debugging cross-browser/platform issues."
+				},
+				{	"name":"LESS",
+					"rank":2,
+					"notes":""
+				},
+				{	"name":"SASS",
+					"rank":1.5,
+					"notes":"SCSS syntax only"
+				}
+			]},
+			{"CMS/CRM Platforms":[
+				{	"name":"Adobe Business Catalyst",
+					"rank":3,
+					"notes":"Well versed in the "
+				},
+				{	"name":"LightCMS",
+					"rank":3,
+					"notes":""
+				},
+				{	"name":"Wordpress",
+					"rank":1.5,
+					"notes":""
+				},
+				{	"name":"SiteFinity",
+					"rank":1.5,
+					"notes":""
+				},
+				{	"name":"Squarespace",
+					"rank":1.5,
+					"notes":""
+				},
+				{	"name":"Tumblr",
+					"rank":1.5,
+					"notes":""
+				},				
+				{	"name":"Joomla!",
+					"rank":1,
+					"notes":""
+				}
+			]},
+			{	"name":"JavaScript",
+				"rank": 2,
+				"notes":"Generally prefer to use some sort o,low-level when able to limit the overhead that invoking a library might entail"
+			},
+			{"JavaScript Libraries":[
+				{	"name":"jQuery",
+					"rank":3,
+					"notes":""
+				},
+				{	"name":"jQuery UI",
+					"rank":2,
+					"notes":""
+				},
+				{	"name":"Underscore.js",
+					"rank":2,
+					"note":""
+				},
+				{	"name":"Angular.js",
+					"rank":1,
+					"note":""
+				},
+				{	"name":"Backbone.js",
+					"rank":1,
+					"note":""
+				},
+				{	"name":"script.aculo.us",
+					"rank":1,
+					"note":""
+				}
+			]}			
+		]
 }
