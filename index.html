@@ -5,9 +5,9 @@
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<script src="/tools/underscore.min.js"></script>
 	<script src="/tools/jquery.min.js"></script>
-	<script src="http://code.jquery.com/jquery-[version].min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
 
@@ -21,11 +21,18 @@ function test(fact){
 
 <body>
 
+
+<script>
+var skills;
+$.getJSON('/skills.json', function(data) { skills = data });
+</script>
+
 <section data-role="page" id="home">
 	.content goes here..like this
+
+	<i class="icon-camera-retro" style="font-size:24px;"></i>
 <section>
-<section data-role="page" id="home">
-</section>
+
 
 
 </body>

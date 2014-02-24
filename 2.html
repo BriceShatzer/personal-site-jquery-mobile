@@ -5,6 +5,7 @@
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+	<link rel="stylesheet" href="/tools/font-awesome/css/font-awesome.min.css" />
 	<script src="/tools/underscore.min.js"></script>
 	<script src="/tools/jquery.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
@@ -16,30 +17,63 @@ function test(fact){
 	else if ( fact ){ console.log(fact+' is true') }
 }
 </script>
+
+<style>
+.ui-header{border:none;}
+.ui-header .ui-btn{font-size: 16px;}
+.ui-header .ui-btn .fa {font-size: 1.2em;float:right;}
+.ui-header .skillIndicator{float:right;}
+.ui-listview>.ui-li-static {padding-top: 0; padding-bottom: 0}
+.ui-listview>li h1 { margin-top: 0; margin-bottom: 0}
+.ui-listview>li div.ui-collapsible-content {
+	border:none; 
+}
+.ui-listview>li .ui-collapsible-heading *{ border: none; width: 100%;}
+.ui-listview>li .ui-collapsible-heading *:hover{background-color: #333;}
+.ui-listview>li div.ui-collapsible-content a{ border-top: none; padding-left: 25px}
+</style>
 </head>
 <body>
 
 <div data-role="header">
-	<h1><a href="#mypanel">+Foo</a></h1>
-
-	<div id="mypanel"  data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
-				<ul>
-					<li>item 1</li>
-					<li>item 2</li>
-				</ul>
-				<p> text and stuff </p>
+	<div id="nav"  data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+		<ul data-role="listview">
+			<li><a href="#bar">Things  <i class="fa fa-star"></i></a></li>
+			<li>
+					<div data-role="collapsible" data-inset="false">
+					<h1>Frameworks</h1>
+						<ul data-role="listview" data-inset="false">
+							<li><a href="#"><h1>Item 1</h1></a></li>
+							<li><a href="#"><h1>Item 2</h1></a></li>
+						</ul>
+					</div>
+			</li>
+			<li><a href="#"><h1>HTML 5</h1></a></li>
+			<li><a href="#"><h1>Other Item</h1></a></li>
+		</ul>
 	</div>
+</div>
 
 </div><!-- /header -->
 
 
 <!-- Start of first page -->
-<section data-role="page" id="foo" class="ui-responsive-panel">
-
-	
+<section data-role="page" id="foo" class="ui-responsive-panel" data-theme="b">
 	<div role="main" class="ui-content">
-		<p>I'm first in the source order so I'm shown as the page.</p>
-		<p>View internal page called <a href="#bar">bar</a></p>
+		<ul data-role="listview">
+			<li><a href="#bar">Things</a></li>
+			<li>
+					<div data-role="collapsible" data-inset="false">
+					<h1>Frameworks</h1>
+						<ul data-role="listview" data-inset="false">
+							<li><a href="#"><h1>Item 1</h1></a></li>
+							<li><a href="#"><h1>Item 2</h1></a></li>
+						</ul>
+					</div>
+			</li>
+			<li><a href="#"><h1>HTML 5</h1></a></li>
+			<li><a href="#"><h1>Other Item</h1></a></li>
+		</ul>
 	</div><!-- /content -->
 
 	<div data-role="footer">
@@ -47,11 +81,15 @@ function test(fact){
 	</div><!-- /footer -->
 </section><!-- /page -->
 
+
+
+
 <!-- Start of second page -->
 <section data-role="page" id="bar">
 
 	<div role="main" class="ui-content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<h1 style="float:left;"><a href="#nav">+Foo</a></h1>
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.<i class="fa fa-bullhorn" style="font-size:24px;color:blue"></i> </p>
 		<p><a href="#foo">Back to foo</a></p>
 	</div><!-- /content -->
 
@@ -61,9 +99,130 @@ function test(fact){
 </section><!-- /page -->
 
 <script>
+var skills;
+
+$.getJSON('/skills.json', function(data) { skills = data });
+
+
+
+</script>
+
+
+
+<script>
+/*
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-half-o"></i>
+<i class="fa fa-star"></i></li>
+*/
+
+/*
+
+
+function setSkillIndicator(rank) {
+if(rank = 3){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'}
+else if (rank = 2.5){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'}
+else if (rank = 2){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'}
+else if (rank = 1.5){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'}
+else if (rank = 1){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'}
+else if (rank = 0.5){ skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'}
+else { skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'}
+}
+
+switch (this.rank){
+	case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
+	case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
+	case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
+	case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
+	case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+	case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+	default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+}
+*/
+
 $(function(){
-	$( "[data-role='header']" ).toolbar({ theme: "a" });
+	$( "[data-role='header']" ).toolbar({ theme: "b" });
 });
-</script
+
+
+_.template('<li><a href="#"><h1><%= name %></h1</a></li>')
+
+
+
+
+$.each(skills, function() {
+var name = this.name;
+var url = encodeURIComponent(name);
+var skillIndicator;
+switch (this.rank){
+	case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
+	case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
+	case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
+	case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
+	case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+	case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+	default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+}
+
+
+
+$('<section data-role="page" id="'+url+'"></section>')
+
+$('<section data-role="page"></section>')
+	.attr('id', url);
+
+$('<div role="main" class="ui-content"></div>')
+
+
+
+$('<li></li>')
+
+
+function link(){}
+
+//-----build nav item -----//
+
+// build folder item
+if(this.childItems){
+	menuItem = $('div')
+
+}
+
+else { 
+	menuItem = $('<a href="#'+url+'"></a>').append( $('<div class="skillIndicator">'+skillIndicator+'</div>') )
+}
+
+
+
+
+
+/* ------ the fuq - the location of the build link functionality needs to be determined. It is a function that allows for the realatively painless creation of a link node in the menu. Unfortunately link nodes appear in two different contexts  and have potentially two different context in which they operate. 
+
+
+/*
+var url = 'thisisaURL';
+var skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';	
+*/
+
+
+
+
+
+
+//build link item
+//$('<li></li>').append( menuItem	).appendTo('#nav>ul');
+
+
+
+
+
+
+} 
+
+
+
+
+</script>
+
 </body>
 </html>
