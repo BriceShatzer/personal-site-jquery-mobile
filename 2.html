@@ -99,17 +99,78 @@ function test(fact){
 </section><!-- /page -->
 
 <script>
+
+$(function(){
+	$( "[data-role='header']" ).toolbar({ theme: "b" });
+});
+
 var skills;
 
-$.getJSON('/skills.json', function(data) { skills = data });
+	$.getJSON('/skills.json', function(data) { 
+//----- start .getJSON call back 
+	skills = data;
 
 
 
-</script>
+
+
+	function buildChildItems(array){
+		$.each(array, function() {generateDisplayValues(this)} )
+	}
+//this probably becomes a view builder. What benifit is there to generate & attach the display varibles vs generating the display varibles and building the item? 
+	function generateDisplayValues(object) {
+		//var name = object.name;
+			
+		if(this.childItems){
+			menuItem = $('<div data-role="collapsible" data-inset="false"></div>')
+				.append( $('<h1>'+object.name+'</h1>') );
+				$.each(object.childItems, function() {
+					 /* iterate through array or object */
+				});
 
 
 
-<script>
+		}
+			object.url = encodeURIComponent(object.name);
+			var skillIndicator;
+			switch (object.rank){
+				case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
+				case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
+				case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
+				case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
+				case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+				case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+				default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+			}
+			object.skillIndicator = skillIndicator;
+
+
+			menuItem = $('div')	}	
+	else { 	menuItem = $('<a href="#'+url+'"></a>').append( $('<div class="skillIndicator">'+skillIndicator+'</div>') )	}
+
+
+
+
+
+	}
+
+
+		$.each(skills, function() {
+		//------ start handle each item within the returned object
+			generateDisplayValues(this);
+			
+/* deciding to what whether to build a folder item or a an build folder item or a display link/node 
+	
+*/
+		//------ end handle each item within the returned object
+		});
+	
+//----- end .getJSON call back 
+	});
+
+
+
+
 /*
 <i class="fa fa-star-o"></i>
 <i class="fa fa-star-half-o"></i>
@@ -140,84 +201,70 @@ switch (this.rank){
 }
 */
 
-$(function(){
-	$( "[data-role='header']" ).toolbar({ theme: "b" });
-});
 
 
-_.template('<li><a href="#"><h1><%= name %></h1</a></li>')
+// _.template('<li><a href="#"><h1><%= name %></h1</a></li>')
 
 
 
-
+/* -- sets display attributes. moved into .getJSON callback
 $.each(skills, function() {
-var name = this.name;
-var url = encodeURIComponent(name);
-var skillIndicator;
-switch (this.rank){
-	case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
-	case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
-	case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
-	case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
-	case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
-	case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
-	default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
-}
-
-
-
-$('<section data-role="page" id="'+url+'"></section>')
-
-$('<section data-role="page"></section>')
-	.attr('id', url);
-
-$('<div role="main" class="ui-content"></div>')
-
-
-
-$('<li></li>')
-
-
-function link(){}
-
-//-----build nav item -----//
-
-// build folder item
-if(this.childItems){
-	menuItem = $('div')
-
-}
-
-else { 
-	menuItem = $('<a href="#'+url+'"></a>').append( $('<div class="skillIndicator">'+skillIndicator+'</div>') )
-}
-
-
-
-
-
-/* ------ the fuq - the location of the build link functionality needs to be determined. It is a function that allows for the realatively painless creation of a link node in the menu. Unfortunately link nodes appear in two different contexts  and have potentially two different context in which they operate. 
-
-
-/*
-var url = 'thisisaURL';
-var skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';	
+	var name = this.name;
+	var url = encodeURIComponent(name);
+	var skillIndicator;
+	switch (this.rank){
+		case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
+		case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
+		case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
+		case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
+		case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+		case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+		default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+	}
 */
 
 
 
+/*
+// -- start build section
+
+	$('<section data-role="page" id="'+url+'"></section>')
+
+	$('<section data-role="page"></section>')
+		.attr('id', url);
+
+	$('<div role="main" class="ui-content"></div>')
 
 
 
-//build link item
-//$('<li></li>').append( menuItem	).appendTo('#nav>ul');
+	$('<li></li>')
+
+
+	function link(){}
+
+	//-----build nav item -----//
+
+
+
+---- end of build section */
+
+	/* ------ the fuq - the location of the build link functionality needs to be determined. It is a function that allows for the realatively painless creation of a link node in the menu. Unfortunately link nodes appear in two different contexts  and have potentially two different context in which they operate. 
+
+
+	/*
+	var url = 'thisisaURL';
+	var skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';	
+	*/
+
+	//build link item
+	//$('<li></li>').append( menuItem	).appendTo('#nav>ul');
 
 
 
 
 
 
-} 
+//  });
 
 
 

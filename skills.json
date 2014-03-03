@@ -79,7 +79,7 @@
 		{	"name":"JavaScript Libraries",
 			"childItems":[
 			{	"name":"jQuery",
-				"rank":3,
+				"rank":2.5,
 				"notes":""
 			},
 			{	"name":"Underscore.js",
