@@ -31,6 +31,14 @@ function test(fact){
 .ui-listview>li .ui-collapsible-heading *{ border: none; width: 100%;}
 .ui-listview>li .ui-collapsible-heading *:hover{background-color: #333;}
 .ui-listview>li div.ui-collapsible-content a{ border-top: none; padding-left: 25px}
+
+
+/* panel specific styling */
+#nav h1 {float:left; margin: 2px 5px;}
+#nav li {overflow:hidden;}
+#nav div.ui-collapsible>h1{float:none;}
+#nav div.skillIndicator{margin:2px 5px;}
+#nav div.skillIndicator i{margin-left: 3px;}
 </style>
 </head>
 <body>
@@ -68,6 +76,7 @@ function test(fact){
 <section data-role="page" id="foo" class="ui-responsive-panel" data-theme="b">
 	<div role="main" class="ui-content">
 		<ul data-role="listview">
+			
 			<li><a href="#bar">Things</a></li>
 			<li>
 					<div data-role="collapsible" data-inset="false">
@@ -129,7 +138,7 @@ function generateDisplayValues(object) {
 
 
 $.getJSON('/skills.json', function(data) { 
-	//----- start .getJSON call back 
+//----- start .getJSON call back 
 	skills = data;
 	function buildMenuItems(array){
 	/* More the likely, this probably becomes an anonymous function of some kind. I don't think their is a reason to isolate
@@ -142,28 +151,32 @@ $.getJSON('/skills.json', function(data) {
 			
 			if(this.childItems){
 				var listOfChildItems = $('<ul data-role="listview" data-inset="false"></ul>');
-				$.each(object.childItems, function() {
-					generateDisplayValues(childObject)
+				$.each(this.childItems, function() {
+					var childObject = this;
+					generateDisplayValues(childObject);
 					$('<li></li>')
 						.append( $('<h1>'+childObject.name+'</h1>') )
-						.append(childObject.skillIndicator)
+						.append( $('<div class="skillIndicator">'+childObject.skillIndicator+'</div>') )
 						.appendTo(listOfChildItems);
 					});
 				
-				menuItem = $('<div data-role="collapsible" data-inset="false"></div>')
+				menuItem = $('<div data-role="collapsible" data-inset="false"></div>');
 				menuItem//might be able to remove this line and still have it function correctly
-					.append( $('<h1>'+object.name+'</h1>') )
+					.append( $('<h1>'+this.name+'</h1>') )
 					.append(listOfChildItems);
 
 			} else {
 				generateDisplayValues(this);
-				menuItem = $('<a href="#'+this.url+'"></a>').append( $('<div class="skillIndicator">'+this.skillIndicator+'</div>') );
+				menuItem = $('<li></li>')
+				menuItem
+					.append( $('<a href="#'+this.url+'">'+this.name+'</a>') )
+					.append( $('<div class="skillIndicator">'+this.skillIndicator+'</div>') );
 			}
-			$('#nav>ul').append(menuItem);
+			$('#nav div.ui-panel-inner>ul').append(menuItem);
 	/*----- orginal first attempt and build function 	menuItem = $('div')	}	
 	else { 	menuItem = $('<a href="#'+url+'"></a>').append( $('<div class="skillIndicator">'+skillIndicator+'</div>') )	}
 	*/
-		}
+		});
 	}
 buildMenuItems(skills);
 	/*----- orginal first attempt at handling the array 
@@ -175,8 +188,7 @@ buildMenuItems(skills);
 	});
 
 	*/
-		
-	//----- end .getJSON call back 
+//----- end .getJSON call back 
 });
 
 
