@@ -35,6 +35,8 @@ function test(fact){
 </head>
 <body>
 
+
+<!-- original place holding header 
 <div data-role="header">
 	<div id="nav"  data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
 		<ul data-role="listview">
@@ -52,9 +54,14 @@ function test(fact){
 			<li><a href="#"><h1>Other Item</h1></a></li>
 		</ul>
 	</div>
+</div>-->
+<!-- /header -->
+<div data-role="header">
+	<div id="nav"  data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+		<ul data-role="listview">			
+		</ul>
+	</div>
 </div>
-
-</div><!-- /header -->
 
 
 <!-- Start of first page -->
@@ -105,80 +112,78 @@ $(function(){
 });
 
 var skills;
+function generateDisplayValues(object) {
+	object.url = encodeURIComponent(object.name);
+	var skillIndicator;
+	switch (object.rank){
+		case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
+		case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
+		case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
+		case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
+		case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+		case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
+		default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+	}
+	object.skillIndicator = skillIndicator;
+}
 
-	$.getJSON('/skills.json', function(data) { 
-//----- start .getJSON call back 
+
+$.getJSON('/skills.json', function(data) { 
+	//----- start .getJSON call back 
 	skills = data;
+	function buildMenuItems(array){
+	/* More the likely, this probably becomes an anonymous function of some kind. I don't think their is a reason to isolate
+	this as a named function*/
 
-
-
-
-
-	function buildChildItems(array){
-		$.each(array, function() {generateDisplayValues(this)} )
-	}
-//this probably becomes a view builder. What benifit is there to generate & attach the display varibles vs generating the display varibles and building the item? 
-	function generateDisplayValues(object) {
-		//var name = object.name;
+		$.each(array, function() {
+			var menuItem;
+	//this probably becomes a view builder. What benifit is there to generate & attach the display varibles vs generating the display varibles and building the item? 
+	//var name = object.name;
 			
-		if(this.childItems){
-			menuItem = $('<div data-role="collapsible" data-inset="false"></div>')
-				.append( $('<h1>'+object.name+'</h1>') );
+			if(this.childItems){
+				var listOfChildItems = $('<ul data-role="listview" data-inset="false"></ul>');
 				$.each(object.childItems, function() {
-					 /* iterate through array or object */
-				});
+					generateDisplayValues(childObject)
+					$('<li></li>')
+						.append( $('<h1>'+childObject.name+'</h1>') )
+						.append(childObject.skillIndicator)
+						.appendTo(listOfChildItems);
+					});
+				
+				menuItem = $('<div data-role="collapsible" data-inset="false"></div>')
+				menuItem//might be able to remove this line and still have it function correctly
+					.append( $('<h1>'+object.name+'</h1>') )
+					.append(listOfChildItems);
 
-
-
-		}
-			object.url = encodeURIComponent(object.name);
-			var skillIndicator;
-			switch (object.rank){
-				case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
-				case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
-				case 2: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>'; break;
-				case 1.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></li>'; break;
-				case 1: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
-				case 0.5: skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'; break;
-				default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
+			} else {
+				generateDisplayValues(this);
+				menuItem = $('<a href="#'+this.url+'"></a>').append( $('<div class="skillIndicator">'+this.skillIndicator+'</div>') );
 			}
-			object.skillIndicator = skillIndicator;
-
-
-			menuItem = $('div')	}	
+			$('#nav>ul').append(menuItem);
+	/*----- orginal first attempt and build function 	menuItem = $('div')	}	
 	else { 	menuItem = $('<a href="#'+url+'"></a>').append( $('<div class="skillIndicator">'+skillIndicator+'</div>') )	}
-
-
-
-
-
+	*/
+		}
 	}
-
-
-		$.each(skills, function() {
-		//------ start handle each item within the returned object
-			generateDisplayValues(this);
-			
-/* deciding to what whether to build a folder item or a an build folder item or a display link/node 
-	
-*/
-		//------ end handle each item within the returned object
-		});
-	
-//----- end .getJSON call back 
+buildMenuItems(skills);
+	/*----- orginal first attempt at handling the array 
+	$.each(skills, function() {
+	//------ start handle each item within the returned object
+		generateDisplayValues(this);
+	// deciding to what whether to build a folder item or a an build folder item or a display link/node
+	//------ end handle each item within the returned object
 	});
 
+	*/
+		
+	//----- end .getJSON call back 
+});
 
 
 
-/*
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-half-o"></i>
-<i class="fa fa-star"></i></li>
-*/
-
-/*
-
+/* -------------
+old, unused stuff
+	/*----- skill indicator as if else statements 
 
 function setSkillIndicator(rank) {
 if(rank = 3){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'}
@@ -189,7 +194,8 @@ else if (rank = 1){ skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-
 else if (rank = 0.5){ skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'}
 else { skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>'}
 }
-
+*/
+	/*----- skill indicator as a switchcase statement 
 switch (this.rank){
 	case 3: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>'; break;
 	case 2.5: skillIndicator = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>'; break;
@@ -200,14 +206,8 @@ switch (this.rank){
 	default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
 }
 */
-
-
-
-// _.template('<li><a href="#"><h1><%= name %></h1</a></li>')
-
-
-
-/* -- sets display attributes. moved into .getJSON callback
+	// _.template('<li><a href="#"><h1><%= name %></h1</a></li>')
+	/* ----- sets display attributes. moved into .getJSON callback 
 $.each(skills, function() {
 	var name = this.name;
 	var url = encodeURIComponent(name);
@@ -222,11 +222,11 @@ $.each(skills, function() {
 		default: skillIndicator = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
 	}
 */
+//--------------
 
 
-
-/*
-// -- start build section
+/* -------------
+start of page build section
 
 	$('<section data-role="page" id="'+url+'"></section>')
 
@@ -237,37 +237,7 @@ $.each(skills, function() {
 
 
 
-	$('<li></li>')
-
-
-	function link(){}
-
-	//-----build nav item -----//
-
-
-
 ---- end of build section */
-
-	/* ------ the fuq - the location of the build link functionality needs to be determined. It is a function that allows for the realatively painless creation of a link node in the menu. Unfortunately link nodes appear in two different contexts  and have potentially two different context in which they operate. 
-
-
-	/*
-	var url = 'thisisaURL';
-	var skillIndicator = '<i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';	
-	*/
-
-	//build link item
-	//$('<li></li>').append( menuItem	).appendTo('#nav>ul');
-
-
-
-
-
-
-//  });
-
-
-
 
 </script>
 
