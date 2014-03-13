@@ -34,7 +34,14 @@ function test(fact){
 
 
 /* panel specific styling */
+#nav div.ui-panel-inner{overflow: hidden;}
 #nav h1 {float:left; margin: 2px 5px;}
+#nav h1.ui-collapsible-heading {width: 100%; padding-left: 10px;}
+#nav h1 a.ui-collapsible-heading-toggle{width: 100%;}
+#nav .ui-listview>li div.ui-collapsible-content {
+	border:none; 
+}
+
 #nav li {overflow:hidden;}
 #nav div.ui-collapsible>h1{float:none;}
 #nav div.skillIndicator{margin:2px 5px;}
