@@ -1,0 +1,69 @@
+[
+    	{	"name":"Test",
+			"notes":"Comfortable working with HTML5, HTML 4.01 Strict/Transitional, and XHTML 1.0 Strict/Transitional"
+		},
+		{	"name":"Testing",
+			"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
+		},
+		{	"name":"Frameworks",
+			"childItems":[
+			{	"name":"test",
+				"notes":""
+			},
+			{	"name":"test",
+				"notes":""
+			},
+			{	"name":"test",
+				"notes":""
+			},
+			{	"name":"ASP.net",
+				"notes":"In addition to maintaining & updating the front-end portion of sites using this structure, I'm comfortable tracking down back-end control components causing display issues."	
+			}]
+		},			
+		{	"name":"JavaScript Libraries",
+			"childItems":[
+			{	"name":"jQuery",
+				"notes":""
+			},
+			{	"name":"Underscore.js",
+				"notes":""
+			},
+			{	"name":"jQuery UI",
+				"notes":""
+			},
+			{
+				"name":"Modernizr",
+				"notes":""
+			},				
+			{	"name":"Angular.js",
+				"notes":""
+			},
+			{	"name":"Backbone.js",
+				"notes":""
+			},
+			{	"name":"script.aculo.us",
+				"notes":""
+			}]
+		},
+		{	"name":"Version Control/Workflow",
+			"childItems":[
+			{	"name":"SVN",
+				"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client"
+			},
+			{	"name":"Git",
+				"notes":"Most of my personal work that is version controlled is managed via GitHub Repositories. Generally I use the \"GitHub for Windows\" GUI, but I am capable of working at the command line level to resolve conflicts and other issues"
+			}]
+		},
+		{	"name":"Other Services",
+			"childItems":[
+			{	"name":"Google Maps JavaScript API",
+				"notes":""
+			},			
+			{	"name":"MailChimp",
+				"notes":""
+			},
+			{	"name":"ArcGIS",
+				"notes":""
+			}]
+		}
+	]

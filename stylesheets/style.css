@@ -1,0 +1,186 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: green !important;
+}
+
+.ui-header {
+  border: none;
+}
+.ui-header .ui-btn {
+  font-size: 16px;
+}
+.ui-header .ui-btn .fa {
+  font-size: 1.2em;
+  float: right;
+}
+
+.ui-listview > li .ui-collapsible-heading * {
+  border: none;
+  width: 100%;
+}
+.ui-listview > li div.ui-collapsible-content {
+  border: none;
+}
+.ui-listview > li div.ui-collapsible-content a {
+  border-top: none;
+  padding-left: 25px;
+}
+
+div[data-role="header"] {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  overflow: hidden;
+  height: 25px;
+  background-color: Fuchsia;
+}
+
+div.ui-page-active,
+section.ui-page-active {
+  margin-top: 25px !important;
+}
+
+/* navigation panel styling */
+#technical {
+  top: 25px;
+}
+#technical div.ui-panel-inner > ul > li.ui-first-child > a {
+  border-top: none;
+}
+#technical .ui-listview > .ui-li-static {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#technical ul a {
+  background-color: #2a2a2a;
+}
+#technical ul a:hover {
+  background-color: #333;
+}
+#technical ul a.ui-btn {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 14px;
+}
+#technical ul h1.ui-collapsible-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#technical ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+  background-color: #2A2A2A;
+}
+
+#creative {
+  top: 25px;
+}
+#creative div.ui-panel-inner > ul > li.ui-first-child > a {
+  border-top: none;
+}
+#creative .ui-listview > .ui-li-static {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#creative ul a {
+  background-color: #2a2a2a;
+}
+#creative ul a:hover {
+  background-color: #333;
+}
+#creative ul a.ui-btn {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 14px;
+}
+#creative ul h1.ui-collapsible-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#creative ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+  background-color: #2A2A2A;
+}
+
+#tools {
+  top: 25px;
+}
+#tools div.ui-panel-inner > ul > li.ui-first-child > a {
+  border-top: none;
+}
+#tools .ui-listview > .ui-li-static {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#tools ul a {
+  background-color: #2a2a2a;
+}
+#tools ul a:hover {
+  background-color: #333;
+}
+#tools ul a.ui-btn {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-size: 14px;
+}
+#tools ul h1.ui-collapsible-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#tools ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+  background-color: #2A2A2A;
+}

@@ -1,0 +1,60 @@
+@import "compass";
+@import "compass/reset";
+//@import "compass/typography/links/link-colors";
+//link-colors($normal, $hover, $active, $visited, $focus)
+
+body {background-color: green !important/*#F2F2F2*/ }
+
+
+.ui-header {border:none;
+	.ui-btn {font-size: 16px;}
+	.ui-btn .fa {font-size: 1.2em;float:right;}
+}
+
+.ui-listview>li {
+	.ui-collapsible-heading * {border: none; width: 100%;}
+
+	div.ui-collapsible-content {border:none;
+		a {border-top: none; padding-left: 25px}
+	}
+}
+
+
+div[data-role="header"] {
+position:fixed;
+left:0px;
+top:0px;
+z-index: 1000;
+width:100%;
+overflow:hidden;
+height: 25px;
+background-color: Fuchsia;
+}
+
+#sectionNav{}
+
+div.ui-page-active,
+section.ui-page-active{margin-top:25px !important;}
+
+
+
+/* navigation panel styling */
+@mixin navPanel {
+	top:25px;
+	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
+	div.ui-panel-inner>ul>li.ui-first-child>a{border-top:none;}
+	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+	ul a {background-color:#2a2a2a;}
+	ul a:hover {background-color: #333;}
+
+	ul a.ui-btn {padding-top:.5em; padding-bottom:.5em;font-size: 14px; }
+	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; 
+		//a.ui-btn-icon-left {font-size: 14px; }
+		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
+	}
+}
+
+#technical {@include navPanel}
+#creative {@include navPanel}
+#tools {@include navPanel}
+

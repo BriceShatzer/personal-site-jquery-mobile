@@ -1,0 +1,80 @@
+[	{	"name":"Version Control/Workflow",
+		"childItems":[
+		{	"name":"SVN",
+			"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client"
+		},
+		{	"name":"Git",
+			"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues"
+		}]
+	},
+	{	"name":"Workflow/Productivity",
+		"childItems":[
+		{	"name":"LiquidPlanner",
+			"notes":""
+		},
+		{	"name":"Redmine",
+			"notes":""
+		},
+		{	"name":"Trello",
+			"notes":""
+		},
+		{	"name":"Workflowy",
+			"notes":""	
+		},
+		{	"name":"astrid",
+			"notes":""	
+		}
+		]
+	},
+	{	"name":"Wireframing",
+		"childItems":[
+		{	"name":"Lucidchart",
+			"notes":""
+		},
+		{	"name":"Lovely Charts",
+			"notes":""
+		},
+		{	"name":"Balsamiq",
+			"notes":""
+		}
+		]
+	},
+	{	"name":"IDE",
+		"childItems":[
+		{	"name":"Sublime Text",
+			"notes":""
+		},
+		{	"name":"Notepad++",
+			"notes":""
+		},
+		{	"name":"Microsoft Visual Studio Express",
+			"notes":""
+		},
+		{	"name":"Adobe Dreamweaver",
+			"notes":""	
+		}]
+	},
+	{	"name":"Audio / Video Production",
+		"childItems":[
+		{	"name":"Audacity",
+			"notes":""
+		},
+		{	"name":"Adobe Audition",
+			"notes":""
+		},
+		{	"name":"Pinnacle Studio",
+			"notes":""
+		},
+		{	"name":"Final Cut Pro",
+			"notes":""	
+		},
+		{	"name":"Windows Movie Maker",
+			"notes":""
+		},
+		{	"name":"Apple iMovie",
+			"notes":""	
+		}		
+
+		]
+	}
+]	

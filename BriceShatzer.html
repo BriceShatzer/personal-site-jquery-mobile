@@ -1,0 +1,165 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">
+	<link rel="stylesheet" href="/tools/font-awesome/css/font-awesome.min.css" />
+	<script src="/tools/lodash.min.js"></script>
+	<script src="/tools/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+
+
+<script>
+function test(fact){
+	if ( !fact ){ console.log(fact+' is false') }
+	else if ( fact ){ console.log(fact+' is true') }
+}
+</script>
+</head>
+
+<body>
+<div data-role="header">
+<div id="navigation">
+		<a href="#technical">Technical</a> | <a href="#creative">Creative</a> | <a href="#tools">Tools</a> | <a href="#about">Me</a> | <a href="/taco">taco</a> 
+	</div>
+</div>	
+	<div id="technical" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>	
+	<div id="creative" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+		<ul data-role="listview">
+			<li><a href="/page.html">Graphic Design</a></li>
+			<li>
+				<div data-role="collapsible" data-inset="false">
+					<h1>Audio/Video</h1>
+					<ul data-role="listview">
+						<li><a href="#">Audacity</a></li>
+						<li><a href="#">Final Cut Pro</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>Brand Identity</a><p>content</p></li>
+		</ul></div>
+	<div id="tools" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>	
+
+
+<!-- Start of first page -->
+<section data-role="page" id="home" data-theme="b">
+	<div role="main" class="ui-content">
+		<h1>Home</h1>
+		<p>This is the starting home page.</p>
+		<p><a href="#technical">Show/Hide Tech Menu</a></p>
+		<p style="margin-top:1200px;">making the page scroll</p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</section><!-- /page -->
+
+
+
+
+<!-- Start of second page -->
+<section data-role="page" id="taco">
+
+	<div role="main" class="ui-content">
+		<h1 style="float:left;"><a href="#nav">Show/Hide Tech Menu</a></h1>
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.<i class="fa fa-bullhorn" style="font-size:24px;color:blue"></i> </p>
+		<p><a href="#home">Back to home</a></p>
+	</div><!-- /content -->
+
+</section><!-- /page -->
+
+
+<!-- Start of second page -->
+<section data-role="page" id="about">
+
+	<div role="main" class="ui-content">
+		<h1>About Me</h1>
+		<p>This is an about page. </p>
+		<p><a href="#home">Back to home</a></p>
+	</div><!-- /content -->
+
+</section><!-- /page -->
+
+
+
+
+<script>$(function(){
+
+$( "[data-role='header']" ).toolbar({ theme: "b" });
+$( "[data-role='panel']" ).panel({ theme: "b" });
+$.mobile.defaultPageTransition = "slide";
+
+//$("body").on( "pagecontainerchange", function( event, ui ) { });
+
+var skills;
+function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }
+function buildMenuItems(array,topic){
+/* in addition to the array, the "topic" of the nav menu should also be passed into to the function. This will assist in building the links. 		
+*/
+var $panelList = $('<ul data-role="listview"></ul>');
+
+$.each(array, function() {
+	var $menuItem = $('<li></li>');
+
+	if(this.childItems){
+		var $listOfChildItems = $('<ul data-role="listview"></ul>');
+		$.each(this.childItems, function() {
+			var childObject = this;
+			generateDisplayValues(childObject);
+			$('<li></li>')
+				.append( '<a href="#">'+childObject.name+'</a>' )
+//-- points to the page and adds a hash to drive that page's functionality
+//				.append( '<a href="/'+topic+'#'+childObject.name+'">'+childObject.name+'</a>' )				
+				.appendTo( $listOfChildItems );
+			});
+		$menuItem.append( 
+			$('<div data-role="collapsible" data-inset="false"></div>')
+				.append( '<h1>'+this.name+'</h1>' )
+				.append( $listOfChildItems )
+			)
+	} else {
+		generateDisplayValues(this);
+		$menuItem.append( '<a href="#">'+this.name+'</a>' )
+	}
+	$panelList.append($menuItem)
+});
+	
+$panelList.appendTo( document.getElementById(topic) )
+$( document.getElementById(topic) ).enhanceWithin(); 
+}
+
+
+$.getJSON('/tech.json', function(data) {
+	buildMenuItems(data,'technical');	
+});
+
+$.getJSON('/tools.json', function(data) {
+	console.dir(data);
+	buildMenuItems(data,'tools');
+});
+//----- start .getJSON call back 
+
+//$( document.getElementById('technical') ).enhanceWithin(); 
+//$('#nav').enhanceWithin(); 
+
+	/*----- orginal first attempt at handling the array 
+	$.each(skills, function() {
+	//------ start handle each item within the returned object
+		generateDisplayValues(this);
+	// deciding to what whether to build a folder item or a an build folder item or a display link/node
+	//------ end handle each item within the returned object
+	});
+
+	*/
+//----- end .getJSON call back 
+
+
+
+});</script>
+
+</body>
+</html>
