@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BriceShatzer.com | Tools</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <script src="/utilities/lodash.min.js"></script>
+    <script src="/utilities/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+</head>
+<body>
+    <div data-role="header">
+        <div id="navigation">
+            <a href="#development_nav">Development</a> | <a href="#creative_nav">Creative</a> | <a href="#tools_nav">Tools</a> | <a href="#about">Me</a>
+        </div>
+    </div>  
+    <div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div> 
+    <div id="creative_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>
+    <div id="tools_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>   
+
+
+<section data-role="page">
+    <div role="main" class="ui-content" >
+        <h1><a href="#development">Show/Hide dev Menu</a></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><a href="/BriceShatzer.html">Back to home</a></p><br>
+<div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+    <div data-role="collapsible">
+        <h3>Section 1</h3>
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a"><div class="ui-bar" ><span class="strong">Block A</span> - this is some descriptive text</div></div>
+            <div class="ui-block-b"><div class="ui-bar" ><span class="strong">Block B</span> - this is some descriptive text</div></div>
+            <div class="ui-block-a"><div class="ui-bar" ><span class="strong">Block A</span> - this is some descriptive text</div></div>
+            <div class="ui-block-b"><div class="ui-bar" ><span class="strong">Block B</span> - this is some descriptive text</div></div>
+        </div>
+    </div>
+    <div data-role="collapsible">
+        <h3>Section 2</h3>
+    <p>I'm the collapsible content for section 2</p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Section 3</h3>
+    <p>I'm the collapsible content for section 3</p>
+    </div>
+</div>
+
+<!-- 
+        <ul data-role="listview" data-inset="true">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+                <div data-role="collapsible" data-inset="false">
+                <h1>taco</h1>
+                <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a"><div class="ui-bar" ><span class="strong">Block A</span> - this is some descriptive text</div></div>
+                    <div class="ui-block-b"><div class="ui-bar" ><span class="strong">Block B</span> - this is some descriptive text</div></div>
+                    <div class="ui-block-a"><div class="ui-bar" ><span class="strong">Block A</span> - this is some descriptive text</div></div>
+                    <div class="ui-block-b"><div class="ui-bar" ><span class="strong">Block B</span> - this is some descriptive text</div></div>
+                </div>
+            </li>
+        </ul> -->
+    </div><!-- /content -->
+
+<script type="text/javascript">
+$( "body" ).on( "pagecontainerchange", function( event, ui ) {
+console.log('page container changed');
+    var url = $.mobile.path.getLocation();
+    console.log( decodeURIComponent( url.slice( url.indexOf('?')+1 ) ) )
+
+console.dir(tools_json);
+
+
+} );
+</script>
+</section><!-- /page -->
+
+
+
+
+</body>
+<script type="text/javascript" src="/navigation.js"></script>
+</html>

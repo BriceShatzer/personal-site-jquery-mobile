@@ -35,7 +35,7 @@ background-color: Fuchsia;
 
 div.ui-page-active,
 section.ui-page-active{margin-top:25px !important;}
-
+span.strong{font-weight:bold}
 
 
 /* navigation panel styling */
@@ -54,7 +54,13 @@ section.ui-page-active{margin-top:25px !important;}
 	}
 }
 
-#technical {@include navPanel}
-#creative {@include navPanel}
-#tools {@include navPanel}
+#development_nav {@include navPanel}
+#creative_nav {@include navPanel}
+#tools_nav {@include navPanel}
 
+
+
+section[data-url="/tools.html"]{
+	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
+//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+}

@@ -2,96 +2,125 @@
     	{	"name":"HTML",
 			"notes":"Comfortable working with HTML5, HTML 4.01 Strict/Transitional, and XHTML 1.0 Strict/Transitional"
 		},
-		{	"name":"Email",
-			"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
-		},
-		{	"name":"Frameworks",
-			"childItems":[
-			{	"name":"Bootstrap",
-				"notes":""
-			},
-			{	"name":"HTML5 Boilerplate",
-				"notes":""
-			},
-			{	"name":"jQuery Mobile",
-				"notes":""
-			},
-			{	"name":"ASP.net",
-				"notes":"In addition to maintaining & updating the front-end portion of sites using this structure, I'm comfortable tracking down back-end control components causing display issues."	
-			}]
-		},			
+
 		{	"name":"Styling",
 			"childItems":[
-			{	"name":"CSS",
+				{
+				"name":"CSS",
 				"notes":"Comfortable working in with both CSS 2.1 and 3. Competent in testing and debugging cross-browser/platform issues."
-			},
-			{	"name":"LESS",
+				},
+				{
+				"name":"LESS",
 				"notes":""
-			},
-			{	"name":"SASS",
+				},
+				{	
+				"name":"SASS",
 				"notes":"SCSS syntax only"
-			}]
+				}
+			]
 		},
-		{	"name":"CMS/CRM Platforms",
-			"childItems":[
-			{	"name":"Adobe Business Catalyst",
-				"notes":""
-			},
-			{	"name":"LightCMS",
-				"notes":""
-			},
-			{	"name":"Wordpress",
-				"notes":""
-			},
-			{	"name":"SiteFinity",
-				"notes":""
-			},
-			{	"name":"Squarespace",
-				"notes":""
-			},
-			{	"name":"Tumblr",
-				"notes":""
-			},				
-			{	"name":"Joomla!",
-				"notes":""
-			}]
-		},
+
 		{	"name":"JavaScript",
-			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also completely comfortable debugging any JavaScript related issue."
-		},
-		{	"name":"JavaScript Libraries",
+			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also completely comfortable debugging any JavaScript related issue.",
 			"childItems":[
-			{	"name":"jQuery",
+				{	
+				"name":"jQuery",
 				"notes":""
-			},
-			{	"name":"Underscore.js",
+				},
+				{	
+				"name":"Underscore.js",
 				"notes":""
-			},
-			{	"name":"jQuery UI",
+				},
+				{	
+				"name":"Lo-Dash",
 				"notes":""
-			},
-			{
+				},
+				{	
+				"name":"jQuery UI",
+				"notes":""
+				},
+				{	
 				"name":"Modernizr",
 				"notes":""
-			},				
-			{	"name":"Angular.js",
+				},				
+				{	
+				"name":"Angular.js",
 				"notes":""
-			},
-			{	"name":"Backbone.js",
+				},
+				{	
+				"name":"Backbone.js",
 				"notes":""
-			},
-			{	"name":"script.aculo.us",
+				},
+				{	
+				"name":"script.aculo.us",
 				"notes":""
-			}]
+				}]
 		},
-		{	"name":"Version Control/Workflow",
+
+		{	"name":"CMS/CRM Platforms",
 			"childItems":[
-			{	"name":"SVN",
+				{	
+				"name":"Adobe Business Catalyst",
+				"notes":""
+				},
+				{	
+				"name":"LightCMS",
+				"notes":""
+				},
+				{	
+				"name":"Wordpress",
+				"notes":""
+				},
+				{	
+				"name":"SiteFinity",
+				"notes":""
+				},
+				{	
+				"name":"Squarespace",
+				"notes":""
+				},
+				{	
+				"name":"Tumblr",
+				"notes":""
+				},				
+				{	
+				"name":"Joomla!",
+				"notes":""
+				}
+			]
+		},
+		{	
+			"name":"Frameworks",
+			"childItems":[
+				{	
+				"name":"Bootstrap",
+				"notes":""
+				},
+				{
+				"name":"HTML5 Boilerplate",
+				"notes":""
+				},
+				{
+				"name":"jQuery Mobile",
+				"notes":""
+				},
+				{
+				"name":"ASP.net",
+				"notes":"In addition to maintaining & updating the front-end portion of sites using this structure, I'm comfortable tracking down back-end control components causing display issues."	
+				}
+			]
+		},		
+		{	"name":"Version Control",
+			"childItems":[
+				{	
+				"name":"SVN",
 				"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client"
-			},
-			{	"name":"Git",
+				},
+				{
+				"name":"Git",
 				"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues"
-			}]
+				}
+			]
 		},
 		{	"name":"Structured Data / Databases",
 			"childItems":[
@@ -109,16 +138,28 @@
 			}]
 
 		},
+		{	"name":"Mapping/Geolocation",
+			"childItems":[
+				{
+				"name":"Google Maps JavaScript API",
+				"notes":""
+				},
+				{
+				"name":"ArcGIS",
+				"notes":""
+				}
+			]
+		},
 		{	"name":"Other Services",
 			"childItems":[
-			{	"name":"Google Maps JavaScript API",
+				{
+				"name":"MailChimp",
 				"notes":""
-			},			
-			{	"name":"MailChimp",
-				"notes":""
-			},
-			{	"name":"ArcGIS",
-				"notes":""
-			}]
+				},
+				{
+				"name":"Email",
+				"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
+				}
+			]
 		}
 	]

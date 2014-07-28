@@ -97,90 +97,99 @@ section.ui-page-active {
   margin-top: 25px !important;
 }
 
+span.strong {
+  font-weight: bold;
+}
+
 /* navigation panel styling */
-#technical {
+#development_nav {
   top: 25px;
 }
-#technical div.ui-panel-inner > ul > li.ui-first-child > a {
+#development_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
 }
-#technical .ui-listview > .ui-li-static {
+#development_nav .ui-listview > .ui-li-static {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-#technical ul a {
+#development_nav ul a {
   background-color: #2a2a2a;
 }
-#technical ul a:hover {
+#development_nav ul a:hover {
   background-color: #333;
 }
-#technical ul a.ui-btn {
+#development_nav ul a.ui-btn {
   padding-top: .5em;
   padding-bottom: .5em;
   font-size: 14px;
 }
-#technical ul h1.ui-collapsible-heading {
+#development_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
 }
-#technical ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+#development_nav ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
   background-color: #2A2A2A;
 }
 
-#creative {
+#creative_nav {
   top: 25px;
 }
-#creative div.ui-panel-inner > ul > li.ui-first-child > a {
+#creative_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
 }
-#creative .ui-listview > .ui-li-static {
+#creative_nav .ui-listview > .ui-li-static {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-#creative ul a {
+#creative_nav ul a {
   background-color: #2a2a2a;
 }
-#creative ul a:hover {
+#creative_nav ul a:hover {
   background-color: #333;
 }
-#creative ul a.ui-btn {
+#creative_nav ul a.ui-btn {
   padding-top: .5em;
   padding-bottom: .5em;
   font-size: 14px;
 }
-#creative ul h1.ui-collapsible-heading {
+#creative_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
 }
-#creative ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+#creative_nav ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
   background-color: #2A2A2A;
 }
 
-#tools {
+#tools_nav {
   top: 25px;
 }
-#tools div.ui-panel-inner > ul > li.ui-first-child > a {
+#tools_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
 }
-#tools .ui-listview > .ui-li-static {
+#tools_nav .ui-listview > .ui-li-static {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-#tools ul a {
+#tools_nav ul a {
   background-color: #2a2a2a;
 }
-#tools ul a:hover {
+#tools_nav ul a:hover {
   background-color: #333;
 }
-#tools ul a.ui-btn {
+#tools_nav ul a.ui-btn {
   padding-top: .5em;
   padding-bottom: .5em;
   font-size: 14px;
 }
-#tools ul h1.ui-collapsible-heading {
+#tools_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
 }
-#tools ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
+#tools_nav ul h1.ui-collapsible-heading a.ui-btn-icon-left:hover {
   background-color: #2A2A2A;
+}
+
+section[data-url="/tools.html"] ul h1.ui-collapsible-heading {
+  margin-top: 0;
+  margin-bottom: 0;
 }

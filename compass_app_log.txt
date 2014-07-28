@@ -92,3 +92,12 @@
 2014-07-25 15:22:26 identical stylesheets/style.css 
 2014-07-25 15:27:50 overwrite stylesheets/style.css 
 2014-07-25 15:29:17 overwrite stylesheets/style.css 
+2014-07-27 21:06:50 overwrite stylesheets/style.css 
+2014-07-28 15:54:23 overwrite stylesheets/style.css 
+2014-07-28 16:52:01 overwrite stylesheets/style.css 
+2014-07-28 17:04:03     error sass/style.scss (Line 61: Invalid CSS after "...clude navPanel}": expected "}", was "")
+2014-07-28 17:04:03 overwrite stylesheets/style.css 
+2014-07-28 17:04:06 overwrite stylesheets/style.css 
+2014-07-28 17:04:32 overwrite stylesheets/style.css 
+2014-07-28 17:06:59 overwrite stylesheets/style.css 
+2014-07-28 17:07:08 overwrite stylesheets/style.css 
