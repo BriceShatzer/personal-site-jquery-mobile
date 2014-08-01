@@ -20,9 +20,10 @@
 			"notes":"Creative Suite 5.5"
 		},
 		{	"name":"Adobe Photoshop"	},
+		{	"name":"GIMP"	},
 		{	"name":"Pixlr"	},
 		{	"name":"Scribus",
-			"notes":"An open source page layout & publishing <a href='http://www.scribus.net/'>tool.</a>"
+			"notes":"An open source page layout & publishing <a href='http://www.scribus.net/' target='_blank' data-role='none'>tool.</a>"
 		}
 
 		]
@@ -43,13 +44,13 @@
 		{	"name":"Apache OpenOffice"	},
 		{	"name":"Google Apps"	},
 		{	"name":"Celtex",
-			"notes":"A <a href='https://www.celtx.com' target='_blank'>tool</a> specializing in script writing."	
+			"notes":"A <a href='https://www.celtx.com' target='_blank' data-role='none'>tool</a> specializing in script writing."	
 		},
 		{	"name":"Microsoft Office Suite",
 			"notes":""
 		},
 		{	"name":"Ron's Editor",
-			"notes":"A robust <a href='http://www.ronsplace.eu/Products/RonsEditor' target='_blank'>CSV</a> editor."
+			"notes":"A robust <a href='http://www.ronsplace.eu/Products/RonsEditor' target='_blank' data-role='none'>CSV</a> editor."
 		}
 		]
 	},
@@ -59,13 +60,13 @@
 			"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client."
 		},
 		{	"name":"Git",
-			"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues."
+			"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues."
 		}]
 	},
 	{	"name":"Web Analytics & Ad Management ",
 		"childItems":[
 		{	"name":"Absolute Banner Manager XE",
-			"notes":"An <a href='http://www.xigla.com/absolutebm/' target='_blank'>ad management</a> solution built in ASP "},
+			"notes":"An <a href='http://www.xigla.com/absolutebm/' target='_blank' data-role='none'>ad management</a> solution built in ASP "},
 		{	"name":"Google Analytics"},
 		{	"name":"Google DoubleClick for Publishers"	}
 
@@ -75,7 +76,7 @@
 	{	"name":"Web Development Tools",
 		"childItems":[
 		{	"name":"Compass.app",
-			"notes":"An <a href='http://compass.kkbox.com/' target='_blank'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank'>Compass open-source CSS Authoring Framework."
+			"notes":"An <a href='http://compass.kkbox.com/' target='_blank' data-role='none'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank' data-role='none'>Compass open-source CSS Authoring Framework."
 		},
 		{	"name":"CuteFTP"	},
 		{	"name":"Filezilla"	},
@@ -85,10 +86,10 @@
 		{	"name":"Internet Explorer Developer Tools"	},		
 		{	"name":"LiveReload"	},		
 		{	"name":"MAMP",
-			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank'>development enviroment</a>."
+			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank' data-role='none'>development enviroment</a>."
 		},
 		{	"name":"Mongoose",
-			"notes":"A simple, <a href='https://code.google.com/p/mongoose/' target='_blank'>local web server</a>."
+			"notes":"A simple, <a href='https://code.google.com/p/mongoose/' target='_blank' data-role='none'>local web server</a>."
 		},
 		{ "name":"WinSCP" }		
 		]

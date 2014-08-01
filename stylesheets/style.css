@@ -54,8 +54,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-body {
-  background-color: green !important;
+section div.ui-panel-wrapper, body {
+  background-color: #F2F2F2 !important;
 }
 
 .ui-header {
@@ -82,6 +82,7 @@ body {
 }
 
 div[data-role="header"] {
+  padding: 12px 10px 8px;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -89,12 +90,30 @@ div[data-role="header"] {
   width: 100%;
   overflow: hidden;
   height: 25px;
-  background-color: Fuchsia;
+  background-color: #2A2A2A;
+  color: #727272;
+}
+div[data-role="header"] a {
+  color: #BFBFBF !important;
+  text-decoration: none;
+}
+div[data-role="header"] a:hover {
+  color: #727272 !important;
 }
 
 div.ui-page-active,
 section.ui-page-active {
-  margin-top: 25px !important;
+  margin-top: 45px !important;
+}
+div.ui-page-active h1,
+section.ui-page-active h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+div.ui-page-active h2,
+section.ui-page-active h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #DDD;
 }
 
 span.strong {
@@ -103,7 +122,7 @@ span.strong {
 
 /* navigation panel styling */
 #development_nav {
-  top: 25px;
+  top: 45px;
 }
 #development_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
@@ -123,6 +142,9 @@ span.strong {
   padding-bottom: .5em;
   font-size: 14px;
 }
+#development_nav ul a.ui-icon-carat-r:after {
+  background: none;
+}
 #development_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -132,7 +154,7 @@ span.strong {
 }
 
 #creative_nav {
-  top: 25px;
+  top: 45px;
 }
 #creative_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
@@ -152,6 +174,9 @@ span.strong {
   padding-bottom: .5em;
   font-size: 14px;
 }
+#creative_nav ul a.ui-icon-carat-r:after {
+  background: none;
+}
 #creative_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -161,7 +186,7 @@ span.strong {
 }
 
 #tools_nav {
-  top: 25px;
+  top: 45px;
 }
 #tools_nav div.ui-panel-inner > ul > li.ui-first-child > a {
   border-top: none;
@@ -181,6 +206,9 @@ span.strong {
   padding-bottom: .5em;
   font-size: 14px;
 }
+#tools_nav ul a.ui-icon-carat-r:after {
+  background: none;
+}
 #tools_nav ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -189,7 +217,10 @@ span.strong {
   background-color: #2A2A2A;
 }
 
-section[data-url="/tools.html"] ul h1.ui-collapsible-heading {
+#toolList ul h1.ui-collapsible-heading {
   margin-top: 0;
   margin-bottom: 0;
+}
+#toolList div.ui-collapsible-content a {
+  font-weight: normal;
 }

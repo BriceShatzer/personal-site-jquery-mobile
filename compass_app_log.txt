@@ -101,3 +101,63 @@
 2014-07-28 17:04:32 overwrite stylesheets/style.css 
 2014-07-28 17:06:59 overwrite stylesheets/style.css 
 2014-07-28 17:07:08 overwrite stylesheets/style.css 
+2014-07-29 14:02:11 overwrite stylesheets/style.css 
+2014-07-29 14:04:36 overwrite stylesheets/style.css 
+2014-07-29 17:31:40 overwrite stylesheets/style.css 
+2014-07-29 17:41:41 overwrite stylesheets/style.css 
+2014-07-29 17:43:05 overwrite stylesheets/style.css 
+2014-07-29 17:45:07 overwrite stylesheets/style.css 
+2014-07-29 17:46:50 overwrite stylesheets/style.css 
+2014-07-29 18:28:23 overwrite stylesheets/style.css 
+2014-07-29 18:28:37 overwrite stylesheets/style.css 
+2014-07-29 18:55:29 overwrite stylesheets/style.css 
+2014-07-29 18:55:51 overwrite stylesheets/style.css 
+2014-07-29 18:58:03 overwrite stylesheets/style.css 
+2014-07-29 18:58:54 overwrite stylesheets/style.css 
+2014-07-29 18:59:08 overwrite stylesheets/style.css 
+2014-07-29 19:00:16 overwrite stylesheets/style.css 
+2014-07-29 19:01:36 overwrite stylesheets/style.css 
+2014-07-29 19:33:01 overwrite stylesheets/style.css 
+2014-07-29 19:35:29 overwrite stylesheets/style.css 
+2014-07-29 20:25:12 overwrite stylesheets/style.css 
+2014-07-29 20:26:13 overwrite stylesheets/style.css 
+2014-07-29 20:27:31     error sass/style.scss (Line 37: Invalid CSS after "	a {#727272": expected "{", was "}")
+2014-07-29 20:27:31 overwrite stylesheets/style.css 
+2014-07-29 20:27:45 overwrite stylesheets/style.css 
+2014-07-29 20:29:34 overwrite stylesheets/style.css 
+2014-07-29 20:29:55 overwrite stylesheets/style.css 
+2014-07-29 20:30:24 overwrite stylesheets/style.css 
+2014-07-29 20:33:00     error sass/style.scss (Line 38: Invalid CSS after "	a +link-colors": expected "{", was "(#727272, #BFBF...")
+2014-07-29 20:33:00 overwrite stylesheets/style.css 
+2014-07-29 20:33:41     error sass/style.scss (Line 39: Invalid CSS after "		+link-colors": expected "{", was "(#727272, #BFBF...")
+2014-07-29 20:33:41 overwrite stylesheets/style.css 
+2014-07-29 20:33:58     error sass/style.scss (Line 39: Invalid CSS after "		+link-colors": expected "{", was "(#727272, #BFBF...")
+2014-07-29 20:33:58 overwrite stylesheets/style.css 
+2014-07-29 20:34:10     error sass/style.scss (Line 39: Invalid CSS after "...727272, #727272": expected "{", was "}")
+2014-07-29 20:34:10 overwrite stylesheets/style.css 
+2014-07-29 20:34:45     error sass/style.scss (Line 39: Invalid CSS after "  +link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:34:45 overwrite stylesheets/style.css 
+2014-07-29 20:34:59 overwrite stylesheets/style.css 
+2014-07-29 20:35:26     error sass/style.scss (Line 40: Invalid CSS after "	 +link-colors": expected "{", was "(#727272, #BFBF...")
+2014-07-29 20:35:26 overwrite stylesheets/style.css 
+2014-07-29 20:36:07     error sass/style.scss (Line 5: Invalid CSS after "  +link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:36:07 overwrite stylesheets/style.css 
+2014-07-29 20:36:13     error sass/style.scss (Line 5: Invalid CSS after "  +link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:36:13 identical stylesheets/style.css 
+2014-07-29 20:38:06     error sass/style.scss (Line 5: Invalid CSS after "  +link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:38:06 overwrite stylesheets/style.css 
+2014-07-29 20:38:11     error sass/style.scss (Line 5: Invalid CSS after "  link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:38:11 overwrite stylesheets/style.css 
+2014-07-29 20:41:06     error sass/style.scss (Line 5: Invalid CSS after "  +link-colors": expected "{", was "(#00c, #0cc, #c...")
+2014-07-29 20:41:06 overwrite stylesheets/style.css 
+2014-07-29 20:42:46 overwrite stylesheets/style.css 
+2014-07-29 20:42:56 overwrite stylesheets/style.css 
+2014-07-29 20:45:54 overwrite stylesheets/style.css 
+2014-07-29 20:57:11     error sass/style.scss (Line 42: Invalid CSS after "	a:hover {color:": expected expression (e.g. 1px, bold), was "##727272 !impor...")
+2014-07-29 20:57:11 overwrite stylesheets/style.css 
+2014-07-29 20:57:13 overwrite stylesheets/style.css 
+2014-08-01 14:55:22 overwrite stylesheets/style.css 
+2014-08-01 14:55:34 overwrite stylesheets/style.css 
+2014-08-01 14:58:50 overwrite stylesheets/style.css 
+2014-08-01 14:59:02 overwrite stylesheets/style.css 
+2014-08-01 18:21:53 overwrite stylesheets/style.css 

@@ -10,12 +10,6 @@
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <script>
-    function test(fact){
-       if ( !fact ){ console.log(fact+' is false') }
-        else if ( fact ){ console.log(fact+' is true') }
-    }
-    </script>
 </head>
 <body>
     <div data-role="header">
@@ -31,14 +25,13 @@
         <h1><a href="#development">Show/Hide dev Menu</a></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p><a href="/BriceShatzer.html">Back to home</a></p><br>
-        <div data-role="collapsibleset" data-theme="a" data-content-theme="a" id="toolList"></div>
+        <div data-role="collapsibleset" data-theme="a" data-content-theme="a" id="creativeContent"></div>
     </div><!-- /content -->
 
 <script type="text/javascript">
 var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
 
-/*
-function buildToolContent(){ 
+/*function buildToolContent(){ 
     $.each(tools_json, function(){
        
         //console.log($category);
@@ -62,43 +55,33 @@ function buildToolContent(){
         //.appendTo('<div data-role="collapsible"><h3>'+this.name+'</h3></div>').appendTo('#toolList');
     });
     //$container.appendTo('#toolList')
-}  
-*/
-$( "body" ).one( "pagecontainerchange", function( event, ui ) { 
-    console.log("pagecontainerchange event from tools.html");
-    
-    if( /tools.html/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
-        console.log('building tools content');
+}  */
+
+$( "body" ).on( "pagecontainerchange", function( event, ui ) {
+        console.log("pagecontainerchange event from creative.html");
+/*
+    console.log('page container changed');
+    var url = $.mobile.path.getLocation();
+    console.log( decodeURIComponent( url.slice( url.indexOf('?')+1 ) ) )
+
+    if(!tools_json){
+        console.log('loading tools.json');
         $.getJSON('/tools.json', function(data) { 
-            console.log('got the tools.json');
-            console.dir(data);
             tools_json = data; 
-            //buildToolContent();
-            //--
-            $.each(tools_json, function(){
-                var $items = $('<div class="ui-grid-a ui-responsive"></div>');
-
-                $.each(this.childItems, function(i,tool) {
-                    var string='';
-                    if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
-                    else{ string+='<div class="ui-block-b">' }
-                    string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
-                    if (this.notes){string+=' - '+this.notes}
-                    string+='</div></div>';
-                    $items.append(string)
-                });
-                var $category =  $('<div data-role="collapsible"></div>');
-                $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
-            });
-            //--
-
+            console.dir(tools_json);
+            buildToolContent();
             $('section,#toolList').enhanceWithin()
         });
+    }else{
+        console.dir(tools_json);
+        buildToolContent();
+        $('section').enhanceWithin()        
     }
 
-//navBarIntialization() 
-});  
- 
+$('a.current').removeClass('current');
+$('a[href="/creative.html"]').removeAttr('href').addClass('current');
+*/
+});    
 </script>
 </section><!-- /page -->
 

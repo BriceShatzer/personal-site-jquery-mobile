@@ -20,9 +20,12 @@
 			]
 		},
 
-		{	"name":"JavaScript",
-			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also completely comfortable debugging any JavaScript related issue.",
+		{	"name":"Client-Side scripting",
 			"childItems":[
+				{
+				"name":"JavaScript",
+				"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also completely comfortable debugging any JavaScript related issue."
+				},
 				{	
 				"name":"jQuery",
 				"notes":""
@@ -39,10 +42,7 @@
 				"name":"jQuery UI",
 				"notes":""
 				},
-				{	
-				"name":"Modernizr",
-				"notes":""
-				},				
+			
 				{	
 				"name":"Angular.js",
 				"notes":""
@@ -110,18 +110,6 @@
 				}
 			]
 		},		
-		{	"name":"Version Control",
-			"childItems":[
-				{	
-				"name":"SVN",
-				"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client"
-				},
-				{
-				"name":"Git",
-				"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues"
-				}
-			]
-		},
 		{	"name":"Structured Data / Databases",
 			"childItems":[
 			{	"name":"JSON",

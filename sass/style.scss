@@ -2,8 +2,10 @@
 @import "compass/reset";
 //@import "compass/typography/links/link-colors";
 //link-colors($normal, $hover, $active, $visited, $focus)
+section div.ui-panel-wrapper,body {background-color: #F2F2F2 !important}
+//#F9F9F9  #F2F2F2
 
-body {background-color: green !important/*#F2F2F2*/ }
+//darks - #1F1F1F, #2A2A2A
 
 
 .ui-header {border:none;
@@ -21,26 +23,47 @@ body {background-color: green !important/*#F2F2F2*/ }
 
 
 div[data-role="header"] {
-position:fixed;
-left:0px;
-top:0px;
-z-index: 1000;
-width:100%;
-overflow:hidden;
-height: 25px;
-background-color: Fuchsia;
+	padding:12px 10px 8px;
+	//padding-top:12px;
+	//padding-bottom:8px;
+	position:fixed;
+	left:0px;
+	top:0px;
+	z-index: 1000;
+	width:100%;
+	overflow:hidden;
+	height: 25px;
+	background-color: #2A2A2A;
+	color: #727272;
+	a {
+		color:#BFBFBF !important;
+		text-decoration: none;
+	}
+	a:hover {color:#727272 !important;}
+
 }
 
 #sectionNav{}
 
 div.ui-page-active,
-section.ui-page-active{margin-top:25px !important;}
+section.ui-page-active{
+	margin-top:45px !important;
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	h2{
+		font-size: 1.5em;
+		border-bottom: 1px solid #DDD;
+	}
+}
 span.strong{font-weight:bold}
+
 
 
 /* navigation panel styling */
 @mixin navPanel {
-	top:25px;
+	top:45px;
 	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
 	div.ui-panel-inner>ul>li.ui-first-child>a{border-top:none;}
 	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
@@ -48,6 +71,8 @@ span.strong{font-weight:bold}
 	ul a:hover {background-color: #333;}
 
 	ul a.ui-btn {padding-top:.5em; padding-bottom:.5em;font-size: 14px; }
+	ul a.ui-icon-carat-r:after { background:none;}
+		//background: url("Path to your image file") no-repeat scroll 0px 0px transparent;
 	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; 
 		//a.ui-btn-icon-left {font-size: 14px; }
 		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
@@ -60,7 +85,9 @@ span.strong{font-weight:bold}
 
 
 
-section[data-url="/tools.html"]{
+//section[data-url="/tools.html"]{
+#toolList{
 	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
+	div.ui-collapsible-content a {font-weight:normal}
 //	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
 }
