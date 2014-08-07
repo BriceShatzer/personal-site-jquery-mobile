@@ -161,3 +161,274 @@
 2014-08-01 14:58:50 overwrite stylesheets/style.css 
 2014-08-01 14:59:02 overwrite stylesheets/style.css 
 2014-08-01 18:21:53 overwrite stylesheets/style.css 
+2014-08-04 17:35:42     error sass/style.scss (Line 61: Invalid CSS after "		color:": expected expression (e.g. 1px, bold), was "#pink !important;")
+2014-08-04 17:35:42 overwrite stylesheets/style.css 
+2014-08-04 17:35:49 overwrite stylesheets/style.css 
+2014-08-04 17:38:29 overwrite stylesheets/style.css 
+2014-08-04 17:39:22 overwrite stylesheets/style.css 
+2014-08-04 17:42:29 overwrite stylesheets/style.css 
+2014-08-04 17:48:36 overwrite stylesheets/style.css 
+2014-08-04 17:56:57 overwrite stylesheets/style.css 
+2014-08-04 17:57:34 overwrite stylesheets/style.css 
+2014-08-04 17:57:49 overwrite stylesheets/style.css 
+2014-08-04 17:59:37 overwrite stylesheets/style.css 
+2014-08-04 17:59:46 overwrite stylesheets/style.css 
+2014-08-04 18:44:32 overwrite stylesheets/style.css 
+2014-08-04 18:52:34 overwrite stylesheets/style.css 
+2014-08-04 18:56:42 overwrite stylesheets/style.css 
+2014-08-04 18:57:45 overwrite stylesheets/style.css 
+2014-08-04 19:00:26 overwrite stylesheets/style.css 
+2014-08-04 19:00:43     error sass/style.scss (Line 75: Invalid CSS after "		border-bottom": expected ";", was ": 1px solid #DDD;")
+2014-08-04 19:00:43 overwrite stylesheets/style.css 
+2014-08-04 19:00:44     error sass/style.scss (Line 75: Invalid CSS after "		border-bottom": expected ";", was ": 1px solid #DDD;")
+2014-08-04 19:00:44 identical stylesheets/style.css 
+2014-08-04 19:00:46 overwrite stylesheets/style.css 
+2014-08-04 19:00:58 overwrite stylesheets/style.css 
+2014-08-04 19:01:19 overwrite stylesheets/style.css 
+2014-08-04 19:01:34 overwrite stylesheets/style.css 
+2014-08-04 19:18:32 overwrite stylesheets/style.css 
+2014-08-04 19:19:32 overwrite stylesheets/style.css 
+2014-08-04 19:19:58 overwrite stylesheets/style.css 
+2014-08-04 19:20:11 overwrite stylesheets/style.css 
+2014-08-04 19:20:37 overwrite stylesheets/style.css 
+2014-08-04 19:21:04 overwrite stylesheets/style.css 
+2014-08-04 19:21:26 overwrite stylesheets/style.css 
+2014-08-04 19:22:38 overwrite stylesheets/style.css 
+2014-08-04 19:22:46 overwrite stylesheets/style.css 
+2014-08-04 19:23:27 overwrite stylesheets/style.css 
+2014-08-04 19:23:34 overwrite stylesheets/style.css 
+2014-08-04 19:24:33 overwrite stylesheets/style.css 
+2014-08-04 19:25:22 overwrite stylesheets/style.css 
+2014-08-04 19:26:34 overwrite stylesheets/style.css 
+2014-08-04 19:28:51 overwrite stylesheets/style.css 
+2014-08-04 19:28:59 overwrite stylesheets/style.css 
+2014-08-04 19:33:35 overwrite stylesheets/style.css 
+2014-08-04 19:35:12 overwrite stylesheets/style.css 
+2014-08-04 19:35:50 overwrite stylesheets/style.css 
+2014-08-04 19:36:59 overwrite stylesheets/style.css 
+2014-08-04 19:37:06 overwrite stylesheets/style.css 
+2014-08-04 19:37:20 overwrite stylesheets/style.css 
+2014-08-04 19:37:52 overwrite stylesheets/style.css 
+2014-08-04 19:38:02 overwrite stylesheets/style.css 
+2014-08-04 21:00:50 overwrite stylesheets/style.css 
+2014-08-04 21:02:51 overwrite stylesheets/style.css 
+2014-08-04 21:03:28 overwrite stylesheets/style.css 
+2014-08-04 21:03:59 overwrite stylesheets/style.css 
+2014-08-04 21:05:19 identical stylesheets/style.css 
+2014-08-06 15:41:19 overwrite stylesheets/style.css 
+2014-08-06 16:08:15 overwrite stylesheets/style.css 
+2014-08-06 17:26:02 overwrite stylesheets/style.css 
+2014-08-06 17:26:47 overwrite stylesheets/style.css 
+2014-08-06 17:27:27 overwrite stylesheets/style.css 
+2014-08-06 17:28:23 overwrite stylesheets/style.css 
+2014-08-06 17:30:04 overwrite stylesheets/style.css 
+2014-08-06 17:31:30 overwrite stylesheets/style.css 
+2014-08-06 17:31:54 overwrite stylesheets/style.css 
+2014-08-06 17:32:31 overwrite stylesheets/style.css 
+2014-08-06 17:35:24 overwrite stylesheets/style.css 
+2014-08-06 17:40:46 overwrite stylesheets/style.css 
+2014-08-06 17:41:41 overwrite stylesheets/style.css 
+2014-08-06 17:41:48 overwrite stylesheets/style.css 
+2014-08-06 17:44:09 overwrite stylesheets/style.css 
+2014-08-06 17:45:15 overwrite stylesheets/style.css 
+2014-08-06 17:45:45 overwrite stylesheets/style.css 
+2014-08-06 17:46:31 overwrite stylesheets/style.css 
+2014-08-06 17:54:22     error sass/style.scss (Line 6: Invalid CSS after "	font-family:": expected expression (e.g. 1px, bold), was ";lato,"Droid Sa...")
+2014-08-06 17:54:22 overwrite stylesheets/style.css 
+2014-08-06 17:54:31 overwrite stylesheets/style.css 
+2014-08-06 17:56:49     error sass/style.scss (Line 6: Invalid CSS after "..., "sans-serif" ": expected "{", was "!important ;")
+2014-08-06 17:56:49 overwrite stylesheets/style.css 
+2014-08-06 17:57:08 overwrite stylesheets/style.css 
+2014-08-06 17:57:33 overwrite stylesheets/style.css 
+2014-08-06 17:58:12 overwrite stylesheets/style.css 
+2014-08-06 18:00:32 overwrite stylesheets/style.css 
+2014-08-06 18:01:58 overwrite stylesheets/style.css 
+2014-08-06 18:02:24 overwrite stylesheets/style.css 
+2014-08-06 18:03:27 overwrite stylesheets/style.css 
+2014-08-06 18:04:13 overwrite stylesheets/style.css 
+2014-08-06 18:04:29 overwrite stylesheets/style.css 
+2014-08-06 18:04:35 overwrite stylesheets/style.css 
+2014-08-06 18:04:50 overwrite stylesheets/style.css 
+2014-08-06 18:04:57 overwrite stylesheets/style.css 
+2014-08-06 18:05:02 overwrite stylesheets/style.css 
+2014-08-06 18:06:16 overwrite stylesheets/style.css 
+2014-08-06 18:09:02 overwrite stylesheets/style.css 
+2014-08-06 18:09:09 overwrite stylesheets/style.css 
+2014-08-06 18:10:22 overwrite stylesheets/style.css 
+2014-08-06 18:13:59 overwrite stylesheets/style.css 
+2014-08-06 18:14:05 overwrite stylesheets/style.css 
+2014-08-06 18:14:57 overwrite stylesheets/style.css 
+2014-08-06 18:16:08 overwrite stylesheets/style.css 
+2014-08-06 18:16:23 overwrite stylesheets/style.css 
+2014-08-06 18:16:37 identical stylesheets/style.css 
+2014-08-06 19:40:07 overwrite stylesheets/style.css 
+2014-08-06 19:40:17     error sass/style.scss (Line 127: Invalid CSS after "...one; text-align": expected "{", was "}")
+2014-08-06 19:40:17 overwrite stylesheets/style.css 
+2014-08-06 19:40:19 overwrite stylesheets/style.css 
+2014-08-06 19:40:54 overwrite stylesheets/style.css 
+2014-08-06 19:44:48 overwrite stylesheets/style.css 
+2014-08-06 19:47:12 overwrite stylesheets/style.css 
+2014-08-06 19:47:42 overwrite stylesheets/style.css 
+2014-08-06 19:49:06 overwrite stylesheets/style.css 
+2014-08-06 19:50:02 overwrite stylesheets/style.css 
+2014-08-06 19:54:54 overwrite stylesheets/style.css 
+2014-08-06 19:55:20 overwrite stylesheets/style.css 
+2014-08-06 19:55:53 overwrite stylesheets/style.css 
+2014-08-06 20:06:29     error sass/style.scss (Line 139: Invalid CSS after "...max-width:960px": expected ")", was ";){padding-righ...")
+2014-08-06 20:06:29 overwrite stylesheets/style.css 
+2014-08-06 20:06:43 overwrite stylesheets/style.css 
+2014-08-06 20:07:08 overwrite stylesheets/style.css 
+2014-08-06 20:09:01 overwrite stylesheets/style.css 
+2014-08-06 20:09:27 overwrite stylesheets/style.css 
+2014-08-06 20:09:50 overwrite stylesheets/style.css 
+2014-08-06 20:10:14 overwrite stylesheets/style.css 
+2014-08-06 20:45:24 overwrite stylesheets/style.css 
+2014-08-06 21:06:39 overwrite stylesheets/style.css 
+2014-08-06 21:07:41 overwrite stylesheets/style.css 
+2014-08-06 21:08:15 overwrite stylesheets/style.css 
+2014-08-06 21:08:33 overwrite stylesheets/style.css 
+2014-08-06 21:53:19 overwrite stylesheets/style.css 
+2014-08-06 22:06:06 overwrite stylesheets/style.css 
+2014-08-06 22:52:38 overwrite stylesheets/style.css 
+2014-08-06 22:57:35 identical stylesheets/style.css 
+2014-08-06 23:04:52 overwrite stylesheets/style.css 
+2014-08-06 23:05:24 overwrite stylesheets/style.css 
+2014-08-06 23:07:57 overwrite stylesheets/style.css 
+2014-08-06 23:10:51 overwrite stylesheets/style.css 
+2014-08-06 23:28:44 overwrite stylesheets/style.css 
+2014-08-07 00:02:01     error sass/style.scss (Line 191: Invalid CSS after "$shadow:  ": expected expression (e.g. 1px, bold), was "@include box-sh...")
+2014-08-07 00:02:01 overwrite stylesheets/style.css 
+2014-08-07 00:02:55 overwrite stylesheets/style.css 
+2014-08-07 00:06:54 overwrite stylesheets/style.css 
+2014-08-07 00:09:39 overwrite stylesheets/style.css 
+2014-08-07 00:18:16 overwrite stylesheets/style.css 
+2014-08-07 00:22:31 overwrite stylesheets/style.css 
+2014-08-07 00:29:18 overwrite stylesheets/style.css 
+2014-08-07 00:29:51 overwrite stylesheets/style.css 
+2014-08-07 00:29:59 overwrite stylesheets/style.css 
+2014-08-07 00:38:48     error sass/style.scss (Line 196: Mixin apply-origin takes 2 arguments but 3 were passed.)
+2014-08-07 00:38:48 overwrite stylesheets/style.css 
+2014-08-07 00:39:10     error sass/style.scss (Line 196: Mixin apply-origin is missing argument $only3d.)
+2014-08-07 00:39:10 overwrite stylesheets/style.css 
+2014-08-07 00:39:55 overwrite stylesheets/style.css 
+2014-08-07 00:40:06 overwrite stylesheets/style.css 
+2014-08-07 00:40:33 overwrite stylesheets/style.css 
+2014-08-07 00:40:47 overwrite stylesheets/style.css 
+2014-08-07 00:40:57 overwrite stylesheets/style.css 
+2014-08-07 00:43:31 overwrite stylesheets/style.css 
+2014-08-07 00:48:22 overwrite stylesheets/style.css 
+2014-08-07 00:49:09 overwrite stylesheets/style.css 
+2014-08-07 00:49:21 overwrite stylesheets/style.css 
+2014-08-07 00:49:48 overwrite stylesheets/style.css 
+2014-08-07 01:02:57 overwrite stylesheets/style.css 
+2014-08-07 01:10:23     error sass/style.scss (Line 6: Invalid CSS after "...id: font-family": expected selector or at-rule, was ": "Droid Sans",...")
+2014-08-07 01:10:23 overwrite stylesheets/style.css 
+2014-08-07 01:11:06     error sass/style.scss (Line 6: Invalid CSS after "...oid:font-family": expected selector or at-rule, was ": "Droid Sans",...")
+2014-08-07 01:11:06 overwrite stylesheets/style.css 
+2014-08-07 01:16:14     error sass/style.scss (Line 12: Invalid CSS after "... !important ; }": expected ":", was "}")
+2014-08-07 01:16:14 overwrite stylesheets/style.css 
+2014-08-07 01:17:11     error sass/style.scss (Line 9: Invalid CSS after "body{$font_lato ": expected ":", was "}")
+2014-08-07 01:17:11 overwrite stylesheets/style.css 
+2014-08-07 01:17:23     error sass/style.scss (Line 9: Invalid CSS after "body{$font_lato": expected ":", was "}")
+2014-08-07 01:17:23 overwrite stylesheets/style.css 
+2014-08-07 01:21:23     error sass/style.scss (Line 6: Invalid CSS after "..., "sans-serif"'": expected "{", was "}	")
+2014-08-07 01:21:23 overwrite stylesheets/style.css 
+2014-08-07 01:21:38     error sass/style.scss (Line 203: Invalid CSS after "		font-family: ": expected expression (e.g. 1px, bold), was "@include font_d...")
+2014-08-07 01:21:38 overwrite stylesheets/style.css 
+2014-08-07 01:21:41     error sass/style.scss (Line 203: Invalid CSS after "		font-family: ": expected expression (e.g. 1px, bold), was "@include font_d...")
+2014-08-07 01:21:41 identical stylesheets/style.css 
+2014-08-07 01:22:00 overwrite stylesheets/style.css 
+2014-08-07 01:25:12 overwrite stylesheets/style.css 
+2014-08-07 01:25:20 identical stylesheets/style.css 
+2014-08-07 01:45:00 overwrite stylesheets/style.css 
+2014-08-07 03:44:43 overwrite stylesheets/style.css 
+2014-08-07 03:45:48     error sass/style.scss (Line 4: File to import not found or unreadable: /utilities/font-awesome/scss/font-awesome.scss.
+Load paths:
+  C:/Users/Brice/Desktop/Depot/_Git Repos/BriceShatzer.com/sass
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/compass-normalize-1.4.3/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/bootstrap-sass-2.3.2.1/vendor/assets/stylesheets
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/susy-1.0.9/sass
+  C:/Users/Brice/Desktop/Depot/compass.app/lib/ruby/compass_extensions/zurb-foundation-4.3.1/scss
+  Compass::SpriteImporter
+  C:/Users/Brice/Desktop/Depot/vendor/assets/stylesheets)
+2014-08-07 03:45:48 overwrite stylesheets/style.css 
+2014-08-07 03:46:03 overwrite stylesheets/style.css 
+2014-08-07 04:01:59    create stylesheets/font-awesome.css 
+2014-08-07 04:02:00 overwrite stylesheets/style.css 
+2014-08-07 04:03:03 identical stylesheets/style.css 
+2014-08-07 04:09:27 overwrite stylesheets/style.css 
+2014-08-07 04:11:10 overwrite stylesheets/style.css 
+2014-08-07 04:11:44 overwrite stylesheets/style.css 
+2014-08-07 04:12:02 overwrite stylesheets/style.css 
+2014-08-07 04:12:28 overwrite stylesheets/style.css 
+2014-08-07 04:14:24 overwrite stylesheets/style.css 
+2014-08-07 04:14:48 overwrite stylesheets/style.css 
+2014-08-07 04:15:52 overwrite stylesheets/style.css 
+2014-08-07 04:21:46 overwrite stylesheets/style.css 
+2014-08-07 04:21:54 overwrite stylesheets/style.css 
+2014-08-07 04:23:55 overwrite stylesheets/style.css 
+2014-08-07 04:24:25 overwrite stylesheets/style.css 
+2014-08-07 04:31:05 overwrite stylesheets/style.css 
+2014-08-07 04:32:25 overwrite stylesheets/style.css 
+2014-08-07 04:33:33 overwrite stylesheets/style.css 
+2014-08-07 04:35:55 overwrite stylesheets/style.css 
+2014-08-07 04:36:13 overwrite stylesheets/style.css 
+2014-08-07 04:36:36 overwrite stylesheets/style.css 
+2014-08-07 04:41:46 overwrite stylesheets/style.css 
+2014-08-07 04:58:00 overwrite stylesheets/font-awesome.css 
+2014-08-07 04:58:01 overwrite stylesheets/style.css 
+2014-08-07 05:09:29 overwrite stylesheets/style.css 
+2014-08-07 05:12:36 overwrite stylesheets/style.css 
+2014-08-07 05:19:07 overwrite stylesheets/style.css 
+2014-08-07 05:57:22     error sass/style.scss (Line 207: Invalid CSS after "...er-select(none)": expected "}", was "color:#1b1b1b;")
+2014-08-07 05:57:22 overwrite stylesheets/style.css 
+2014-08-07 05:57:43     error sass/style.scss (Line 206: Undefined mixin 'user-select'.)
+2014-08-07 05:57:43 overwrite stylesheets/style.css 
+2014-08-07 05:58:41 overwrite stylesheets/style.css 
+2014-08-07 05:59:35 overwrite stylesheets/style.css 
+2014-08-07 05:59:52 identical stylesheets/style.css 
+2014-08-07 06:02:46 overwrite stylesheets/style.css 
+2014-08-07 06:04:10 overwrite stylesheets/style.css 
+2014-08-07 06:05:15 identical stylesheets/style.css 
+2014-08-07 06:06:11 overwrite stylesheets/style.css 
+2014-08-07 06:11:25     error sass/style.scss (Line 265: Invalid CSS after "		color:#BFBFBF": expected ";", was "&:visited{color...")
+2014-08-07 06:11:25 overwrite stylesheets/style.css 
+2014-08-07 06:11:26     error sass/style.scss (Line 265: Invalid CSS after "		color:#BFBFBF": expected ";", was "&:visited{color...")
+2014-08-07 06:11:26 identical stylesheets/style.css 
+2014-08-07 06:11:38     error sass/style.scss (Line 266: Invalid CSS after "		color:#BFBFBF": expected ";", was "&:visited{color...")
+2014-08-07 06:11:38 overwrite stylesheets/style.css 
+2014-08-07 06:11:46 overwrite stylesheets/style.css 
+2014-08-07 06:13:14     error sass/style.scss (Line 266: Invalid CSS after "		color": expected ";", was ":#BFBFBF;")
+2014-08-07 06:13:14 overwrite stylesheets/style.css 
+2014-08-07 06:13:16 overwrite stylesheets/style.css 
+2014-08-07 06:25:42 overwrite stylesheets/style.css 
+2014-08-07 06:35:18 overwrite stylesheets/style.css 
+2014-08-07 07:12:20 overwrite stylesheets/style.css 
+2014-08-07 07:12:52 overwrite stylesheets/style.css 
+2014-08-07 07:17:22 overwrite stylesheets/style.css 
+2014-08-07 07:50:06 overwrite stylesheets/style.css 
+2014-08-07 07:51:10 overwrite stylesheets/style.css 
+2014-08-07 07:51:28 overwrite stylesheets/style.css 
+2014-08-07 07:51:49 overwrite stylesheets/style.css 
+2014-08-07 07:52:10 overwrite stylesheets/style.css 
+2014-08-07 07:52:41 overwrite stylesheets/style.css 
+2014-08-07 07:53:48 overwrite stylesheets/style.css 
+2014-08-07 07:56:26 overwrite stylesheets/style.css 
+2014-08-07 07:56:44 overwrite stylesheets/style.css 
+2014-08-07 07:58:45 overwrite stylesheets/style.css 
+2014-08-07 07:59:19 overwrite stylesheets/style.css 
+2014-08-07 08:12:23 identical stylesheets/font-awesome.css 
+2014-08-07 08:12:24 identical stylesheets/style.css 
+2014-08-07 08:12:43 overwrite stylesheets/font-awesome.css 
+2014-08-07 08:12:44 overwrite stylesheets/style.css 
+2014-08-07 08:13:37 overwrite stylesheets/font-awesome.css 
+2014-08-07 08:13:38 overwrite stylesheets/style.css 
+2014-08-07 08:15:16 overwrite stylesheets/style.css 
+2014-08-07 08:15:34 overwrite stylesheets/style.css 
+2014-08-07 08:15:45 overwrite stylesheets/style.css 
+2014-08-07 08:16:00 overwrite stylesheets/style.css 
+2014-08-07 08:16:12 overwrite stylesheets/style.css 

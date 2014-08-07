@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BriceShatzer.com | Tools</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>BriceShatzer.com | Development</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
@@ -14,10 +15,42 @@
 <body>
     <div data-role="header">
         <div id="navigation">
-            <a href="#development_nav">Development</a> | <a href="/creative.html">Creative</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+            <a href="/development.html">Development</a> | <a href="/creative.html">Creative</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
         </div>
-    </div>  
-    <div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div> 
+        <div class="quickInfo_open-arrow"><span>Info</span></div>
+    </div> 
+    <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+        <div class="ui-body">
+            <p>Quick Info</p>
+            <p>other things</p>
+            <div class="list-group">
+                <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+                <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+            </div>
+            <br>
+
+            <ul data-role="listview">
+                <li><span class="fa fa-envelope" style="font-size:1.8em;"></span> <span style="vertical-align:top">Brice.Shatzer@gmail.com</span></li>
+                <li style="line-height:2em;"><span class="fa fa-mobile" style="font-size:2.6em;margin:0 .4em"></span> <span style="vertical-align:top;margin:0 .2em">319-239-2470</span></li>
+                <li style="overflow:hidden;">
+                    <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
+                    <div style="float:right;width:9em;text-align:center;">
+                        Carthage College<br>
+                        <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
+                    </div>
+                </li>
+                <li style="text-align:center;">
+                    <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
+                    <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
+                    <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
+                </li>
+            </ul>
+
+            <br>
+
+        </div>
+        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+    </div> 
 
 
 <section data-role="page">
@@ -27,6 +60,7 @@
 var $container = $('#developmentContent');
 //$('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
 
+//85% sure this function is never used anywhere anymore ====
 function buildDevContent(){ 
     $.each(filtered_portfolio, function(){
        
@@ -52,8 +86,11 @@ function buildDevContent(){
     });
     //$container.appendTo('#toolList')
 }  
+//85% sure this function is never used anywhere anymore ====
+
 var tech_list=[];
-var portfolio_json;
+var portfolioPrincipal_json;
+var portfolioMaintained_json;
 function createTechList(){
     _.forEach(tech_json, function(obj) { 
         if(obj.childItems){
@@ -66,23 +103,11 @@ function createTechList(){
 
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from development.html");
     var techLoad = new $.Deferred();
-    var portfolioLoad = new $.Deferred();
     var url = $.mobile.path.getLocation();
-    var query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
+    var query; 
+    if(/\?/.test(url)){ query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
+    }else{ query = false }
 
-
-if( /development.html/.test($.mobile.path.getLocation()) ){
-
-//--check for & load required data 
-    if(!portfolio_json){ 
-        $.getJSON('/portfolio.json', function(data) { 
-            portfolio_json = data;
-          console.log('portfolio_json loaded via development.html' );            
-            portfolioLoad.resolve();
-        }) 
-    }else{ portfolioLoad.resolve(); }
-
-    //.then( function(){console.log('placeholder for maintainer data load')}, function(){console.log('Woah bro....something screwed up when loading /portfolio.json')})
 
     if(!tech_json){
         $.getJSON('/tech.json', function(data) {
@@ -92,70 +117,165 @@ if( /development.html/.test($.mobile.path.getLocation()) ){
         });
     }else{ techLoad.resolve() }
 
-$.when.apply($, [techLoad,portfolioLoad,] ).done(function(){ console.log('all JSON files loaded');
-    //------------------------------------
-    //pluck what's needed and build the page    
 
+if( /development.html/.test($.mobile.path.getLocation()) ){
+    if(!query){
+        console.log('no query');
+        $.when(techLoad).done(function(){ 
+            console.log('tech_json loaded deferred caught');
+            function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }
+            //--
+                // in addition to the array, the "topic" of the nav menu should also be passed into to the function. This will assist in building the links.        
 
-    //--create var tech_list
-    _.forEach(tech_json, function(obj) { 
-        if(obj.childItems){
-            _.forEach(obj.childItems, function(child) { tech_list.push(child) });
-        }else{ tech_list.push(obj) } 
-    }); 
+            //var $panelList = $('<ul data-role="listview"></ul>');
+            var tech_blocks = [];// = $('<div></div>');
 
-    var relevantTech = _.find(tech_list, function(tech){ return tech.name.toLowerCase() == query.toLowerCase()  });
-    console.dir(relevantTech);
+            $.each(tech_json, function(i) {
+                
+                var $tech_class = $('<div class="ui-body"></div>');
 
-    var portfolioExamples = _.filter(portfolio_json, function(obj) { 
-        var match;
-            $.each(obj.tech, function(){
-                if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
-            }) 
-        return match === true;
-    });
+                if(this.childItems){
+                    $tech_class.append('<h2>'+this.name+'</h2>')
+                    var $listOfChildItems = $('<ul></ul>');
+                    $.each(this.childItems, function() {
+                        var childObject = this;
+                        generateDisplayValues(childObject);
+                        $('<li></li>')
+                            .append( '<h3><a href="/development.html?'+childObject.url+'">'+childObject.name+'</a></h3>' )
+                            .appendTo( $listOfChildItems );
+                        });
+                    $tech_class.append( $listOfChildItems );
+                } else {
+                    generateDisplayValues(this);
+                    $tech_class.append( '<h2><a href="/development.html?'+this.url+'">'+this.name+'</a></h2>' );
+                }
+                 tech_blocks.push( $tech_class );
 
-    var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#developmentContent');
-    if( !$workspace.html() ){ 
-        $workspace.append('<h1>'+relevantTech.name+'</h1>'); 
-        if(relevantTech.notes){$workspace.append('<p>'+relevantTech.notes+'</p>'); }
-        if(portfolioExamples.length){
-            var $priorWork = $('<div><h2>Prior work utilizing this technology</h2></div>')
-            $.each(portfolioExamples, function(i, obj) {
-                //var $example = $('<a href="#">'+obj.name+'</a>')
-                $('<a href="#">'+obj.name+'</a><br>').appendTo($priorWork);
             });
-            $priorWork.appendTo($workspace);
-        }
-    }
-    
+            $tech = $('<div class="ui-grid-a ui-responsive"></div>')
+            
+            $.each(tech_blocks, function(i) { 
+                var className = i%2==0 ? "ui-block-a" : "ui-block-b" ;
+                $('<div class='+className+'></div>').append(this).appendTo($tech);
+            });
+           
+            $tech.appendTo('#developmentContent');
+        });
+  
+    }else{//
+        //--check for & load required data 
+        var portfolioPrincipal_Load = new $.Deferred();
+        var portfolioMaintained_Load = new $.Deferred();
 
-//-- make tech all lower case 
-/*
-_.each(portfolio_json, function(obj){ 
-    $.each(obj.tech, function(n,item){
-        obj.tech.splice(n,1,item.toLowerCase())
-    })
-})    
-*/
-    //.replaceWith('<h1>'+relevantTech.name+'</h1>' )
-    /*
-    .append('<h1>'+relevantTech.name+'</h1>')
-    .enhanceWithin()
+        if(!portfolioPrincipal_json){ 
+            $.getJSON('/portfolio_principal.json', function(data) { 
+                portfolioPrincipal_json = data;
+              console.log('portfolioPrincipal_json loaded via development.html' );            
+                portfolioPrincipal_Load.resolve();
+            }) 
+        }else{ portfolioPrincipal_Load.resolve(); }
+        //.then( function(){console.log('placeholder for maintainer data load')}, function(){console.log('Woah bro....something screwed up when loading /portfolio_principal.json')})
 
-    /*
-    if(relevantTech.notes){
+        if(!portfolioMaintained_json){
+            $.getJSON('/portfolio_maintained.json', function(data) { 
+                portfolioMaintained_json = data;
+              console.log('portfolioMaintained_json loaded via development.html' );            
+                portfolioMaintained_Load.resolve();
+            }) 
+        }else{ portfolioMaintained_Load.resolve(); }        
+        
+        if(!tech_json){
+            $.getJSON('/tech.json', function(data) {
+                tech_json = data;
+                console.log('tech_json loaded via development.html' );
+                techLoad.resolve();
+            });
+        }else{ techLoad.resolve() }
 
-    }else{}
-    */
 
-    //------------------------------------
-    })
-
+        $.when.apply($, [techLoad,portfolioPrincipal_Load,portfolioMaintained_Load] ).done(function(){ console.log('all JSON files loaded');
+            //------------------------------------
+            //after loads are done, pluck what's needed and build the page    
 
 
+            //--create var tech_list
+            _.forEach(tech_json, function(obj) { 
+                if(obj.childItems){
+                    _.forEach(obj.childItems, function(child) { tech_list.push(child) });
+                }else{ tech_list.push(obj) } 
+            }); 
 
-}
+            var relevantTech = _.find(tech_list, function(tech){ return tech.name.toLowerCase() == query.toLowerCase()  });
+            console.dir(relevantTech);
+
+            var portfolioExamples = _.filter(portfolioPrincipal_json, function(obj) { 
+                var match;
+                    $.each(obj.tech, function(){
+                        if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
+                    }) 
+                return match === true;
+            });
+
+            var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#developmentContent');
+            if( !$workspace.html() ){ 
+                $workspace.append('<h1>'+relevantTech.name+'</h1>'); 
+                if(relevantTech.notes){$workspace.append('<p class="notes">'+relevantTech.notes+'</p>'); }
+                if(portfolioExamples.length){
+                    var $allPriorWork = $('<div class="ui-grid-a ui-responsive"><h2>Prior Work Utilizing This Technology:</h2></div>');
+                    
+                    var $principalWork = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Principally Involved in Creation</h3><ul></ul></div>');
+                    
+                    var $maintaince = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Projects I Helped to Maintain</h3><ul><li>taco</li><li>taco</li> <li>taco</li></div>');
+                    
+                    $.each(portfolioExamples, function(i, obj) {
+                        //var $example = $('<a href="#">'+obj.name+'</a>')
+                        $('<li><a href="/work.html?'+obj.name+'">'+obj.name+'</li>').appendTo( $principalWork.children('ul') );
+                    });
+
+                    $('<div class="ui-block-a"></div>')
+                        .append( $principalWork )
+                        .appendTo($allPriorWork);
+                    //$('<div class="ui-block-a"></div>')
+                        //.append($principalWork)
+                        //.appendTo($allPriorWork);            
+                        //.appendTo('<div class="ui-block-a"><h3>Projects I had principal involvement</h3></div>')
+                        
+                    $('<div class="ui-block-b">')
+                        .append($maintaince)
+                        .appendTo($allPriorWork);
+
+                    
+                    $allPriorWork.appendTo($workspace);
+                }
+            }
+            
+
+        //-- make tech all lower case 
+        /*
+        _.each(portfolioPrincipal_json, function(obj){ 
+            $.each(obj.tech, function(n,item){
+                obj.tech.splice(n,1,item.toLowerCase())
+            })
+        })    
+        */
+            //.replaceWith('<h1>'+relevantTech.name+'</h1>' )
+            /*
+            .append('<h1>'+relevantTech.name+'</h1>')
+            .enhanceWithin()
+
+            /*
+            if(relevantTech.notes){
+
+            }else{}
+            */
+
+            //after loads are done, pluck what's needed and build the page           
+            //------------------------------------
+        })
+    }//added
+}//orginal
+//----
+
 
 });    
 </script>

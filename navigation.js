@@ -11,22 +11,24 @@ $.mobile.defaultPageTransition = "slide";
 
 var skills;
 function navBarIntialization(){
-
 	$('a.current').removeClass('current');
-	var $navItems = $('#navigation a');
-	$navItems.eq(1).attr('href', '/creative.html');
-	$navItems.eq(2).attr('href', '/tools.html');
-	if( /tools.html/.test($.mobile.path.getLocation()) ){
-		$('a[href="/tools.html"]').removeAttr('href').addClass('current');
+	var $navItems = $('#navigation a')
+	//.not('');
+	$.each(['/development.html','/creative.html','/tools.html','#about'], function(i, url) { $navItems.eq(i).attr('href',url) });
+	if( /development.html/.test($.mobile.path.getLocation()) ){
+		$('a[href="/development.html"]').removeAttr('href').addClass('current');
 	}
 	if(/creative.html/.test($.mobile.path.getLocation()) ){
 		$('a[href="/creative.html"]').removeAttr('href').addClass('current');	
+	}
+	if(/tools.html/.test($.mobile.path.getLocation()) ){
+		$('a[href="/tools.html"]').removeAttr('href').addClass('current');	
 	} 
 }
-function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }
+/*function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }
 function buildMenuItems(array,topic){
-	/* in addition to the array, the "topic" of the nav menu should also be passed into to the function. This will assist in building the links. 		
-	*/
+	// in addition to the array, the "topic" of the nav menu should also be passed into to the function. This will assist in building the links. 		
+
 	var $panelList = $('<ul data-role="listview"></ul>');
 
 	$.each(array, function() {
@@ -41,7 +43,7 @@ function buildMenuItems(array,topic){
 	//				.append( '<a href="#">'+childObject.name+'</a>' )
 	//-- points to the page and adds a hash to drive that page's functionality
 	//				.append( '<a href="/'+topic+'.html#'+encodeURIComponent(childObject.name)+'">'+childObject.name+'</a>' )
-					.append( '<a href="/'+topic+'.html?'+encodeURIComponent(childObject.name)+'">'+childObject.name+'</a>' )				
+					.append( '<a href="/development.html?'+encodeURIComponent(childObject.name)+'">'+childObject.name+'</a>' )				
 					.appendTo( $listOfChildItems );
 
 				});
@@ -57,10 +59,11 @@ function buildMenuItems(array,topic){
 		$panelList.append($menuItem)
 	});
 		
-	$panelList.appendTo( document.getElementById(topic+"_nav") );	
-	$( document.getElementById(topic+"_nav") ).enhanceWithin(); 
-}
+	$panelList.appendTo( '#developmentContent' );	
+	$('#developmentContent').enhanceWithin(); 
+}*/
 
+/*
 if(!tech_json){
 	$.getJSON('/tech.json', function(data) {
 		buildMenuItems(data,'development');
@@ -68,6 +71,7 @@ if(!tech_json){
 		console.log('tech_json loaded via navigation.js' );
 	});
 }
+*/
 navBarIntialization();
 console.log("function navBarIntialization() has been fired from navigation.js");
 
@@ -79,11 +83,41 @@ console.log("function navBarIntialization() has been fired from navigation.js");
 	tools_json = data;
 });*/
 
+
+
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {
 	navBarIntialization();
 	console.log("function navBarIntialization() has been fired from navigation.js pagecontainerchange event"); 
 });  
 
+$("body").on("click","div.quickInfo_close-arrow, div.quickInfo_open-arrow", function(){ 
+	$("#quickInfo").panel( "toggle" );
+})
+
+$openArrow = $('div.quickInfo_open-arrow');
+$( "body" ).on({
+	panelbeforeopen:function() { $openArrow.addClass('panel-open') },
+	panelbeforeclose:function(){ $openArrow.removeClass('panel-open') }
+})
+
+/*$( "#quickInfo" ).on({
+		beforeclose:function(){$('div.quickInfo_open-arrow.panel-open').removeClass('panel-open');console.log('panel closed') },
+		beforeopen:function(){$('div.quickInfo_open-arrow').addClass('panel-open');console.log('panel opened')}
+});
+$("body").on("beforeclose","#quickInfo",function(){
+	$openArrow.removeClass('panel-open');
+	console.log('"beforeclose event fired"')
+})
+
+$("body").on("beforeopen","#quickInfo",function(){
+	$openArrow.addClass('panel-open');
+	console.log('"beforeopen event fired"')
+});
+*/
+
+
+	//"beforeclose", function( event, ui ) {$('div.quickInfo_open-arrow.panel-open').removeClass('panel-open')} );
+//$( "#quickInfo" ).on( "beforeopen", function( event, ui ) {$('div.quickInfo_open-arrow').addClass('panel-open')} );
 //--tools page
 /*	if( /tools.html/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
 	    console.log('loading tools.json');

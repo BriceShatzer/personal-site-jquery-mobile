@@ -4,6 +4,7 @@
 <head>
 	<title>BriceShatzer.com</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/stylesheets/style.css" />
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">
 	<!-- <link rel="stylesheet" href="/utilities/font-awesome/css/font-awesome.min.css" /> -->
@@ -25,8 +26,19 @@ function test(fact){
 <div id="navigation">
 		<a href="#development_nav">Development</a> | <a href="/creative.html">Creative</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
 	</div>
-</div>	
-	<div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>	
+</div>
+<div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+	<h1>Quick Info</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. </p>
+	<ul>
+		<li><a href="">Ut enim ad minim veniam</a></li>
+		<li><a href="">quis nostrud exercitation</a></li>
+		<li><a href="">ullamco laboris nisi</a></li>
+	</ul>
+</div>			
+
+<div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div>	
 
 
 <!-- Start of first page -->
@@ -35,7 +47,7 @@ function test(fact){
 		<h1>Home</h1>
 		<p><a href="/tools">Link to Tools page</a></p>
 		<p>This is the starting home page.<br></p>
-		<p><a href="#development">Show/Hide Tech Menu</a></p>
+		<p><a href="#development_nav">Show/Hide Tech Menu</a></p>
 		<p style="margin-top:1200px;">making the page scroll</p>
 	</div><!-- /content -->
 
@@ -51,7 +63,7 @@ function test(fact){
 <section data-role="page" id="taco">
 
 	<div role="main" class="ui-content">
-		<h1 style="float:left;"><a href="#nav">Show/Hide Tech Menu</a></h1>
+
 		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.<i class="fa fa-bullhorn" style="font-size:24px;color:blue"></i> </p>
 		<p><a href="#home">Back to home</a></p>
 	</div><!-- /content -->

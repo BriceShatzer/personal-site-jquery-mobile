@@ -1,8 +1,21 @@
 @import "compass";
 @import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "font-awesome.scss";
 //@import "compass/typography/links/link-colors";
 //link-colors($normal, $hover, $active, $visited, $focus)
-section div.ui-panel-wrapper,body {background-color: #F2F2F2 !important}
+@mixin font_droid{font-family: "Droid Sans", "sans-serif";}	
+@mixin font_lato{font-family:lato,"Droid Sans", "sans-serif";}
+
+body{@include font_lato
+	 //font-family:lato,"Droid Sans", "sans-serif" !important ;
+	//a{ font-family: "Droid Sans", "sans-serif" !important ; }
+}
+
+section div.ui-panel-wrapper,body {
+	background-color: #F2F2F2 !important;
+}
 //#F9F9F9  #F2F2F2
 
 //darks - #1F1F1F, #2A2A2A
@@ -36,11 +49,19 @@ div[data-role="header"] {
 	background-color: #2A2A2A;
 	color: #727272;
 	a {
-		color:#BFBFBF !important;
+		@include font_droid;
+		//font-family: "Droid Sans", "sans-serif";
 		text-decoration: none;
+		color:#BFBFBF;
+		&:visited{color:#BFBFBF;}
+		&.current,&:hover{color:#727272;}
+		&.current{cursor:default}
 	}
-	a:hover {color:#727272 !important;}
-
+	/*
+	a, a:visited { color:#BFBFBF;}
+	a:hover {color:#727272;}
+	a.current{color:#727272;cursor:default;}
+	*/
 }
 
 #sectionNav{}
@@ -48,20 +69,176 @@ div[data-role="header"] {
 div.ui-page-active,
 section.ui-page-active{
 	margin-top:45px !important;
+h1,h2,h3{@include font_droid}
 	h1 {
+		//font-family: "Droid Sans", "sans-serif";		
 		font-size: 2em;
 		font-weight: bold;
 	}
 	h2{
-		font-size: 1.5em;
+		//font-family: "Droid Sans", "sans-serif";		
+		font-size: 1.6em;
+		//font-size: 1.5em;
 		border-bottom: 1px solid #DDD;
+
+	}
+	h3{
+		//font-family: "Droid Sans", "sans-serif";		
+		font-size: 1.3em;
+		line-height: 1.3em;
 	}
 }
-span.strong{font-weight:bold}
 
+//Maybe make this link styling more universal? 
+a[data-role="none"]{
+	//color:#BFBFBF !important;
+	color:#727272 !important;
+	//text-decoration:none;
+	//line-height: 1.6em;
+	margin-bottom: 5px;
+	&:hover{color:#2A2A2A !important;}
+}
+/*
+a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
+}
+*/
 
+#developmentContent{
+	h1 {
+		// font-family: "Droid Sans", "sans-serif";		
+		float:left;
+		// font-size: 2em;
+		// font-weight: bold;
+		margin-right:0.8em;
+	}
+	h2{
+		// font-family: "Droid Sans", "sans-serif";		
+		// font-size: 1.6em;
+		text-align: center;
+		border-bottom: none;
+	}
+	h3{
+//		font-family: "Droid Sans", "sans-serif";		
+		text-align:center;
+//		font-size: 1.3em;
+//		line-height: 1.3em;
+		padding-bottom:2px;
+		border-bottom: 1px solid #DDD;
+		margin-bottom: 4px;
+
+	}
+	a{	font-weight:normal;
+		color:#727272 !important;
+		text-decoration:none;
+		line-height: 1.1em;
+		//margin-bottom: 5px;
+		&:hover{text-decoration:underline}
+	}
+	//a:hover{text-decoration:underline}
+	p.notes{
+		font-size:1.1em;
+		line-height: 1.1em;
+		margin-bottom: 1em;
+	}
+	div.ui-grid-a.ui-responsive{
+		clear:both;
+		>div{padding:1em;margin-top:0.8em;}
+		
+		div.ui-body.ui-body-a.ui-corner-all{
+			//padding:1em;margin-top:0.8em;
+			ul li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
+			ul li{ text-indent:5px;margin-bottom:1px; }
+		}
+	}
+}
+section[data-url="/development.html"] #developmentContent{
+	h2,h3{text-align:left;}
+	h2{
+		border-bottom: 1px solid #DDD;
+		margin-bottom: 4px;
+	}
+	h3{border-bottom: none;}
+	div.ui-body{
+		padding-left:2em;
+		padding-right:6em;
+		@media screen and (max-width:992px){padding-right:2em;}
+		@media screen and (max-width:640px){padding-left:0.4em;padding-right:0.4em;}
+	}
+}
+
+span.strong{
+	@include font_droid;
+	font-weight:bold;
+}
 
 /* navigation panel styling */
+div.quickInfo_open-arrow,div.quickInfo_close-arrow{
+	cursor:pointer;
+	width: 0; 
+	height: 0; 	
+	span{
+		@include font_droid;
+		@include user-select(none);
+		color:#1b1b1b;
+		color:#727272;
+		font-weight: bold;
+	}
+}
+
+
+div.quickInfo_open-arrow{
+	@include single-transition(left,575ms,ease-out,false);
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	//border-left:30px solid #333333; 
+	border-left:30px solid #2A2A2A; 
+	position:fixed;
+	left:0;
+	top:50%;
+	//margin-top:-25px;
+	margin-top:-60px;
+	&:hover{border-left-color: #2f2f2f;
+		//#727272;
+	}
+	span{
+		@include rotate(90deg);
+		@include apply-origin(55% 20% 0, false);
+		float:right;
+	}
+	&.panel-open{
+		left:-32px;
+	}
+}
+
+div.quickInfo_close-arrow{
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-right:30px solid #333333; 
+	position:absolute;
+	right:0;
+	top:50%;
+	margin-top:-105px;
+	&:hover{border-right-color: #2f2f2f
+		//#727272;
+	}
+	span{
+		@include rotate(270deg);
+		@include apply-origin(45% 25% 0, false);
+		float:left;
+	}
+}
+
+/*
+@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset);
+
+div.panel-button{}
+
+
+
+  border-bottom{1px solid #121212}
+  rgba(255, 255, 255, 0.07) 
+*/
+
 @mixin navPanel {
 	top:45px;
 	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
@@ -78,11 +255,35 @@ span.strong{font-weight:bold}
 		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
 	}
 }
+#quickInfo{//@include navPanel
+	top:45px;
+	border-top:1px solid #1F1F1F;
+	div.ui-panel-inner{@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset)}
+	ul li{margin:0.5em 0;}
+	p{@include font_lato}
+	span.fa{
+	//	font-size: 3em;
+		color:#BFBFBF;
+	}
+	a span.fa{
+		//float:left;
+		text-align:center;
+		font-size: 3em;
+		color:#BFBFBF;
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+		&:visited{color:#BFBFBF}
+		&:hover{color:#727272}
+	}
+	span.fa-mobile{@include rotate(330deg);}
 
+}
+
+/*
 #development_nav {@include navPanel}
 #creative_nav {@include navPanel}
 #tools_nav {@include navPanel}
-
+*/
 
 
 //section[data-url="/tools.html"]{

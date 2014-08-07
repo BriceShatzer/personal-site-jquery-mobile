@@ -1,0 +1,65 @@
+[
+
+]
+  - Workflow/Productivity
+    - SVN - TortoiseSVN Client
+    
+    - LiquidPlanner
+    - Redmine
+    - Trello
+    - Workflowy
+    - astrid
+    
+    - - Wireframing Apps  -
+      - Lucidchart
+      - Lovely Charts
+      - Balsamiq 
+    
+    - Google Apps 
+    - Microsoft Office Suite
+    - Apache OpenOffice
+    - celtex
+    
+  - Design / Asset Creation
+    - Adobe Creative Suites (4, 5.5, 6)
+      - Photoshop
+    - GIMP
+    - Pixlr
+    - SketchUp
+    - Scribus
+  - Coding / Development
+    - Notepad++
+    - Compass
+    - Microsoft Visual Studio Express
+    - Adobe Dreamweaver
+    - - FTP Clients -
+      - WinSCP
+      - Filezilla
+      - CuteFTP
+    - Browser Extensions / Tools
+      - Chrome
+        - Chrome Developer Tools
+        - Firebug Lite
+        - ColorZilla
+        - Tape
+      - Firefox
+        - Firebug
+        - Web Developer Extension
+        - Web Developer's Toolbox
+        - ColorZilla
+      - Internet Explorer
+        - IE Developer Tools 
+  - Audio / Video Production
+    - Audacity
+    - Adobe Audition
+    - Pinnacle Studio
+    - Final Cut Pro
+    - Windows Movie Maker
+    - Apple iMovie
+  - Miscellaneous Applications / Services
+    - Google Analytics
+    - GroupMail
+    - MailChimp
+    - ArcGIS 
+- Skills
+- Client/Purpose/Employer

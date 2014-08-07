@@ -20,7 +20,7 @@
 			]
 		},
 
-		{	"name":"Client-Side scripting",
+		{	"name":"Client-Side Scripting",
 			"childItems":[
 				{
 				"name":"JavaScript",
@@ -30,6 +30,10 @@
 				"name":"jQuery",
 				"notes":""
 				},
+				{
+				"name":"Google Maps JavaScript API",
+				"notes":""
+				},				
 				{	
 				"name":"Underscore.js",
 				"notes":""
@@ -125,18 +129,6 @@
 				"notes":""
 			}]
 
-		},
-		{	"name":"Mapping/Geolocation",
-			"childItems":[
-				{
-				"name":"Google Maps JavaScript API",
-				"notes":""
-				},
-				{
-				"name":"ArcGIS",
-				"notes":""
-				}
-			]
 		},
 		{	"name":"Other Services",
 			"childItems":[

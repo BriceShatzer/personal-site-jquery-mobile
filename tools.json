@@ -4,8 +4,8 @@
 		{	"name":"Adobe Audition 3"	},		
 		{	"name":"Apple iMovie"	},	
 		{	"name":"Audacity"	},
-		{	"name":"Pinnacle Studio 10"	},
-		{	"name":"Final Cut Pro 6"	}
+		{	"name":"Final Cut Pro 6"	},		
+		{	"name":"Pinnacle Studio 10"	}
 		]
 	},
 	{	"name":"Graphic Design",
@@ -38,14 +38,26 @@
 		{	"name":"Sublime Text"	}
 		]
 	},
-
+	{	"name":"Mapping / 3D Modeling",
+		"childItems":[
+		{"name":"ArcGIS",
+		"notes":"A <a href='http://www.esri.com/software/arcgis' target='_blank' data-role='none'>desktop application</a> that enables the creation, maniplulation and analysis of geospatial data."
+		},
+		{"name":"Google SketchUp 8",
+		"notes":"A 3D drawing <a href='http://www.sketchup.com/products/sketchup-make' target='_blank' data-role='none'>tool</a> that is now currently known as \"SketchUp Make\""
+		},
+		{"name":"USGS/EROS EarthExplorer",
+		"notes":"An <a href='http://earthexplorer.usgs.gov/' target='_blank' data-role='none'>online utility</a> provided by the U.S. Geological Survey's Earth Resources Observation and Science Center which allows citizens to access to nearly all of the maps they produce and various data sets they collect."
+		}
+		]
+	},
 	{	"name":"Productivity",
 		"childItems":[
 		{	"name":"Apache OpenOffice"	},
-		{	"name":"Google Apps"	},
 		{	"name":"Celtex",
 			"notes":"A <a href='https://www.celtx.com' target='_blank' data-role='none'>tool</a> specializing in script writing."	
 		},
+		{	"name":"Google Apps"	},		
 		{	"name":"Microsoft Office Suite",
 			"notes":""
 		},
@@ -57,10 +69,10 @@
 	{	"name":"Version Control",
 		"childItems":[
 		{	"name":"SVN",
-			"notes":"The majority of the work I do for Links Technology is managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client."
+			"notes":"The majority of the work I did for Links Technology was managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client."
 		},
 		{	"name":"Git",
-			"notes":"Most of my personal work that is version controlled is managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues."
+			"notes":"Most of my personal work is version controlled and managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues."
 		}]
 	},
 	{	"name":"Web Analytics & Ad Management ",
@@ -76,7 +88,7 @@
 	{	"name":"Web Development Tools",
 		"childItems":[
 		{	"name":"Compass.app",
-			"notes":"An <a href='http://compass.kkbox.com/' target='_blank' data-role='none'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank' data-role='none'>Compass open-source CSS Authoring Framework."
+			"notes":"An <a href='http://compass.kkbox.com/' target='_blank' data-role='none'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank' data-role='none'>Compass</a> open-source CSS authoring framework."
 		},
 		{	"name":"CuteFTP"	},
 		{	"name":"Filezilla"	},
@@ -94,19 +106,19 @@
 		{ "name":"WinSCP" }		
 		]
 	},
-	{	"name":"Wireframing",
+	{	"name":"Wireframing" ,
 		"childItems":[
-		{	"name":"Lucidchart"	},
+		{	"name":"Balsamiq"	},		
 		{	"name":"Lovely Charts"	},
-		{	"name":"Balsamiq"	}
+		{	"name":"Lucidchart"	}
 		]
 	},	
-	{	"name":"Workflow/Project Management",
+	{	"name":"Workflow / Project Management",
 		"childItems":[
+		{	"name":"Basecamp"	},
 		{	"name":"LiquidPlanner"},
 		{	"name":"Redmine"	},
-		{	"name":"Trello"		},
-		{	"name":"Basecamp"	}
+		{	"name":"Trello"		}
 		]
 	}
 ]	

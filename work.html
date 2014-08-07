@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BriceShatzer.com | Work</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/utilities/lodash.min.js"></script>
+    <script src="/utilities/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+</head>
+<body>
+    <div data-role="header">
+        <div id="navigation">
+            <a href="/development.html">Development</a> | <a href="/creative.html">Creative</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+        </div>
+    </div>  
+    <div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div> 
+
+
+<section data-role="page">
+    <div role="main" class="ui-content" id="portfolioContent" ></div><!-- /content -->
+
+<script type="text/javascript">
+var nacho;
+
+var $container = $('#portfolioContent');
+
+//var tech_list=[];
+var portfolio_json;
+var tech_json;
+
+
+
+$( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from development.html");
+    var portfolioLoad = new $.Deferred();
+    var techLoad = new $.Deferred();
+    var url = $.mobile.path.getLocation();
+    var query; 
+    if(/\?/.test(url)){ query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
+    }else{ query = false }
+
+if( /work.html/.test($.mobile.path.getLocation()) ){
+    if(!query){console.log('no query')}
+    else{
+    //--check for & load required data 
+        if(!portfolio_json){ 
+            $.getJSON('/portfolio_principal.json', function(data) { 
+                portfolio_json = data;
+              console.log('portfolio_json loaded via development.html' );            
+                portfolioLoad.resolve();
+            }) 
+        }else{ portfolioLoad.resolve(); }
+
+        if(!tech_json){
+        $.getJSON('/tech.json', function(data) {
+            tech_json = data;
+            console.log('tech_json loaded via development.html' );
+            techLoad.resolve();
+        });
+        }else{ techLoad.resolve() }        
+
+        $.when.apply($, [techLoad,portfolioLoad] ).done(function(){
+            //------------------------------------
+            //pluck what's needed and build the page    
+
+        /*
+            //--create var tech_list
+            _.forEach(tech_json, function(obj) { 
+                if(obj.childItems){
+                    _.forEach(obj.childItems, function(child) { tech_list.push(child) });
+                }else{ tech_list.push(obj) } 
+            }); 
+        */
+
+            var portfolioItem = _.find(portfolio_json, function(work){ return work.name.toLowerCase() == query.toLowerCase()  });
+            nacho=portfolioItem;
+
+        /*
+            var portfolioExamples = _.filter(portfolio_json, function(obj) { 
+                var match;
+                    $.each(obj.tech, function(){
+                        if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
+                    }) 
+                return match === true;
+            });
+        */
+
+            var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#portfolioContent');
+            if( !$workspace.html() ){ 
+                $workspace.append('<h1>'+portfolioItem.name+'</h1>'); 
+                if(portfolioItem.notes){$workspace.append('<p>'+portfolioItem.notes+'</p>'); }
+            }
+            
+
+
+            //------------------------------------
+            })
+
+
+        }
+
+    }
+
+});    
+</script>
+</section><!-- /page -->
+
+
+
+
+</body>
+<script type="text/javascript" src="/navigation.js"></script>
+</html>
