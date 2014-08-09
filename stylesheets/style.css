@@ -2121,6 +2121,9 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 #developmentContent a:hover {
   text-decoration: underline;
 }
+#developmentContent div.devTopic_top {
+  padding: 1em;
+}
 #developmentContent p.notes {
   font-size: 1.1em;
   line-height: 1.1em;
@@ -2278,17 +2281,17 @@ div.panel-button{}
 #quickInfo span.fa {
   color: #BFBFBF;
 }
-#quickInfo a span.fa {
+#quickInfo #icons a span.fa {
   text-align: center;
   font-size: 3em;
   color: #BFBFBF;
   margin-left: 0.2em;
   margin-right: 0.2em;
 }
-#quickInfo a span.fa:visited {
+#quickInfo #icons a span.fa:visited {
   color: #BFBFBF;
 }
-#quickInfo a span.fa:hover {
+#quickInfo #icons a span.fa:hover {
   color: #727272;
 }
 #quickInfo span.fa-mobile {

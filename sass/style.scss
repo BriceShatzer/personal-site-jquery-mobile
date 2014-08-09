@@ -135,6 +135,7 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 		&:hover{text-decoration:underline}
 	}
 	//a:hover{text-decoration:underline}
+	div.devTopic_top{padding:1em;}
 	p.notes{
 		font-size:1.1em;
 		line-height: 1.1em;
@@ -170,6 +171,8 @@ span.strong{
 	@include font_droid;
 	font-weight:bold;
 }
+
+
 
 /* navigation panel styling */
 div.quickInfo_open-arrow,div.quickInfo_close-arrow{
@@ -265,7 +268,7 @@ div.panel-button{}
 	//	font-size: 3em;
 		color:#BFBFBF;
 	}
-	a span.fa{
+	#icons a span.fa{
 		//float:left;
 		text-align:center;
 		font-size: 3em;
