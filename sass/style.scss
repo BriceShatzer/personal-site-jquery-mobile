@@ -89,6 +89,8 @@ h1,h2,h3{@include font_droid}
 	}
 }
 
+div.ui-content{padding: 0.5em 1.5em 1em 1.5em;}
+
 //Maybe make this link styling more universal? 
 a[data-role="none"]{
 	//color:#BFBFBF !important;
@@ -103,6 +105,36 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
 
+
+
+//section[data-url="/tools.html"]{
+#toolList{
+	padding:1em;
+	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
+	div.ui-collapsible-content a {font-weight:normal}
+//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+}
+#toolsInfo,
+#workExample{
+	padding:1em;
+	overflow:hidden;
+}
+
+#workExample{
+	div.techUsed{float:right;}
+	img{
+		max-width:40%;
+		max-height: 200px;
+		margin-right:1em;
+		vertical-align: middle;
+	}
+
+}
+
+
+
+
+#workExample,
 #developmentContent{
 	h1 {
 		// font-family: "Droid Sans", "sans-serif";		
@@ -128,14 +160,17 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 
 	}
 	a{	font-weight:normal;
-		color:#727272 !important;
+		//color:#727272 !important;
+		color:#727272;
 		text-decoration:none;
 		line-height: 1.1em;
 		//margin-bottom: 5px;
 		&:hover{text-decoration:underline}
 	}
 	//a:hover{text-decoration:underline}
-	div.devTopic_top{padding:1em;}
+	div.devTopic_top{
+		padding:1em;overflow:hidden
+	}
 	p.notes{
 		font-size:1.1em;
 		line-height: 1.1em;
@@ -149,6 +184,44 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 			//padding:1em;margin-top:0.8em;
 			ul li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
 			ul li{ text-indent:5px;margin-bottom:1px; }
+		}
+	}
+
+	div.backbutton{
+		a{
+			@include font_droid;
+			font-size: 1em;
+			color: #BFBFBF;
+			&:hover{color: #727272;}		
+			line-height: 1.5em;
+			font-weight: bold;
+			text-decoration: none;
+
+			
+			cursor: pointer;
+			
+			float:right;
+			position:relative;
+			right:-2em;
+			text-shadow: none;
+			padding:0.5em 1em;
+			/* position: absolute;
+			bottom: 16px;
+			right: 0px; 
+			padding: 6px 12px 6px 12px;
+			*/
+			background-color: #2A2A2A;
+			background-clip: padding-box;
+			border: 1px solid rgba(0, 0, 0, 0);
+			border-left: 0px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			span{vertical-align: top;}
+			span.fa{
+				font-weight: normal;
+				font-size: 1.5em;
+			//	margin:0 0.1em
+			}
 		}
 	}
 }
@@ -166,6 +239,19 @@ section[data-url="/development.html"] #developmentContent{
 		@media screen and (max-width:640px){padding-left:0.4em;padding-right:0.4em;}
 	}
 }
+
+#portfolioContent{
+	div.itemInfo{float:left;width:75%;}
+	div.techUsed{clear:none;width:20%;}
+	h1{
+		float:none;
+		margin-right:0;
+	}
+	p.notes{margin-top:0.5em;}
+
+}
+
+
 
 span.strong{
 	@include font_droid;
@@ -242,6 +328,7 @@ div.panel-button{}
   rgba(255, 255, 255, 0.07) 
 */
 
+/*
 @mixin navPanel {
 	top:45px;
 	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
@@ -258,40 +345,94 @@ div.panel-button{}
 		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
 	}
 }
+*/
 #quickInfo{//@include navPanel
 	top:45px;
 	border-top:1px solid #1F1F1F;
 	div.ui-panel-inner{@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset)}
-	ul li{margin:0.5em 0;}
+	div.ui-body{
+		padding-left:.08em;
+		padding-top:0
+	}
+	ul li{
+		@include font_lato;
+		font-weight: normal;
+		margin:0.5em 0;
+		a, a span, a span.fa{
+			color:#BFBFBF;
+			text-decoration: none;	
+			&:visited{color:#BFBFBF}
+			&:hover{color:#727272}
+		}
+	}
 	p{@include font_lato}
-	span.fa{
-	//	font-size: 3em;
+	span{
 		color:#BFBFBF;
 	}
-	#icons a span.fa{
+	#title{
+		margin-top:0;
+		margin-bottom:1em;
+		h1{
+			@include font_droid;
+			font-size:2em;
+			text-align:center;
+			font-weight: bold;
+		}
+	}
+	#resume{
+		a{font-weight:normal;}
+		line-height:1.8em;
+		span.fa{
+			font-size:1.8em;
+			margin:0 0.4em;
+		}
+		span:not(.fa){vertical-align:top;}
+	}
+	#email{
+		line-height:1.8em;
+		span.fa{
+			font-size:1.8em;
+			margin:0 0.4em;
+		}
+		span:not(.fa){
+			vertical-align:top;
+			font-size:0.8em;
+		}
+	}
+	#cellphone{
+		line-height:2em;
+		span.fa{
+			font-size:2.6em;
+			margin:0 0 0 0.1em;
+
+		}
+		a{	font-weight:normal;
+			vertical-align:top;
+			margin:0 0.2em;
+		}
+	}
+	#icons{
+		text-align:center;
+		padding-top:5px;
+		a span.fa{
 		//float:left;
 		text-align:center;
 		font-size: 3em;
-		color:#BFBFBF;
+		//color:#BFBFBF;
 		margin-left: 0.2em;
 		margin-right: 0.2em;
-		&:visited{color:#BFBFBF}
-		&:hover{color:#727272}
+		//&:visited{color:#BFBFBF}
+		//&:hover{color:#727272}
+		}
 	}
 	span.fa-mobile{@include rotate(330deg);}
 
 }
+
+
 
 /*
 #development_nav {@include navPanel}
 #creative_nav {@include navPanel}
 #tools_nav {@include navPanel}
 */
-
-
-//section[data-url="/tools.html"]{
-#toolList{
-	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
-	div.ui-collapsible-content a {font-weight:normal}
-//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
-}

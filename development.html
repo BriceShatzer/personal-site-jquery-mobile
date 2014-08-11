@@ -20,12 +20,12 @@
         <div class="quickInfo_open-arrow"><span>Info</span></div>
     </div> 
     <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
-        <div class="ui-body" style="padding-left:.08em;padding-top:0" itemscope itemtype ="http://schema.org/person">
+        <div class="ui-body" itemscope itemtype="http://schema.org/person">
             <ul data-role="listview">
-                <li style="margin-top:0;margin-bottom:1em;"><h1 style="text-align:center;font-size:2em;font-family:'Droid Sans',sans-serif;font-weight:bold;" itemprop="name">Brice Shatzer</h1></li>
-                <li style="line-height:1.8em"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o" style="font-size:1.8em;margin:0 0.4em"></span><span style="vertical-align:top;">View Resume<span></a></li>
-                <li style="line-height:1.8em;"><span class="fa fa-fw fa-envelope" style="font-size:1.8em;margin:0 0.4em"></span> <span style="vertical-align:top;font-size:0.8em;" itemprop="email">Brice.Shatzer@gmail.com</span></li>
-                <li style="line-height:2em;"><span class="fa fa-fw fa-mobile" style="font-size:2.6em;margin:0 0 0 0.1em"></span><a href="tel:+13192392470" style="vertical-align:top;margin:0 0.2em" itemprop="telephone">319-239-2470</a></span></li>
+                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
             <!--
                 <li style="overflow:hidden;">
                     <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
@@ -34,8 +34,8 @@
                         <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
                     </div>
                 </li>
-            -->
-                <li style="text-align:center;padding-top:5px;" id="icons">
+            --> 
+                <li style="" id="icons">
                     <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
                     <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
                     <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
@@ -46,10 +46,10 @@
 
         </div>
         <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
-    </div> 
+    </div><!-- end header --> 
 
 
-<section data-role="page">
+<section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" id="developmentContent" ></div><!-- /content -->
 
 <script type="text/javascript">
@@ -241,7 +241,7 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                             var $principalWork = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Principally Involved in Creation</h3><ul></ul></div>');              
 
                             $.each(portfolioExamples, function(i, obj) {
-                                $('<li><a href="/work.html?'+obj.name+'">'+obj.name+'</li>').appendTo( $principalWork.children('ul') );
+                                $('<li><a href="/work.html?'+encodeURIComponent(obj.name)+'">'+obj.name+'</li>').appendTo( $principalWork.children('ul') );
                             });
                         
                             $('<div class="'+ ( (maintenanceExamples.length)?"ui-block-a":"" ) +'"></div>')
@@ -250,7 +250,7 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                         }
                         
                         if(maintenanceExamples.length){
-                            var $maintenance = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Projects I Helped to Maintain</h3><ul></ul></div>');
+                            var $maintenance = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Helped to Maintain</h3><ul></ul></div>');
                             $.each(maintenanceExamples, function(i, obj) {
                                 $('<li><a href="'+obj.link+'">'+obj.name+'</li>').appendTo( $maintenance.children('ul') );
                             });
@@ -259,7 +259,9 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                                 .append($maintenance)
                                 .appendTo($allPriorWork);                                                  
                         }
+
                     $allPriorWork.appendTo($workspace);
+                    $workspace.append('<div class="backbutton"><a href="/development.html"><span class="fa fa-bars"></span> <span>Return to Technology List</span></a></div>');
                     }
                 }
                 //after loads are done, pluck what's needed and build the page           

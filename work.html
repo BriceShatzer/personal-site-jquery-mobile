@@ -6,22 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BriceShatzer.com | Work</title>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">
+    <link rel="stylesheet" href="/utilities/fancybox/jquery.fancybox.css" />       
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
 </head>
 <body>
     <div data-role="header">
         <div id="navigation">
             <a href="/development.html">Development</a> | <a href="/creative.html">Creative</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
         </div>
-    </div>  
-    <div id="development_nav" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true"></div> 
+        <div class="quickInfo_open-arrow"><span>Info</span></div>
+    </div> 
+    <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+        <div class="ui-body" itemscope itemtype="http://schema.org/person">
+            <ul data-role="listview">
+                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+            <!--
+                <li style="overflow:hidden;">
+                    <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
+                    <div style="float:right;width:9em;text-align:center;">
+                        Carthage College<br>
+                        <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
+                    </div>
+                </li>
+            --> 
+                <li style="" id="icons">
+                    <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
+                    <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
+                    <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
+                </li>
+            </ul>
+
+            <br>
+
+        </div>
+        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+    </div><!-- end header -->
 
 
-<section data-role="page">
+<section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" id="portfolioContent" ></div><!-- /content -->
 
 <script type="text/javascript">
@@ -35,7 +65,7 @@ var tech_json;
 
 
 
-$( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from development.html");
+$( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from work.html");
     var portfolioLoad = new $.Deferred();
     var techLoad = new $.Deferred();
     var url = $.mobile.path.getLocation();
@@ -77,8 +107,7 @@ if( /work.html/.test($.mobile.path.getLocation()) ){
         */
 
             var portfolioItem = _.find(portfolio_json, function(work){ return work.name.toLowerCase() == query.toLowerCase()  });
-            nacho=portfolioItem;
-
+nacho = portfolioItem;
         /*
             var portfolioExamples = _.filter(portfolio_json, function(obj) { 
                 var match;
@@ -89,10 +118,34 @@ if( /work.html/.test($.mobile.path.getLocation()) ){
             });
         */
 
-            var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#portfolioContent');
-            if( !$workspace.html() ){ 
-                $workspace.append('<h1>'+portfolioItem.name+'</h1>'); 
-                if(portfolioItem.notes){$workspace.append('<p>'+portfolioItem.notes+'</p>'); }
+            /*var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#portfolioContent');
+            console.log(query);*/
+            var $workspace = $('section[data-url="/work.html?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
+            if( !$workspace.html() ){
+                $content = $('<div id="workExample"></div>');
+
+                $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
+
+                if(portfolioItem.notes){
+                    $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); }
+
+                if(portfolioItem.tech){
+                    $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
+                    $.each(portfolioItem.tech, function() {
+                        $('<li><a href="/development.html?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
+                    });
+                    $content.append($techUsed);
+                
+                }
+                if(portfolioItem.media){
+                    $.each(portfolioItem.media, function() {
+                        $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                    });
+                }
+
+                console.log($workspace);
+                $workspace.append($content);
+                if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
             }
             
 

@@ -2086,6 +2086,10 @@ section.ui-page-active h3 {
   line-height: 1.3em;
 }
 
+div.ui-content {
+  padding: 0.5em 1.5em 1em 1.5em;
+}
+
 a[data-role="none"] {
   color: #727272 !important;
   margin-bottom: 5px;
@@ -2098,53 +2102,131 @@ a[data-role="none"]:hover {
 a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
+#toolList {
+  padding: 1em;
+}
+#toolList ul h1.ui-collapsible-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#toolList div.ui-collapsible-content a {
+  font-weight: normal;
+}
+
+#toolsInfo,
+#workExample {
+  padding: 1em;
+  overflow: hidden;
+}
+
+#workExample div.techUsed {
+  float: right;
+}
+#workExample img {
+  max-width: 40%;
+  max-height: 200px;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+#workExample h1,
 #developmentContent h1 {
   float: left;
   margin-right: 0.8em;
 }
+#workExample h2,
 #developmentContent h2 {
   text-align: center;
   border-bottom: none;
 }
+#workExample h3,
 #developmentContent h3 {
   text-align: center;
   padding-bottom: 2px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
+#workExample a,
 #developmentContent a {
   font-weight: normal;
-  color: #727272 !important;
+  color: #727272;
   text-decoration: none;
   line-height: 1.1em;
 }
+#workExample a:hover,
 #developmentContent a:hover {
   text-decoration: underline;
 }
+#workExample div.devTopic_top,
 #developmentContent div.devTopic_top {
   padding: 1em;
+  overflow: hidden;
 }
+#workExample p.notes,
 #developmentContent p.notes {
   font-size: 1.1em;
   line-height: 1.1em;
   margin-bottom: 1em;
 }
+#workExample div.ui-grid-a.ui-responsive,
 #developmentContent div.ui-grid-a.ui-responsive {
   clear: both;
 }
+#workExample div.ui-grid-a.ui-responsive > div,
 #developmentContent div.ui-grid-a.ui-responsive > div {
   padding: 1em;
   margin-top: 0.8em;
 }
+#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
   content: "-";
   position: relative;
   left: -5px;
   top: -1px;
 }
+#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
   text-indent: 5px;
   margin-bottom: 1px;
+}
+#workExample div.backbutton a,
+#developmentContent div.backbutton a {
+  font-family: "Droid Sans", "sans-serif";
+  font-size: 1em;
+  color: #BFBFBF;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  right: -2em;
+  text-shadow: none;
+  padding: 0.5em 1em;
+  /* position: absolute;
+  bottom: 16px;
+  right: 0px; 
+  padding: 6px 12px 6px 12px;
+  */
+  background-color: #2A2A2A;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-left: 0px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#workExample div.backbutton a:hover,
+#developmentContent div.backbutton a:hover {
+  color: #727272;
+}
+#workExample div.backbutton a span,
+#developmentContent div.backbutton a span {
+  vertical-align: top;
+}
+#workExample div.backbutton a span.fa,
+#developmentContent div.backbutton a span.fa {
+  font-weight: normal;
+  font-size: 1.5em;
 }
 
 section[data-url="/development.html"] #developmentContent h2, section[data-url="/development.html"] #developmentContent h3 {
@@ -2171,6 +2253,22 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
     padding-left: 0.4em;
     padding-right: 0.4em;
   }
+}
+
+#portfolioContent div.itemInfo {
+  float: left;
+  width: 75%;
+}
+#portfolioContent div.techUsed {
+  clear: none;
+  width: 20%;
+}
+#portfolioContent h1 {
+  float: none;
+  margin-right: 0;
+}
+#portfolioContent p.notes {
+  margin-top: 0.5em;
 }
 
 span.strong {
@@ -2263,6 +2361,24 @@ div.panel-button{}
   border-bottom{1px solid #121212}
   rgba(255, 255, 255, 0.07) 
 */
+/*
+@mixin navPanel {
+	top:45px;
+	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
+	div.ui-panel-inner>ul>li.ui-first-child>a{border-top:none;}
+	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+	ul a {background-color:#2a2a2a;}
+	ul a:hover {background-color: #333;}
+
+	ul a.ui-btn {padding-top:.5em; padding-bottom:.5em;font-size: 14px; }
+	ul a.ui-icon-carat-r:after { background:none;}
+		//background: url("Path to your image file") no-repeat scroll 0px 0px transparent;
+	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; 
+		//a.ui-btn-icon-left {font-size: 14px; }
+		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
+	}
+}
+*/
 #quickInfo {
   top: 45px;
   border-top: 1px solid #1F1F1F;
@@ -2272,27 +2388,86 @@ div.panel-button{}
   -moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0 inset;
   box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0 inset;
 }
+#quickInfo div.ui-body {
+  padding-left: .08em;
+  padding-top: 0;
+}
 #quickInfo ul li {
+  font-family: lato,"Droid Sans", "sans-serif";
+  font-weight: normal;
   margin: 0.5em 0;
+}
+#quickInfo ul li a, #quickInfo ul li a span, #quickInfo ul li a span.fa {
+  color: #BFBFBF;
+  text-decoration: none;
+}
+#quickInfo ul li a:visited, #quickInfo ul li a span:visited, #quickInfo ul li a span.fa:visited {
+  color: #BFBFBF;
+}
+#quickInfo ul li a:hover, #quickInfo ul li a span:hover, #quickInfo ul li a span.fa:hover {
+  color: #727272;
 }
 #quickInfo p {
   font-family: lato,"Droid Sans", "sans-serif";
 }
-#quickInfo span.fa {
+#quickInfo span {
   color: #BFBFBF;
+}
+#quickInfo #title {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+#quickInfo #title h1 {
+  font-family: "Droid Sans", "sans-serif";
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+#quickInfo #resume {
+  line-height: 1.8em;
+}
+#quickInfo #resume a {
+  font-weight: normal;
+}
+#quickInfo #resume span.fa {
+  font-size: 1.8em;
+  margin: 0 0.4em;
+}
+#quickInfo #resume span:not(.fa) {
+  vertical-align: top;
+}
+#quickInfo #email {
+  line-height: 1.8em;
+}
+#quickInfo #email span.fa {
+  font-size: 1.8em;
+  margin: 0 0.4em;
+}
+#quickInfo #email span:not(.fa) {
+  vertical-align: top;
+  font-size: 0.8em;
+}
+#quickInfo #cellphone {
+  line-height: 2em;
+}
+#quickInfo #cellphone span.fa {
+  font-size: 2.6em;
+  margin: 0 0 0 0.1em;
+}
+#quickInfo #cellphone a {
+  font-weight: normal;
+  vertical-align: top;
+  margin: 0 0.2em;
+}
+#quickInfo #icons {
+  text-align: center;
+  padding-top: 5px;
 }
 #quickInfo #icons a span.fa {
   text-align: center;
   font-size: 3em;
-  color: #BFBFBF;
   margin-left: 0.2em;
   margin-right: 0.2em;
-}
-#quickInfo #icons a span.fa:visited {
-  color: #BFBFBF;
-}
-#quickInfo #icons a span.fa:hover {
-  color: #727272;
 }
 #quickInfo span.fa-mobile {
   -webkit-transform: rotate(330deg);
@@ -2307,10 +2482,3 @@ div.panel-button{}
 #creative_nav {@include navPanel}
 #tools_nav {@include navPanel}
 */
-#toolList ul h1.ui-collapsible-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-#toolList div.ui-collapsible-content a {
-  font-weight: normal;
-}

@@ -72,7 +72,7 @@ if(!tech_json){
 	});
 }
 */
-navBarIntialization();
+//navBarIntialization();
 console.log("function navBarIntialization() has been fired from navigation.js");
 
 
@@ -86,8 +86,8 @@ console.log("function navBarIntialization() has been fired from navigation.js");
 
 
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {
-	navBarIntialization();
-	console.log("function navBarIntialization() has been fired from navigation.js pagecontainerchange event"); 
+//	navBarIntialization();
+//	console.log("function navBarIntialization() has been fired from navigation.js pagecontainerchange event"); 
 });  
 
 $("body").on("click","div.quickInfo_close-arrow, div.quickInfo_open-arrow", function(){ 
