@@ -109,17 +109,21 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 
 //section[data-url="/tools.html"]{
 #toolList{
-	padding:1em;
+	margin-top:0;
+	padding:0.5em 1em 1em;
 	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
 	div.ui-collapsible-content a {font-weight:normal}
 //	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
 }
 #toolsInfo,
+#writingInfo,
+div.writingExample,
 #workExample{
 	padding:1em;
 	overflow:hidden;
 }
 
+/*
 #workExample{
 	div.techUsed{float:right;}
 	img{
@@ -131,11 +135,13 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 
 }
 
-
+*/
 
 
 #workExample,
-#developmentContent{
+#developmentContent,
+#writingContent,
+#toolsInfo{
 	h1 {
 		// font-family: "Droid Sans", "sans-serif";		
 		float:left;
@@ -171,11 +177,12 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 	div.devTopic_top{
 		padding:1em;overflow:hidden
 	}
-	p.notes{
-		font-size:1.1em;
+	p{
 		line-height: 1.1em;
 		margin-bottom: 1em;
 	}
+	p.notes{ font-size:1.1em;}
+
 	div.ui-grid-a.ui-responsive{
 		clear:both;
 		>div{padding:1em;margin-top:0.8em;}
@@ -225,6 +232,12 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 		}
 	}
 }
+#toolsInfo,
+#writingContent{ 
+	h1{margin-right:0.4em;}
+	p.notes{font-size:1em;}
+}
+
 section[data-url="/development.html"] #developmentContent{
 	h2,h3{text-align:left;}
 	h2{
@@ -240,16 +253,79 @@ section[data-url="/development.html"] #developmentContent{
 	}
 }
 
-#portfolioContent{
-	div.itemInfo{float:left;width:75%;}
-	div.techUsed{clear:none;width:20%;}
-	h1{
-		float:none;
-		margin-right:0;
+/* #workExample{
+	div.techUsed{float:right;}
+	img{
+		max-width:40%;
+		max-height: 200px;
+		margin-right:1em;
+		vertical-align: middle;
 	}
-	p.notes{margin-top:0.5em;}
 
 }
+ */
+
+#portfolioContent,
+#workExample{
+	div.itemInfo{
+		float:left;
+		width:75%;
+	}
+	div.techUsed{
+		float:right;
+		clear:none;
+		width:20%;
+		padding: 0.5em 0.8em 0.8em;
+	}
+}
+
+#portfolioContent{
+	h1{float:none;margin-right:0;}
+	p.notes{margin-top:0.5em;}
+}
+#workExample{
+	img{
+		max-width:40%;
+		max-height: 200px;
+		margin-right:1em;
+		vertical-align: middle;
+	}
+}
+
+#writingContent{
+	div.writingExample{
+		border-bottom: 1px solid #DDD;
+		padding-bottom: 0.8em;
+	}
+	h3{
+		float:left;
+		text-align:left;
+		padding:0;
+		border-bottom:0;
+		margin:0 0.8em 0 0;
+	}
+	span.fa{
+		font-size:1em;
+		vertical-align:middle;
+	}
+	a.documentLink{
+		float:left;
+		line-height:1.5em;
+		clear:none;
+		font-size: 1em;
+		vertical-align: bottom;
+		&:hover{
+			text-decoration: none;
+			color:#333;
+		}
+	}
+	ul{ 
+		line-height: 1.1em;
+		li{list-style: disc inside;}
+	}
+	border-bottom: solid 1px #DDD;
+}
+
 
 
 

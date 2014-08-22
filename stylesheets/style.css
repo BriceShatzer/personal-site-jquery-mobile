@@ -2103,7 +2103,8 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
 #toolList {
-  padding: 1em;
+  margin-top: 0;
+  padding: 0.5em 1em 1em;
 }
 #toolList ul h1.ui-collapsible-heading {
   margin-top: 0;
@@ -2114,83 +2115,117 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 
 #toolsInfo,
+#writingInfo,
+div.writingExample,
 #workExample {
   padding: 1em;
   overflow: hidden;
 }
 
-#workExample div.techUsed {
-  float: right;
-}
-#workExample img {
-  max-width: 40%;
-  max-height: 200px;
-  margin-right: 1em;
-  vertical-align: middle;
+/*
+#workExample{
+	div.techUsed{float:right;}
+	img{
+		max-width:40%;
+		max-height: 200px;
+		margin-right:1em;
+		vertical-align: middle;
+	}
+
 }
 
+*/
 #workExample h1,
-#developmentContent h1 {
+#developmentContent h1,
+#writingContent h1,
+#toolsInfo h1 {
   float: left;
   margin-right: 0.8em;
 }
 #workExample h2,
-#developmentContent h2 {
+#developmentContent h2,
+#writingContent h2,
+#toolsInfo h2 {
   text-align: center;
   border-bottom: none;
 }
 #workExample h3,
-#developmentContent h3 {
+#developmentContent h3,
+#writingContent h3,
+#toolsInfo h3 {
   text-align: center;
   padding-bottom: 2px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
 #workExample a,
-#developmentContent a {
+#developmentContent a,
+#writingContent a,
+#toolsInfo a {
   font-weight: normal;
   color: #727272;
   text-decoration: none;
   line-height: 1.1em;
 }
 #workExample a:hover,
-#developmentContent a:hover {
+#developmentContent a:hover,
+#writingContent a:hover,
+#toolsInfo a:hover {
   text-decoration: underline;
 }
 #workExample div.devTopic_top,
-#developmentContent div.devTopic_top {
+#developmentContent div.devTopic_top,
+#writingContent div.devTopic_top,
+#toolsInfo div.devTopic_top {
   padding: 1em;
   overflow: hidden;
 }
-#workExample p.notes,
-#developmentContent p.notes {
-  font-size: 1.1em;
+#workExample p,
+#developmentContent p,
+#writingContent p,
+#toolsInfo p {
   line-height: 1.1em;
   margin-bottom: 1em;
 }
+#workExample p.notes,
+#developmentContent p.notes,
+#writingContent p.notes,
+#toolsInfo p.notes {
+  font-size: 1.1em;
+}
 #workExample div.ui-grid-a.ui-responsive,
-#developmentContent div.ui-grid-a.ui-responsive {
+#developmentContent div.ui-grid-a.ui-responsive,
+#writingContent div.ui-grid-a.ui-responsive,
+#toolsInfo div.ui-grid-a.ui-responsive {
   clear: both;
 }
 #workExample div.ui-grid-a.ui-responsive > div,
-#developmentContent div.ui-grid-a.ui-responsive > div {
+#developmentContent div.ui-grid-a.ui-responsive > div,
+#writingContent div.ui-grid-a.ui-responsive > div,
+#toolsInfo div.ui-grid-a.ui-responsive > div {
   padding: 1em;
   margin-top: 0.8em;
 }
 #workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
+#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
   content: "-";
   position: relative;
   left: -5px;
   top: -1px;
 }
 #workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
+#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
   text-indent: 5px;
   margin-bottom: 1px;
 }
 #workExample div.backbutton a,
-#developmentContent div.backbutton a {
+#developmentContent div.backbutton a,
+#writingContent div.backbutton a,
+#toolsInfo div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
   font-size: 1em;
   color: #BFBFBF;
@@ -2216,17 +2251,32 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
   border-bottom-left-radius: 4px;
 }
 #workExample div.backbutton a:hover,
-#developmentContent div.backbutton a:hover {
+#developmentContent div.backbutton a:hover,
+#writingContent div.backbutton a:hover,
+#toolsInfo div.backbutton a:hover {
   color: #727272;
 }
 #workExample div.backbutton a span,
-#developmentContent div.backbutton a span {
+#developmentContent div.backbutton a span,
+#writingContent div.backbutton a span,
+#toolsInfo div.backbutton a span {
   vertical-align: top;
 }
 #workExample div.backbutton a span.fa,
-#developmentContent div.backbutton a span.fa {
+#developmentContent div.backbutton a span.fa,
+#writingContent div.backbutton a span.fa,
+#toolsInfo div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
+}
+
+#toolsInfo h1,
+#writingContent h1 {
+  margin-right: 0.4em;
+}
+#toolsInfo p.notes,
+#writingContent p.notes {
+  font-size: 1em;
 }
 
 section[data-url="/development.html"] #developmentContent h2, section[data-url="/development.html"] #developmentContent h3 {
@@ -2255,20 +2305,79 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   }
 }
 
-#portfolioContent div.itemInfo {
+/* #workExample{
+	div.techUsed{float:right;}
+	img{
+		max-width:40%;
+		max-height: 200px;
+		margin-right:1em;
+		vertical-align: middle;
+	}
+
+}
+ */
+#portfolioContent div.itemInfo,
+#workExample div.itemInfo {
   float: left;
   width: 75%;
 }
-#portfolioContent div.techUsed {
+#portfolioContent div.techUsed,
+#workExample div.techUsed {
+  float: right;
   clear: none;
   width: 20%;
+  padding: 0.5em 0.8em 0.8em;
 }
+
 #portfolioContent h1 {
   float: none;
   margin-right: 0;
 }
 #portfolioContent p.notes {
   margin-top: 0.5em;
+}
+
+#workExample img {
+  max-width: 40%;
+  max-height: 200px;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+#writingContent {
+  border-bottom: solid 1px #DDD;
+}
+#writingContent div.writingExample {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 0.8em;
+}
+#writingContent h3 {
+  float: left;
+  text-align: left;
+  padding: 0;
+  border-bottom: 0;
+  margin: 0 0.8em 0 0;
+}
+#writingContent span.fa {
+  font-size: 1em;
+  vertical-align: middle;
+}
+#writingContent a.documentLink {
+  float: left;
+  line-height: 1.5em;
+  clear: none;
+  font-size: 1em;
+  vertical-align: bottom;
+}
+#writingContent a.documentLink:hover {
+  text-decoration: none;
+  color: #333;
+}
+#writingContent ul {
+  line-height: 1.1em;
+}
+#writingContent ul li {
+  list-style: disc inside;
 }
 
 span.strong {
