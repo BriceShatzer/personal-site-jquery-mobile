@@ -293,9 +293,21 @@ section[data-url="/development.html"] #developmentContent{
 }
 
 #writingContent{
+	//border-bottom: solid 1px #DDD;
 	div.writingExample{
+		width:45%;
+		float: left;
+		margin-right: 2%;
 		border-bottom: 1px solid #DDD;
 		padding-bottom: 0.8em;
+		ul{margin-bottom:1em;}
+		@media screen and (max-width:1280px){margin-right:1%;}		
+		@media screen and (max-width:992px){
+			width:100%;
+			float:none;
+			margin-right:0;
+		}
+		//@media screen and (max-width:640px){}
 	}
 	h3{
 		float:left;
@@ -322,8 +334,7 @@ section[data-url="/development.html"] #developmentContent{
 	ul{ 
 		line-height: 1.1em;
 		li{list-style: disc inside;}
-	}
-	border-bottom: solid 1px #DDD;
+	}	
 }
 
 

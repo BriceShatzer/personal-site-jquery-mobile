@@ -2344,12 +2344,27 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   vertical-align: middle;
 }
 
-#writingContent {
-  border-bottom: solid 1px #DDD;
-}
 #writingContent div.writingExample {
+  width: 45%;
+  float: left;
+  margin-right: 2%;
   border-bottom: 1px solid #DDD;
   padding-bottom: 0.8em;
+}
+#writingContent div.writingExample ul {
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 1280px) {
+  #writingContent div.writingExample {
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #writingContent div.writingExample {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }
 #writingContent h3 {
   float: left;

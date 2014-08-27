@@ -72,7 +72,7 @@
 			"notes":"The majority of the work I did for Links Technology was managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client."
 		},
 		{	"name":"Git",
-			"notes":"Most of my personal work is version controlled and managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. Generally I use \"SourceTree\" GUI (have previously used \"GitHub for Windows\" & \"TortoiseGit\"), but I am capable of working at the command line level to resolve conflicts and other issues."
+			"notes":"Most of my personal work is version controlled and managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. I generally use a GUI to manage things (currently \"SourceTree\" but have previously used \"GitHub for Windows\", \"TortoiseGit\" & the vanilla Git Gui), but I am capable of working at the command line level to resolve conflicts and other issues."
 		}]
 	},
 	{	"name":"Web Analytics & Ad Management ",
