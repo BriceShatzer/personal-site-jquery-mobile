@@ -1,4 +1,4 @@
-var portfolio_principal = [
+var portfolioPrincipal = [
 {"name":"The Forklift Guy",
 "context":"Links",
 "tech":["HTML & CSS","LightCMS"],
@@ -152,7 +152,7 @@ var portfolio_principal = [
 "media":[]
 }];
 
-var portfolio_maintained = [
+var portfolioMaintained = [
 {
 	"name":"Sarah Starling Art",
 	"link":"http://sarahstarlingart.com/",
@@ -294,7 +294,7 @@ var portfolio_creative =[
 }];
 
 
-var tech_list = [
+var tech_data = [
 	{	"name":"Structure & Styling",
 		"childItems":[
 			{

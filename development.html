@@ -11,6 +11,13 @@
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/data.js"></script>
+    <script>
+    function test(fact){
+       if ( !fact ){ console.log(fact+' is false') }
+        else if ( fact ){ console.log(fact+' is true') }
+    }
+    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -87,20 +94,20 @@ function buildDevContent(){
 //95% sure this function is never used anywhere anymore ====
 
 var tech_list=[];
-var portfolioPrincipal_json;
-var portfolioMaintained_json;
-function createTechList(){
-    _.forEach(tech_json, function(obj) { 
+//var portfolioPrincipal;
+//var portfolioMaintained;
+//function createTechList(){
+    _.forEach(tech_data, function(obj) { 
         if(obj.childItems){
             _.forEach(obj.childItems, function(child) { tech_list.push(child) });
         }else{ tech_list.push(obj) } 
     });
-}
+//}
 
 
 
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from development.html");
-    var techLoad = new $.Deferred();
+ //   var techLoad = new $.Deferred();
     var url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
     /*
@@ -109,15 +116,15 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
     if(/\?/.test(url)){ query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
     }else{ query = false }
     */
-
-    if(!tech_json){
+/*
+    if(!tech_data){
         $.getJSON('/tech.json', function(data) {
-            tech_json = data;
-            console.log('tech_json loaded via development.html' );
+            tech_data = data;
+            console.log('tech_data loaded via development.html' );
             techLoad.resolve();
         });
     }else{ techLoad.resolve() }
-
+*/
 
     if( /development.html/.test($.mobile.path.getLocation()) ){
     //current page in development.html family 
@@ -125,15 +132,16 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
             console.log('no query');
             var $workspace = $('section[data-url="/development.html"]').find('#developmentContent');
             if( !$workspace.html() ){ 
-                $.when(techLoad).done(function(){ 
-                    console.log('tech_json loaded deferred caught');
+//                $.when(techLoad).done(function(){ 
+//                    console.log('tech_data loaded deferred caught');
                     function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }
                     //--
                         // in addition to the array, the "topic" of the nav menu should also be passed into to the function. This will assist in building the links.        
                         //var $panelList = $('<ul data-role="listview"></ul>');
                     var tech_blocks = [];// = $('<div></div>');
 
-                    $.each(tech_json, function(i) {
+                    $.each(tech_data, function(i) {
+                        //can probably remove indexInArray
                         
                         var $tech_class = $('<div class="ui-body"></div>');
 
@@ -152,7 +160,7 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                             generateDisplayValues(this);
                             $tech_class.append( '<h2><a href="/development.html?'+this.url+'">'+this.name+'</a></h2>' );
                         }
-                         tech_blocks.push( $tech_class );
+                        tech_blocks.push( $tech_class );
 
                     });
                     $tech = $('<div class="ui-grid-a ui-responsive"></div>')
@@ -163,55 +171,62 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                     });
                    
                     $tech.appendTo('#developmentContent');
-                });
+//                });
             }
         }else{
         //--query has value 
             //--check for & load required data 
-            var portfolioPrincipal_Load = new $.Deferred();
-            var portfolioMaintained_Load = new $.Deferred();
+//            var portfolioPrincipal_Load = new $.Deferred();
+//          var portfolioMaintained_Load = new $.Deferred();
 
-            if(!portfolioPrincipal_json){ 
+/*
+            if(!portfolioPrincipal){ 
                 $.getJSON('/portfolio_principal.json', function(data) { 
-                    portfolioPrincipal_json = data;
-                  console.log('portfolioPrincipal_json loaded via development.html' );            
+                    portfolioPrincipal = data;
+                  console.log('portfolioPrincipal loaded via development.html' );            
                     portfolioPrincipal_Load.resolve();
                 }) 
             }else{ portfolioPrincipal_Load.resolve(); }
+*/
             //.then( function(){console.log('placeholder for maintainer data load')}, function(){console.log('Woah bro....something screwed up when loading /portfolio_principal.json')})
-
-            if(!portfolioMaintained_json){
+/*
+            if(!portfolioMaintained){
                 $.getJSON('/portfolio_maintained.json', function(data) { 
-                    portfolioMaintained_json = data;
-                  console.log('portfolioMaintained_json loaded via development.html' );            
+                    portfolioMaintained = data;
+                  console.log('portfolioMaintained loaded via development.html' );            
                     portfolioMaintained_Load.resolve();
                 }) 
             }else{ portfolioMaintained_Load.resolve(); }        
-            
-            if(!tech_json){
+*/
+/*            
+            if(!tech_data){
                 $.getJSON('/tech.json', function(data) {
-                    tech_json = data;
-                    console.log('tech_json loaded via development.html' );
+                    tech_data = data;
+                    console.log('tech_data loaded via development.html' );
                     techLoad.resolve();
                 });
             }else{ techLoad.resolve() }
 
+*/
 
-            $.when.apply($, [techLoad,portfolioPrincipal_Load,portfolioMaintained_Load] ).done(function(){ console.log('all JSON files loaded');
+//            $.when.apply($, [techLoad,portfolioPrincipal_Load,portfolioMaintained_Load] ).done(function(){ console.log('all JSON files loaded');
                 //------------------------------------
                 //after loads are done, pluck what's needed and build the page    
 
                 //--create var tech_list
-                _.forEach(tech_json, function(obj) { 
+
+/*
+    --- create Tech List
+                _.forEach(tech_data, function(obj) { 
                     if(obj.childItems){
                         _.forEach(obj.childItems, function(child) { tech_list.push(child) });
                     }else{ tech_list.push(obj) } 
                 }); 
-
+*/
                 var relevantTech = _.find(tech_list, function(tech){ return tech.name.toLowerCase() == query.toLowerCase()  });
                 console.dir(relevantTech);
 
-                var portfolioExamples = _.filter(portfolioPrincipal_json, function(obj) { 
+                var portfolioExamples = _.filter(portfolioPrincipal, function(obj) { 
                     var match;
                         $.each(obj.tech, function(){
                             if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
@@ -219,7 +234,7 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                     return match === true;
                 });
                 
-                var maintenanceExamples = _.filter(portfolioMaintained_json, function(obj) { 
+                var maintenanceExamples = _.filter(portfolioMaintained, function(obj) { 
                     var match;
                         $.each(obj.tech, function(){
                             if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
@@ -268,7 +283,7 @@ $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagec
                 }
                 //after loads are done, pluck what's needed and build the page           
                 //------------------------------------
-            })
+//            })
         //-- end query has value 
         }
     //current page in development.html family 
