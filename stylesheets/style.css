@@ -2337,11 +2337,20 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   margin-top: 0.5em;
 }
 
+#workExample div.itemInfo {
+  font-size: 1.1em;
+}
 #workExample img {
   max-width: 40%;
   max-height: 200px;
   margin-right: 1em;
   vertical-align: middle;
+}
+#workExample ul {
+  line-height: 1.1em;
+}
+#workExample ul li {
+  list-style: disc inside;
 }
 
 #writingContent div.writingExample {

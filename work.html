@@ -12,6 +12,7 @@
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/data.js"></script>
 </head>
 <body>
     <div data-role="header">
@@ -53,14 +54,15 @@
 <section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" id="portfolioContent" ></div><!-- /content -->
 
+<script type="text/javascript" src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
 var nacho;
 
 var $container = $('#portfolioContent');
 
 //var tech_list=[];
-var portfolio_json;
-var tech_json;
+//var portfolioPrincipal;
+//var tech_data;
 
 
 
@@ -76,39 +78,40 @@ if( /work.html/.test($.mobile.path.getLocation()) ){
     if(!query){console.log('no query')}
     else{
     //--check for & load required data 
-        if(!portfolio_json){ 
+        /*
+        if(!portfolioPrincipal){ 
             $.getJSON('/portfolio_principal.json', function(data) { 
-                portfolio_json = data;
-              console.log('portfolio_json loaded via development.html' );            
+                portfolioPrincipal = data;
+              console.log('portfolioPrincipal loaded via development.html' );            
                 portfolioLoad.resolve();
             }) 
         }else{ portfolioLoad.resolve(); }
 
-        if(!tech_json){
+        if(!tech_data){
         $.getJSON('/tech.json', function(data) {
-            tech_json = data;
-            console.log('tech_json loaded via development.html' );
+            tech_data = data;
+            console.log('tech_data loaded via development.html' );
             techLoad.resolve();
         });
         }else{ techLoad.resolve() }        
-
-        $.when.apply($, [techLoad,portfolioLoad] ).done(function(){
-            //------------------------------------
+        */
+    //  $.when.apply($, [techLoad,portfolioLoad] ).done(function(){
+//------------------------------------
             //pluck what's needed and build the page    
 
         /*
             //--create var tech_list
-            _.forEach(tech_json, function(obj) { 
+            _.forEach(tech_data, function(obj) { 
                 if(obj.childItems){
                     _.forEach(obj.childItems, function(child) { tech_list.push(child) });
                 }else{ tech_list.push(obj) } 
             }); 
         */
 
-            var portfolioItem = _.find(portfolio_json, function(work){ return work.name.toLowerCase() == query.toLowerCase()  });
+            var portfolioItem = _.find(portfolioPrincipal, function(work){ return work.name.toLowerCase() == query.toLowerCase()  });
 nacho = portfolioItem;
         /*
-            var portfolioExamples = _.filter(portfolio_json, function(obj) { 
+            var portfolioExamples = _.filter(portfolioPrincipal, function(obj) { 
                 var match;
                     $.each(obj.tech, function(){
                         if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
@@ -142,7 +145,7 @@ nacho = portfolioItem;
                     });
                 }
 
-                console.log($workspace);
+                console.log($workspace.selector);
                 $workspace.append($content);
                 if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
             }
@@ -150,7 +153,7 @@ nacho = portfolioItem;
 
 
             //------------------------------------
-            })
+//            })
 
 
         }
@@ -159,7 +162,7 @@ nacho = portfolioItem;
 
 });    
 </script>
-<script type="text/javascript" src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
+
 </section><!-- /page -->
 
 

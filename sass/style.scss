@@ -284,11 +284,16 @@ section[data-url="/development.html"] #developmentContent{
 	p.notes{margin-top:0.5em;}
 }
 #workExample{
+	div.itemInfo{font-size:1.1em}
 	img{
 		max-width:40%;
-		max-height: 200px;
+		max-height: 200px; 
 		margin-right:1em;
 		vertical-align: middle;
+	}
+	ul{ 
+		line-height: 1.1em;
+		li{list-style: disc inside;}
 	}
 }
 
