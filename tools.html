@@ -32,15 +32,6 @@
                 <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
                 <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
                 <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
-            <!--
-                <li style="overflow:hidden;">
-                    <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
-                    <div style="float:right;width:9em;text-align:center;">
-                        Carthage College<br>
-                        <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
-                    </div>
-                </li>
-            --> 
                 <li style="" id="icons">
                     <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
                     <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
@@ -68,70 +59,39 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
-var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
-
-/*
-function buildToolContent(){ 
-    $.each(tools_json, function(){
-       
-        //console.log($category);
-        var $items = $('<div class="ui-grid-a ui-responsive"></div>')
-
-        $.each(this.childItems, function(i,tool) {
-            var string='';
-            if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
-            else{ string+='<div class="ui-block-b">' }
-            string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
-            if (this.notes){string+=' - '+this.notes}
-            string+='</div></div>';
-            $items.append(string)
-                //'<div class="ui-block-a"><div class="ui-bar"><span class="strong">'++'</span> - this is some descriptive text</div></div>' 
-        });
+    var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
+    $( "body" ).one( "pagecontainerchange", function( event, ui ) { 
+        console.log("pagecontainerchange event from tools.html");
         
-        var $category =  $('<div data-role="collapsible"></div>');
-        $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
-        
-        //console.log($category);
-        //.appendTo('<div data-role="collapsible"><h3>'+this.name+'</h3></div>').appendTo('#toolList');
-    });
-    //$container.appendTo('#toolList')
-}  
-*/
-$( "body" ).one( "pagecontainerchange", function( event, ui ) { 
-    console.log("pagecontainerchange event from tools.html");
-    
-    if( /tools.html/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
-        console.log('building tools content');
-        $.getJSON('/tools.json', function(data) { 
-            console.log('got the tools.json');
-            console.dir(data);
-            tools_json = data; 
-            //buildToolContent();
-            //--
-            $.each(tools_json, function(){
-                var $items = $('<div class="ui-grid-a ui-responsive"></div>');
+        if( /tools.html/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
+            console.log('building tools content');
+            $.getJSON('/tools.json', function(data) { 
+                console.log('got the tools.json');
+                console.dir(data);
+                tools_json = data; 
+                //buildToolContent();
+                //--
+                $.each(tools_json, function(){
+                    var $items = $('<div class="ui-grid-a ui-responsive"></div>');
 
-                $.each(this.childItems, function(i,tool) {
-                    var string='';
-                    if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
-                    else{ string+='<div class="ui-block-b">' }
-                    string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
-                    if (this.notes){string+=' - '+this.notes}
-                    string+='</div></div>';
-                    $items.append(string)
+                    $.each(this.childItems, function(i,tool) {
+                        var string='';
+                        if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
+                        else{ string+='<div class="ui-block-b">' }
+                        string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
+                        if (this.notes){string+=' - '+this.notes}
+                        string+='</div></div>';
+                        $items.append(string)
+                    });
+                    var $category =  $('<div data-role="collapsible"></div>');
+                    $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
                 });
-                var $category =  $('<div data-role="collapsible"></div>');
-                $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
+                //--
+
+                $('section,#toolList').enhanceWithin()
             });
-            //--
-
-            $('section,#toolList').enhanceWithin()
-        });
-    }
-
-//navBarIntialization() 
-});  
- 
+        }
+    });
 </script>
 </section><!-- /page -->
 
