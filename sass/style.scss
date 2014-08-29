@@ -9,7 +9,8 @@
 @mixin font_droid{font-family: "Droid Sans", "sans-serif";}	
 @mixin font_lato{font-family:lato,"Droid Sans", "sans-serif";}
 
-body{@include font_lato
+body{@include font_lato;
+	background-color:#F2F2F2;
 	 //font-family:lato,"Droid Sans", "sans-serif" !important ;
 	//a{ font-family: "Droid Sans", "sans-serif" !important ; }
 }
@@ -17,7 +18,8 @@ body{@include font_lato
 section div.ui-panel-wrapper,body {
 	background-color: #F2F2F2 !important;
 }
-//#F9F9F9  #F2F2F2
+//standard bg color: #F2F2F2
+//#F9F9F9  
 //darks - #1F1F1F, #2A2A2A
 
 
@@ -113,10 +115,13 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 	div.ui-collapsible-content a {font-weight:normal}
 //	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
 }
-#toolsInfo,
+
+#creativeInfo,
+#workExample,
 #writingInfo,
 div.writingExample,
-#workExample{
+#toolsInfo
+{
 	padding:1em;
 	overflow:hidden;
 }
@@ -136,8 +141,9 @@ div.writingExample,
 */
 
 
-#workExample,
 #developmentContent,
+#workExample,
+#creativeInfo,
 #writingContent,
 #toolsInfo{
 	h1 {
@@ -145,7 +151,8 @@ div.writingExample,
 		float:left;
 		// font-size: 2em;
 		// font-weight: bold;
-		margin-right:0.8em;
+		//margin-right:0.8em;
+		margin-right:0.4em;
 	}
 	h2{
 		// font-family: "Droid Sans", "sans-serif";		
@@ -230,11 +237,27 @@ div.writingExample,
 		}
 	}
 }
-#toolsInfo,
-#writingContent{ 
-	h1{margin-right:0.4em;}
-	p.notes{font-size:1em;}
+
+@mixin example-blocks{
+	width:45%;
+	float: left;
+	margin-right: 2%;
+	@media screen and (max-width:1280px){margin-right:1%;}		
+	@media screen and (max-width:992px){
+		width:100%;
+		float:none;
+		margin-right:0;
+	}
 }
+
+//---this can probably be removed
+#creativeInfo,
+#writingContent, 
+#toolsInfo{
+	h1{margin-right:0.4em;}
+	//p.notes{font-size:1em;}
+}
+//
 
 section[data-url="/development.html"] #developmentContent{
 	h2,h3{text-align:left;}
@@ -299,19 +322,10 @@ section[data-url="/development.html"] #developmentContent{
 #writingContent{
 	//border-bottom: solid 1px #DDD;
 	div.writingExample{
-		width:45%;
-		float: left;
-		margin-right: 2%;
+		@include example-blocks;
 		border-bottom: 1px solid #DDD;
 		padding-bottom: 0.8em;
 		ul{margin-bottom:1em;}
-		@media screen and (max-width:1280px){margin-right:1%;}		
-		@media screen and (max-width:992px){
-			width:100%;
-			float:none;
-			margin-right:0;
-		}
-		//@media screen and (max-width:640px){}
 	}
 	h3{
 		float:left;

@@ -2271,6 +2271,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 body {
   font-family: lato,"Droid Sans", "sans-serif";
+  background-color: #F2F2F2;
 }
 
 section div.ui-panel-wrapper, body {
@@ -2386,10 +2387,11 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
   font-weight: normal;
 }
 
-#toolsInfo,
+#creativeInfo,
+#workExample,
 #writingInfo,
 div.writingExample,
-#workExample {
+#toolsInfo {
   padding: 1em;
   overflow: hidden;
 }
@@ -2407,22 +2409,25 @@ div.writingExample,
 }
 
 */
-#workExample h1,
 #developmentContent h1,
+#workExample h1,
+#creativeInfo h1,
 #writingContent h1,
 #toolsInfo h1 {
   float: left;
-  margin-right: 0.8em;
+  margin-right: 0.4em;
 }
-#workExample h2,
 #developmentContent h2,
+#workExample h2,
+#creativeInfo h2,
 #writingContent h2,
 #toolsInfo h2 {
   text-align: center;
   border-bottom: none;
 }
-#workExample h3,
 #developmentContent h3,
+#workExample h3,
+#creativeInfo h3,
 #writingContent h3,
 #toolsInfo h3 {
   text-align: center;
@@ -2430,8 +2435,9 @@ div.writingExample,
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
-#workExample a,
 #developmentContent a,
+#workExample a,
+#creativeInfo a,
 #writingContent a,
 #toolsInfo a {
   font-weight: normal;
@@ -2439,47 +2445,54 @@ div.writingExample,
   text-decoration: none;
   line-height: 1.1em;
 }
-#workExample a:hover,
 #developmentContent a:hover,
+#workExample a:hover,
+#creativeInfo a:hover,
 #writingContent a:hover,
 #toolsInfo a:hover {
   text-decoration: underline;
 }
-#workExample div.devTopic_top,
 #developmentContent div.devTopic_top,
+#workExample div.devTopic_top,
+#creativeInfo div.devTopic_top,
 #writingContent div.devTopic_top,
 #toolsInfo div.devTopic_top {
   padding: 1em;
   overflow: hidden;
 }
-#workExample p,
 #developmentContent p,
+#workExample p,
+#creativeInfo p,
 #writingContent p,
 #toolsInfo p {
   line-height: 1.1em;
   margin-bottom: 1em;
 }
-#workExample p.notes,
 #developmentContent p.notes,
+#workExample p.notes,
+#creativeInfo p.notes,
 #writingContent p.notes,
 #toolsInfo p.notes {
   font-size: 1.1em;
 }
-#workExample div.ui-grid-a.ui-responsive,
 #developmentContent div.ui-grid-a.ui-responsive,
+#workExample div.ui-grid-a.ui-responsive,
+#creativeInfo div.ui-grid-a.ui-responsive,
 #writingContent div.ui-grid-a.ui-responsive,
 #toolsInfo div.ui-grid-a.ui-responsive {
   clear: both;
 }
-#workExample div.ui-grid-a.ui-responsive > div,
 #developmentContent div.ui-grid-a.ui-responsive > div,
+#workExample div.ui-grid-a.ui-responsive > div,
+#creativeInfo div.ui-grid-a.ui-responsive > div,
 #writingContent div.ui-grid-a.ui-responsive > div,
 #toolsInfo div.ui-grid-a.ui-responsive > div {
   padding: 1em;
   margin-top: 0.8em;
 }
-#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
   content: "-";
@@ -2487,15 +2500,17 @@ div.writingExample,
   left: -5px;
   top: -1px;
 }
-#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
   text-indent: 5px;
   margin-bottom: 1px;
 }
-#workExample div.backbutton a,
 #developmentContent div.backbutton a,
+#workExample div.backbutton a,
+#creativeInfo div.backbutton a,
 #writingContent div.backbutton a,
 #toolsInfo div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
@@ -2522,33 +2537,33 @@ div.writingExample,
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-#workExample div.backbutton a:hover,
 #developmentContent div.backbutton a:hover,
+#workExample div.backbutton a:hover,
+#creativeInfo div.backbutton a:hover,
 #writingContent div.backbutton a:hover,
 #toolsInfo div.backbutton a:hover {
   color: #727272;
 }
-#workExample div.backbutton a span,
 #developmentContent div.backbutton a span,
+#workExample div.backbutton a span,
+#creativeInfo div.backbutton a span,
 #writingContent div.backbutton a span,
 #toolsInfo div.backbutton a span {
   vertical-align: top;
 }
-#workExample div.backbutton a span.fa,
 #developmentContent div.backbutton a span.fa,
+#workExample div.backbutton a span.fa,
+#creativeInfo div.backbutton a span.fa,
 #writingContent div.backbutton a span.fa,
 #toolsInfo div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
 }
 
-#toolsInfo h1,
-#writingContent h1 {
+#creativeInfo h1,
+#writingContent h1,
+#toolsInfo h1 {
   margin-right: 0.4em;
-}
-#toolsInfo p.notes,
-#writingContent p.notes {
-  font-size: 1em;
 }
 
 section[data-url="/development.html"] #developmentContent h2, section[data-url="/development.html"] #developmentContent h3 {
@@ -2633,9 +2648,6 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   border-bottom: 1px solid #DDD;
   padding-bottom: 0.8em;
 }
-#writingContent div.writingExample ul {
-  margin-bottom: 1em;
-}
 @media screen and (max-width: 1280px) {
   #writingContent div.writingExample {
     margin-right: 1%;
@@ -2647,6 +2659,9 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
     float: none;
     margin-right: 0;
   }
+}
+#writingContent div.writingExample ul {
+  margin-bottom: 1em;
 }
 #writingContent h3 {
   float: left;
