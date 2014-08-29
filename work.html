@@ -56,137 +56,62 @@
 
 
 <script type="text/javascript">
-var nacho;
-
 var $container = $('#portfolioContent');
 
-//var tech_list=[];
-//var portfolioPrincipal;
-//var tech_data;
 
-
-
-$( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from work.html");
+$( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from work.html");
     //var portfolioLoad = new $.Deferred();
     //var techLoad = new $.Deferred();
-    var url = $.mobile.path.getLocation();
-    var query; 
-    if(/\?/.test(url)){ query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
-    }else{ query = false }
+    url = $.mobile.path.getLocation();
+    var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
 
-if( /work.html/.test($.mobile.path.getLocation()) ){
-    if(!query){console.log('no query')}
+//    if( /work.html/.test($.mobile.path.getLocation()) ){
+    if(!query){console.log('work.html\'s pagecontainerchange event says "no query"')}
     else{
-    //--check for & load required data 
-        /*
-        if(!portfolioPrincipal){ 
-            $.getJSON('/portfolio_principal.json', function(data) { 
-                portfolioPrincipal = data;
-              console.log('portfolioPrincipal loaded via development.html' );            
-                portfolioLoad.resolve();
-            }) 
-        }else{ portfolioLoad.resolve(); }
 
-        if(!tech_data){
-        $.getJSON('/tech.json', function(data) {
-            tech_data = data;
-            console.log('tech_data loaded via development.html' );
-            techLoad.resolve();
+        var portfolioItem = _.find(portfolioPrincipal, function(work){
+            return work.name.toLowerCase() == query.toLowerCase()  
         });
-        }else{ techLoad.resolve() }        
-        */
-    //  $.when.apply($, [techLoad,portfolioLoad] ).done(function(){
-//------------------------------------
-            //pluck what's needed and build the page    
 
-        /*
-            //--create var tech_list
-            _.forEach(tech_data, function(obj) { 
-                if(obj.childItems){
-                    _.forEach(obj.childItems, function(child) { tech_list.push(child) });
-                }else{ tech_list.push(obj) } 
-            }); 
-        */
+        var $workspace = $('section[data-url="/work.html?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
+        if( !$workspace.html() ){
+            $content = $('<div id="workExample"></div>');
 
-            var portfolioItem = _.find(portfolioPrincipal, function(work){ return work.name.toLowerCase() == query.toLowerCase()  });
-nacho = portfolioItem;
-        /*
-            var portfolioExamples = _.filter(portfolioPrincipal, function(obj) { 
-                var match;
-                    $.each(obj.tech, function(){
-                        if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
-                    }) 
-                return match === true;
-            });
-        */
+            $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
 
-            /*var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#portfolioContent');
-            console.log(query);*/
-            var $workspace = $('section[data-url="/work.html?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
-            if( !$workspace.html() ){
-                $content = $('<div id="workExample"></div>');
+            if(portfolioItem.notes){
+                $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); }
 
-                $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
-
-                if(portfolioItem.notes){
-                    $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); }
-
-                if(portfolioItem.tech){
-                    $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
-                    $.each(portfolioItem.tech, function() {
-                        $('<li><a href="/development.html?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
-                    });
-                    $content.append($techUsed);
-                
-                }
-                if(portfolioItem.media){
-                    $.each(portfolioItem.media, function() {
-                        /*
-                        $content.find('div.itemInfo').append('<img class="fancybox" src="'+this+'" alt="" />')
-                        */
-                        $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
-                    });
-                }
-
-                console.log($workspace.selector);
-                $workspace.append($content);
-                if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
-            }
+            if(portfolioItem.tech){
+                $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
+                $.each(portfolioItem.tech, function() {
+                    $('<li><a href="/development.html?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
+                });
+                $content.append($techUsed);
             
+            }
+            if(portfolioItem.media){
+                $.each(portfolioItem.media, function() {
+                    /*
+                    $content.find('div.itemInfo').append('<img class="fancybox" src="'+this+'" alt="" />')
+                    */
+                    $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                });
+            }
 
-
-            //------------------------------------
-//            })
-
-
+            console.log($workspace.selector);
+            $workspace.append($content);
+            if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
         }
+        //------------------------------------
+
 
     }
-/*    $('body').on("click", "div.itemInfo img.fancybox", function(){
-        console.log(this.src);
 
-        //console.log(this);
-        //console.dir(this.src);
-        $.fancybox.open({ href : this.src })
-    })*/
-
+//    }
 
 
 });
-/*$('body').on("click", "div.itemInfo img.fancybox", function(){
-    console.log(this.src);
-    //console.log(this);
-    //console.dir(this.src);
-    $.fancybox.open({ href : this.src })
-})
-$( "body" ).on( "pagecontainertransition", function(event, ui ) {
-    console.log(event);
-    console.log(this);
-    console.log("pagecontainertransition fired from work.html page");
-    //debugger
-    //$('div.itemInfo a.image').fancybox();
-});
-*/
 </script>
 
 </section><!-- /page -->

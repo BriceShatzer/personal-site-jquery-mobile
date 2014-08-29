@@ -434,4 +434,4 @@ var tech_data = [
 		]
 	}
 ];
-	
+var url;	
