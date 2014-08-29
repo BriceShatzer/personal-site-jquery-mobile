@@ -1,11 +1,14 @@
-var tech_json;
-var tools_json;
+//var tech_json;
+//var tools_json;
+//var url;
 
 $(function(){
 
 $( "[data-role='header']" ).toolbar({ theme: "b" });
 $( "[data-role='panel']" ).panel({ theme: "b" });
 $.mobile.defaultPageTransition = "slide";
+
+
 
 //$("body").on( "pagecontainerchange", function( event, ui ) { });
 
@@ -84,11 +87,13 @@ console.log("function navBarIntialization() has been fired from navigation.js");
 });*/
 
 
-
+/*
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {
-//	navBarIntialization();
-//	console.log("function navBarIntialization() has been fired from navigation.js pagecontainerchange event"); 
+	url = $.mobile.path.getLocation();
+	console.log('pagecontainerchange fired from navigation.js');
+	console.log('url = '+url);
 });  
+*/
 
 $("body").on("click","div.quickInfo_close-arrow, div.quickInfo_open-arrow", function(){ 
 	$("#quickInfo").panel( "toggle" );
