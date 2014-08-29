@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BriceShatzer.com | Writing</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/utilities/lodash.min.js"></script>
+    <script src="/utilities/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="/data.js"></script>
+    <script>
+    function test(fact){
+       if ( !fact ){ console.log(fact+' is false') }
+        else if ( fact ){ console.log(fact+' is true') }
+    }
+    </script>    
+</head>
+<body>
+    <div data-role="header">
+        <div id="navigation">
+            <a href="/development.html">Development</a> | <a href="/creative.html">Creative & Design</a> | <a href="/writing.html">Writing</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+        </div>
+        <div class="quickInfo_open-arrow"><span>Info</span></div>
+    </div> 
+    <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+        <div class="ui-body" itemscope itemtype="http://schema.org/person">
+            <ul data-role="listview">
+                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+            <!--
+                <li style="overflow:hidden;">
+                    <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
+                    <div style="float:right;width:9em;text-align:center;">
+                        Carthage College<br>
+                        <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
+                    </div>
+                </li>
+            --> 
+                <li style="" id="icons">
+                    <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
+                    <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
+                    <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
+                </li>
+            </ul>
+
+            <br>
+
+        </div>
+        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+    </div><!-- end header --> 
+
+<section data-role="page" class="ui-responsive-panel" id="writing">
+<link rel="stylesheet" href="/utilities/fancybox/jquery.fancybox.css" /> 
+<script type="text/javascript" src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
+    <div role="main" class="ui-content" id="writingContent">
+        <div id="writingInfo">
+            <h1>Writing</h1>
+            <p class="notes">
+                Through my educational concentration and experience as a student journalist, I've had the opportunity to become a more competent and experienced writer. This experience, paired with my natural inclination toward technical knowledge and skills, has put me in a unique position to create things like training material and design documentation that must convey esoteric processes or ideas in a understandable and useful way. 
+            </p>
+            <p class="notes">
+                Below you will find various examples of my writing. Along with a copy of the original work, I have included a brief explanation to help provide the context & background of each individual work.</p>
+        </div>
+        <div class="writingExample">
+            <h3>Team Management Mobile Application Design Doc</h3>
+            <a class="documentLink" href="/portfolio/Team_Management_App_Design_Doc.pdf" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Document)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>Created a design document to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform. From the original concepts through the finalized document, the entire project was completed independently.</p> 
+                <ul>The final document attempted to:
+                    <li>Establish a clear and concise product definition and design philosophy</li>
+                    <li>Create a general understanding of the look and feel of the application through detailed mockup images</li>
+                    <li>Define a set of processes that needed to be created and handled by both the app and our back-end system</li>
+                </ul>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>RapidDraft Admin Systems Manual</h3>
+            <a class="documentLink" href="/portfolio/RapidDraft_Admin_User_Manuel.pdf" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Document)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>Created an expansive internal user manual to help new employees get familiar with the administration system and processes behind RapidDraft.com.</p>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>SportsBuff.com Main Page Image Guide</h3>
+            <a class="documentLink" href="/portfolio/Sports_Buff_Main_Page_Image_Guide.pdf" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Document)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>Created an internal document for employees who don't possess any technical or graphic design skills. The guide walks users through selecting, editing and uploading an image to be displayed on the main page of SportsBuff.com</p>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>Banner Management User Guide</h3>
+            <a class="documentLink" href="/portfolio/Banner_Manager_User_Guide.pdf" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Document)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>Created an internal document for non-technical employees to guide them through the process of creating and managing banner advertisements using the Absolute Banner Manager XE Software.</p>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>Social Networking and Politics Article - "In MySpace We Trust"</h3>
+            <a class="documentLink fancybox" href="/portfolio/writing_InMySpaceWeTrust.jpg" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Article)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>An article covering the potential effect of social networking sites on an upcoming midterm election that appeared in the weekly collegiate publication "The Carthage Current"</p>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>Winter Charity Event Article - "Runners Bundle Up for Festive 5k"</h3>
+            <a class="documentLink fancybox" href="/portfolio/writing_RunnersBundleUp.jpg" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Article)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>An article that previewed the Jingle Bell Walk/Run for Arthritis, an outdoor charity event held during the winter which appeared in the weekly collegiate publication "The Carthage Current"</p>
+            </div>
+        </div>
+        <div class="writingExample">
+            <h3>Women's Collegiate Volleyball Article - "Lady Reds Clinch Winning Streak Record"</h3>
+            <a class="documentLink fancybox" href="/portfolio/writing_LadyRedsClinchStreak.jpg" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Article)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>An article covering the Carthage Lady Reds Volleyball surpassing the CCIW record for consecutive conference wins that appeared in the weekly collegiate publication "The Carthage Current"</p>
+            </div>
+        </div> 
+        <div class="writingExample">
+            <h3>Alumni Networking Dinner Article - "Sharing Success Over Dinner"</h3>
+            <a class="documentLink fancybox" href="/portfolio/writing_SharingSuccessOverDinner.jpg" target="blank">
+                ( <span class="fa fa-file-text-o"></span> View Article)
+            </a>
+            <div class="itemInfo" style="clear:both">
+                <p>An article covering a networking dinner that was held on campus that appeared in the weekly collegiate publication "The Carthage Current"</p>
+            </div>
+        </div>               
+    </div>
+    <script type="text/javascript">
+        $('#writingContent a.documentLink.fancybox').fancybox();
+        //.each( function() { this.fancybox(); });
+    </script>
+
+</section> <!-- /page -->
+
+</body>
+<script type="text/javascript" src="/navigation.js"></script>
+</html>

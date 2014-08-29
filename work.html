@@ -7,11 +7,11 @@
     <title>BriceShatzer.com | Work</title>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">
-    <link rel="stylesheet" href="/utilities/fancybox/jquery.fancybox.css" />       
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
 </head>
 <body>
@@ -54,7 +54,7 @@
 <section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" id="portfolioContent" ></div><!-- /content -->
 
-<script type="text/javascript" src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
+
 <script type="text/javascript">
 var nacho;
 
@@ -67,8 +67,8 @@ var $container = $('#portfolioContent');
 
 
 $( "body" ).on( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from work.html");
-    var portfolioLoad = new $.Deferred();
-    var techLoad = new $.Deferred();
+    //var portfolioLoad = new $.Deferred();
+    //var techLoad = new $.Deferred();
     var url = $.mobile.path.getLocation();
     var query; 
     if(/\?/.test(url)){ query = decodeURIComponent(url.slice( url.indexOf('?')+1 )  );
@@ -141,6 +141,9 @@ nacho = portfolioItem;
                 }
                 if(portfolioItem.media){
                     $.each(portfolioItem.media, function() {
+                        /*
+                        $content.find('div.itemInfo').append('<img class="fancybox" src="'+this+'" alt="" />')
+                        */
                         $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
                     });
                 }
@@ -159,8 +162,31 @@ nacho = portfolioItem;
         }
 
     }
+/*    $('body').on("click", "div.itemInfo img.fancybox", function(){
+        console.log(this.src);
 
-});    
+        //console.log(this);
+        //console.dir(this.src);
+        $.fancybox.open({ href : this.src })
+    })*/
+
+
+
+});
+/*$('body').on("click", "div.itemInfo img.fancybox", function(){
+    console.log(this.src);
+    //console.log(this);
+    //console.dir(this.src);
+    $.fancybox.open({ href : this.src })
+})
+$( "body" ).on( "pagecontainertransition", function(event, ui ) {
+    console.log(event);
+    console.log(this);
+    console.log("pagecontainertransition fired from work.html page");
+    //debugger
+    //$('div.itemInfo a.image').fancybox();
+});
+*/
 </script>
 
 </section><!-- /page -->
