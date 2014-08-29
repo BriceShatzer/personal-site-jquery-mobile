@@ -2,7 +2,8 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/user-interface";
-@import "font-awesome.scss";
+@import "font-awesome";
+@import "fancybox";
 //@import "compass/typography/links/link-colors";
 //link-colors($normal, $hover, $active, $visited, $focus)
 @mixin font_droid{font-family: "Droid Sans", "sans-serif";}	
@@ -17,7 +18,6 @@ section div.ui-panel-wrapper,body {
 	background-color: #F2F2F2 !important;
 }
 //#F9F9F9  #F2F2F2
-
 //darks - #1F1F1F, #2A2A2A
 
 
@@ -104,8 +104,6 @@ a[data-role="none"]{
 a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
-
-
 
 //section[data-url="/tools.html"]{
 #toolList{
@@ -290,6 +288,7 @@ section[data-url="/development.html"] #developmentContent{
 		max-height: 200px; 
 		margin-right:1em;
 		vertical-align: middle;
+		cursor: pointer;
 	}
 	ul{ 
 		line-height: 1.1em;
