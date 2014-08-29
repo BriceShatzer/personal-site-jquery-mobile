@@ -216,3 +216,4 @@ pip-log.txt
 
 #sass
 .sass-cache
+compass_app_log.txt
