@@ -319,6 +319,30 @@ section[data-url="/development.html"] #developmentContent{
 	}
 }
 
+div.creativeCategory{
+	overflow:hidden;
+	border-bottom: 1px solid #DDD;
+	//padding-bottom: 0.8em;
+	padding: 0.8em 1em 0.8em;
+	h3{
+		font-size:1.5em;
+		line-height: 1.5em;
+	}
+	div.creativeExample{
+		@include example-blocks;
+		@include font_droid;
+		line-height: 1.1em;
+		margin: 0.5em 0;
+		a{
+			font-weight:bold;
+			color: #333;
+			text-decoration:none;
+			&:hover{color:#727272;}
+		}
+	}
+}
+
+
 #writingContent{
 	//border-bottom: solid 1px #DDD;
 	div.writingExample{

@@ -2641,6 +2641,44 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   list-style: disc inside;
 }
 
+div.creativeCategory {
+  overflow: hidden;
+  border-bottom: 1px solid #DDD;
+  padding: 0.8em 1em 0.8em;
+}
+div.creativeCategory h3 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+div.creativeCategory div.creativeExample {
+  width: 45%;
+  float: left;
+  margin-right: 2%;
+  font-family: "Droid Sans", "sans-serif";
+  line-height: 1.1em;
+  margin: 0.5em 0;
+}
+@media screen and (max-width: 1280px) {
+  div.creativeCategory div.creativeExample {
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 992px) {
+  div.creativeCategory div.creativeExample {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+}
+div.creativeCategory div.creativeExample a {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+div.creativeCategory div.creativeExample a:hover {
+  color: #727272;
+}
+
 #writingContent div.writingExample {
   width: 45%;
   float: left;
