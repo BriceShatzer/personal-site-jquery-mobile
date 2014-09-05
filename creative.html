@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/utilities/lodash.min.js"></script>
     <script src="/utilities/jquery.min.js"></script>
+    <script src="/utilities/download.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
+    <script>
+    function test(fact){
+       if ( !fact ){ console.log(fact+' is false') }
+        else if ( fact ){ console.log(fact+' is true') }
+    }
+    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -82,18 +89,65 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
             $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>');            
 
 
-
             var groupedItems = _.groupBy(items, function(obj){return obj.category}); 
             var itemCategories = _.keys(groupedItems);
 
             $.each(itemCategories, function(i,category) {
                 var $categoryContainer = $('<div class="creativeCategory"><h3>'+category+'</h3></div>');
                 $.each(groupedItems[category], function(i,item){
-                    $('<div class="creativeExample"><a href="#">'+item.name+'</a> - '+item.previewSlug+'</div>')
+                    $('<div class="creativeExample"><a href="creative.html?'+encodeURIComponent(item.name)+'">'+item.name+'</a> - '+item.previewSlug+'</div>')
                         .appendTo($categoryContainer)
                 });
                 $categoryContainer.appendTo($workspace);
             });
+        }
+    } else {
+        var creativeExample = _.find(items, function(item){ return item.name == query });
+        console.dir(creativeExample);
+        var $workspace = $('section[data-url="/creative.html?'+encodeURIComponent(query)+'"]').find('#creativeContent');
+        if( !$workspace.html() ){
+            $content = $('<div id="creativeExampleDetail"></div>');
+
+            $content.append('<h1 style="clear:both">'+creativeExample.name+'</h1>'); 
+
+            if(creativeExample.notes){
+                if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
+                    $content.append('<div class="itemInfo"><p class="notes">'+creativeExample.notes+'</p></div>');
+                } else{ 
+                    $content.append('<div class="itemInfo">'+creativeExample.notes+'</div>');
+                    $content.find('div.itemInfo p').addClass('notes');
+                }  
+
+            }
+
+            if(creativeExample.media){
+                if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
+                $.each(creativeExample.media, function() {
+                    var str = this.toLowerCase();
+                    if (str.search('youtube')>0){ //build youtube
+                        console.log('build youtube');
+                        $content.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
+                    } else {
+                        var filename = this.substring(this.lastIndexOf('/')+1);
+                        if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
+                            $content.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                        } else if ( str.search('\.pdf')>0 ) { // build pdf
+                            $content.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
+                        } else { // build other stuff
+                            $content.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
+                        }
+                    }
+                });
+            }
+            $workspace.append($content);
+            if(creativeExample.media){
+                $('a.image').fancybox();
+                $('a.download').on('click', function(event) {
+                    event.preventDefault();
+                    downloadFile(event.currentTarget.href);
+                });
+
+            }
         }
     }  
 

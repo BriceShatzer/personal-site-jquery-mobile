@@ -117,6 +117,8 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 
 #creativeInfo,
+//#creativeContent,
+#creativeContent,
 #workExample,
 #writingInfo,
 div.writingExample,
@@ -126,24 +128,10 @@ div.writingExample,
 	overflow:hidden;
 }
 
-/*
-#workExample{
-	div.techUsed{float:right;}
-	img{
-		max-width:40%;
-		max-height: 200px;
-		margin-right:1em;
-		vertical-align: middle;
-	}
-
-}
-
-*/
-
-
 #developmentContent,
 #workExample,
 #creativeInfo,
+#creativeExampleDetail,
 #writingContent,
 #toolsInfo{
 	h1 {
@@ -237,6 +225,7 @@ div.writingExample,
 		}
 	}
 }
+#creativeInfo{padding-top:0;}
 
 @mixin example-blocks{
 	width:45%;
@@ -285,7 +274,6 @@ section[data-url="/development.html"] #developmentContent{
 
 }
  */
-
 #portfolioContent,
 #workExample{
 	div.itemInfo{
@@ -299,30 +287,39 @@ section[data-url="/development.html"] #developmentContent{
 		padding: 0.5em 0.8em 0.8em;
 	}
 }
-
+#creativeExampleDetail,
 #portfolioContent{
 	h1{float:none;margin-right:0;}
 	p.notes{margin-top:0.5em;}
 }
+#creativeExampleDetail,
 #workExample{
 	div.itemInfo{font-size:1.1em}
-	img{
-		max-width:40%;
-		max-height: 200px; 
-		margin-right:1em;
-		vertical-align: middle;
-		cursor: pointer;
-	}
 	ul{ 
 		line-height: 1.1em;
 		li{list-style: disc inside;}
 	}
 }
+#creativeExampleDetail div.media,
+#creativeExampleDetail img,
+#workExample img{
+	max-width:40%;	
+	max-height: 200px; 
+	margin-right:1em;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#creativeExampleDetail div.media,
+#creativeExampleDetail img{
+	text-align:center;
+	float:left;
+	span{font-size: 4em;}
+}
+#creativeExampleDetail div.media{padding:1em;}
 
 div.creativeCategory{
 	overflow:hidden;
 	border-bottom: 1px solid #DDD;
-	//padding-bottom: 0.8em;
 	padding: 0.8em 1em 0.8em;
 	h3{
 		font-size:1.5em;
@@ -332,7 +329,8 @@ div.creativeCategory{
 		@include example-blocks;
 		@include font_droid;
 		line-height: 1.1em;
-		margin: 0.5em 0;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 		a{
 			font-weight:bold;
 			color: #333;

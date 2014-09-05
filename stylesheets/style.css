@@ -2388,6 +2388,7 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 
 #creativeInfo,
+#creativeContent,
 #workExample,
 #writingInfo,
 div.writingExample,
@@ -2396,22 +2397,10 @@ div.writingExample,
   overflow: hidden;
 }
 
-/*
-#workExample{
-	div.techUsed{float:right;}
-	img{
-		max-width:40%;
-		max-height: 200px;
-		margin-right:1em;
-		vertical-align: middle;
-	}
-
-}
-
-*/
 #developmentContent h1,
 #workExample h1,
 #creativeInfo h1,
+#creativeExampleDetail h1,
 #writingContent h1,
 #toolsInfo h1 {
   float: left;
@@ -2420,6 +2409,7 @@ div.writingExample,
 #developmentContent h2,
 #workExample h2,
 #creativeInfo h2,
+#creativeExampleDetail h2,
 #writingContent h2,
 #toolsInfo h2 {
   text-align: center;
@@ -2428,6 +2418,7 @@ div.writingExample,
 #developmentContent h3,
 #workExample h3,
 #creativeInfo h3,
+#creativeExampleDetail h3,
 #writingContent h3,
 #toolsInfo h3 {
   text-align: center;
@@ -2438,6 +2429,7 @@ div.writingExample,
 #developmentContent a,
 #workExample a,
 #creativeInfo a,
+#creativeExampleDetail a,
 #writingContent a,
 #toolsInfo a {
   font-weight: normal;
@@ -2448,6 +2440,7 @@ div.writingExample,
 #developmentContent a:hover,
 #workExample a:hover,
 #creativeInfo a:hover,
+#creativeExampleDetail a:hover,
 #writingContent a:hover,
 #toolsInfo a:hover {
   text-decoration: underline;
@@ -2455,6 +2448,7 @@ div.writingExample,
 #developmentContent div.devTopic_top,
 #workExample div.devTopic_top,
 #creativeInfo div.devTopic_top,
+#creativeExampleDetail div.devTopic_top,
 #writingContent div.devTopic_top,
 #toolsInfo div.devTopic_top {
   padding: 1em;
@@ -2463,6 +2457,7 @@ div.writingExample,
 #developmentContent p,
 #workExample p,
 #creativeInfo p,
+#creativeExampleDetail p,
 #writingContent p,
 #toolsInfo p {
   line-height: 1.1em;
@@ -2471,6 +2466,7 @@ div.writingExample,
 #developmentContent p.notes,
 #workExample p.notes,
 #creativeInfo p.notes,
+#creativeExampleDetail p.notes,
 #writingContent p.notes,
 #toolsInfo p.notes {
   font-size: 1.1em;
@@ -2478,6 +2474,7 @@ div.writingExample,
 #developmentContent div.ui-grid-a.ui-responsive,
 #workExample div.ui-grid-a.ui-responsive,
 #creativeInfo div.ui-grid-a.ui-responsive,
+#creativeExampleDetail div.ui-grid-a.ui-responsive,
 #writingContent div.ui-grid-a.ui-responsive,
 #toolsInfo div.ui-grid-a.ui-responsive {
   clear: both;
@@ -2485,6 +2482,7 @@ div.writingExample,
 #developmentContent div.ui-grid-a.ui-responsive > div,
 #workExample div.ui-grid-a.ui-responsive > div,
 #creativeInfo div.ui-grid-a.ui-responsive > div,
+#creativeExampleDetail div.ui-grid-a.ui-responsive > div,
 #writingContent div.ui-grid-a.ui-responsive > div,
 #toolsInfo div.ui-grid-a.ui-responsive > div {
   padding: 1em;
@@ -2493,6 +2491,7 @@ div.writingExample,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
   content: "-";
@@ -2503,6 +2502,7 @@ div.writingExample,
 #developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
   text-indent: 5px;
@@ -2511,6 +2511,7 @@ div.writingExample,
 #developmentContent div.backbutton a,
 #workExample div.backbutton a,
 #creativeInfo div.backbutton a,
+#creativeExampleDetail div.backbutton a,
 #writingContent div.backbutton a,
 #toolsInfo div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
@@ -2540,6 +2541,7 @@ div.writingExample,
 #developmentContent div.backbutton a:hover,
 #workExample div.backbutton a:hover,
 #creativeInfo div.backbutton a:hover,
+#creativeExampleDetail div.backbutton a:hover,
 #writingContent div.backbutton a:hover,
 #toolsInfo div.backbutton a:hover {
   color: #727272;
@@ -2547,6 +2549,7 @@ div.writingExample,
 #developmentContent div.backbutton a span,
 #workExample div.backbutton a span,
 #creativeInfo div.backbutton a span,
+#creativeExampleDetail div.backbutton a span,
 #writingContent div.backbutton a span,
 #toolsInfo div.backbutton a span {
   vertical-align: top;
@@ -2554,10 +2557,15 @@ div.writingExample,
 #developmentContent div.backbutton a span.fa,
 #workExample div.backbutton a span.fa,
 #creativeInfo div.backbutton a span.fa,
+#creativeExampleDetail div.backbutton a span.fa,
 #writingContent div.backbutton a span.fa,
 #toolsInfo div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
+}
+
+#creativeInfo {
+  padding-top: 0;
 }
 
 #creativeInfo h1,
@@ -2616,17 +2624,31 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   padding: 0.5em 0.8em 0.8em;
 }
 
+#creativeExampleDetail h1,
 #portfolioContent h1 {
   float: none;
   margin-right: 0;
 }
+#creativeExampleDetail p.notes,
 #portfolioContent p.notes {
   margin-top: 0.5em;
 }
 
+#creativeExampleDetail div.itemInfo,
 #workExample div.itemInfo {
   font-size: 1.1em;
 }
+#creativeExampleDetail ul,
+#workExample ul {
+  line-height: 1.1em;
+}
+#creativeExampleDetail ul li,
+#workExample ul li {
+  list-style: disc inside;
+}
+
+#creativeExampleDetail div.media,
+#creativeExampleDetail img,
 #workExample img {
   max-width: 40%;
   max-height: 200px;
@@ -2634,11 +2656,19 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   vertical-align: middle;
   cursor: pointer;
 }
-#workExample ul {
-  line-height: 1.1em;
+
+#creativeExampleDetail div.media,
+#creativeExampleDetail img {
+  text-align: center;
+  float: left;
 }
-#workExample ul li {
-  list-style: disc inside;
+#creativeExampleDetail div.media span,
+#creativeExampleDetail img span {
+  font-size: 4em;
+}
+
+#creativeExampleDetail div.media {
+  padding: 1em;
 }
 
 div.creativeCategory {
@@ -2656,7 +2686,8 @@ div.creativeCategory div.creativeExample {
   margin-right: 2%;
   font-family: "Droid Sans", "sans-serif";
   line-height: 1.1em;
-  margin: 0.5em 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 @media screen and (max-width: 1280px) {
   div.creativeCategory div.creativeExample {

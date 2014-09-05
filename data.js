@@ -31,12 +31,12 @@ var portfolioPrincipal = [
 "notes":"A site built for a boutique located in Beverly Hills, California which sells high-end handbags and home furnishings. The site is built on the <a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> platform and takes advantage of it's baked in e-commence features.",
 "media":[]
 },
-{"name":"Krystix",
+{"name":"Schaumburg Park Foundation",
 "context":"Links",
-"tech":["HTML & CSS","LightCMS"],
-"link":"",
+"tech":["HTML & CSS","LightCMS","JavaScript"],
+"link":"http://www.schaumburgparkfoundation.org/",
 "role":["developer","designer"],
-"notes":"A simple site built to help promote a credential/ticket/VIP pass product. The site is built on the <a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> platform.",
+"notes":"A site built to help raise awareness of and solicit donation for the Schaumburg Park Foundation. The site is built on the <a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> platform.",
 "media":[]
 },
 {"name":"R.J. Augustine and Associates",
@@ -143,14 +143,23 @@ var portfolioPrincipal = [
 "notes":"Helped implement some jQuery plugins and other scripting to add some interactivity to various pages, most noteably the <a href='http://www.linkstechnology.com/web-design/our-work' target='_blank'>\"Our Work\"</a> and <a href='http://www.linkstechnology.com/about-us/staff-bios' target='_blank'>\"Our Staff\"</a> pages.",
 "media":[]
 },
-{"name":"Redmon's Towing (unlaunched)",
+{"name":"Redmons Towing (unlaunched)",
 "context":"Links",
-"tech":["HTML & CSS","LightCMS","JavaScript","jQuery","jQueryUI"],
+"tech":["HTML & CSS","LightCMS","JavaScript","jQuery","jQuery UI"],
 "link":"http://redmonstowing.linkslite.com/",
 "role":["designer","developer"],
 "notes":"A site built for a Chicagoland based towing company. The site is built on the <a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> platform and uses jQuery & jQueryUI to provide novel interface interactivity. The site is structurally complete but some of the pages are missing content, and the project was ultimately never launched.",
 "media":[]
-}];
+},
+{"name":"BriceShatzer.com ",
+"context":"Personal",
+"tech":["HTML & CSS","SASS","JavaScript","jQuery","jQuery Mobile","Lo-Dash","JSON"],
+"link":"http://www.BriceShatzer.com",
+"role":["designer","developer"],
+"notes":"...the site you're looking at.",
+"media":[]
+}
+];
 
 var portfolioMaintained = [
 {
@@ -181,22 +190,22 @@ var portfolioMaintained = [
 {
 	"name":"PIR International",
 	"link":"http://www.pirinternational.com/",
-	"tech":[]
+	"tech":["ASP / PHP"]
 },
 {
 	"name":"Peerless Imported Rugs",
 	"link":"http://peerlessrugs.com/",
-	"tech":[]
+	"tech":["ASP / PHP"]
 },
 {
 	"name":"Area-Rug-Depot",
 	"link":"http://www.area-rugs-depot.com/",
-	"tech":[]
+	"tech":["ASP / PHP"]
 },
 {
 	"name":"Peerless Rug Company",
 	"link":"http://peerlessrugcompany.com/",
-	"tech":[]
+	"tech":["ASP / PHP"]
 },
 {
 	"name":"Community Support Services",
@@ -211,10 +220,78 @@ var portfolioMaintained = [
 {
 	"name":"Hoffman Estates Park District",
 	"link":"http://www.heparks.org/",
-	"tech":["html & css","joomla"]
-}];
+	"tech":["html & css","joomla!"]
+},
+{	"name":"Legal-Lease",
+	"link":"http://www.legal-lease.com/",
+	"tech":["ASP / PHP","Wordpress"]
+}
+];
 
 var portfolio_creative =[
+{
+	"name":"Beer Run: Mapping Retail Alcohol Sales Ordinances",
+	"category":"Graphic Design",
+	"previewSlug":"Visually conveying the cut-off time for alcohol sales for retailers within a 15 mile radius of Kenosha, WI",
+	"notes":"<p>As part of an assignment for the class <a href='https://my.carthage.edu/ICS/Academics/GEO/GEO_2600__UG11/RA_2011_UNDG-GEO_2600__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Mapping Your World: Introduction to Geographic Information Science\"</a>, I created a radius map to show the cut-off time for retail alcohol sales for businesses within 15 miles of Kenosha, WI.</p><p>The map was created using the ArcGIS software suite to combine mapping data extracted from the U.S. Geological Survey's Earth Resources Observation and Science Center with code and ordinance research pertaining to municipalities in Lake County, Illinois.</p><p>The complete assignment document which provides the rational behind the project and a deeper explanation detailing the creation of the map can be found below.</p>",
+	"media":["/portfolio/FinalMappingProject.png","/portfolio/GISMappingProject.pdf"]
+},
+{
+	"name":"ILUSSSA Website/Brand Identity",
+	"category":"Branding & Logos",
+	"previewSlug":"Created unique and effective iconography & style guidelines for a state organization while maintaining consistency with their national parent association",
+	"notes":"<p>When <a href='http://www.linkstechnology.com/' target='_blank'>we</a> were asked to build a new website for the Illinois branch of the <a href='http://www.usssatoday.com' target='_blank'>United States Specialty Sports Association</a> (USSSA), I created new iconography and style guidelines that were both consistent with the national USSSA organization while still being able to effectively convey different sections of the website.</p><p>Created using Adobe Photoshop & Illustrator</p>",
+	"media":["/portfolio/ILUSSSA_icons+style.png","/portfolio/fastpitch_icon.ai","/portfolio/slowpitch_icon.ai","/portfolio/hof_icon.ai","/portfolio/umpire_icon.ai","/portfolio/IL_USSSA_logo.ai"]
+},
+{
+	"name":"Tau Kappa Epsilon Branded Lighters",
+	"category":"Branding & Logos",
+	"previewSlug":"Worked as the creative talent and liaison between a student organization and a manufacturer to create a branded item",
+	"notes":"<p>The Tau Chi chapter of Tau Kappa Epsilon placed me in charge of a project to create branded lighters that would be given to all of the members fraternity members as an end-of-semester gift.</p> <p>My <a href='/portfolio/TKELightersOriginalDesign.pdf' target='_target'>initial design</a> was approved by the chapter but rejected by the manufacturer because it could not accurately be replicated on such a small item. They then provided specific parameters for us to work within for the item, that I used to create <a href='/portfolio/TKELightersRoughDesignDoc.pdf' target='_blank'> two more designs for the chapter's review.</p> <p>After a final design was selected and submitted, the <a href='/portfolio/TKELightersFinalProof.pdf' target='_blank'>final production proof</a> was completed and the items were manufactured.</p>",
+	"media":"/portfolio/TKELightersFinal.jpg"
+},
+{
+	"name":"Carthage Drumline Name and Logo Concepts",
+	"category":"Branding & Logos",
+	"previewSlug":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group",
+	"notes":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group. The idea plays off of the various \"fire\" elements that Carthage uses in their branding (i.e. <a href='http://athletics.carthage.edu/custompages/General/Carthage%20Logo.JPG' target='_blank'>Torch & Shield Athletic Logo</a>, <a href='http://www.carthage.edu/athletics/red-hots/' target='_blank'>The Mascot Torchie</a>, etc.) and brand them using fire fighting inspired elements. Below you find the a copy of the proposal that was submitted along with the individual example logos that were included in the document.",
+	"media":["/portfolio/DrummerLogoSimpleRedBrigade.jpg","/portfolio/DrummerLogoSimpleRedFire.jpg","/portfolio/DrummerLogoBandW.jpg","/portfolio/DrummerLogoMinimalist.jpg","/portfolio/CarthageDrumlineProposal.pdf"]
+},
+{
+	"name":"Special Use Zone Signage",
+	"category":"Graphic Design",
+	"previewSlug":"Potential signage designs for an outdoor multipurpose recreation area",
+	"notes":"<p>As a final group project for the class <a href='https://my.carthage.edu/ICS/Academics/CDM/CDM_400F__S__UG11/RB_2012_UNDG-CDM_400F__S__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Interpreting Nature\"</a>, we were required to create signage designs for the Richard Bong State Recreation Area's \"Special Use Zone\". Numerous activities like hunting, ATV trails, dog training and model airplanes/rocketry all take place within this space. This popularity has lead to altercations between groups of park goers, so we were tasked with creating signage which not only conveyed the diverse array of actives which take place, but also reminding visitors to be considerate to others also using the space.</p><p>I was responsible for creating more literal representation of the various activities that take place to contrast the more minimalistic iconography used in our other designs. Each activity was created as an independent vector image in Adobe Illustrator before being composited together in Adobe InDesign.</p>",
+	"media":["/portfolio/Bong_MuralStyle.jpg","/portfolio/Bong_ColoredImages.jpg","/portfolio/All_SUZ_Signs.pdf"]
+},
+{
+	"name":"Themed Article Splash Images",
+	"category":"Graphic Design",
+	"previewSlug":"A series of images created for a set of themed articles",
+	"notes":"Front page splash images that were created for a weekly article series that discussed football games of fantasy interest, with each installment revolving around a particular topic (e.g. sitcoms, '90s game shows, Hitchcock movies, etc.)",
+	"media":["/portfolio/CarmenSandiego.jpg","/portfolio/big-bang.jpg","/portfolio/hitchcock.jpg"]
+},
+{
+	"name":"Scarface Parody Image",
+	"category":"Graphic Design",
+	"previewSlug":"A spoof on the original poster for the movie Scarface that was used on the Iowa Hawkeye fan website BlackHeartGoldPants.com",
+	"notes":"Created for and used on the Iowa Hawkeye fan website <a href='http://www.BlackHeartGoldPants.com' target='_blank'>BlackHeartGoldPants.com</a>. When Iowa Wide Receiver <a href='http://en.wikipedia.org/wiki/Derrell_Johnson-Koulianos'>Derrell Johnson Koulianos</a> was arrested on multiple drug sale and possession charges, he instantly began to draw comparisons to Tony Montana, the criminal protagonist in the film Scarface. The image mimics the minimalist design and allegorical use of color found in the <a href='http://www.imdb.com/media/rm2378142208/tt0086250' target='_blank'>original movie poster</a> for satirical effect.",
+	"media":"/portfolio/DJK_is_Scarface.png"
+},
+{
+	"name":"\"Quick Pick\" Mobile App Mock-up Images",
+	"category":"Graphic Design",
+	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application",
+	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
+	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
+},
+{
+	"name":"Team Management Mobile App Mock-up Images",
+	"category":"Graphic Design",
+	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
+	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
+	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
+},
 {
 	"name":"2009 SportsBuff.com Fantasy Football Finalists",
 	"category":"Audio/Video",
@@ -242,55 +319,6 @@ var portfolio_creative =[
 	"previewSlug":"Multiple versions of the intro for the daily fantasy sports audio podcast \"The Fantasy Lunch\"",
 	"notes":"<p>\"The Fantasy Lunch\" was a daily audio podcast which featured three hosts discussing various sports stories and their possible impact in the world of fantasy sports. With the daily schedule of the show, the hosts often rotated. This meant that multiple intro version had to be created to accurately reflect who was on air for that particular day. The intros were created using an audio clip from \"The Simpsons\", a piece of music created for and owned by <a href='http://www.worldfantasygames.com/' target='_blank'>WFG</a>, and my voice.</p><p>\"The Fantasy Lunch\" can be found on <a href='http://itunes.apple.com/us/podcast/rapiddraft-coms-fantasy-lunch/id361272196' target='_blank'>iTunes</a> and on <a href='http://www.blogtalkradio.com/rdfantasylunch' target='_blank'>BlogTalkRadio</a></p>",
 	"media":["/portfolio/intro-pat-and-bdw.mp3","/portfolio/intro-pat-and-schauf.mp3","/portfolio/intro-pat-schauf-and-bdw.mp3"]
-},
-{
-	"name":"ILUSSSA Website/Brand Identity",
-	"category":"Branding & Logos",
-	"previewSlug":"",
-	"notes":"",
-	"media":["/portfolio/ILUSSSA_icons+style.png","/portfolio/fastpitch_icon.ai","/portfolio/slowpitch_icon.ai","/portfolio/hof_icon.ai","/portfolio/umpire_icon.ai","/portfolio/IL_USSSA_logo.ai"]
-},
-{
-	"name":"Branded Lighters",
-	"category":"Branding & Logos",
-	"previewSlug":"Worked as the creative talent and liaison between a student organization and a manufacturer to create a branded item",
-	"notes":"<p>The Tau Chi chapter of Tau Kappa Epsilon placed me in charge of a project to create branded lighters that would be given to all of the members fraternity members as an end-of-semester gift.</p> <p>My <a href='/portfolio/TKELightersOriginalDesign.pdf' target='_target'>initial design</a> was approved by the chapter but rejected by the manufacturer because it could not accurately be replicated on such a small item. They then provided specific parameters for us to work within for the item, that I used to create <a href='/portfolio/TKELightersRoughDesignDoc.pdf' target='_blank'> two more designs for the chapter's review.</p> <p>After a final design was selected and submitted, the <a href='/portfolio/TKELightersFinalProof.pdf' target='_blank'>final production proof</a> was completed and the items were manufactured.</p>",
-	"media":"/portfolio/TKELightersFinal.jpg"
-},
-{
-	"name":"Carthage Drumline Name and Logo Concepts",
-	"category":"Branding & Logos",
-	"previewSlug":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group",
-	"notes":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group. The idea plays off of the various \"fire\" elements that Carthage uses in their branding (i.e. <a href='http://athletics.carthage.edu/custompages/General/Carthage%20Logo.JPG' target='_blank'>Torch & Shield Athletic Logo</a>, <a href='http://www.carthage.edu/athletics/red-hots/' target='_blank'>The Mascot Torchie</a>, etc.) and brand them using fire fighting inspired elements. Below you find the a copy of the proposal that was submitted along with the individual example logos that were included in the document.",
-	"media":["/portfolio/DrummerLogoSimpleRedBrigade.jpg","/portfolio/DrummerLogoSimpleRedFire.jpg","/portfolio/DrummerLogoBandW.jpg","/portfolio/DrummerLogoMinimalist.jpg","/portfolio/CarthageDrumlineProposal.pdf"]
-},
-{
-	"name":"Themed Article Splash Images",
-	"category":"Graphic Design",
-	"previewSlug":"A series of images created for a set of themed articles",
-	"notes":"Front page splash images that were created for a weekly article series that discussed football games of fantasy interest, with each installment revolving around a particular topic (e.g. sitcoms, '90s game shows, Hitchcock movies, etc.)",
-	"media":["/portfolio/CarmenSandiego.jpg","/portfolio/big-bang.jpg","/portfolio/hitchcock.jpg"]
-},
-{
-	"name":"Scarface Parody Image",
-	"category":"Graphic Design",
-	"previewSlug":"A spoof on the original poster for the movie Scarface that was used on the Iowa Hawkeye fan website BlackHeartGoldPants.com",
-	"notes":"Created for and used on the Iowa Hawkeye fan website <a href='http://www.BlackHeartGoldPants.com' target='_blank'>BlackHeartGoldPants.com</a>. When Iowa Wide Receiver <a href='http://en.wikipedia.org/wiki/Derrell_Johnson-Koulianos'>Derrell Johnson Koulianos</a> was arrested on multiple drug sale and possession charges, he instantly began to draw comparisons to Tony Montana, the criminal protagonist in the film Scarface. The image uses the minimalist design and allegorical use of color found in the <a href='http://www.imdb.com/media/rm2378142208/tt0086250' target='_blank'>original movie poster</a> for satirical effect.",
-	"media":"/portfolio/DJK_is_Scarface.png"
-},
-{
-	"name":"\"Quick Pick\" Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application.",
-	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
-	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
-},
-{
-	"name":"Team Management Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"",
-	"notes":"A collection of rough user interface mock-ups that were created in conjunction with the Team Management Mobile Application Design Document.",
-	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
 }];
 
 
@@ -308,6 +336,10 @@ var tech_data = [
 			{	
 			"name":"SASS",
 			"notes":"SCSS syntax only"
+			},
+			{
+				"name":"ASP / PHP",
+				"notes":"I have a limited amount of experience with sites built using ASP or PHP. I wouldn't be able write something from scratch, but I am comfortable tracking down root causes of client-side rendering issues"
 			}
 		]
 	},
@@ -345,10 +377,6 @@ var tech_data = [
 			},
 			{	
 			"name":"Backbone.js",
-			"notes":""
-			},
-			{	
-			"name":"script.aculo.us",
 			"notes":""
 			}]
 	},
