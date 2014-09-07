@@ -243,6 +243,12 @@ var portfolio_creative =[
 	"notes":"<p>When <a href='http://www.linkstechnology.com/' target='_blank'>we</a> were asked to build a new website for the Illinois branch of the <a href='http://www.usssatoday.com' target='_blank'>United States Specialty Sports Association</a> (USSSA), I created new iconography and style guidelines that were both consistent with the national USSSA organization while still being able to effectively convey different sections of the website.</p><p>Created using Adobe Photoshop & Illustrator</p>",
 	"media":["/portfolio/ILUSSSA_icons+style.png","/portfolio/fastpitch_icon.ai","/portfolio/slowpitch_icon.ai","/portfolio/hof_icon.ai","/portfolio/umpire_icon.ai","/portfolio/IL_USSSA_logo.ai"]
 },
+{	"name":"Personal Logo",
+	"category":"Branding & Logos",
+	"previewSlug":"A minimalistic logo which I use to provide a consistent identity across various online sites and services",
+	"notes":"<p>I created this minimalistic logo to provide a consistent identity across various online sites and services like <a href='http://github.com/BriceShatzer' target='_blank'>GitHub</a>, <a href='http://twitter.com/_shatzer' target='_blank'>Twitter</a> and <a href='http://www.about.me/brice_shatzer' target='_blank'>About.me</a></p><p>Created using Adobe Photoshop & Illustrator</p>",
+	"media":["/portfolio/personal_logo.jpg","/portfolio/personal_logo-splash_page.png"]
+},
 {
 	"name":"Tau Kappa Epsilon Branded Lighters",
 	"category":"Branding & Logos",
@@ -291,6 +297,19 @@ var portfolio_creative =[
 	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
 	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
 	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
+},
+{	"name":"RASA Summer Camp Brochure",
+	"category":"Graphic Design",
+	"previewSlug":"This simple brochure was created to help promote a summer soccer camp",
+	"notes":"This simple tri-fold style brochure was created to help promote a summer preseason camp for local boys high school teams hosted by the Racine Area Soccer Association and Racine United Soccer Club. Both a color and black & white version were created to allow flexibility in printing. In addition to creating the elements and design, all promotional copy was written by me.",
+	"media":["/portfolio/HSCamp2012Color.pdf","/portfolio/HSCamp2012BW.pdf"]
+},
+{
+	"name":"Schaumburg Park Foundation Site Design",
+	"category":"Graphic Design",
+	"previewSlug":"",
+	"notes":"<p><a href='http://www.schaumburgparkfoundation.org/' target='_blank'>Schaumburg Park Foundation</a></p>",
+	"media":["/portfolio/SPF_Homepage.jpg","/portfolio/SPF_Homepage.psd","/portfolio/SPF_InteriorPage.jpg","/portfolio/SPF_InteriorPage.psd"]
 },
 {
 	"name":"2009 SportsBuff.com Fantasy Football Finalists",
