@@ -2709,6 +2709,9 @@ div.creativeCategory div.creativeExample a {
 div.creativeCategory div.creativeExample a:hover {
   color: #727272;
 }
+div.creativeCategory div.creativeExample:nth-child(even) {
+  clear: left;
+}
 
 #writingContent div.writingExample {
   width: 45%;
