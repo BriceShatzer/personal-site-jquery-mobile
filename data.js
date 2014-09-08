@@ -307,8 +307,8 @@ var portfolio_creative =[
 {
 	"name":"Schaumburg Park Foundation Site Design",
 	"category":"Graphic Design",
-	"previewSlug":"",
-	"notes":"<p><a href='http://www.schaumburgparkfoundation.org/' target='_blank'>Schaumburg Park Foundation</a></p>",
+	"previewSlug":"Home and interior page mock-ups for a non-profit organization.",
+	"notes":"<p>Designed for the Schaumburg Park Foundation with the goal of helping to raise awareness and solicit donations. The site was ultimately built on the LightCMS platform and can be viewed <a href='http://www.schaumburgparkfoundation.org/' target='_blank'>here</a></p>",
 	"media":["/portfolio/SPF_Homepage.jpg","/portfolio/SPF_Homepage.psd","/portfolio/SPF_InteriorPage.jpg","/portfolio/SPF_InteriorPage.psd"]
 },
 {
@@ -359,6 +359,14 @@ var tech_data = [
 			{
 				"name":"ASP / PHP",
 				"notes":"I have a limited amount of experience with sites built using ASP or PHP. I wouldn't be able write something from scratch, but I am comfortable tracking down root causes of client-side rendering issues"
+			},
+			{	
+			"name":"Bootstrap",
+			"notes":""
+			},
+			{
+			"name":"jQuery Mobile",
+			"notes":""
 			}
 		]
 	},
@@ -367,11 +375,11 @@ var tech_data = [
 		"childItems":[
 			{
 			"name":"JavaScript",
-			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also completely comfortable debugging any JavaScript related issue."
+			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I'm also comfortable debugging nearly any JavaScript related issue."
 			},
 			{	
 			"name":"jQuery",
-			"notes":""
+			"notes":"I'm completely comfortable working with this library. I have experience implementing plugins, debugging version dependency & migration issues, and writing original functionality."
 			},
 			{
 			"name":"Google Maps JavaScript API",
@@ -423,36 +431,11 @@ var tech_data = [
 			"notes":""
 			},
 			{	
-			"name":"Tumblr",
-			"notes":""
-			},				
-			{	
 			"name":"Joomla!",
 			"notes":""
 			}
 		]
 	},
-	{	
-		"name":"Frameworks",
-		"childItems":[
-			{	
-			"name":"Bootstrap",
-			"notes":""
-			},
-			{
-			"name":"HTML5 Boilerplate",
-			"notes":""
-			},
-			{
-			"name":"jQuery Mobile",
-			"notes":""
-			},
-			{
-			"name":"ASP.net",
-			"notes":"In addition to maintaining & updating the front-end portion of sites using this structure, I'm comfortable tracking down back-end control components causing display issues."	
-			}
-		]
-	},		
 	{	"name":"Structured Data / Databases",
 		"childItems":[
 		{	"name":"JSON",
