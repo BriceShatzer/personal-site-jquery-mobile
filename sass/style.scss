@@ -225,7 +225,10 @@ div.writingExample,
 		}
 	}
 }
-#creativeInfo{padding-top:0;}
+#creativeInfo{
+	padding:0 1em 0;
+	p{margin-bottom:0;}
+}
 
 @mixin example-blocks{
 	width:45%;
@@ -313,9 +316,26 @@ section[data-url="/development.html"] #developmentContent{
 #creativeExampleDetail img{
 	text-align:center;
 	float:left;
-	span{font-size: 4em;}
+	@media screen and (max-width:992px){
+		max-width:90%;
+		max-height: none;
+		clear:left;
+		//float:none;
+		//margin-left: auto;
+    	//margin-right: auto;
+    	//padding-top:0.5em;
+    	padding-bottom:0.8em
+	}
+	span{
+		font-size: 4em;
+		@media screen and (max-width:992px){font-size:3em;}
+		@media screen and (max-width:640px){font-size:2em;}
+	}
 }
-#creativeExampleDetail div.media{padding:1em;}
+#creativeExampleDetail div.media{ 
+	padding:1em;
+	@media screen and (max-width:992px){width:90%}
+}
 
 div.creativeCategory{
 	overflow:hidden;

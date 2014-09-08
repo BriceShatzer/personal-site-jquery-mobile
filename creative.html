@@ -86,7 +86,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
         var $workspace = $('section[data-url="/creative.html"]').find('#creativeContent');
         if( !$workspace.html() ){  
             console.log('workspace has no html');
-            $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>');            
+            $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
 
 
             var groupedItems = _.groupBy(items, function(obj){return obj.category}); 

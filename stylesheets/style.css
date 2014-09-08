@@ -2565,7 +2565,10 @@ div.writingExample,
 }
 
 #creativeInfo {
-  padding-top: 0;
+  padding: 0 1em 0;
+}
+#creativeInfo p {
+  margin-bottom: 0;
 }
 
 #creativeInfo h1,
@@ -2662,13 +2665,39 @@ section[data-url="/development.html"] #developmentContent div.ui-body {
   text-align: center;
   float: left;
 }
+@media screen and (max-width: 992px) {
+  #creativeExampleDetail div.media,
+  #creativeExampleDetail img {
+    max-width: 90%;
+    max-height: none;
+    clear: left;
+    padding-bottom: 0.8em;
+  }
+}
 #creativeExampleDetail div.media span,
 #creativeExampleDetail img span {
   font-size: 4em;
 }
+@media screen and (max-width: 992px) {
+  #creativeExampleDetail div.media span,
+  #creativeExampleDetail img span {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 640px) {
+  #creativeExampleDetail div.media span,
+  #creativeExampleDetail img span {
+    font-size: 2em;
+  }
+}
 
 #creativeExampleDetail div.media {
   padding: 1em;
+}
+@media screen and (max-width: 992px) {
+  #creativeExampleDetail div.media {
+    width: 90%;
+  }
 }
 
 div.creativeCategory {
