@@ -105,7 +105,7 @@ var portfolioPrincipal = [
 },
 {"name":"The Marriott Theatre",
 "context":"Links",
-"tech":["HTML & CSS","JSON","LESS","Bootstrap","Lo-Dash","underscore.js","Adobe Business Catalyst"],
+"tech":["HTML & CSS","LESS","Bootstrap","Lo-Dash","underscore.js","Adobe Business Catalyst"],
 "link":"http://www.marriotttheatre.com/",
 "role":"developer",
 "notes":"A responsive site. ",
@@ -113,7 +113,7 @@ var portfolioPrincipal = [
 },
 {"name":"POPAI",
 "context":"Links",
-"tech":["HTML & CSS","LESS","JavaScript","jQuery","Lo-Dash","JSON","Bootstrap","MySQL","Wordpress","Google Maps JavaScript API","Adobe Business Catalyst"],
+"tech":["HTML & CSS","LESS","JavaScript","jQuery","Lo-Dash","Bootstrap","MySQL","Wordpress","Google Maps JavaScript API","Adobe Business Catalyst"],
 "link":"http://www.popai.com/",
 "role":"developer",
 "notes":"I used Business Catalyst's custom web app framework with various JavaScript solutions to create a couple custom components to meet the needs of the client.<br><ul><li>The <a href='http://www.popai.com/resources' target='_blank'>Industry Resources</a> has controls which allow for different types and categories of content to be sorted and filtered.</li><li>The <a href='http://www.popai.com/industry-news' target='_blank'>various</a> <a href='http://popai.businesscatalyst.com/global-office-news' target='_blank'>news</a> pages are rendered in a way that allows the content to be previewed, but keeps the full article in a \"walled garden\".</li><li>The<a href='http://www.popai.com/global-offices' target='_blank'>Global Offices</a> page uses the Google Maps API to build an interactive map of the various POPAI chapters located throughout the world.</li><li>The <a href='http://www.popai.com/events' target='_blank'>Events</a> page renders events in both a list and calendar view.</li></ul><br>In addition to creating the majority of the site functionality, I was also instrumental in migrating the organization's extensive existing content from their prior site that built using previously site was built on Wordpress.",
@@ -153,7 +153,7 @@ var portfolioPrincipal = [
 },
 {"name":"BriceShatzer.com ",
 "context":"Personal",
-"tech":["HTML & CSS","SASS","JavaScript","jQuery","jQuery Mobile","Lo-Dash","JSON"],
+"tech":["HTML & CSS","SASS","JavaScript","jQuery","jQuery Mobile","Lo-Dash"],
 "link":"http://www.BriceShatzer.com",
 "role":["designer","developer"],
 "notes":"...the site you're looking at.",
@@ -357,8 +357,8 @@ var tech_data = [
 			"notes":"SCSS syntax only"
 			},
 			{
-				"name":"ASP / PHP",
-				"notes":"I have a limited amount of experience with sites built using ASP or PHP. I wouldn't be able write something from scratch, but I am comfortable tracking down root causes of client-side rendering issues"
+			"name":"ASP / PHP",
+			"notes":"I have a limited amount of experience with sites built using ASP or PHP. I wouldn't be able write something from scratch, but I am comfortable tracking down root causes of client-side rendering issues"
 			},
 			{	
 			"name":"Bootstrap",
@@ -387,24 +387,20 @@ var tech_data = [
 			},				
 			{	
 			"name":"Underscore.js",
-			"notes":""
+			"notes":"<a href='http://underscorejs.org/' target='_blank'>Underscore.js</a> is a JavaScript library that provides functional programming helpers without extending any built-in objects. I've primarily used it as way to manipulate structured data in sites using a MVC-like design."
 			},
 			{	
 			"name":"Lo-Dash",
-			"notes":""
+			"notes":"<a href='http://lodash.com/' target='_blank'>Lo-Dash</a> is a utility JavaScript library that was forked from <a href='development.html'>underscore.js</a>. It provides the functional programming helpers of underscore.js, while adding some additional feature and increasing performance."
 			},
 			{	
 			"name":"jQuery UI",
-			"notes":""
+			"notes":"A set of widgets and visual effects built on top of jQuery."
 			},
 		
 			{	
-			"name":"Angular.js",
-			"notes":""
-			},
-			{	
-			"name":"Backbone.js",
-			"notes":""
+			"name":"AngularJS & Backbone.js",
+			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of these frameworks through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a>."
 			}]
 	},
 
@@ -416,11 +412,11 @@ var tech_data = [
 			},
 			{	
 			"name":"LightCMS",
-			"notes":""
+			"notes":"A white label content management system"
 			},
 			{	
 			"name":"Wordpress",
-			"notes":""
+			"notes":"Arguably the most ubiquitous content management system currently in use."
 			},
 			{	
 			"name":"SiteFinity",
@@ -435,7 +431,7 @@ var tech_data = [
 			"notes":""
 			}
 		]
-	},
+	}/*,
 	{	"name":"Structured Data / Databases",
 		"childItems":[
 		{	"name":"JSON",
@@ -450,7 +446,7 @@ var tech_data = [
 		{	"name":"MySQL",
 			"notes":""
 		}]
-	},
+	}/*,
 	{	"name":"Other Services",
 		"childItems":[
 			{
@@ -462,6 +458,6 @@ var tech_data = [
 			"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
 			}
 		]
-	}
+	}*/
 ];
 var url;	
