@@ -2393,7 +2393,8 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 #workExample,
 #writingInfo,
 div.writingExample,
-#toolsInfo {
+#toolsInfo,
+#aboutMeInfo {
   padding: 1em;
   overflow: hidden;
 }
@@ -2403,7 +2404,8 @@ div.writingExample,
 #creativeInfo h1,
 #creativeExampleDetail h1,
 #writingContent h1,
-#toolsInfo h1 {
+#toolsInfo h1,
+#aboutMeInfo h1 {
   float: left;
   margin-right: 0.4em;
 }
@@ -2412,7 +2414,8 @@ div.writingExample,
 #creativeInfo h2,
 #creativeExampleDetail h2,
 #writingContent h2,
-#toolsInfo h2 {
+#toolsInfo h2,
+#aboutMeInfo h2 {
   text-align: center;
   border-bottom: none;
 }
@@ -2421,7 +2424,8 @@ div.writingExample,
 #creativeInfo h3,
 #creativeExampleDetail h3,
 #writingContent h3,
-#toolsInfo h3 {
+#toolsInfo h3,
+#aboutMeInfo h3 {
   text-align: center;
   padding-bottom: 2px;
   border-bottom: 1px solid #DDD;
@@ -2432,7 +2436,8 @@ div.writingExample,
 #creativeInfo a,
 #creativeExampleDetail a,
 #writingContent a,
-#toolsInfo a {
+#toolsInfo a,
+#aboutMeInfo a {
   font-weight: normal;
   color: #727272;
   text-decoration: none;
@@ -2443,7 +2448,8 @@ div.writingExample,
 #creativeInfo a:hover,
 #creativeExampleDetail a:hover,
 #writingContent a:hover,
-#toolsInfo a:hover {
+#toolsInfo a:hover,
+#aboutMeInfo a:hover {
   text-decoration: underline;
 }
 #developmentContent div.devTopic_top,
@@ -2451,7 +2457,8 @@ div.writingExample,
 #creativeInfo div.devTopic_top,
 #creativeExampleDetail div.devTopic_top,
 #writingContent div.devTopic_top,
-#toolsInfo div.devTopic_top {
+#toolsInfo div.devTopic_top,
+#aboutMeInfo div.devTopic_top {
   padding: 1em;
   overflow: hidden;
 }
@@ -2460,7 +2467,8 @@ div.writingExample,
 #creativeInfo p,
 #creativeExampleDetail p,
 #writingContent p,
-#toolsInfo p {
+#toolsInfo p,
+#aboutMeInfo p {
   line-height: 1.1em;
   margin-bottom: 1em;
 }
@@ -2469,7 +2477,8 @@ div.writingExample,
 #creativeInfo p.notes,
 #creativeExampleDetail p.notes,
 #writingContent p.notes,
-#toolsInfo p.notes {
+#toolsInfo p.notes,
+#aboutMeInfo p.notes {
   font-size: 1.1em;
 }
 #developmentContent div.ui-grid-a.ui-responsive,
@@ -2477,7 +2486,8 @@ div.writingExample,
 #creativeInfo div.ui-grid-a.ui-responsive,
 #creativeExampleDetail div.ui-grid-a.ui-responsive,
 #writingContent div.ui-grid-a.ui-responsive,
-#toolsInfo div.ui-grid-a.ui-responsive {
+#toolsInfo div.ui-grid-a.ui-responsive,
+#aboutMeInfo div.ui-grid-a.ui-responsive {
   clear: both;
 }
 #developmentContent div.ui-grid-a.ui-responsive > div,
@@ -2485,7 +2495,8 @@ div.writingExample,
 #creativeInfo div.ui-grid-a.ui-responsive > div,
 #creativeExampleDetail div.ui-grid-a.ui-responsive > div,
 #writingContent div.ui-grid-a.ui-responsive > div,
-#toolsInfo div.ui-grid-a.ui-responsive > div {
+#toolsInfo div.ui-grid-a.ui-responsive > div,
+#aboutMeInfo div.ui-grid-a.ui-responsive > div {
   padding: 1em;
   margin-top: 0.8em;
 }
@@ -2494,7 +2505,8 @@ div.writingExample,
 #creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
+#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
+#aboutMeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
   content: "-";
   position: relative;
   left: -5px;
@@ -2505,7 +2517,8 @@ div.writingExample,
 #creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
 #writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
+#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
+#aboutMeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
   text-indent: 5px;
   margin-bottom: 1px;
 }
@@ -2514,7 +2527,8 @@ div.writingExample,
 #creativeInfo div.backbutton a,
 #creativeExampleDetail div.backbutton a,
 #writingContent div.backbutton a,
-#toolsInfo div.backbutton a {
+#toolsInfo div.backbutton a,
+#aboutMeInfo div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
   font-size: 1em;
   color: #BFBFBF;
@@ -2544,7 +2558,8 @@ div.writingExample,
 #creativeInfo div.backbutton a:hover,
 #creativeExampleDetail div.backbutton a:hover,
 #writingContent div.backbutton a:hover,
-#toolsInfo div.backbutton a:hover {
+#toolsInfo div.backbutton a:hover,
+#aboutMeInfo div.backbutton a:hover {
   color: #727272;
 }
 #developmentContent div.backbutton a span,
@@ -2552,7 +2567,8 @@ div.writingExample,
 #creativeInfo div.backbutton a span,
 #creativeExampleDetail div.backbutton a span,
 #writingContent div.backbutton a span,
-#toolsInfo div.backbutton a span {
+#toolsInfo div.backbutton a span,
+#aboutMeInfo div.backbutton a span {
   vertical-align: top;
 }
 #developmentContent div.backbutton a span.fa,
@@ -2560,7 +2576,8 @@ div.writingExample,
 #creativeInfo div.backbutton a span.fa,
 #creativeExampleDetail div.backbutton a span.fa,
 #writingContent div.backbutton a span.fa,
-#toolsInfo div.backbutton a span.fa {
+#toolsInfo div.backbutton a span.fa,
+#aboutMeInfo div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
 }
@@ -2587,27 +2604,27 @@ div.writingExample,
   margin-right: 0.4em;
 }
 
-section[data-url="/development.html"] #developmentContent h2, section[data-url="/development.html"] #developmentContent h3 {
+section[data-url="/development"] #developmentContent h2, section[data-url="/development"] #developmentContent h3 {
   text-align: left;
 }
-section[data-url="/development.html"] #developmentContent h2 {
+section[data-url="/development"] #developmentContent h2 {
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
-section[data-url="/development.html"] #developmentContent h3 {
+section[data-url="/development"] #developmentContent h3 {
   border-bottom: none;
 }
-section[data-url="/development.html"] #developmentContent div.ui-body {
+section[data-url="/development"] #developmentContent div.ui-body {
   padding-left: 2em;
   padding-right: 6em;
 }
 @media screen and (max-width: 992px) {
-  section[data-url="/development.html"] #developmentContent div.ui-body {
+  section[data-url="/development"] #developmentContent div.ui-body {
     padding-right: 2em;
   }
 }
 @media screen and (max-width: 640px) {
-  section[data-url="/development.html"] #developmentContent div.ui-body {
+  section[data-url="/development"] #developmentContent div.ui-body {
     padding-left: 0.4em;
     padding-right: 0.4em;
   }

@@ -122,7 +122,8 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 #workExample,
 #writingInfo,
 div.writingExample,
-#toolsInfo
+#toolsInfo,
+#aboutMeInfo
 {
 	padding:1em;
 	overflow:hidden;
@@ -133,7 +134,9 @@ div.writingExample,
 #creativeInfo,
 #creativeExampleDetail,
 #writingContent,
-#toolsInfo{
+#toolsInfo,
+#aboutMeInfo
+{
 	h1 {
 		// font-family: "Droid Sans", "sans-serif";		
 		float:left;
@@ -256,7 +259,7 @@ div.writingExample,
 }
 //
 
-section[data-url="/development.html"] #developmentContent{
+section[data-url="/development"] #developmentContent{
 	h2,h3{text-align:left;}
 	h2{
 		border-bottom: 1px solid #DDD;
