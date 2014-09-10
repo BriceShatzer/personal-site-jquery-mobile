@@ -2387,6 +2387,7 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
   font-weight: normal;
 }
 
+#developmentInfo,
 #creativeInfo,
 #creativeContent,
 #workExample,
@@ -2562,6 +2563,15 @@ div.writingExample,
 #toolsInfo div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
+}
+
+#developmentInfo {
+  padding-bottom: 0;
+}
+
+#developmentContent p.notes.lone {
+  float: left;
+  margin-top: 1em;
 }
 
 #creativeInfo {

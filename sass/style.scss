@@ -115,7 +115,7 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 	div.ui-collapsible-content a {font-weight:normal}
 //	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
 }
-
+#developmentInfo,
 #creativeInfo,
 //#creativeContent,
 #creativeContent,
@@ -224,6 +224,11 @@ div.writingExample,
 			}
 		}
 	}
+}
+#developmentInfo{ padding-bottom:0; }
+#developmentContent p.notes.lone{
+	float:left;
+	margin-top:1em;	
 }
 #creativeInfo{
 	padding:0 1em 0;
