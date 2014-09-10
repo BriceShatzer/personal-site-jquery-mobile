@@ -109,11 +109,9 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
             $.each(tech_blocks, function(i) { 
                 var className;
                 function setClassName(name){ className = name }
-
                 if(i===0){setClassName("ui-block-a")}
                 else if(i===1){setClassName("ui-block-b")}
                 else if(i===2){setClassName("ui-block-c")}
-//                var className;
                 $('<div class='+className+'></div>').append(this).appendTo($tech);
             });
            
