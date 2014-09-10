@@ -17,7 +17,7 @@
 <body>
     <div data-role="header">
         <div id="navigation">
-            <a href="/development.html">Development</a> | <a href="/creative.html">Creative & Design</a> | <a href="#writing">Writing</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+            <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">Me</a>
         </div>
         <div class="quickInfo_open-arrow"><span>Info</span></div>
     </div> 
@@ -59,7 +59,7 @@
 var $container = $('#portfolioContent');
 
 
-$( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from work.html");
+$( "body" ).one( "pagecontainerchange", function( event, ui ) {
     //var portfolioLoad = new $.Deferred();
     //var techLoad = new $.Deferred();
     url = $.mobile.path.getLocation();
@@ -73,7 +73,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
             return work.name.toLowerCase() == query.toLowerCase()  
         });
 
-        var $workspace = $('section[data-url="/work.html?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
+        var $workspace = $('section[data-url="/work?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
         if( !$workspace.html() ){
             $content = $('<div id="workExample"></div>');
 
@@ -85,7 +85,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
             if(portfolioItem.tech){
                 $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
                 $.each(portfolioItem.tech, function() {
-                    $('<li><a href="/development.html?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
+                    $('<li><a href="/development?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
                 });
                 $content.append($techUsed);
             

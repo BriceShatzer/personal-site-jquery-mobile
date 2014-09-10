@@ -24,7 +24,7 @@
 <body>
     <div data-role="header">
         <div id="navigation">
-            <a href="/development.html">Development</a> | <a href="/creative.html">Creative & Design</a> | <a href="/writing.html">Writing</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+            <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">Me</a>
         </div>
         <div class="quickInfo_open-arrow"><span>Info</span></div>
     </div> 
@@ -60,30 +60,20 @@
 <section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" >
         <div id="creativeContent"></div>
-        <!--
-        <div class="creativeCategory">
-            <h3>Audio/Video</h3>
-            <div class="creativeExample"><a href="#">2009 SportsBuff.com Fantasy Football Finalists</a> - A promotional video featuring the top players from the 2009 SportsBuff.com Fantasy Football Season</div>
-            <div class="creativeExample"><a href="#" class="strong" style="font-weight:bold;">2009 SportsBuff.com Fantasy Baseball Finalists</a> - A promotional video featuring the top players from the 2009 SportsBuff.com Fantasy Baseball Season</div>
-            <div class="creativeExample"><a href="#" class="strong" style="font-weight:bold;">2009 SportsBuff.com Fantasy Baseball Finalists</a> - A promotional video featuring the top players from the 2009 SportsBuff.com Fantasy Baseball Season</div>
-        </div>
-        -->
-        <!-- <p><a href="/BriceShatzer.html">Back to home</a></p><br>-->
-        <!-- <div data-role="collapsibleset" data-theme="a" data-content-theme="a" id="creativeContent"></div> -->
     </div><!-- /content -->
 
 <script type="text/javascript">
 //var $container = $('#creativeContent');
 var items = portfolio_creative;
 
-$( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("pagecontainerchange event from development.html");
+$( "body" ).one( "pagecontainerchange", function( event, ui ) {
     url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
     console.log(query);
 
     if(!query){
         console.log('no query');
-        var $workspace = $('section[data-url="/creative.html"]').find('#creativeContent');
+        var $workspace = $('section[data-url="/creative"]').find('#creativeContent');
         if( !$workspace.html() ){  
             console.log('workspace has no html');
             $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
@@ -95,7 +85,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
             $.each(itemCategories, function(i,category) {
                 var $categoryContainer = $('<div class="creativeCategory"><h3>'+category+'</h3></div>');
                 $.each(groupedItems[category], function(i,item){
-                    $('<div class="creativeExample"><a href="creative.html?'+encodeURIComponent(item.name)+'">'+item.name+'</a> - '+item.previewSlug+'</div>')
+                    $('<div class="creativeExample"><a href="creative?'+encodeURIComponent(item.name)+'">'+item.name+'</a> - '+item.previewSlug+'</div>')
                         .appendTo($categoryContainer)
                 });
                 $categoryContainer.appendTo($workspace);
@@ -104,7 +94,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
     } else {
         var creativeExample = _.find(items, function(item){ return item.name == query });
         console.dir(creativeExample);
-        var $workspace = $('section[data-url="/creative.html?'+encodeURIComponent(query)+'"]').find('#creativeContent');
+        var $workspace = $('section[data-url="/creative?'+encodeURIComponent(query)+'"]').find('#creativeContent');
         if( !$workspace.html() ){
             $content = $('<div id="creativeExampleDetail"></div>');
 
@@ -150,63 +140,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {console.log("page
             }
         }
     }  
-
-
-
 });
-
-
-/*function buildToolContent(){ 
-    $.each(tools_json, function(){
-       
-        //console.log($category);
-        var $items = $('<div class="ui-grid-a ui-responsive"></div>')
-
-        $.each(this.childItems, function(i,tool) {
-            var string='';
-            if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
-            else{ string+='<div class="ui-block-b">' }
-            string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
-            if (this.notes){string+=' - '+this.notes}
-            string+='</div></div>';
-            $items.append(string)
-                //'<div class="ui-block-a"><div class="ui-bar"><span class="strong">'++'</span> - this is some descriptive text</div></div>' 
-        });
-        
-        var $category =  $('<div data-role="collapsible"></div>');
-        $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
-        
-        //console.log($category);
-        //.appendTo('<div data-role="collapsible"><h3>'+this.name+'</h3></div>').appendTo('#toolList');
-    });
-    //$container.appendTo('#toolList')
-}  */
-
-$( "body" ).on( "pagecontainerchange", function( event, ui ) {
-        console.log("pagecontainerchange event from creative.html");
-/*
-    console.log('page container changed');
-    var url = $.mobile.path.getLocation();
-    console.log( decodeURIComponent( url.slice( url.indexOf('?')+1 ) ) )
-
-    if(!tools_json){
-        console.log('loading tools.json');
-        $.getJSON('/tools.json', function(data) { 
-            tools_json = data; 
-            console.dir(tools_json);
-            buildToolContent();
-            $('section,#toolList').enhanceWithin()
-        });
-    }else{
-        console.dir(tools_json);
-        buildToolContent();
-        $('section').enhanceWithin()        
-    }
-
-$('a.current').removeClass('current');
-$('a[href="/creative.html"]').removeAttr('href').addClass('current');
-*/
-});    
 </script>
 </section><!-- /page -->
 

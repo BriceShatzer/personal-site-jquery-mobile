@@ -23,7 +23,7 @@
 <body>
     <div <div data-role="header">
         <div id="navigation">
-            <a href="/development.html">Development</a> | <a href="/creative.html">Creative & Design</a> | <a href="/writing.html">Writing</a> | <a href="/tools.html">Tools</a> | <a href="#about">Me</a>
+            <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">Me</a>
         </div>
         <div class="quickInfo_open-arrow"><span>Info</span></div>
     </div> 
@@ -65,7 +65,7 @@
     $( "body" ).one( "pagecontainerchange", function( event, ui ) { 
         console.log("pagecontainerchange event from tools.html");
         
-        if( /tools.html/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
+        if( /tools/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
             console.log('building tools content');
             $.getJSON('/tools.json', function(data) { 
                 console.log('got the tools.json');
