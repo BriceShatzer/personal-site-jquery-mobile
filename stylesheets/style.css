@@ -2337,12 +2337,6 @@ div.ui-page-active,
 section.ui-page-active {
   margin-top: 45px !important;
 }
-div.ui-page-active h1, div.ui-page-active h2, div.ui-page-active h3,
-section.ui-page-active h1,
-section.ui-page-active h2,
-section.ui-page-active h3 {
-  font-family: "Droid Sans", "sans-serif";
-}
 div.ui-page-active h1,
 section.ui-page-active h1 {
   font-size: 2em;
@@ -2406,7 +2400,9 @@ div.writingExample,
 #writingContent h1,
 #toolsInfo h1,
 #aboutMeInfo h1 {
+  font-family: "Droid Sans", "sans-serif";
   float: left;
+  font-size: 2.2em;
   margin-right: 0.4em;
 }
 #developmentContent h2,
@@ -2641,8 +2637,21 @@ section[data-url="/development"] #developmentContent div.ui-body {
 
 }
  */
+#workExample a.siteLink {
+  float: left;
+  line-height: 2.2em;
+  clear: none;
+  font-size: 1em;
+  vertical-align: bottom;
+}
+#workExample a.siteLink:hover {
+  text-decoration: none;
+  color: #333;
+}
+
 #portfolioContent div.itemInfo,
 #workExample div.itemInfo {
+  clear: left;
   float: left;
   width: 75%;
 }
@@ -2654,13 +2663,12 @@ section[data-url="/development"] #developmentContent div.ui-body {
   padding: 0.5em 0.8em 0.8em;
 }
 
-#creativeExampleDetail h1,
-#portfolioContent h1 {
+#creativeExampleDetail h1 {
   float: none;
   margin-right: 0;
 }
-#creativeExampleDetail p.notes,
-#portfolioContent p.notes {
+
+#creativeExampleDetail p.notes, #portfolioContent p.notes {
   margin-top: 0.5em;
 }
 
@@ -2740,7 +2748,6 @@ div.creativeCategory div.creativeExample {
   width: 45%;
   float: left;
   margin-right: 2%;
-  font-family: "Droid Sans", "sans-serif";
   line-height: 1.1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -2758,6 +2765,7 @@ div.creativeCategory div.creativeExample {
   }
 }
 div.creativeCategory div.creativeExample a {
+  font-family: "Droid Sans", "sans-serif";
   font-weight: bold;
   color: #333;
   text-decoration: none;

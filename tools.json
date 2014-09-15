@@ -87,6 +87,9 @@
 	},
 	{	"name":"Web Development Tools",
 		"childItems":[
+		{	"name":"Charles",
+			"notes":"A web proxy and debugging <a href='http://www.charlesproxy.com/' target='_blank' data-role='none'>tool</a>"
+		},
 		{	"name":"Compass.app",
 			"notes":"An <a href='http://compass.kkbox.com/' target='_blank' data-role='none'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank' data-role='none'>Compass</a> open-source CSS authoring framework."
 		},
@@ -95,13 +98,18 @@
 		{	"name":"Firebug"	},		
 		{	"name":"Firefox Developer Tools"	},		
 		{	"name":"Google Chrome Developer Tools"	},
+		{	"name":"Grunt",
+			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be comfortable stepping into an existing workflow which uses it."},
 		{	"name":"Internet Explorer Developer Tools"	},		
-		{	"name":"LiveReload"	},		
+		{	"name":"LiveReload"	},
 		{	"name":"MAMP",
 			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank' data-role='none'>development enviroment</a>."
 		},
 		{	"name":"Mongoose",
 			"notes":"A simple, <a href='https://code.google.com/p/mongoose/' target='_blank' data-role='none'>local web server</a>."
+		},
+		{	"name":"nodeJS",
+			"notes":"Comfortable setting up a local node environment to serve files, test server interaction, or aid in build automation"
 		},
 		{ "name":"WinSCP" }		
 		]

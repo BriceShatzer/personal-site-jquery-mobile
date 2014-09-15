@@ -71,7 +71,7 @@ div[data-role="header"] {
 div.ui-page-active,
 section.ui-page-active{
 	margin-top:45px !important;
-h1,h2,h3{@include font_droid}
+//h1,h2,h3{@include font_droid}
 	h1 {
 		//font-family: "Droid Sans", "sans-serif";		
 		font-size: 2em;
@@ -138,9 +138,9 @@ div.writingExample,
 #aboutMeInfo
 {
 	h1 {
-		// font-family: "Droid Sans", "sans-serif";		
+		font-family: "Droid Sans", "sans-serif";		
 		float:left;
-		// font-size: 2em;
+		font-size: 2.2em;
 		// font-weight: bold;
 		//margin-right:0.8em;
 		margin-right:0.4em;
@@ -159,7 +159,6 @@ div.writingExample,
 		padding-bottom:2px;
 		border-bottom: 1px solid #DDD;
 		margin-bottom: 4px;
-
 	}
 	a{	font-weight:normal;
 		//color:#727272 !important;
@@ -285,9 +284,23 @@ section[data-url="/development"] #developmentContent{
 
 }
  */
+#workExample{
+	a.siteLink{
+		float:left;
+		line-height:2.2em;
+		clear:none;
+		font-size: 1em;
+		vertical-align: bottom;
+		&:hover{
+			text-decoration: none;
+			color:#333;
+		}
+	}	
+}
 #portfolioContent,
 #workExample{
 	div.itemInfo{
+		clear:left;
 		float:left;
 		width:75%;
 	}
@@ -298,11 +311,9 @@ section[data-url="/development"] #developmentContent{
 		padding: 0.5em 0.8em 0.8em;
 	}
 }
-#creativeExampleDetail,
-#portfolioContent{
-	h1{float:none;margin-right:0;}
-	p.notes{margin-top:0.5em;}
-}
+#creativeExampleDetail h1{float:none;margin-right:0;}
+#creativeExampleDetail p.notes, #portfolioContent p.notes{margin-top:0.5em;}
+
 #creativeExampleDetail,
 #workExample{
 	div.itemInfo{font-size:1.1em}
@@ -355,11 +366,10 @@ div.creativeCategory{
 	}
 	div.creativeExample{
 		@include example-blocks;
-		@include font_droid;
 		line-height: 1.1em;
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
-		a{
+		a{@include font_droid;
 			font-weight:bold;
 			color: #333;
 			text-decoration:none;
