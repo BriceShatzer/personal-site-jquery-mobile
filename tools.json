@@ -99,11 +99,11 @@
 		{	"name":"Firefox Developer Tools"	},		
 		{	"name":"Google Chrome Developer Tools"	},
 		{	"name":"Grunt",
-			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be comfortable stepping into an existing workflow which uses it."},
+			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be capable stepping into an existing workflow which uses it."},
 		{	"name":"Internet Explorer Developer Tools"	},		
 		{	"name":"LiveReload"	},
 		{	"name":"MAMP",
-			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank' data-role='none'>development enviroment</a>."
+			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank' data-role='none'>development environment</a>."
 		},
 		{	"name":"Mongoose",
 			"notes":"A simple, <a href='https://code.google.com/p/mongoose/' target='_blank' data-role='none'>local web server</a>."
