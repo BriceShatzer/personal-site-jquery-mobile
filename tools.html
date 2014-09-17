@@ -55,6 +55,8 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
+/*
+
     var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
     $( "body" ).one( "pagecontainerchange", function( event, ui ) { 
         console.log("pagecontainerchange event from tools.html");
@@ -88,6 +90,37 @@
             });
         }
     });
+*/
+
+    var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
+    $("body").one( "pagecontainerbeforetransition", function(event, ui){
+        var incomingPage = ui.toPage
+        
+        console.log("pagecontainerbeforetransition event from tools.html");
+        
+        $.getJSON('/tools.json', function(data) { 
+            console.log('got the tools.json');
+            console.dir(data);
+            var tools_json = data; 
+            $.each(tools_json, function(){
+                var $items = $('<div class="ui-grid-a ui-responsive"></div>');
+
+                $.each(this.childItems, function(i,tool) {
+                    var string='';
+                    if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
+                    else{ string+='<div class="ui-block-b">' }
+                    string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
+                    if (this.notes){string+=' - '+this.notes}
+                    string+='</div></div>';
+                    $items.append(string)
+                });
+                var $category =  $('<div data-role="collapsible"></div>');
+                $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo(incomingPage.find('#toolList'));
+            });
+            incomingPage.enhanceWithin();
+        });
+    });
+
 </script>
 </section><!-- /page -->
 

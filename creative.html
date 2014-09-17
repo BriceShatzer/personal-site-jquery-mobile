@@ -66,16 +66,22 @@
 //var $container = $('#creativeContent');
 var items = portfolio_creative;
 
-$( "body" ).one( "pagecontainerchange", function( event, ui ) {
-    url = $.mobile.path.getLocation();
+
+//$( "body" ).one( "pagecontainerchange", function( event, ui ) {    
+$("body").one( "pagecontainerbeforetransition", function(event, ui){
+    var incomingPage = ui.toPage;
+    var url = ui.absUrl;
+    //url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
     console.log(query);
 
     if(!query){
         console.log('no query');
-        var $workspace = $('section[data-url="/creative"]').find('#creativeContent');
-        if( !$workspace.html() ){  
-            console.log('workspace has no html');
+        
+        //var $workspace = $('section[data-url="/creative"]').find('#creativeContent');
+        var $workspace = incomingPage.find('#creativeContent');
+        //if( !$workspace.html() ){  
+        //    console.log('workspace has no html');
             $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
 
 
@@ -90,12 +96,13 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
                 });
                 $categoryContainer.appendTo($workspace);
             });
-        }
+        //}
     } else {
         var creativeExample = _.find(items, function(item){ return item.name == query });
         console.dir(creativeExample);
-        var $workspace = $('section[data-url="/creative?'+encodeURIComponent(query)+'"]').find('#creativeContent');
-        if( !$workspace.html() ){
+        var $workspace = incomingPage.find('#creativeContent');
+        //var $workspace = $('section[data-url="/creative?'+encodeURIComponent(query)+'"]').find('#creativeContent');
+        //if( !$workspace.html() ){
             $content = $('<div id="creativeExampleDetail"></div>');
 
             $content.append('<h1 style="clear:both">'+creativeExample.name+'</h1>'); 
@@ -138,7 +145,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
                 });
 
             }
-        }
+        //}
     }  
 });
 </script>

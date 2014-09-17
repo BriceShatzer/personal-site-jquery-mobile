@@ -14,6 +14,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
+    <script>
+    function test(fact){
+       if ( !fact ){ console.log(fact+' is false') }
+        else if ( fact ){ console.log(fact+' is true') }
+    }
+    </script>
 </head>
 <body>
     <div data-role="header">
@@ -57,25 +63,26 @@
 
 
 <script type="text/javascript">
-var $container = $('#portfolioContent');
-
-
-$( "body" ).one( "pagecontainerchange", function( event, ui ) {
+//var $container = $('#portfolioContent');
+//$( "body" ).one( "pagecontainerchange", function( event, ui ) {
+$("body").one( "pagecontainerbeforetransition", function(event, ui){
+    var incomingPage = ui.toPage;
     //var portfolioLoad = new $.Deferred();
     //var techLoad = new $.Deferred();
-    url = $.mobile.path.getLocation();
+    var url = ui.toPage.data('url');
+    //var url = ui.absUrl;
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
 
 //    if( /work.html/.test($.mobile.path.getLocation()) ){
     if(!query){console.log('work.html\'s pagecontainerchange event says "no query"')}
     else{
-
         var portfolioItem = _.find(portfolioPrincipal, function(work){
             return work.name.toLowerCase() == query.toLowerCase()  
         });
 
-        var $workspace = $('section[data-url="/work?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
-        if( !$workspace.html() ){
+        //var $workspace = $('section[data-url="/work?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
+        var $workspace = incomingPage.find('#portfolioContent');
+        //if( !$workspace.html() ){
             $content = $('<div id="workExample"></div>');
 
             $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
@@ -101,7 +108,7 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
             console.log($workspace.selector);
             $workspace.append($content);
             if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
-        }
+        //}
         //------------------------------------
 
 
