@@ -113,13 +113,12 @@
     <script type="text/javascript">
         $('#aboutToggle').click(
             function(event) {
+                event.preventDefault();    
                 var tldr = '( see TL;DR version )'
                 var unabr = '( see Unabridged version)'
-                var $aboutTLDR =$('#aboutTLDR')
+                var $aboutTLDR = $('#aboutTLDR')
                 var $aboutUnabr = $('#aboutUnabridged')
-
-                event.preventDefault();
-                if(this.innerText === tldr){
+                if($(this).text() === tldr){
                     $aboutUnabr.slideUp();
                     $aboutTLDR.slideDown();
                     $(this).text(unabr);
