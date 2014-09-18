@@ -69,8 +69,11 @@ var items = portfolio_creative;
 
 //$( "body" ).one( "pagecontainerchange", function( event, ui ) {    
 $("body").one( "pagecontainerbeforetransition", function(event, ui){
-    var incomingPage = ui.toPage;
-    var url = ui.absUrl;
+    console.log('-----> from page = '+ui.prevPage)
+    //var incomingPage = ui.toPage;
+    var $workspace = ui.toPage.find('#creativeContent');
+    var url = ui.toPage.data('url');
+    //var url = ui.absUrl;
     //url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
     console.log(query);
@@ -79,7 +82,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         console.log('no query');
         
         //var $workspace = $('section[data-url="/creative"]').find('#creativeContent');
-        var $workspace = incomingPage.find('#creativeContent');
+        //var $workspace = incomingPage.find('#creativeContent');
         //if( !$workspace.html() ){  
         //    console.log('workspace has no html');
             $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
@@ -100,7 +103,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
     } else {
         var creativeExample = _.find(items, function(item){ return item.name == query });
         console.dir(creativeExample);
-        var $workspace = incomingPage.find('#creativeContent');
+        //var $workspace = incomingPage.find('#creativeContent');
         //var $workspace = $('section[data-url="/creative?'+encodeURIComponent(query)+'"]').find('#creativeContent');
         //if( !$workspace.html() ){
             $content = $('<div id="creativeExampleDetail"></div>');
@@ -137,6 +140,11 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
                 });
             }
             $workspace.append($content);
+            $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');
+            $workspace.on('click', 'div.backbutton', function(event) {
+                event.preventDefault();
+                $('body').pagecontainer('change', "/creative", {reverse:true});
+            });  
             if(creativeExample.media){
                 $('a.image').fancybox();
                 $('a.download').on('click', function(event) {

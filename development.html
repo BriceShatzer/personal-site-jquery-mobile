@@ -14,6 +14,12 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
+    <script>
+    function test(fact){
+       if ( !fact ){ console.log(fact+' is false') }
+        else if ( fact ){ console.log(fact+' is true') }
+    }
+    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -58,7 +64,6 @@
 
 
 <script type="text/javascript">
-var $container = $('#developmentContent');
 
 var tech_list=[];
 _.forEach(tech_data, function(obj) {
@@ -67,8 +72,11 @@ _.forEach(tech_data, function(obj) {
     } else { tech_list.push(obj) } 
 });
 
-$( "body" ).one( "pagecontainerchange", function( event, ui ) {
-    url = $.mobile.path.getLocation();
+$( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
+    var $workspace = ui.toPage.find('#developmentContent');
+    //var incomingPage = ui.toPage;
+    var url = ui.toPage.data('url');
+    //url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
     console.log(query);
 
@@ -76,9 +84,8 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
     //current page in development.html family 
     if(!query){
         console.log('no query');
-        var $workspace = $('section[data-url="/development"]').find('#developmentContent');
-        if( !$workspace.html() ){ 
-            console.log('workspace has no html');
+        //var $workspace = incomingPage.find('#developmentContent');
+        //if( !$workspace.html() ){ 
             $workspace.append('<div id="developmentInfo"><h1>Development</h1><p class="notes">I\'ve had the opportunity to learn about and work with various technologies. Below you can learn more about the different things that I have experience working with and see specific examples of my past work.</p></div>');
             function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }            
             var tech_blocks = [];
@@ -114,9 +121,10 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
                 else if(i===2){setClassName("ui-block-c")}
                 $('<div class='+className+'></div>').append(this).appendTo($tech);
             });
-           
-            $tech.appendTo('#developmentContent');
-        }
+            debugger           
+            $workspace.append($tech)
+            //$tech.appendTo('#developmentContent');
+        //}
     } else {
         console.log('query exists');
         //-- query has value 
@@ -139,10 +147,10 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
             return match === true;
         });            
 
-        var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#developmentContent');
-        if( !$workspace.html() ){ 
+        //var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#developmentContent');
+        //if( !$workspace.html() ){ 
             //build top
-            $workspace_top = $('<div class="devTopic_top">');
+            $workspace_top = $('<div class="devTopic_top"></div>');
             $workspace_top.append('<h1>'+relevantTech.name+'</h1>'); 
             if(relevantTech.notes){$workspace_top.append('<p class="notes">'+relevantTech.notes+'</p>'); }
             $workspace.append($workspace_top);
@@ -176,8 +184,12 @@ $( "body" ).one( "pagecontainerchange", function( event, ui ) {
 
             $allPriorWork.appendTo($workspace);
             } else {$workspace_top.find('p.notes').addClass('lone')}
-            $workspace.append('<div class="backbutton"><a href="/development"><span class="fa fa-bars"></span> <span>Return to Technology List</span></a></div>');
-        }
+            $workspace.append('<div class="backbutton"><a href="/development"><span class="fa fa-chevron-left"></span> <span>See Other Technologies</span></a></div>');
+            $workspace.on('click', 'div.backbutton', function(event) {
+                event.preventDefault();
+                $('body').pagecontainer('change', "/development", {reverse:true});
+            });            
+        //}
     //-- end query has value 
     }
 //  current page in development.html family 

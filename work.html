@@ -66,7 +66,8 @@
 //var $container = $('#portfolioContent');
 //$( "body" ).one( "pagecontainerchange", function( event, ui ) {
 $("body").one( "pagecontainerbeforetransition", function(event, ui){
-    var incomingPage = ui.toPage;
+    //var incomingPage = ui.toPage;
+    var $workspace = ui.toPage.find('#portfolioContent');
     //var portfolioLoad = new $.Deferred();
     //var techLoad = new $.Deferred();
     var url = ui.toPage.data('url');
@@ -81,7 +82,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         });
 
         //var $workspace = $('section[data-url="/work?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
-        var $workspace = incomingPage.find('#portfolioContent');
+        
         //if( !$workspace.html() ){
             $content = $('<div id="workExample"></div>');
 
@@ -104,8 +105,15 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
                     $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
                 });
             }
-
-            console.log($workspace.selector);
+            if(ui.prevPage){
+                var previousPage = ui.prevPage.data('url');
+                $content.append('<div class="backbutton"><a href="'+ui.prevPage.data('url')+'"><span class="fa fa-chevron-left"></span> <span>Return to Previous Page</span></a></div>');
+                //$('body')
+                $workspace.on('click', 'div.backbutton', function(event) {
+                    event.preventDefault();
+                    $('body').pagecontainer('change', previousPage, {reverse:true});
+                });
+            }
             $workspace.append($content);
             if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
         //}
@@ -118,6 +126,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
 
 
 });
+var taco;
 </script>
 
 </section><!-- /page -->
