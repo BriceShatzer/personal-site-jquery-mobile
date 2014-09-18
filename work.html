@@ -63,70 +63,52 @@
 
 
 <script type="text/javascript">
-//var $container = $('#portfolioContent');
-//$( "body" ).one( "pagecontainerchange", function( event, ui ) {
 $("body").one( "pagecontainerbeforetransition", function(event, ui){
-    //var incomingPage = ui.toPage;
+
     var $workspace = ui.toPage.find('#portfolioContent');
-    //var portfolioLoad = new $.Deferred();
-    //var techLoad = new $.Deferred();
     var url = ui.toPage.data('url');
-    //var url = ui.absUrl;
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
 
-//    if( /work.html/.test($.mobile.path.getLocation()) ){
     if(!query){console.log('work.html\'s pagecontainerchange event says "no query"')}
     else{
         var portfolioItem = _.find(portfolioPrincipal, function(work){
             return work.name.toLowerCase() == query.toLowerCase()  
         });
-
-        //var $workspace = $('section[data-url="/work?'+encodeURIComponent(query)+'"]').find('#portfolioContent');
         
-        //if( !$workspace.html() ){
-            $content = $('<div id="workExample"></div>');
+        $content = $('<div id="workExample"></div>');
 
-            $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
-            if(portfolioItem.link){
-                $content.append('<a class="siteLink" href="'+portfolioItem.link+'" target="blank">(  <span class="fa fa-globe"></span> View Site )</a>')
-            }
-            if(portfolioItem.notes){
-                $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); 
-            }
-            if(portfolioItem.tech){
-                $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
-                $.each(portfolioItem.tech, function() {
-                    $('<li><a href="/development?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
-                });
-                $content.append($techUsed);            
-            }
-            if(portfolioItem.media){
-                $.each(portfolioItem.media, function() {
-                    $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
-                });
-            }
-            if(ui.prevPage){
-                var previousPage = ui.prevPage.data('url');
-                $content.append('<div class="backbutton"><a href="'+ui.prevPage.data('url')+'"><span class="fa fa-chevron-left"></span> <span>Return to Previous Page</span></a></div>');
-                //$('body')
-                $workspace.on('click', 'div.backbutton', function(event) {
-                    event.preventDefault();
-                    $('body').pagecontainer('change', previousPage, {reverse:true});
-                });
-            }
-            $workspace.append($content);
-            if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
-        //}
-        //------------------------------------
-
-
+        $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
+        if(portfolioItem.link){//add link
+            $content.append('<a class="siteLink" href="'+portfolioItem.link+'" target="blank">(  <span class="fa fa-globe"></span> View Site )</a>')
+        }
+        if(portfolioItem.notes){//add notes
+            $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); 
+        }
+        if(portfolioItem.tech){//add technology used 
+            $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
+            $.each(portfolioItem.tech, function() {
+                $('<li><a href="/development?'+encodeURIComponent(this)+'">'+this+'</li>').appendTo($techUsed.find('ul'));
+            });
+            $content.append($techUsed);            
+        }
+        if(portfolioItem.media){//add images
+            $.each(portfolioItem.media, function() {
+                $content.find('div.itemInfo').append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+            });
+        }
+        if(ui.prevPage){//add back button
+            var previousPage = ui.prevPage.data('url');
+            $content.append('<div class="backbutton"><a href="'+ui.prevPage.data('url')+'"><span class="fa fa-chevron-left"></span> <span>Return to Previous Page</span></a></div>');
+            $workspace.on('click', 'div.backbutton', function(event) {
+                event.preventDefault();
+                $('body').pagecontainer('change', previousPage, {reverse:true});
+            });
+        }
+        $workspace.append($content);
+        if(portfolioItem.media){$('div.itemInfo a.image').fancybox();}
     }
-
-//    }
-
-
+//-- end pagecontainerbeforetransition event handler
 });
-var taco;
 </script>
 
 </section><!-- /page -->

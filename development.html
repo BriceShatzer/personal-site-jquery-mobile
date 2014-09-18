@@ -64,137 +64,118 @@
 
 
 <script type="text/javascript">
-
-var tech_list=[];
-_.forEach(tech_data, function(obj) {
-    if(obj.childItems){
-        _.forEach(obj.childItems, function(child) { tech_list.push(child) });
-    } else { tech_list.push(obj) } 
-});
-
 $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
     var $workspace = ui.toPage.find('#developmentContent');
-    //var incomingPage = ui.toPage;
     var url = ui.toPage.data('url');
-    //url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
-    console.log(query);
+    var tech_list=[];
+    _.forEach(tech_data, function(obj) {
+        if(obj.childItems){
+            _.forEach(obj.childItems, function(child) { tech_list.push(child) });
+        } else { tech_list.push(obj) } 
+    });
 
-    //if( /development.html/.test($.mobile.path.getLocation()) ){
-    //current page in development.html family 
     if(!query){
-        console.log('no query');
-        //var $workspace = incomingPage.find('#developmentContent');
-        //if( !$workspace.html() ){ 
-            $workspace.append('<div id="developmentInfo"><h1>Development</h1><p class="notes">I\'ve had the opportunity to learn about and work with various technologies. Below you can learn more about the different things that I have experience working with and see specific examples of my past work.</p></div>');
-            function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }            
-            var tech_blocks = [];
-            $.each(tech_data, function() {//can probably remove indexInArray
-                
-                var $tech_class = $('<div class="ui-body"></div>');
-
-                if(this.childItems){
-                    $tech_class.append('<h2>'+this.name+'</h2>')
-                    var $listOfChildItems = $('<ul></ul>');
-                    $.each(this.childItems, function() {
-                        var childObject = this;
-                        generateDisplayValues(childObject);
-                        $('<li></li>')
-                            .append( '<h3><a href="/development?'+childObject.url+'">'+childObject.name+'</a></h3>' )
-                            .appendTo( $listOfChildItems );
-                        });
-                    $tech_class.append( $listOfChildItems );
-                } else {
-                    generateDisplayValues(this);
-                    $tech_class.append( '<h2><a href="/development?'+this.url+'">'+this.name+'</a></h2>' );
-                }
-                tech_blocks.push( $tech_class );
-
-            });
-            $tech = $('<div class="ui-grid-b ui-responsive"></div>')
-            
-            $.each(tech_blocks, function(i) { 
-                var className;
-                function setClassName(name){ className = name }
-                if(i===0){setClassName("ui-block-a")}
-                else if(i===1){setClassName("ui-block-b")}
-                else if(i===2){setClassName("ui-block-c")}
-                $('<div class='+className+'></div>').append(this).appendTo($tech);
-            });
-            debugger           
-            $workspace.append($tech)
-            //$tech.appendTo('#developmentContent');
-        //}
+        //-- no query, build technology list page
+        $workspace.append('<div id="developmentInfo"><h1>Development</h1><p class="notes">I\'ve had the opportunity to learn about and work with various technologies. Below you can learn more about the different things that I have experience working with and see specific examples of my past work.</p></div>');
+        function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }            
+        var tech_blocks = [];
+        $.each(tech_data, function() {            
+            var $tech_class = $('<div class="ui-body"></div>');
+            if(this.childItems){
+                $tech_class.append('<h2>'+this.name+'</h2>')
+                var $listOfChildItems = $('<ul></ul>');
+                $.each(this.childItems, function() {
+                    var childObject = this;
+                    generateDisplayValues(childObject);
+                    $('<li></li>')
+                        .append( '<h3><a href="/development?'+childObject.url+'">'+childObject.name+'</a></h3>' )
+                        .appendTo( $listOfChildItems );
+                    });
+                $tech_class.append( $listOfChildItems );
+            } else {
+                generateDisplayValues(this);
+                $tech_class.append( '<h2><a href="/development?'+this.url+'">'+this.name+'</a></h2>' );
+            }
+            tech_blocks.push( $tech_class );
+        });
+        $tech = $('<div class="ui-grid-b ui-responsive"></div>')
+        
+        $.each(tech_blocks, function(i) { 
+            var className;
+            function setClassName(name){ className = name }
+            if(i===0){setClassName("ui-block-a")}
+            else if(i===1){setClassName("ui-block-b")}
+            else if(i===2){setClassName("ui-block-c")}
+            $('<div class='+className+'></div>').append(this).appendTo($tech);
+        });
+        $workspace.append($tech)
+    //-- end no query 
     } else {
-        console.log('query exists');
-        //-- query has value 
+    //-- query has value, build topic page 
         var relevantTech = _.find(tech_list, function(tech){ return tech.name.toLowerCase() == query.toLowerCase()  });
-        console.dir(relevantTech);
-
         var portfolioExamples = _.filter(portfolioPrincipal, function(obj) { 
             var match;
-                $.each(obj.tech, function(){
-                    if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
-                }) 
+            $.each(obj.tech, function(){
+                if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
+            }) 
             return match === true;
         });
-        
         var maintenanceExamples = _.filter(portfolioMaintained, function(obj) { 
             var match;
-                $.each(obj.tech, function(){
-                    if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
-                }) 
+            $.each(obj.tech, function(){
+                if( this.toLowerCase() == query.toLowerCase() ){ match=true; } 
+            }) 
             return match === true;
         });            
 
-        //var $workspace = $('section[data-url="'+url.slice( url.lastIndexOf('/'))+'"]').find('#developmentContent');
-        //if( !$workspace.html() ){ 
-            //build top
-            $workspace_top = $('<div class="devTopic_top"></div>');
-            $workspace_top.append('<h1>'+relevantTech.name+'</h1>'); 
-            if(relevantTech.notes){$workspace_top.append('<p class="notes">'+relevantTech.notes+'</p>'); }
-            $workspace.append($workspace_top);
-            
-            //build bottom
-            if(portfolioExamples.length || maintenanceExamples.length){
-                var $allPriorWork = $('<div class="ui-grid-a ui-responsive"><h2>Prior Work Utilizing This Technology:</h2></div>');
+        //build top
+        $workspace_top = $('<div class="devTopic_top"></div>');
+        $workspace_top.append('<h1>'+relevantTech.name+'</h1>'); 
+        if(relevantTech.notes){$workspace_top.append('<p class="notes">'+relevantTech.notes+'</p>'); }
+        $workspace.append($workspace_top);
+        
+        //build bottom
+        if(portfolioExamples.length || maintenanceExamples.length){
+            var $allPriorWork = $('<div class="ui-grid-a ui-responsive"><h2>Prior Work Utilizing This Technology:</h2></div>');
 
-                if(portfolioExamples.length){
-                    var $principalWork = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Principally Involved in Creation</h3><ul></ul></div>');              
+            if(portfolioExamples.length){
+                var $principalWork = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Principally Involved in Creation</h3><ul></ul></div>');              
+                $.each(portfolioExamples, function(i, obj) {
+                    $('<li><a href="/work?'+encodeURIComponent(obj.name)+'">'+obj.name+'</li>').appendTo($principalWork.children('ul'));
+                });
 
-                    $.each(portfolioExamples, function(i, obj) {
-                        $('<li><a href="/work?'+encodeURIComponent(obj.name)+'">'+obj.name+'</li>').appendTo( $principalWork.children('ul') );
-                    });
-                
-                    $('<div class="'+ ( (maintenanceExamples.length)?"ui-block-a":"" ) +'"></div>')
-                        .append( $principalWork )
-                        .appendTo($allPriorWork);
-                }
-                
-                if(maintenanceExamples.length){
-                    var $maintenance = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Helped to Maintain</h3><ul></ul></div>');
-                    $.each(maintenanceExamples, function(i, obj) {
-                        $('<li><a href="'+obj.link+'">'+obj.name+'</li>').appendTo( $maintenance.children('ul') );
-                    });
+                $('<div class="'+ ( (maintenanceExamples.length)?"ui-block-a":"lone" ) +'"></div>')
+                    .append($principalWork)
+                    .appendTo($allPriorWork);
+            }
+            // singlePriorWork
+            if(maintenanceExamples.length){
+                var $maintenance = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Helped to Maintain</h3><ul></ul></div>');
+                $.each(maintenanceExamples, function(i, obj) {
+                    $('<li><a href="'+obj.link+'">'+obj.name+'</li>').appendTo( $maintenance.children('ul') );
+                });
 
-                    $('<div class="'+ ( (portfolioExamples.length)?"ui-block-b":"" ) +'"></div>')                        
-                        .append($maintenance)
-                        .appendTo($allPriorWork);                                                  
-                }
-
+                $('<div class="'+ ( (portfolioExamples.length)?"ui-block-b":"lone" ) +'"></div>')
+                    .append($maintenance)
+                    .appendTo($allPriorWork);                                                  
+            }
+            debugger
+            if($allPriorWork.find('div.lone').length){
+                $allPriorWork.find('h2').addClass('lone');            
+            }
             $allPriorWork.appendTo($workspace);
-            } else {$workspace_top.find('p.notes').addClass('lone')}
-            $workspace.append('<div class="backbutton"><a href="/development"><span class="fa fa-chevron-left"></span> <span>See Other Technologies</span></a></div>');
-            $workspace.on('click', 'div.backbutton', function(event) {
-                event.preventDefault();
-                $('body').pagecontainer('change', "/development", {reverse:true});
-            });            
-        //}
+        } else {$workspace_top.find('p.notes').addClass('lone')}
+
+        //add back button
+        $workspace.append('<div class="backbutton"><a href="/development"><span class="fa fa-chevron-left"></span> <span>See Other Technologies</span></a></div>');
+        $workspace.on('click', 'div.backbutton', function(event) {
+            event.preventDefault();
+            $('body').pagecontainer('change', "/development", {reverse:true});
+        });            
     //-- end query has value 
     }
-//  current page in development.html family 
-//}
-//-- end pagecontainerchange event handler
+//-- end pagecontainerbeforetransition event handler
 });    
 </script>
 </section><!-- /page -->

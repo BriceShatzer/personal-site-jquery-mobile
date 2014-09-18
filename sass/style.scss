@@ -233,6 +233,38 @@ div.writingExample,
 	float:left;
 	margin-top:1em;	
 }
+/* #developmentContent h2.lone{
+}
+#developmentContent div.lone{
+	
+	width:60%;
+	margin-right:auto;
+	margin-left:auto;
+} */
+
+#developmentContent h2.lone{
+	width:38%;
+	float:left;
+	padding-top:1em;
+	text-align:right;	
+	@media screen and (max-width:680px){
+		width:100%;
+		float:none;
+		padding:0;
+		text-align: center;
+	}	
+}
+#developmentContent div.lone{
+	float:right;
+	width:55%;
+	margin-top:0 !important;
+	@media screen and (max-width:680px){
+		width: inherit;
+		float:none;
+		//margin-top:0.8em !important;
+	}	
+}
+
 #creativeInfo{
 	padding:0 1em 0;
 	p{margin-bottom:0;}
