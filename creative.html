@@ -24,7 +24,20 @@
 <body>
     <div data-role="header">
         <div id="navigation">
-            <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">About</a>
+            <span id='horziontalNavItems'>
+                <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">About</a>
+            </span>
+            <span class='fa fa-bars' ></span>
+            <span id="verticalNavItems">
+                <ul>
+                    <li><a href="/development">Development</a></li>
+                    <li><a href="/creative">Creative & Design</a></li>
+                    <li><a href="/writing">Writing</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </span>
+            <div class="verticalNav_close-arrow"><span>Close</span></div>
         </div>
         <div class="quickInfo_open-arrow"><span>Info</span></div>
     </div> 

@@ -2301,38 +2301,6 @@ section div.ui-panel-wrapper, body {
   padding-left: 25px;
 }
 
-div[data-role="header"] {
-  padding: 12px 10px 8px;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 1000;
-  width: 100%;
-  overflow: hidden;
-  height: 25px;
-  background-color: #2A2A2A;
-  color: #727272;
-  /*
-  a, a:visited { color:#BFBFBF;}
-  a:hover {color:#727272;}
-  a.current{color:#727272;cursor:default;}
-  */
-}
-div[data-role="header"] a {
-  font-family: "Droid Sans", "sans-serif";
-  text-decoration: none;
-  color: #BFBFBF;
-}
-div[data-role="header"] a:visited {
-  color: #BFBFBF;
-}
-div[data-role="header"] a.current, div[data-role="header"] a:hover {
-  color: #727272;
-}
-div[data-role="header"] a.current {
-  cursor: default;
-}
-
 div.ui-page-active,
 section.ui-page-active {
   margin-top: 45px !important;
@@ -2866,17 +2834,110 @@ span.strong {
 }
 
 /* navigation panel styling */
-div.quickInfo_open-arrow, div.quickInfo_close-arrow {
+div[data-role="header"] {
+  padding: 12px 10px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  overflow: hidden;
+  min-height: 1.1em;
+  background-color: #2A2A2A;
+  color: #727272;
+  /*
+  a, a:visited { color:#BFBFBF;}
+  a:hover {color:#727272;}
+  a.current{color:#727272;cursor:default;}
+  */
+}
+div[data-role="header"] #horziontalNavItems {
+  line-height: 1.1em;
+}
+@media screen and (max-width: 640px) {
+  div[data-role="header"] #horziontalNavItems {
+    display: none;
+  }
+}
+div[data-role="header"] #verticalNavItems {
+  display: none;
+  line-height: 1.2em;
+}
+div[data-role="header"] #verticalNavItems li a:before {
+  content: ' - ';
+}
+div[data-role="header"] a {
+  font-family: "Droid Sans", "sans-serif";
+  text-decoration: none;
+  color: #BFBFBF;
+}
+div[data-role="header"] a:visited {
+  color: #BFBFBF;
+}
+div[data-role="header"] a.current, div[data-role="header"] a:hover {
+  color: #727272;
+}
+div[data-role="header"] a.current {
+  cursor: default;
+}
+div[data-role="header"] span.fa {
+  display: none;
+  color: #BFBFBF;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 640px) {
+  div[data-role="header"] span.fa {
+    display: inline;
+  }
+}
+
+div.verticalNav_close-arrow {
+  -webkit-transition: bottom 200ms ease-out;
+  -moz-transition: bottom 200ms ease-out;
+  -o-transition: bottom 200ms ease-out;
+  transition: bottom 200ms ease-out;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 30px solid #333333;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  bottom: -35px;
+}
+div.verticalNav_close-arrow span {
+  position: absolute;
+  line-height: 30px;
+  top: 5px;
+  left: -1em;
+}
+
+#navigation[data-vertical_menu_open="true"] span.fa-bars {
+  display: none;
+}
+#navigation[data-vertical_menu_open="true"] div.verticalNav_close-arrow {
+  -webkit-transition: bottom 575ms ease-out;
+  -moz-transition: bottom 575ms ease-out;
+  -o-transition: bottom 575ms ease-out;
+  transition: bottom 575ms ease-out;
+  bottom: 0;
+}
+#navigation[data-vertical_menu_open="true"] div.verticalNav_close-arrow:hover {
+  border-bottom-color: #2f2f2f;
+}
+
+div.verticalNav_close-arrow, div.quickInfo_open-arrow, div.quickInfo_close-arrow {
   cursor: pointer;
   width: 0;
   height: 0;
 }
-div.quickInfo_open-arrow span, div.quickInfo_close-arrow span {
+div.verticalNav_close-arrow span, div.quickInfo_open-arrow span, div.quickInfo_close-arrow span {
   font-family: "Droid Sans", "sans-serif";
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  color: #1b1b1b;
   color: #727272;
   font-weight: bold;
 }
@@ -2915,6 +2976,10 @@ div.quickInfo_open-arrow.panel-open {
 }
 
 div.quickInfo_close-arrow {
+  -webkit-transition: right 575ms ease-out;
+  -moz-transition: right 575ms ease-out;
+  -o-transition: right 575ms ease-out;
+  transition: right 575ms ease-out;
   border-top: 60px solid transparent;
   border-bottom: 60px solid transparent;
   border-right: 30px solid #333333;
@@ -2938,6 +3003,11 @@ div.quickInfo_close-arrow span {
   -o-transform-origin: 45% 25% 0;
   transform-origin: 45% 25% 0;
   float: left;
+}
+@media screen and (min-width: 1280px) {
+  div.quickInfo_close-arrow {
+    right: -35px;
+  }
 }
 
 /*
@@ -2969,7 +3039,7 @@ div.panel-button{}
 }
 */
 #quickInfo {
-  top: 45px;
+  top: 42px;
   border-top: 1px solid #1F1F1F;
 }
 #quickInfo div.ui-panel-inner {
