@@ -2384,7 +2384,6 @@ a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 #developmentInfo,
 #creativeInfo,
 #creativeContent,
-#workExample,
 #writingInfo,
 div.writingExample,
 #toolsInfo,
@@ -2536,7 +2535,7 @@ div.writingExample,
   position: relative;
   right: -2em;
   text-shadow: none;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0.5em 0.75em;
   /* position: absolute;
   bottom: 16px;
   right: 0px; 
@@ -2574,8 +2573,10 @@ div.writingExample,
 #writingContent div.backbutton a span.fa,
 #toolsInfo div.backbutton a span.fa,
 #aboutMeInfo div.backbutton a span.fa {
+  vertical-align: middle;
   font-weight: normal;
   font-size: 1.5em;
+  margin-right: 0.2em;
 }
 
 #developmentInfo {
@@ -2647,6 +2648,10 @@ section[data-url="/development"] #developmentContent div.ui-body {
 #workExample a.siteLink:hover {
   text-decoration: none;
   color: #333;
+}
+#workExample div.backbutton a {
+  margin-top: 2em;
+  clear: right;
 }
 
 #portfolioContent div.itemInfo,
