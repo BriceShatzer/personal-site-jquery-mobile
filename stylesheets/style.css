@@ -2835,36 +2835,31 @@ span.strong {
 
 /* navigation panel styling */
 div[data-role="header"] {
-  padding: 12px 10px;
+  padding: 0px 10px;
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 1000;
   width: 100%;
-  overflow: hidden;
   min-height: 1.1em;
   background-color: #2A2A2A;
   color: #727272;
+  /* 	span.fa {
+  		display:none;
+  		color:#BFBFBF;
+  		cursor:pointer;
+  		font-size: 1.1em;
+  		@media screen and (max-width:640px){
+  			display:inline;
+  			@include navItemSpacing;
+  		}
+  	}
+   */
   /*
   a, a:visited { color:#BFBFBF;}
   a:hover {color:#727272;}
   a.current{color:#727272;cursor:default;}
   */
-}
-div[data-role="header"] #horziontalNavItems {
-  line-height: 1.1em;
-}
-@media screen and (max-width: 640px) {
-  div[data-role="header"] #horziontalNavItems {
-    display: none;
-  }
-}
-div[data-role="header"] #verticalNavItems {
-  display: none;
-  line-height: 1.2em;
-}
-div[data-role="header"] #verticalNavItems li a:before {
-  content: ' - ';
 }
 div[data-role="header"] a {
   font-family: "Droid Sans", "sans-serif";
@@ -2880,16 +2875,48 @@ div[data-role="header"] a.current, div[data-role="header"] a:hover {
 div[data-role="header"] a.current {
   cursor: default;
 }
-div[data-role="header"] span.fa {
-  display: none;
+div[data-role="header"] span.fa-bars {
+  -webkit-transition: left 225ms ease-out;
+  -moz-transition: left 225ms ease-out;
+  -o-transition: left 225ms ease-out;
+  transition: left 225ms ease-out;
+  position: absolute;
+  left: -30px;
   color: #BFBFBF;
   cursor: pointer;
   font-size: 1.1em;
 }
 @media screen and (max-width: 640px) {
-  div[data-role="header"] span.fa {
-    display: inline;
+  div[data-role="header"] span.fa-bars {
+    left: 0;
   }
+}
+
+#navigation {
+  position: relative;
+  overflow: hidden;
+  min-height: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#horziontalNavItems {
+  line-height: 1.1em;
+}
+@media screen and (max-width: 640px) {
+  #horziontalNavItems {
+    display: none;
+  }
+}
+
+#verticalNavItems {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: none;
+  line-height: 1.2em;
+}
+#verticalNavItems li a:before {
+  content: ' - ';
 }
 
 div.verticalNav_close-arrow {
@@ -2914,8 +2941,19 @@ div.verticalNav_close-arrow span {
   left: -1em;
 }
 
+#navigation[data-vertical_menu_open="true"] {
+  min-height: 42px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
 #navigation[data-vertical_menu_open="true"] span.fa-bars {
-  display: none;
+  -webkit-transition: left 375ms ease-out;
+  -moz-transition: left 375ms ease-out;
+  -o-transition: left 375ms ease-out;
+  transition: left 375ms ease-out;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  left: -30px;
 }
 #navigation[data-vertical_menu_open="true"] div.verticalNav_close-arrow {
   -webkit-transition: bottom 575ms ease-out;
