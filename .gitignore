@@ -8,7 +8,7 @@
 #config and logs
 compass_app_log.txt
 sftp-config.json
-.jshintrc 
+*.jshintrc
 
 
 #################
@@ -226,3 +226,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
