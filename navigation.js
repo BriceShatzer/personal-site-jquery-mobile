@@ -27,6 +27,16 @@ function hideVerticalNavigation(){
     $('#verticalNavItems').slideUp(200);
     $('#navigation').attr('data-vertical_menu_open', false);
 }
+function responsiveAdjustment(){
+	var viewPort = $(window).width();
+	var verticalMenuOpen = $navigation.attr('data-vertical_menu_open') === "true" ? true : false;
+    if( viewPort > 639 && verticalMenuOpen ){
+        hideVerticalNavigation();
+    }
+    if( viewPort > 1280){
+    	$("#quickInfo").panel('open');
+   	}
+}
 var $navigation = $('#navigation');
 var $openArrow = $('div.quickInfo_open-arrow');
 
@@ -40,42 +50,33 @@ $navigation
 	    }
 	})
 	.on("click","div.verticalNav_close-arrow", function(){
-		hideVerticalNavigation()
+		hideVerticalNavigation();
 	});
 
 
-//--- Quick Info Panel functionality 
 $( "body" )
+	//--- open/close Quick Panel
+	.on("click","div.quickInfo_close-arrow, div.quickInfo_open-arrow", function(){ 
+		$("#quickInfo").panel( "toggle" );
+	})
+	//--- jQuery Mobile events
 	.on({
-		panelbeforeopen:function() { 
+		pagecontainertransition:function(){// set responsive view on intial page load 
+			responsiveAdjustment();
+		},
+		pagecontainerbeforechange:function(){// close Vertical Navigation when navigating to a new page
+			hideVerticalNavigation();
+		},
+		panelbeforeopen:function(){ // Quick Info panel open
 			$openArrow.addClass('panel-open');
 			hideVerticalNavigation(); 
 		},
-		panelbeforeclose:function(){ 
+		panelbeforeclose:function(){ // Quick Info panel close
 			$openArrow.removeClass('panel-open');
-		},
-		pagecontainerbeforechange:function(){//close Vertical Navigation when navigating to a new page
-			hideVerticalNavigation();
 		}
-	})
-	.on("click","div.quickInfo_close-arrow, div.quickInfo_open-arrow", function(){ 
-		$("#quickInfo").panel( "toggle" );
 	});
-	//.on("click","#verticalNavItems a", function(){hideVerticalNavigation();})
 
-//--- responsive behavior
+//--- set responsive view on page resize
 $( window ).resize(function() {
-	var viewPort = $(window).width();
-	var verticalMenuOpen = $navigation.attr('data-vertical_menu_open') === "true" ? true : false;
-    if( viewPort > 639 && verticalMenuOpen ){
-        hideVerticalNavigation()
-    }
-    if( viewPort > 1280){
-    	$("#quickInfo").panel('open');
-
-   	}
+	responsiveAdjustment();	
 });
-	
-
-
-//}());
