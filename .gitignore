@@ -1,4 +1,17 @@
 #################
+## General Dev
+#################
+
+#sass
+.sass-cache
+
+#config and logs
+compass_app_log.txt
+sftp-config.json
+.jshintrc 
+
+
+#################
 ## Eclipse
 #################
 
@@ -213,8 +226,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-
-#sass
-.sass-cache
-compass_app_log.txt
-sftp-config.json
