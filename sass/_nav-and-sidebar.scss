@@ -1,0 +1,304 @@
+/* navigation panel styling */
+@mixin navItemSpacing{
+	margin-top:12px;
+	margin-bottom:12px;
+}
+
+div[data-role="header"] {
+	//padding:12px 10px;
+	padding:0px 10px;
+	position:fixed;
+	left:0px;
+	top:0px;
+	z-index: 1000;
+	width:100%;
+	//overflow:hidden;
+	min-height:1.1em;
+	background-color: #2A2A2A;
+	color: #727272;
+	a {
+		@include font_droid;
+		//font-family: "Droid Sans", "sans-serif";
+		text-decoration: none;
+		color:#BFBFBF;
+		&:visited{color:#BFBFBF;}
+		&.current,&:hover{color:#727272;}
+		&.current{cursor:default}
+	}
+/* 	span.fa {
+		display:none;
+		color:#BFBFBF;
+		cursor:pointer;
+		font-size: 1.1em;
+		@media screen and (max-width:640px){
+			display:inline;
+			@include navItemSpacing;
+		}
+	}
+ */
+ 	span.fa-bars {
+ 		@include single-transition(left,225ms,ease-out,false);
+		position: absolute;
+		left:-30px;
+		color:#BFBFBF;
+		cursor:pointer;
+		font-size: 1.1em;
+		@media screen and (max-width:640px){
+			//display:inline;
+			//@include navItemSpacing;
+			left:0;
+		}
+	}
+	span.label {
+		@include single-transition(right,525ms,ease-out,false);
+		line-height: 18px;
+		position: absolute;
+		right:-10em;
+		bottom:12px;
+		padding-right:10px;
+		@media screen and (max-width:640px){
+			right:1em;
+		}
+		@media screen and (min-width:992px) and (max-width:1280px){
+			right:1em;			
+		}
+	}
+	/*
+	a, a:visited { color:#BFBFBF;}
+	a:hover {color:#727272;}
+	a.current{color:#727272;cursor:default;}
+	*/
+}
+#navigation{
+	position: relative;
+	overflow:hidden;
+	min-height:18px;
+	padding-top:12px;
+	padding-bottom:12px;
+}
+#horziontalNavItems{
+	line-height:1.1em;
+	@media screen and (max-width:640px){display:none;}
+}
+#verticalNavItems {
+	//@include navItemSpacing;
+	margin-top:8px;
+	margin-bottom:10px;
+	display:none;
+	//line-height: 1.2em;
+	line-height: 1.4em;
+	li a{
+		&:before{content:' - '}
+	}
+}
+
+div.verticalNav_close-arrow{
+	@include single-transition(bottom,200ms,ease-out,false);
+	width: 0; 
+	height: 0; 
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-bottom: 30px solid #333333;
+	position:absolute;
+	left:50%;
+	margin-left:-60px;
+	bottom:-35px;
+	span{
+		position: absolute;
+		line-height: 30px;
+		top:5px;
+		left:-1em;
+	}	
+}
+#navigation[data-vertical_menu_open="true"] {
+	min-height:42px;
+	padding-bottom:0;
+	padding-top:0;
+	span.fa-bars{
+		@include single-transition(left,375ms,ease-out,false);
+		@include navItemSpacing;
+		left:-30px
+	}
+	span.label{ bottom:10px;}
+
+	div.verticalNav_close-arrow{
+	@include single-transition(bottom,575ms,ease-out,false);	
+		bottom:0;
+		&:hover{border-bottom-color: #2f2f2f}
+	}
+}
+
+
+
+div.verticalNav_close-arrow,div.quickInfo_open-arrow,div.quickInfo_close-arrow{
+	cursor:pointer;
+	width: 0; 
+	height: 0; 	
+	span{
+		@include font_droid;
+		@include user-select(none);
+		//color:#1b1b1b;
+		color:#727272;
+		font-weight: bold;
+	}
+
+}
+
+
+div.quickInfo_open-arrow{
+	@include single-transition(left,575ms,ease-out,false);
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	//border-left:30px solid #333333; 
+	border-left:30px solid #2A2A2A; 
+	position:fixed;
+	left:0;
+	top:50%;
+	//margin-top:-25px;
+	margin-top:-60px;
+	&:hover{border-left-color: #2f2f2f;
+		//#727272;
+	}
+	span{
+		@include rotate(90deg);
+		@include apply-origin(55% 20% 0, false);
+		float:right;
+	}
+	&.panel-open{
+		left:-32px;
+	}
+	//@media screen and (min-width:1280px){display:none !important;}
+}
+
+div.quickInfo_close-arrow{
+	@include single-transition(right,575ms,ease-out,false);
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent; 
+	border-right:30px solid #333333; 
+	position:absolute;
+	right:0;
+	top:50%;
+	margin-top:-105px;
+	&:hover{border-right-color: #2f2f2f	/*#727272;*/}
+	span{
+		@include rotate(270deg);
+		@include apply-origin(45% 25% 0, false);
+		float:left;
+	}
+	@media screen and (min-width:1280px){
+		right:-35px;
+	}
+}
+
+/*
+@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset);
+
+div.panel-button{}
+
+
+
+  border-bottom{1px solid #121212}
+  rgba(255, 255, 255, 0.07) 
+*/
+
+/*
+@mixin navPanel {
+	top:45px;
+	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
+	div.ui-panel-inner>ul>li.ui-first-child>a{border-top:none;}
+	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+	ul a {background-color:#2a2a2a;}
+	ul a:hover {background-color: #333;}
+
+	ul a.ui-btn {padding-top:.5em; padding-bottom:.5em;font-size: 14px; }
+	ul a.ui-icon-carat-r:after { background:none;}
+		//background: url("Path to your image file") no-repeat scroll 0px 0px transparent;
+	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; 
+		//a.ui-btn-icon-left {font-size: 14px; }
+		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
+	}
+}
+*/
+#quickInfo{//@include navPanel
+	top:42px;
+	border-top:1px solid #1F1F1F;
+	div.ui-panel-inner{@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset)}
+	div.ui-body{
+		padding-left:.08em;
+		padding-top:0
+	}
+	ul li{
+		@include font_lato;
+		font-weight: normal;
+		margin:0.5em 0;
+		a, a span, a span.fa{
+			color:#BFBFBF;
+			text-decoration: none;	
+			&:visited{color:#BFBFBF}
+			&:hover{color:#727272}
+		}
+	}
+	p{@include font_lato}
+	span{
+		color:#BFBFBF;
+	}
+	#title{
+		margin-top:0;
+		margin-bottom:1em;
+		h1{
+			@include font_droid;
+			font-size:2em;
+			text-align:center;
+			font-weight: bold;
+		}
+	}
+	#resume{
+		a{font-weight:normal;}
+		line-height:1.8em;
+		span.fa{
+			font-size:1.8em;
+			margin:0 0.4em;
+		}
+		span:not(.fa){vertical-align:top;}
+	}
+	#email{
+		line-height:1.8em;
+		span.fa{
+			font-size:1.8em;
+			margin:0 0.4em;
+		}
+		span:not(.fa){
+			vertical-align:top;
+			font-size:0.8em;
+		}
+	}
+	#cellphone{
+		line-height:2em;
+		span.fa{
+			font-size:2.6em;
+			margin:0 0 0 0.1em;
+
+		}
+		a{	font-weight:normal;
+			vertical-align:top;
+			margin:0 0.2em;
+		}
+	}
+	#icons{
+		text-align:center;
+		padding-top:5px;
+		a span.fa{
+		//float:left;
+		text-align:center;
+		font-size: 3em;
+		//color:#BFBFBF;
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+		//&:visited{color:#BFBFBF}
+		//&:hover{color:#727272}
+		}
+	}
+	span.fa-mobile{@include rotate(330deg);}
+
+}
+
