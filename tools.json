@@ -23,13 +23,13 @@
 			"notes":"Creative Suites 4, 5.5 & 6"
 		},
 		{	"name":"GIMP",
-			"notes":"An open source image creation & editing <a href='http://www.gimp.org/' target='_blank' data-role='none'>tool</a>."
+			"notes":"An open-source image creation & editing <a href='http://www.gimp.org/'>tool</a>"
 		},
 		{	"name":"Pixlr",
-			"notes":"A free, online image creation and editing <a href='https://pixlr.com/' target='_blank' data-role='none'>tool</a>."
+			"notes":"A free, online image creation and editing <a href='https://pixlr.com/'>tool</a>"
 		},
 		{	"name":"Scribus",
-			"notes":"An open source page layout & publishing <a href='http://www.scribus.net/' target='_blank' data-role='none'>tool</a>."
+			"notes":"An open-source page layout & publishing <a href='http://www.scribus.net/'>tool</a>"
 		}
 		]
 	},
@@ -46,28 +46,35 @@
 	{	"name":"Mapping / 3D Modeling",
 		"childItems":[
 		{"name":"ArcGIS",
-		"notes":"A <a href='http://www.esri.com/software/arcgis' target='_blank' data-role='none'>desktop application</a> that enables the creation, maniplulation and analysis of geospatial data."
+		"notes":"A <a href='http://www.esri.com/software/arcgis'>desktop application</a> that enables the creation, manipulation and analysis of geospatial data"
 		},
 		{"name":"Google SketchUp 8",
-		"notes":"A 3D drawing <a href='http://www.sketchup.com/products/sketchup-make' target='_blank' data-role='none'>tool</a> that is now currently known as \"SketchUp Make\""
+		"notes":"A 3D drawing <a href='http://www.sketchup.com/products/sketchup-make'>tool</a> that is now currently known as \"SketchUp Make\""
 		},
 		{"name":"USGS/EROS EarthExplorer",
-		"notes":"An <a href='http://earthexplorer.usgs.gov/' target='_blank' data-role='none'>online utility</a> provided by the U.S. Geological Survey's Earth Resources Observation and Science Center which allows citizens to access to nearly all of the maps they produce and various data sets they collect."
+		"notes":"An <a href='http://earthexplorer.usgs.gov/'>online utility</a> provided by the U.S. Geological Survey's Earth Resources Observation and Science Center which allows citizens to access to nearly all of the maps they produce and various data sets they collect"
 		}
 		]
 	},
 	{	"name":"Productivity",
 		"childItems":[
-		{	"name":"Apache OpenOffice"	},
-		{	"name":"Celtex",
-			"notes":"A <a href='https://www.celtx.com' target='_blank' data-role='none'>tool</a> specializing in script writing."	
+		{	"name":"Apache OpenOffice",
+			"notes":"An open-source <a href='https://www.openoffice.org/'>collection</a> of office suite software"
 		},
-		{	"name":"Google Apps"	},		
+		{	"name":"Celtex",
+			"notes":"A <a href='https://www.celtx.com'>tool</a> specializing in script writing"	
+		},
+		{	"name":"Daux.io",
+			"notes":"A PHP <a href='http://daux.io/'>application</a> that generates documentation from Markdown files"
+		},
+		{	"name":"Google Apps for Work",
+			"notes":"A <a href='http://www.google.com/enterprise/apps/business/' target='_blank' data-role:'none'>collection</a> of web based communication tools and office suite software"
+		},		
 		{	"name":"Microsoft Office Suite",
-			"notes":""
+			"notes":"In addition to general competency with all of the programs included, I have extensive experience with the advance manipulation of data in Excel"
 		},
 		{	"name":"Ron's Editor",
-			"notes":"A robust <a href='http://www.ronsplace.eu/Products/RonsEditor' target='_blank' data-role='none'>CSV</a> editor."
+			"notes":"A robust <a href='http://www.ronsplace.eu/Products/RonsEditor'>CSV</a> editor"
 		}
 		]
 	},
@@ -77,61 +84,80 @@
 			"notes":"The majority of the work I did for Links Technology was managed via SVN. All of my interaction with the systems is handled through the TortoiseSVN client."
 		},
 		{	"name":"Git",
-			"notes":"Most of my personal work is version controlled and managed via <a href='https://bitbucket.org/BriceShatzer' target='_blank' data-role='none'>Bitbucket</a> & <a href='https://github.com/briceshatzer' target='_blank' data-role='none'>GitHub</a>. I generally use a GUI to manage things (currently \"SourceTree\" but have previously used \"GitHub for Windows\", \"TortoiseGit\" & the vanilla Git GUI), but I am capable of working at the command line level to resolve conflicts and other issues."
+			"notes":"Most of my personal work is version controlled and managed via <a href='https://bitbucket.org/BriceShatzer'>Bitbucket</a> & <a href='https://github.com/briceshatzer'>GitHub</a>. I generally use a GUI to manage things (currently \"SourceTree\" but have previously used \"GitHub for Windows\", \"TortoiseGit\" & the vanilla Git GUI), but I am capable of working at the command line level to resolve conflicts and other issues."
 		}]
 	},
 	{	"name":"Web Analytics & Ad Management ",
 		"childItems":[
 		{	"name":"Absolute Banner Manager XE",
-			"notes":"An <a href='http://www.xigla.com/absolutebm/' target='_blank' data-role='none'>ad management</a> solution built in ASP "},
-		{	"name":"Google Analytics"},
-		{	"name":"Google DoubleClick for Publishers"	}
+			"notes":"An <a href='http://www.xigla.com/absolutebm/'>ad management</a> solution built in ASP "},
+		{	"name":"Google Analytics",
+			"notes":"A <a href='http://www.google.com/analytics/'>tool</a> to track and analyze website traffic"
+		},
+		{	"name":"Google DoubleClick for Publishers",
+			"notes":"An ad inventory management <a href='http://www.google.com/doubleclick/publishers/welcome/'>service and tool</a>"
+		}
 
 
 		]
 	},
 	{	"name":"Web Development Tools",
 		"childItems":[
+		{	"name":"Browser Development Tools",
+			"notes":"I am completely comfortable using the built in developer tools for <a href='https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox'>Firefox</a>, <a href='http://msdn.microsoft.com/en-us/library/dd565628.aspx'>IE</a>, and <a href='https://developer.chrome.com/devtools'>Chrome</a>(preferred) in addition to third-party tools like <a href='https://getfirebug.com/'>Firebug</a> and <a href='http://chrispederick.com/work/web-developer/'>Web Developer</a>"
+		},
 		{	"name":"Charles",
-			"notes":"A web proxy and debugging <a href='http://www.charlesproxy.com/' target='_blank' data-role='none'>tool</a>"
+			"notes":"A web proxy and debugging <a href='http://www.charlesproxy.com/'>tool</a>"
 		},
 		{	"name":"Compass.app",
-			"notes":"An <a href='http://compass.kkbox.com/' target='_blank' data-role='none'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/' target='_blank' data-role='none'>Compass</a> open-source CSS authoring framework."
+			"notes":"An <a href='http://compass.kkbox.com/'>automated stylesheet preprocessor</a> that works with the <a href='http://compass-style.org/'>Compass</a> open-source CSS authoring framework"
 		},
-		{	"name":"CuteFTP"	},
-		{	"name":"Filezilla"	},
-		{	"name":"Firebug"	},		
-		{	"name":"Firefox Developer Tools"	},		
-		{	"name":"Google Chrome Developer Tools"	},
+		{	"name":"FTP Clients",
+			"notes":"Currently, I use <a href='http://winscp.net/eng/index.php'>WinSCP</a> and the <a href='http://wbond.net/sublime_packages/sftp'>SFTP package</a> for Sublime Text, but have previous experience with <a href='https://filezilla-project.org/'>FileZilla</a> and <a href='http://www.cuteftp.com/'>CuteFTP</a>"
+		},		
 		{	"name":"Grunt",
 			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be capable stepping into an existing workflow which uses it."},
-		{	"name":"Internet Explorer Developer Tools"	},		
-		{	"name":"LiveReload"	},
+		{	"name":"LiveReload",
+			"notes":"A tool used to "	
+		},
 		{	"name":"MAMP",
-			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/' target='_blank' data-role='none'>development environment</a>."
+			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/'>development environment</a>"
 		},
 		{	"name":"Mongoose",
-			"notes":"A simple, <a href='https://code.google.com/p/mongoose/' target='_blank' data-role='none'>local web server</a>."
+			"notes":"A simple, <a href='https://code.google.com/p/mongoose/'>local web server</a>"
 		},
 		{	"name":"nodeJS",
-			"notes":"Comfortable setting up a local node environment to serve files, test server interaction, or aid in build automation"
-		},
-		{ "name":"WinSCP" }		
+			"notes":"I'm comfortable setting up a local node environment to serve files, test server interactions, or aid in build automation"
+		}
 		]
 	},
-	{	"name":"Wireframing" ,
+	{	"name":"Wireframing / Diagramming" ,
 		"childItems":[
-		{	"name":"Balsamiq"	},		
-		{	"name":"Lovely Charts"	},
-		{	"name":"Lucidchart"	}
+		{	"name":"Balsamiq Mockups",
+			"notes":"A <a href='http://balsamiq.com/products/mockups/'>tool</a> for creating basic UX/UI mockups and wireframes"
+		},		
+		{	"name":"Lovely Charts",
+			"notes":"A diagramming <a href='http://www.lovelycharts.com/'>tool</a> for creating things like flowcharts and sitemaps"
+		},
+		{	"name":"Lucidchart",
+			"notes":"A diagramming and wireframing <a href='https://www.lucidchart.com/'>tool</a> for creating mockups and flowcharts"
+		}
 		]
 	},	
 	{	"name":"Workflow / Project Management",
 		"childItems":[
-		{	"name":"Basecamp"	},
-		{	"name":"LiquidPlanner"},
-		{	"name":"Redmine"	},
-		{	"name":"Trello"		}
+		{	"name":"Basecamp",
+			"notes":"I have experience using the collaborative web documents, shared to-do lists, and messaging portions of this project management <a href='https://basecamp.com/'>tool</a>"
+		},
+		{	"name":"LiquidPlanner",
+			"notes":"A project management <a href='http://www.liquidplanner.com/'>tool</a> used to coordinate scheduling in addition to tracking time for billing purposes"
+		},
+		{	"name":"Redmine",
+			"notes":"I have experience using the bug-tracking portion of this project management <a href='http://www.redmine.org/'>tool</a>"
+		},
+		{	"name":"Trello",
+			"notes":"A <a href='http://en.wikipedia.org/wiki/Kanban'>Kanban</a>-based project management <a href='https://trello.com/'>tool</a>"
+		}
 		]
 	}
 ]	
