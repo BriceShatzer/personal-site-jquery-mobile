@@ -2280,88 +2280,8 @@ section div.ui-panel-wrapper, body {
 
 .ui-header {
   border: none;
-  /* .ui-btn {font-size: 16px;}
-  .ui-btn .fa {font-size: 1.2em;float:right;} */
 }
 
-.ui-listview > li .ui-collapsible-heading * {
-  border: none;
-  width: 100%;
-}
-.ui-listview > li div.ui-collapsible-content {
-  border: none;
-}
-.ui-listview > li div.ui-collapsible-content a {
-  border-top: none;
-  padding-left: 25px;
-}
-
-/*
-section.ui-page-active{
-	margin-top:45px !important;
-	h1 {
-		@include font_droid;
-		font-size: 2.2em;
-		font-weight: bold;
-		float:left;
-		margin-right: 0.4em;
-	}
-	h2{
-		font-size: 1.6em;
-		border-bottom: 1px solid #DDD;
-		text-align:  center;
-		border-bottom: none;
-	}
-	h3{
-		font-size: 1.3em;
-		line-height: 1.3em;
-		text-align: center;
-		padding-bottom:2px;
-		border-bottom:1px solid #DDD;
-		margin-bottom: 4px;
-	}
-} */
-/* a[data-role="none"]{
-	//color:#BFBFBF !important;
-	color:#727272 !important;
-	//text-decoration:none;
-	//line-height: 1.6em;
-	margin-bottom: 5px;
-	&:hover{color:#2A2A2A !important;}
-} */
-/*
-a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
-}
-*/
-div.relevantMedia,
-div.pageHeader {
-  overflow: hidden;
-  padding: 0 1em;
-}
-
-div.pageHeader p.notes {
-  font-size: 1.1em;
-  line-height: 1.1em;
-  margin-bottom: 1em;
-}
-
-div.itemInfo p.notes a {
-  color: #727272;
-  text-decoration: underline;
-}
-div.itemInfo p.notes a:hover {
-  color: #2A2A2A !important;
-}
-
-/*
-#developmentContent,
-#workExample,
-#creativeInfo,
-#creativeExampleDetail,
-#writingContent,
-#toolsInfo,
-#aboutMeInfo
-*/
 section.ui-page-active {
   padding-top: 45px !important;
 }
@@ -2389,44 +2309,6 @@ section.ui-page-active h3 {
 
 div.ui-content {
   padding: 1em 1em 1em 2em;
-  	/*
-  	div.backbutton{
-  		a{
-  			@include font_droid;
-  			font-size: 1em;
-  			color: #BFBFBF;
-  			&:hover{color: #727272;}		
-  			line-height: 1.5em;
-  			font-weight: bold;
-  			text-decoration: none;
-  
-  			
-  			cursor: pointer;
-  			
-  			float:right;
-  			position:relative;
-  			right:-2em;
-  			text-shadow: none;
-  			padding:0.5em 1em 0.5em 0.75em;
-  			//position: absolute;
-  			//bottom: 16px;
-  			//right: 0px; 
-  			//padding: 6px 12px 6px 12px;
-  			background-color: #2A2A2A;
-  			background-clip: padding-box;
-  			border: 1px solid rgba(0, 0, 0, 0);
-  			border-left: 0px;
-  			border-top-left-radius: 4px;
-  			border-bottom-left-radius: 4px;
-  			span{vertical-align: top;}
-  			span.fa{
-  				vertical-align: middle;
-  				font-weight: normal;
-  				font-size: 1.5em;
-  				margin-right: 0.2em;
-  			}
-  		}
-  	}*/
 }
 div.ui-content a {
   font-weight: normal;
@@ -2482,6 +2364,38 @@ div.ui-content div.backbutton a span.fa {
   margin-right: 0.2em;
 }
 
+.ui-listview > li .ui-collapsible-heading * {
+  border: none;
+  width: 100%;
+}
+.ui-listview > li div.ui-collapsible-content {
+  border: none;
+}
+.ui-listview > li div.ui-collapsible-content a {
+  border-top: none;
+  padding-left: 25px;
+}
+
+div.relevantMedia,
+div.pageHeader {
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+div.pageHeader p.notes {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+}
+
+div.itemInfo a {
+  color: #727272;
+  text-decoration: underline;
+}
+div.itemInfo a:hover {
+  color: #2A2A2A !important;
+}
+
 #developmentContent a:hover {
   color: #727272;
 }
@@ -2532,10 +2446,6 @@ div.ui-content div.backbutton a span.fa {
   }
 }
 
-/* #creativeInfo{
-	padding:0 1em 0;
-	p{margin-bottom:0;}
-} */
 section[data-url="/development"] #developmentContent h2, section[data-url="/development"] #developmentContent h3 {
   text-align: left;
 }
@@ -2555,17 +2465,6 @@ section[data-url="/development"] #developmentContent div.ui-body {
   }
 }
 
-/* #workExample{
-	div.techUsed{float:right;}
-	img{
-		max-width:40%;
-		max-height: 200px;
-		margin-right:1em;
-		vertical-align: middle;
-	}
-
-}
- */
 #workExample a.siteLink {
   float: left;
   line-height: 2.2em;
@@ -2597,21 +2496,15 @@ section[data-url="/development"] #developmentContent div.ui-body {
   padding: 0.5em 0.8em 0.8em;
 }
 
-div.creativeCategory
 #creativeExampleDetail h1 {
   float: none;
   margin-right: 0;
 }
 
-#creativeExampleDetail p.notes, #portfolioContent p.notes {
+#creativeExampleDetail p.notes, #workExample p.notes {
   margin-top: 0.5em;
 }
 
-#creativeExampleDetail div.itemInfo,
-#workExample div.itemInfo {
-  font-size: 1.1em;
-  padding: 0 1em;
-}
 #creativeExampleDetail ul,
 #workExample ul {
   line-height: 1.1em;
@@ -2619,6 +2512,15 @@ div.creativeCategory
 #creativeExampleDetail ul li,
 #workExample ul li {
   list-style: disc inside;
+}
+#creativeExampleDetail div.itemInfo,
+#workExample div.itemInfo {
+  font-size: 1.1em;
+  padding: 0 1em;
+}
+#creativeExampleDetail div.itemInfo ul,
+#workExample div.itemInfo ul {
+  line-height: 1.2em;
 }
 
 #creativeExampleDetail div.media,
@@ -2726,6 +2628,9 @@ div.creativeCategory div.creativeExample:nth-child(even) {
     margin-right: 0;
   }
 }
+#writingContent div.writingExample div.itemInfo {
+  clear: both;
+}
 #writingContent div.writingExample ul {
   margin-bottom: 1em;
 }
@@ -2816,7 +2721,7 @@ span.strong {
   margin-bottom: 1px;
 }
 
-/* navigation panel styling */
+/* navigation styling */
 div[data-role="header"] {
   padding: 0px 10px;
   position: fixed;
@@ -2827,22 +2732,6 @@ div[data-role="header"] {
   min-height: 1.1em;
   background-color: #2A2A2A;
   color: #727272;
-  /* 	span.fa {
-  		display:none;
-  		color:#BFBFBF;
-  		cursor:pointer;
-  		font-size: 1.1em;
-  		@media screen and (max-width:640px){
-  			display:inline;
-  			@include navItemSpacing;
-  		}
-  	}
-   */
-  /*
-  a, a:visited { color:#BFBFBF;}
-  a:hover {color:#727272;}
-  a.current{color:#727272;cursor:default;}
-  */
 }
 div[data-role="header"] a {
   font-family: "Droid Sans", "sans-serif";
@@ -3055,34 +2944,6 @@ div.quickInfo_close-arrow span {
   }
 }
 
-/*
-@include box-shadow(  rgba(255, 255, 255, 0.07) 0 1px 0 inset);
-
-div.panel-button{}
-
-
-
-  border-bottom{1px solid #121212}
-  rgba(255, 255, 255, 0.07) 
-*/
-/*
-@mixin navPanel {
-	top:45px;
-	//height: calc(100% - 40px); ---http://stackoverflow.com/a/17069027/1608016
-	div.ui-panel-inner>ul>li.ui-first-child>a{border-top:none;}
-	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
-	ul a {background-color:#2a2a2a;}
-	ul a:hover {background-color: #333;}
-
-	ul a.ui-btn {padding-top:.5em; padding-bottom:.5em;font-size: 14px; }
-	ul a.ui-icon-carat-r:after { background:none;}
-		//background: url("Path to your image file") no-repeat scroll 0px 0px transparent;
-	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; 
-		//a.ui-btn-icon-left {font-size: 14px; }
-		a.ui-btn-icon-left:hover {background-color:#2A2A2A;}
-	}
-}
-*/
 #quickInfo {
   top: 42px;
   border-top: 1px solid #1F1F1F;
@@ -3180,9 +3041,3 @@ div.panel-button{}
   -o-transform: rotate(330deg);
   transform: rotate(330deg);
 }
-
-/*
-#development_nav {@include navPanel}
-#creative_nav {@include navPanel}
-#tools_nav {@include navPanel}
-*/

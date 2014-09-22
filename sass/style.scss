@@ -14,7 +14,7 @@ body{
 	background-color:#F2F2F2;
 }
 
-section div.ui-panel-wrapper,body {
+section div.ui-panel-wrapper,body{
 	background-color: #F2F2F2 !important;
 }
 //standard bg color: #F2F2F2
@@ -22,105 +22,9 @@ section div.ui-panel-wrapper,body {
 //darks - #1F1F1F, #2A2A2A
 
 
-.ui-header {border:none;
-	/* .ui-btn {font-size: 16px;}
-	.ui-btn .fa {font-size: 1.2em;float:right;} */
-}
+.ui-header {border:none;}
 
-.ui-listview>li {
-	.ui-collapsible-heading * {border: none; width: 100%;}
-
-	div.ui-collapsible-content {border:none;
-		a {border-top: none; padding-left: 25px}
-	}
-}
-
-
-/*
 section.ui-page-active{
-	margin-top:45px !important;
-	h1 {
-		@include font_droid;
-		font-size: 2.2em;
-		font-weight: bold;
-		float:left;
-		margin-right: 0.4em;
-	}
-	h2{
-		font-size: 1.6em;
-		border-bottom: 1px solid #DDD;
-		text-align:  center;
-		border-bottom: none;
-	}
-	h3{
-		font-size: 1.3em;
-		line-height: 1.3em;
-		text-align: center;
-		padding-bottom:2px;
-		border-bottom:1px solid #DDD;
-		margin-bottom: 4px;
-	}
-} */
-
-
-//Maybe make this link styling more universal? 
-/* a[data-role="none"]{
-	//color:#BFBFBF !important;
-	color:#727272 !important;
-	//text-decoration:none;
-	//line-height: 1.6em;
-	margin-bottom: 5px;
-	&:hover{color:#2A2A2A !important;}
-} */
-/*
-a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
-}
-*/
-
-div.relevantMedia, 
-div.pageHeader{
-	overflow:hidden;
-	//padding:0 1em 0.5em;
-	padding:0 1em;
-}
-
-div.pageHeader p.notes{
-	font-size:1.1em;
-	line-height:1.1em;
-	margin-bottom:1em;
-}
-div.itemInfo p.notes a{
-	color:#727272;
-	text-decoration:underline;
-	&:hover{color:#2A2A2A !important;}
-}
-
-/*
-#developmentInfo,
-#creativeInfo,
-//#creativeContent,
-#creativeContent,
-//#workExample,
-#writingInfo,
-div.writingExample,
-#toolsInfo,
-#aboutMeInfo
-{
-	padding:1em;
-	overflow:hidden;
-}
-*/
-/*
-#developmentContent,
-#workExample,
-#creativeInfo,
-#creativeExampleDetail,
-#writingContent,
-#toolsInfo,
-#aboutMeInfo
-*/
-section.ui-page-active{
-	//margin-top:45px !important;
 	padding-top:45px !important;
 	h1 {
 		@include font_droid;
@@ -147,14 +51,11 @@ section.ui-page-active{
 
 div.ui-content{
 	padding: 1em 1em 1em 2em;
-
 	a{
 		font-weight:normal;
-		//color:#727272 !important;
 		color:#727272;
 		text-decoration:none;
 		line-height: 1.1em;
-		//margin-bottom: 5px;
 		&:visited{color:#727272}
 		&:hover{text-decoration:underline}
 	}
@@ -162,8 +63,7 @@ div.ui-content{
 		line-height: 1.1em;
 		margin-bottom: 1em;
 	}
-	p.notes{ font-size:1.1em;}
-
+	p.notes{font-size:1.1em;}
 	div.backbutton{
 		a{
 			@include font_droid;
@@ -190,60 +90,44 @@ div.ui-content{
 			color: #BFBFBF;
 			&:visited{color:#BFBFBF}
 			&:hover{color: #727272;}			
-			span{
-			vertical-align: middle;
-			//	vertical-align: top;
-			}
+			span{vertical-align: middle;}
 			span.fa{
-				
 				font-weight: normal;
 				font-size: 1.5em;
 				margin-right: 0.2em;
 			}
 		}
 	}
-
-
-	/*
-	div.backbutton{
-		a{
-			@include font_droid;
-			font-size: 1em;
-			color: #BFBFBF;
-			&:hover{color: #727272;}		
-			line-height: 1.5em;
-			font-weight: bold;
-			text-decoration: none;
-
-			
-			cursor: pointer;
-			
-			float:right;
-			position:relative;
-			right:-2em;
-			text-shadow: none;
-			padding:0.5em 1em 0.5em 0.75em;
-			//position: absolute;
-			//bottom: 16px;
-			//right: 0px; 
-			//padding: 6px 12px 6px 12px;
-			background-color: #2A2A2A;
-			background-clip: padding-box;
-			border: 1px solid rgba(0, 0, 0, 0);
-			border-left: 0px;
-			border-top-left-radius: 4px;
-			border-bottom-left-radius: 4px;
-			span{vertical-align: top;}
-			span.fa{
-				vertical-align: middle;
-				font-weight: normal;
-				font-size: 1.5em;
-				margin-right: 0.2em;
-			}
-		}
-	}*/
 }
-#developmentContent {
+
+.ui-listview>li{
+	.ui-collapsible-heading * {border: none; width: 100%;}
+	div.ui-collapsible-content {border:none;
+		a {border-top: none; padding-left: 25px}
+	}
+}
+
+div.relevantMedia, 
+div.pageHeader{
+	overflow:hidden;
+	padding:0 1em;
+}
+
+div.pageHeader p.notes{
+	font-size:1.1em;
+	line-height:1.1em;
+	margin-bottom:1em;
+}
+//div.itemInfo p.notes a{
+div.itemInfo a{	
+	color:#727272;
+	text-decoration:underline;
+	&:hover{color:#2A2A2A !important;}
+}
+
+
+
+#developmentContent{
 	a:hover{color:#727272;}
 	p.notes.lone{
 		float:left;
@@ -252,9 +136,7 @@ div.ui-content{
 	div.ui-grid-a.ui-responsive{
 	clear:both;
 		>div{padding:1em;margin-top:0.8em;}
-	
 		div.ui-body.ui-body-a.ui-corner-all{
-		//padding:1em;margin-top:0.8em;
 			ul li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
 			ul li{ text-indent:5px;margin-bottom:1px; }
 		}
@@ -278,21 +160,14 @@ div.ui-content{
 		@media screen and (max-width:680px){
 			width: inherit;
 			float:none;
-			//margin-top:0.8em !important;
 		}	
 	}
 }
-
-/* #creativeInfo{
-	padding:0 1em 0;
-	p{margin-bottom:0;}
-} */
 
 @mixin example-blocks{
 	width:48%;
 	float: left;
 	margin-right: 2%;
-	//@media screen and (max-width:1280px){margin-right:1%;}		
 	@media screen and (max-width:992px){
 		width:100%;
 		float:none;
@@ -308,24 +183,11 @@ section[data-url="/development"] #developmentContent{
 	}
 	h3{border-bottom: none;}
 	div.ui-body{
-		//padding-left:2em;
 		padding-right:4em;
 		@media screen and (max-width:992px){padding-right:2em;}
-		//@media screen and (max-width:640px){padding-left:0.4em;padding-right:0.4em;}
 	}
 }
 
-/* #workExample{
-	div.techUsed{float:right;}
-	img{
-		max-width:40%;
-		max-height: 200px;
-		margin-right:1em;
-		vertical-align: middle;
-	}
-
-}
- */
 #workExample{
 	a.siteLink{
 		float:left;
@@ -343,7 +205,7 @@ section[data-url="/development"] #developmentContent{
 		clear:right;
 	}
 }
-//#portfolioContent,
+
 #workExample{
 	a:hover{color:#727272}
 	div.itemInfo{
@@ -358,21 +220,24 @@ section[data-url="/development"] #developmentContent{
 		padding: 0.5em 0.8em 0.8em;
 	}
 }
-div.creativeCategory
+
+//div.creativeCategory
 #creativeExampleDetail h1{float:none;margin-right:0;}
-#creativeExampleDetail p.notes, #portfolioContent p.notes{margin-top:0.5em;}
+#creativeExampleDetail p.notes, #workExample p.notes{margin-top:0.5em;}
 
 #creativeExampleDetail,
 #workExample{
-	div.itemInfo{
-		font-size:1.1em;
-		padding:0 1em;
-	}
 	ul{ 
 		line-height: 1.1em;
 		li{list-style: disc inside;}
 	}
+	div.itemInfo{
+		font-size:1.1em;
+		padding:0 1em;
+		ul {line-height: 1.2em;}
+	}	
 }
+
 #creativeExampleDetail div.media,
 #creativeExampleDetail img,
 #workExample img{
@@ -382,6 +247,7 @@ div.creativeCategory
 	vertical-align: middle;
 	cursor: pointer;
 }
+
 #creativeExampleDetail div.media,
 #creativeExampleDetail img{
 	text-align:center;
@@ -390,10 +256,6 @@ div.creativeCategory
 		max-width:90%;
 		max-height: none;
 		clear:left;
-		//float:none;
-		//margin-left: auto;
-    	//margin-right: auto;
-    	//padding-top:0.5em;
     	padding-bottom:0.8em
 	}
 	span{
@@ -402,6 +264,7 @@ div.creativeCategory
 		@media screen and (max-width:640px){font-size:2em;}
 	}
 }
+
 #creativeExampleDetail div.media{ 
 	padding:1em;
 	@media screen and (max-width:992px){width:90%}
@@ -431,14 +294,13 @@ div.creativeCategory{
 	div.creativeExample:nth-child(even){ clear:left; }
 }
 
-
 #writingContent{
 	padding:0 1em;
-	//border-bottom: solid 1px #DDD;
 	div.writingExample{
 		@include example-blocks;
 		border-bottom: 1px solid #DDD;
 		padding-top:0.5em;
+		div.itemInfo{clear:both;}
 		ul{margin-bottom:1em;}
 	}
 	h3{
@@ -478,7 +340,6 @@ span.strong{
 #toolList{
 	margin-top:0;
 	padding:0.5em 1em 1em;
-	//ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
 	h3.ui-collapsible-heading {
 		margin:0;
 		padding:0;
@@ -490,11 +351,10 @@ span.strong{
 		color:#727272;
 		&:hover{color:#2A2A2A}
 	}
-//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
 }
-#aboutMeContent div.pageHeader{
-	padding-bottom:1em;
-}
+
+#aboutMeContent div.pageHeader{	padding-bottom:1em; }
+
 #aboutToggle {
 	color:#727272;
 	&:hover{
@@ -502,9 +362,7 @@ span.strong{
 		text-decoration: none;
 	}
 }
-#aboutUnabridged, #aboutTLDR{
-	padding:0 1em;
-}
+#aboutUnabridged, #aboutTLDR{ padding:0 1em; }
 
 #aboutTLDR{
 	font-size:1.1em;
@@ -514,12 +372,4 @@ span.strong{
 	li{ text-indent:5px;margin-bottom:1px; }
 }
 
-
-
 @import "nav-and-sidebar";
-
-/*
-#development_nav {@include navPanel}
-#creative_nav {@include navPanel}
-#tools_nav {@include navPanel}
-*/
