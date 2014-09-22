@@ -97,7 +97,11 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         }
         $content.append($workspace_top);
         if(portfolioItem.notes){//add notes
-            $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); 
+            if($.parseHTML(portfolioItem.notes)[0].nodeName === "#text"){
+                $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); 
+            } else {
+                $content.append('<div class="itemInfo">'+portfolioItem.notes+'</div>');
+                $content.find('div.itemInfo p').addClass('notes');}
         }
         if(portfolioItem.tech){//add technology used 
             $techUsed = $('<div class="ui-body ui-body-a ui-corner-all techUsed"><h3>Technology Used</h3><ul></ul></div>');
