@@ -9,10 +9,9 @@
 @mixin font_droid{font-family: "Droid Sans", "sans-serif";}	
 @mixin font_lato{font-family:lato,"Droid Sans", "sans-serif";}
 
-body{@include font_lato;
+body{
+	@include font_lato;
 	background-color:#F2F2F2;
-	 //font-family:lato,"Droid Sans", "sans-serif" !important ;
-	//a{ font-family: "Droid Sans", "sans-serif" !important ; }
 }
 
 section div.ui-panel-wrapper,body {
@@ -24,8 +23,8 @@ section div.ui-panel-wrapper,body {
 
 
 .ui-header {border:none;
-	.ui-btn {font-size: 16px;}
-	.ui-btn .fa {font-size: 1.2em;float:right;}
+	/* .ui-btn {font-size: 16px;}
+	.ui-btn .fa {font-size: 1.2em;float:right;} */
 }
 
 .ui-listview>li {
@@ -37,54 +36,66 @@ section div.ui-panel-wrapper,body {
 }
 
 
-
-div.ui-page-active,
+/*
 section.ui-page-active{
 	margin-top:45px !important;
-//h1,h2,h3{@include font_droid}
 	h1 {
-		//font-family: "Droid Sans", "sans-serif";		
-		font-size: 2em;
+		@include font_droid;
+		font-size: 2.2em;
 		font-weight: bold;
+		float:left;
+		margin-right: 0.4em;
 	}
 	h2{
-		//font-family: "Droid Sans", "sans-serif";		
 		font-size: 1.6em;
-		//font-size: 1.5em;
 		border-bottom: 1px solid #DDD;
-
+		text-align:  center;
+		border-bottom: none;
 	}
 	h3{
-		//font-family: "Droid Sans", "sans-serif";		
 		font-size: 1.3em;
 		line-height: 1.3em;
+		text-align: center;
+		padding-bottom:2px;
+		border-bottom:1px solid #DDD;
+		margin-bottom: 4px;
 	}
-}
+} */
 
-div.ui-content{padding: 0.5em 1.5em 1em 1.5em;}
 
 //Maybe make this link styling more universal? 
-a[data-role="none"]{
+/* a[data-role="none"]{
 	//color:#BFBFBF !important;
 	color:#727272 !important;
 	//text-decoration:none;
 	//line-height: 1.6em;
 	margin-bottom: 5px;
 	&:hover{color:#2A2A2A !important;}
-}
+} */
 /*
 a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
 
-//section[data-url="/tools.html"]{
-#toolList{
-	margin-top:0;
-	padding:0.5em 1em 1em;
-	ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
-	div.ui-collapsible-content a {font-weight:normal}
-//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+div.relevantMedia, 
+div.pageHeader{
+	overflow:hidden;
+	//padding:0 1em 0.5em;
+	padding:0 1em;
 }
+
+div.pageHeader p.notes{
+	font-size:1.1em;
+	line-height:1.1em;
+	margin-bottom:1em;
+}
+div.itemInfo p.notes a{
+	color:#727272;
+	text-decoration:underline;
+	&:hover{color:#2A2A2A !important;}
+}
+
+/*
 #developmentInfo,
 #creativeInfo,
 //#creativeContent,
@@ -98,7 +109,8 @@ div.writingExample,
 	padding:1em;
 	overflow:hidden;
 }
-
+*/
+/*
 #developmentContent,
 #workExample,
 #creativeInfo,
@@ -106,41 +118,45 @@ div.writingExample,
 #writingContent,
 #toolsInfo,
 #aboutMeInfo
-{
+*/
+section.ui-page-active{
+	//margin-top:45px !important;
+	padding-top:45px !important;
 	h1 {
-		font-family: "Droid Sans", "sans-serif";		
-		float:left;
+		@include font_droid;
 		font-size: 2.2em;
-		// font-weight: bold;
-		//margin-right:0.8em;
-		margin-right:0.4em;
+		font-weight: bold;
+		float:left;
+		margin-right: 0.4em;
 	}
 	h2{
-		// font-family: "Droid Sans", "sans-serif";		
-		// font-size: 1.6em;
-		text-align: center;
+		font-size: 1.6em;
+		border-bottom: 1px solid #DDD;
+		text-align:  center;
 		border-bottom: none;
 	}
 	h3{
-//		font-family: "Droid Sans", "sans-serif";		
-		text-align:center;
-//		font-size: 1.3em;
-//		line-height: 1.3em;
+		font-size: 1.3em;
+		line-height: 1.3em;
+		text-align: center;
 		padding-bottom:2px;
-		border-bottom: 1px solid #DDD;
+		border-bottom:1px solid #DDD;
 		margin-bottom: 4px;
 	}
-	a{	font-weight:normal;
+}
+
+div.ui-content{
+	padding: 1em 1em 1em 2em;
+
+	a{
+		font-weight:normal;
 		//color:#727272 !important;
 		color:#727272;
 		text-decoration:none;
 		line-height: 1.1em;
 		//margin-bottom: 5px;
+		&:visited{color:#727272}
 		&:hover{text-decoration:underline}
-	}
-	//a:hover{text-decoration:underline}
-	div.devTopic_top{
-		padding:1em;overflow:hidden
 	}
 	p{
 		line-height: 1.1em;
@@ -148,17 +164,47 @@ div.writingExample,
 	}
 	p.notes{ font-size:1.1em;}
 
-	div.ui-grid-a.ui-responsive{
-		clear:both;
-		>div{padding:1em;margin-top:0.8em;}
-		
-		div.ui-body.ui-body-a.ui-corner-all{
-			//padding:1em;margin-top:0.8em;
-			ul li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
-			ul li{ text-indent:5px;margin-bottom:1px; }
+	div.backbutton{
+		a{
+			@include font_droid;
+			font-size: 1em;
+			line-height: 1.5em;
+			font-weight: bold;
+			text-decoration: none;
+			text-shadow: none;
+			cursor: pointer;
+
+			background-color: #2A2A2A;
+			background-clip: padding-box;
+			
+			float:right;
+			position:relative;
+			right:-2em;
+			padding:0.5em 1.5em 0.5em 0.75em;
+			
+			border: 1px solid rgba(0, 0, 0, 0);
+			border-left: 0px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+
+			color: #BFBFBF;
+			&:visited{color:#BFBFBF}
+			&:hover{color: #727272;}			
+			span{
+			vertical-align: middle;
+			//	vertical-align: top;
+			}
+			span.fa{
+				
+				font-weight: normal;
+				font-size: 1.5em;
+				margin-right: 0.2em;
+			}
 		}
 	}
 
+
+	/*
 	div.backbutton{
 		a{
 			@include font_droid;
@@ -177,11 +223,10 @@ div.writingExample,
 			right:-2em;
 			text-shadow: none;
 			padding:0.5em 1em 0.5em 0.75em;
-			/* position: absolute;
-			bottom: 16px;
-			right: 0px; 
-			padding: 6px 12px 6px 12px;
-			*/
+			//position: absolute;
+			//bottom: 16px;
+			//right: 0px; 
+			//padding: 6px 12px 6px 12px;
 			background-color: #2A2A2A;
 			background-clip: padding-box;
 			border: 1px solid rgba(0, 0, 0, 0);
@@ -196,62 +241,64 @@ div.writingExample,
 				margin-right: 0.2em;
 			}
 		}
+	}*/
+}
+#developmentContent {
+	a:hover{color:#727272;}
+	p.notes.lone{
+		float:left;
+		margin-top:1em;	
+	}
+	div.ui-grid-a.ui-responsive{
+	clear:both;
+		>div{padding:1em;margin-top:0.8em;}
+	
+		div.ui-body.ui-body-a.ui-corner-all{
+		//padding:1em;margin-top:0.8em;
+			ul li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
+			ul li{ text-indent:5px;margin-bottom:1px; }
+		}
+	}
+	h2.lone{
+		width:38%;
+		float:left;
+		padding-top:1em;
+		text-align:right;	
+		@media screen and (max-width:680px){
+			width:100%;
+			float:none;
+			padding:0;
+			text-align: center;
+		}
+	}
+	div.lone{
+		float:right;
+		width:55%;
+		margin-top:0 !important;
+		@media screen and (max-width:680px){
+			width: inherit;
+			float:none;
+			//margin-top:0.8em !important;
+		}	
 	}
 }
-#developmentInfo{ padding-bottom:0; }
-#developmentContent p.notes.lone{
-	float:left;
-	margin-top:1em;	
-}
 
-#developmentContent h2.lone{
-	width:38%;
-	float:left;
-	padding-top:1em;
-	text-align:right;	
-	@media screen and (max-width:680px){
-		width:100%;
-		float:none;
-		padding:0;
-		text-align: center;
-	}	
-}
-#developmentContent div.lone{
-	float:right;
-	width:55%;
-	margin-top:0 !important;
-	@media screen and (max-width:680px){
-		width: inherit;
-		float:none;
-		//margin-top:0.8em !important;
-	}	
-}
-
-#creativeInfo{
+/* #creativeInfo{
 	padding:0 1em 0;
 	p{margin-bottom:0;}
-}
+} */
 
 @mixin example-blocks{
-	width:45%;
+	width:48%;
 	float: left;
 	margin-right: 2%;
-	@media screen and (max-width:1280px){margin-right:1%;}		
+	//@media screen and (max-width:1280px){margin-right:1%;}		
 	@media screen and (max-width:992px){
 		width:100%;
 		float:none;
 		margin-right:0;
 	}
 }
-
-//---this can probably be removed
-#creativeInfo,
-#writingContent, 
-#toolsInfo{
-	h1{margin-right:0.4em;}
-	//p.notes{font-size:1em;}
-}
-//
 
 section[data-url="/development"] #developmentContent{
 	h2,h3{text-align:left;}
@@ -261,10 +308,10 @@ section[data-url="/development"] #developmentContent{
 	}
 	h3{border-bottom: none;}
 	div.ui-body{
-		padding-left:2em;
-		padding-right:6em;
+		//padding-left:2em;
+		padding-right:4em;
 		@media screen and (max-width:992px){padding-right:2em;}
-		@media screen and (max-width:640px){padding-left:0.4em;padding-right:0.4em;}
+		//@media screen and (max-width:640px){padding-left:0.4em;padding-right:0.4em;}
 	}
 }
 
@@ -296,12 +343,13 @@ section[data-url="/development"] #developmentContent{
 		clear:right;
 	}
 }
-#portfolioContent,
+//#portfolioContent,
 #workExample{
+	a:hover{color:#727272}
 	div.itemInfo{
 		clear:left;
 		float:left;
-		width:75%;
+		width:70%;
 	}
 	div.techUsed{
 		float:right;
@@ -310,12 +358,16 @@ section[data-url="/development"] #developmentContent{
 		padding: 0.5em 0.8em 0.8em;
 	}
 }
+div.creativeCategory
 #creativeExampleDetail h1{float:none;margin-right:0;}
 #creativeExampleDetail p.notes, #portfolioContent p.notes{margin-top:0.5em;}
 
 #creativeExampleDetail,
 #workExample{
-	div.itemInfo{font-size:1.1em}
+	div.itemInfo{
+		font-size:1.1em;
+		padding:0 1em;
+	}
 	ul{ 
 		line-height: 1.1em;
 		li{list-style: disc inside;}
@@ -362,6 +414,7 @@ div.creativeCategory{
 	h3{
 		font-size:1.5em;
 		line-height: 1.5em;
+		border-bottom:none;
 	}
 	div.creativeExample{
 		@include example-blocks;
@@ -380,11 +433,12 @@ div.creativeCategory{
 
 
 #writingContent{
+	padding:0 1em;
 	//border-bottom: solid 1px #DDD;
 	div.writingExample{
 		@include example-blocks;
 		border-bottom: 1px solid #DDD;
-		padding-bottom: 0.8em;
+		padding-top:0.5em;
 		ul{margin-bottom:1em;}
 	}
 	h3{
@@ -407,6 +461,7 @@ div.creativeCategory{
 		&:hover{
 			text-decoration: none;
 			color:#333;
+			span.text{text-decoration:underline;}
 		}
 	}
 	ul{ 
@@ -415,10 +470,48 @@ div.creativeCategory{
 	}	
 }
 
-
 span.strong{
 	@include font_droid;
 	font-weight:bold;
+}
+
+#toolList{
+	margin-top:0;
+	padding:0.5em 1em 1em;
+	//ul h1.ui-collapsible-heading {margin-top:0; margin-bottom:0; }
+	h3.ui-collapsible-heading {
+		margin:0;
+		padding:0;
+		border-bottom:none; 
+	}
+	div.ui-collapsible-content a {
+		font-weight:normal;
+		text-decoration:underline;
+		color:#727272;
+		&:hover{color:#2A2A2A}
+	}
+//	.ui-listview > .ui-li-static {padding-top:0px;padding-bottom:0px;}
+}
+#aboutMeContent div.pageHeader{
+	padding-bottom:1em;
+}
+#aboutToggle {
+	color:#727272;
+	&:hover{
+		color:#333;
+		text-decoration: none;
+	}
+}
+#aboutUnabridged, #aboutTLDR{
+	padding:0 1em;
+}
+
+#aboutTLDR{
+	font-size:1.1em;
+	line-height: 1.1em;
+	margin-bottom: 1em;
+	li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
+	li{ text-indent:5px;margin-bottom:1px; }
 }
 
 

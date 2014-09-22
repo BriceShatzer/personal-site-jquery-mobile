@@ -2280,13 +2280,8 @@ section div.ui-panel-wrapper, body {
 
 .ui-header {
   border: none;
-}
-.ui-header .ui-btn {
-  font-size: 16px;
-}
-.ui-header .ui-btn .fa {
-  font-size: 1.2em;
-  float: right;
+  /* .ui-btn {font-size: 16px;}
+  .ui-btn .fa {font-size: 1.2em;float:right;} */
 }
 
 .ui-listview > li .ui-collapsible-heading * {
@@ -2301,261 +2296,216 @@ section div.ui-panel-wrapper, body {
   padding-left: 25px;
 }
 
-div.ui-page-active,
-section.ui-page-active {
-  margin-top: 45px !important;
-}
-div.ui-page-active h1,
-section.ui-page-active h1 {
-  font-size: 2em;
-  font-weight: bold;
-}
-div.ui-page-active h2,
-section.ui-page-active h2 {
-  font-size: 1.6em;
-  border-bottom: 1px solid #DDD;
-}
-div.ui-page-active h3,
-section.ui-page-active h3 {
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
-
-div.ui-content {
-  padding: 0.5em 1.5em 1em 1.5em;
-}
-
-a[data-role="none"] {
-  color: #727272 !important;
-  margin-bottom: 5px;
-}
-a[data-role="none"]:hover {
-  color: #2A2A2A !important;
-}
-
+/*
+section.ui-page-active{
+	margin-top:45px !important;
+	h1 {
+		@include font_droid;
+		font-size: 2.2em;
+		font-weight: bold;
+		float:left;
+		margin-right: 0.4em;
+	}
+	h2{
+		font-size: 1.6em;
+		border-bottom: 1px solid #DDD;
+		text-align:  center;
+		border-bottom: none;
+	}
+	h3{
+		font-size: 1.3em;
+		line-height: 1.3em;
+		text-align: center;
+		padding-bottom:2px;
+		border-bottom:1px solid #DDD;
+		margin-bottom: 4px;
+	}
+} */
+/* a[data-role="none"]{
+	//color:#BFBFBF !important;
+	color:#727272 !important;
+	//text-decoration:none;
+	//line-height: 1.6em;
+	margin-bottom: 5px;
+	&:hover{color:#2A2A2A !important;}
+} */
 /*
 a[data-role="none"]:hover{ color:#2A2A2A !important;//text-decoration:underline;
 }
 */
-#toolList {
-  margin-top: 0;
-  padding: 0.5em 1em 1em;
-}
-#toolList ul h1.ui-collapsible-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-#toolList div.ui-collapsible-content a {
-  font-weight: normal;
-}
-
-#developmentInfo,
-#creativeInfo,
-#creativeContent,
-#writingInfo,
-div.writingExample,
-#toolsInfo,
-#aboutMeInfo {
-  padding: 1em;
+div.relevantMedia,
+div.pageHeader {
   overflow: hidden;
+  padding: 0 1em;
 }
 
-#developmentContent h1,
-#workExample h1,
-#creativeInfo h1,
-#creativeExampleDetail h1,
-#writingContent h1,
-#toolsInfo h1,
-#aboutMeInfo h1 {
+div.pageHeader p.notes {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+}
+
+div.itemInfo p.notes a {
+  color: #727272;
+  text-decoration: underline;
+}
+div.itemInfo p.notes a:hover {
+  color: #2A2A2A !important;
+}
+
+/*
+#developmentContent,
+#workExample,
+#creativeInfo,
+#creativeExampleDetail,
+#writingContent,
+#toolsInfo,
+#aboutMeInfo
+*/
+section.ui-page-active {
+  padding-top: 45px !important;
+}
+section.ui-page-active h1 {
   font-family: "Droid Sans", "sans-serif";
-  float: left;
   font-size: 2.2em;
+  font-weight: bold;
+  float: left;
   margin-right: 0.4em;
 }
-#developmentContent h2,
-#workExample h2,
-#creativeInfo h2,
-#creativeExampleDetail h2,
-#writingContent h2,
-#toolsInfo h2,
-#aboutMeInfo h2 {
+section.ui-page-active h2 {
+  font-size: 1.6em;
+  border-bottom: 1px solid #DDD;
   text-align: center;
   border-bottom: none;
 }
-#developmentContent h3,
-#workExample h3,
-#creativeInfo h3,
-#creativeExampleDetail h3,
-#writingContent h3,
-#toolsInfo h3,
-#aboutMeInfo h3 {
+section.ui-page-active h3 {
+  font-size: 1.3em;
+  line-height: 1.3em;
   text-align: center;
   padding-bottom: 2px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
-#developmentContent a,
-#workExample a,
-#creativeInfo a,
-#creativeExampleDetail a,
-#writingContent a,
-#toolsInfo a,
-#aboutMeInfo a {
+
+div.ui-content {
+  padding: 1em 1em 1em 2em;
+  	/*
+  	div.backbutton{
+  		a{
+  			@include font_droid;
+  			font-size: 1em;
+  			color: #BFBFBF;
+  			&:hover{color: #727272;}		
+  			line-height: 1.5em;
+  			font-weight: bold;
+  			text-decoration: none;
+  
+  			
+  			cursor: pointer;
+  			
+  			float:right;
+  			position:relative;
+  			right:-2em;
+  			text-shadow: none;
+  			padding:0.5em 1em 0.5em 0.75em;
+  			//position: absolute;
+  			//bottom: 16px;
+  			//right: 0px; 
+  			//padding: 6px 12px 6px 12px;
+  			background-color: #2A2A2A;
+  			background-clip: padding-box;
+  			border: 1px solid rgba(0, 0, 0, 0);
+  			border-left: 0px;
+  			border-top-left-radius: 4px;
+  			border-bottom-left-radius: 4px;
+  			span{vertical-align: top;}
+  			span.fa{
+  				vertical-align: middle;
+  				font-weight: normal;
+  				font-size: 1.5em;
+  				margin-right: 0.2em;
+  			}
+  		}
+  	}*/
+}
+div.ui-content a {
   font-weight: normal;
   color: #727272;
   text-decoration: none;
   line-height: 1.1em;
 }
-#developmentContent a:hover,
-#workExample a:hover,
-#creativeInfo a:hover,
-#creativeExampleDetail a:hover,
-#writingContent a:hover,
-#toolsInfo a:hover,
-#aboutMeInfo a:hover {
+div.ui-content a:visited {
+  color: #727272;
+}
+div.ui-content a:hover {
   text-decoration: underline;
 }
-#developmentContent div.devTopic_top,
-#workExample div.devTopic_top,
-#creativeInfo div.devTopic_top,
-#creativeExampleDetail div.devTopic_top,
-#writingContent div.devTopic_top,
-#toolsInfo div.devTopic_top,
-#aboutMeInfo div.devTopic_top {
-  padding: 1em;
-  overflow: hidden;
-}
-#developmentContent p,
-#workExample p,
-#creativeInfo p,
-#creativeExampleDetail p,
-#writingContent p,
-#toolsInfo p,
-#aboutMeInfo p {
+div.ui-content p {
   line-height: 1.1em;
   margin-bottom: 1em;
 }
-#developmentContent p.notes,
-#workExample p.notes,
-#creativeInfo p.notes,
-#creativeExampleDetail p.notes,
-#writingContent p.notes,
-#toolsInfo p.notes,
-#aboutMeInfo p.notes {
+div.ui-content p.notes {
   font-size: 1.1em;
 }
-#developmentContent div.ui-grid-a.ui-responsive,
-#workExample div.ui-grid-a.ui-responsive,
-#creativeInfo div.ui-grid-a.ui-responsive,
-#creativeExampleDetail div.ui-grid-a.ui-responsive,
-#writingContent div.ui-grid-a.ui-responsive,
-#toolsInfo div.ui-grid-a.ui-responsive,
-#aboutMeInfo div.ui-grid-a.ui-responsive {
-  clear: both;
-}
-#developmentContent div.ui-grid-a.ui-responsive > div,
-#workExample div.ui-grid-a.ui-responsive > div,
-#creativeInfo div.ui-grid-a.ui-responsive > div,
-#creativeExampleDetail div.ui-grid-a.ui-responsive > div,
-#writingContent div.ui-grid-a.ui-responsive > div,
-#toolsInfo div.ui-grid-a.ui-responsive > div,
-#aboutMeInfo div.ui-grid-a.ui-responsive > div {
-  padding: 1em;
-  margin-top: 0.8em;
-}
-#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before,
-#aboutMeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
-  content: "-";
-  position: relative;
-  left: -5px;
-  top: -1px;
-}
-#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#workExample div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#creativeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#creativeExampleDetail div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#writingContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#toolsInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li,
-#aboutMeInfo div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
-  text-indent: 5px;
-  margin-bottom: 1px;
-}
-#developmentContent div.backbutton a,
-#workExample div.backbutton a,
-#creativeInfo div.backbutton a,
-#creativeExampleDetail div.backbutton a,
-#writingContent div.backbutton a,
-#toolsInfo div.backbutton a,
-#aboutMeInfo div.backbutton a {
+div.ui-content div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
   font-size: 1em;
-  color: #BFBFBF;
   line-height: 1.5em;
   font-weight: bold;
   text-decoration: none;
+  text-shadow: none;
   cursor: pointer;
+  background-color: #2A2A2A;
+  background-clip: padding-box;
   float: right;
   position: relative;
   right: -2em;
-  text-shadow: none;
-  padding: 0.5em 1em 0.5em 0.75em;
-  /* position: absolute;
-  bottom: 16px;
-  right: 0px; 
-  padding: 6px 12px 6px 12px;
-  */
-  background-color: #2A2A2A;
-  background-clip: padding-box;
+  padding: 0.5em 1.5em 0.5em 0.75em;
   border: 1px solid rgba(0, 0, 0, 0);
   border-left: 0px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  color: #BFBFBF;
 }
-#developmentContent div.backbutton a:hover,
-#workExample div.backbutton a:hover,
-#creativeInfo div.backbutton a:hover,
-#creativeExampleDetail div.backbutton a:hover,
-#writingContent div.backbutton a:hover,
-#toolsInfo div.backbutton a:hover,
-#aboutMeInfo div.backbutton a:hover {
+div.ui-content div.backbutton a:visited {
+  color: #BFBFBF;
+}
+div.ui-content div.backbutton a:hover {
   color: #727272;
 }
-#developmentContent div.backbutton a span,
-#workExample div.backbutton a span,
-#creativeInfo div.backbutton a span,
-#creativeExampleDetail div.backbutton a span,
-#writingContent div.backbutton a span,
-#toolsInfo div.backbutton a span,
-#aboutMeInfo div.backbutton a span {
-  vertical-align: top;
-}
-#developmentContent div.backbutton a span.fa,
-#workExample div.backbutton a span.fa,
-#creativeInfo div.backbutton a span.fa,
-#creativeExampleDetail div.backbutton a span.fa,
-#writingContent div.backbutton a span.fa,
-#toolsInfo div.backbutton a span.fa,
-#aboutMeInfo div.backbutton a span.fa {
+div.ui-content div.backbutton a span {
   vertical-align: middle;
+}
+div.ui-content div.backbutton a span.fa {
   font-weight: normal;
   font-size: 1.5em;
   margin-right: 0.2em;
 }
 
-#developmentInfo {
-  padding-bottom: 0;
+#developmentContent a:hover {
+  color: #727272;
 }
-
 #developmentContent p.notes.lone {
   float: left;
   margin-top: 1em;
 }
-
+#developmentContent div.ui-grid-a.ui-responsive {
+  clear: both;
+}
+#developmentContent div.ui-grid-a.ui-responsive > div {
+  padding: 1em;
+  margin-top: 0.8em;
+}
+#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li:before {
+  content: "-";
+  position: relative;
+  left: -5px;
+  top: -1px;
+}
+#developmentContent div.ui-grid-a.ui-responsive div.ui-body.ui-body-a.ui-corner-all ul li {
+  text-indent: 5px;
+  margin-bottom: 1px;
+}
 #developmentContent h2.lone {
   width: 38%;
   float: left;
@@ -2570,7 +2520,6 @@ div.writingExample,
     text-align: center;
   }
 }
-
 #developmentContent div.lone {
   float: right;
   width: 55%;
@@ -2583,19 +2532,10 @@ div.writingExample,
   }
 }
 
-#creativeInfo {
-  padding: 0 1em 0;
-}
-#creativeInfo p {
-  margin-bottom: 0;
-}
-
-#creativeInfo h1,
-#writingContent h1,
-#toolsInfo h1 {
-  margin-right: 0.4em;
-}
-
+/* #creativeInfo{
+	padding:0 1em 0;
+	p{margin-bottom:0;}
+} */
 section[data-url="/development"] #developmentContent h2, section[data-url="/development"] #developmentContent h3 {
   text-align: left;
 }
@@ -2607,18 +2547,11 @@ section[data-url="/development"] #developmentContent h3 {
   border-bottom: none;
 }
 section[data-url="/development"] #developmentContent div.ui-body {
-  padding-left: 2em;
-  padding-right: 6em;
+  padding-right: 4em;
 }
 @media screen and (max-width: 992px) {
   section[data-url="/development"] #developmentContent div.ui-body {
     padding-right: 2em;
-  }
-}
-@media screen and (max-width: 640px) {
-  section[data-url="/development"] #developmentContent div.ui-body {
-    padding-left: 0.4em;
-    padding-right: 0.4em;
   }
 }
 
@@ -2649,13 +2582,14 @@ section[data-url="/development"] #developmentContent div.ui-body {
   clear: right;
 }
 
-#portfolioContent div.itemInfo,
+#workExample a:hover {
+  color: #727272;
+}
 #workExample div.itemInfo {
   clear: left;
   float: left;
-  width: 75%;
+  width: 70%;
 }
-#portfolioContent div.techUsed,
 #workExample div.techUsed {
   float: right;
   clear: none;
@@ -2663,6 +2597,7 @@ section[data-url="/development"] #developmentContent div.ui-body {
   padding: 0.5em 0.8em 0.8em;
 }
 
+div.creativeCategory
 #creativeExampleDetail h1 {
   float: none;
   margin-right: 0;
@@ -2675,6 +2610,7 @@ section[data-url="/development"] #developmentContent div.ui-body {
 #creativeExampleDetail div.itemInfo,
 #workExample div.itemInfo {
   font-size: 1.1em;
+  padding: 0 1em;
 }
 #creativeExampleDetail ul,
 #workExample ul {
@@ -2743,19 +2679,15 @@ div.creativeCategory {
 div.creativeCategory h3 {
   font-size: 1.5em;
   line-height: 1.5em;
+  border-bottom: none;
 }
 div.creativeCategory div.creativeExample {
-  width: 45%;
+  width: 48%;
   float: left;
   margin-right: 2%;
   line-height: 1.1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-}
-@media screen and (max-width: 1280px) {
-  div.creativeCategory div.creativeExample {
-    margin-right: 1%;
-  }
 }
 @media screen and (max-width: 992px) {
   div.creativeCategory div.creativeExample {
@@ -2777,17 +2709,15 @@ div.creativeCategory div.creativeExample:nth-child(even) {
   clear: left;
 }
 
+#writingContent {
+  padding: 0 1em;
+}
 #writingContent div.writingExample {
-  width: 45%;
+  width: 48%;
   float: left;
   margin-right: 2%;
   border-bottom: 1px solid #DDD;
-  padding-bottom: 0.8em;
-}
-@media screen and (max-width: 1280px) {
-  #writingContent div.writingExample {
-    margin-right: 1%;
-  }
+  padding-top: 0.5em;
 }
 @media screen and (max-width: 992px) {
   #writingContent div.writingExample {
@@ -2821,6 +2751,9 @@ div.creativeCategory div.creativeExample:nth-child(even) {
   text-decoration: none;
   color: #333;
 }
+#writingContent a.documentLink:hover span.text {
+  text-decoration: underline;
+}
 #writingContent ul {
   line-height: 1.1em;
 }
@@ -2831,6 +2764,56 @@ div.creativeCategory div.creativeExample:nth-child(even) {
 span.strong {
   font-family: "Droid Sans", "sans-serif";
   font-weight: bold;
+}
+
+#toolList {
+  margin-top: 0;
+  padding: 0.5em 1em 1em;
+}
+#toolList h3.ui-collapsible-heading {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+#toolList div.ui-collapsible-content a {
+  font-weight: normal;
+  text-decoration: underline;
+  color: #727272;
+}
+#toolList div.ui-collapsible-content a:hover {
+  color: #2A2A2A;
+}
+
+#aboutMeContent div.pageHeader {
+  padding-bottom: 1em;
+}
+
+#aboutToggle {
+  color: #727272;
+}
+#aboutToggle:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+#aboutUnabridged, #aboutTLDR {
+  padding: 0 1em;
+}
+
+#aboutTLDR {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+}
+#aboutTLDR li:before {
+  content: "-";
+  position: relative;
+  left: -5px;
+  top: -1px;
+}
+#aboutTLDR li {
+  text-indent: 5px;
+  margin-bottom: 1px;
 }
 
 /* navigation panel styling */

@@ -99,7 +99,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         //var $workspace = incomingPage.find('#creativeContent');
         //if( !$workspace.html() ){  
         //    console.log('workspace has no html');
-            $workspace.append('<div id="creativeInfo"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
+            $workspace.append('<div class="pageHeader"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
 
 
             var groupedItems = _.groupBy(items, function(obj){return obj.category}); 
@@ -122,7 +122,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         //if( !$workspace.html() ){
             $content = $('<div id="creativeExampleDetail"></div>');
 
-            $content.append('<h1 style="clear:both">'+creativeExample.name+'</h1>'); 
+            $content.append('<div class="pageHeader"><h1>'+creativeExample.name+'</h1></div>'); 
 
             if(creativeExample.notes){
                 if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
@@ -135,23 +135,25 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
             }
 
             if(creativeExample.media){
+                var $relevantMedia = $('<div class="relevantMedia"></div>');
                 if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
                 $.each(creativeExample.media, function() {
                     var str = this.toLowerCase();
                     if (str.search('youtube')>0){ //build youtube
                         console.log('build youtube');
-                        $content.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
+                        $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
                     } else {
                         var filename = this.substring(this.lastIndexOf('/')+1);
                         if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
-                            $content.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                            $relevantMedia.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
                         } else if ( str.search('\.pdf')>0 ) { // build pdf
-                            $content.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
+                            $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
                         } else { // build other stuff
-                            $content.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
+                            $relevantMedia.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
                         }
                     }
                 });
+                $content.append($relevantMedia);
             }
             $workspace.append($content);
             $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');

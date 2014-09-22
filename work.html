@@ -88,13 +88,14 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
         var portfolioItem = _.find(portfolioPrincipal, function(work){
             return work.name.toLowerCase() == query.toLowerCase()  
         });
-        
-        $content = $('<div id="workExample"></div>');
+        var $content = $('<div id="workExample"></div>');
+        var $workspace_top = $('<div class="pageHeader"></div>');
 
-        $content.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
+        $workspace_top.append('<h1 style="clear:both">'+portfolioItem.name+'</h1>'); 
         if(portfolioItem.link){//add link
-            $content.append('<a class="siteLink" href="'+portfolioItem.link+'" target="blank">(  <span class="fa fa-globe"></span> View Site )</a>')
+            $workspace_top.append('<a class="siteLink" href="'+portfolioItem.link+'" target="blank">(  <span class="fa fa-globe"></span> View Site )</a>')
         }
+        $content.append($workspace_top);
         if(portfolioItem.notes){//add notes
             $content.append('<div class="itemInfo"><p class="notes">'+portfolioItem.notes+'</p></div>'); 
         }

@@ -75,36 +75,7 @@
 <section data-role="page" class="ui-responsive-panel">
     <div role="main" class="ui-content" id="developmentContent" ></div><!-- /content -->
 
-<!--
-     <div id="navigation">
-            <span id='horziontalNavItems'>
-                <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">About</a>
-            </span>
-            <span class='fa fa-bars' ></span>
-            <span id="verticalNavItems">
--->
-
 <script type="text/javascript">
-/*
-function hideVerticalNavigation(){
-    $('#verticalNavItems').slideUp(200);
-    $('#navigation').attr('data-vertical_menu_open', false);
-}
-
-$('#navigation').on('click', 'span.fa-bars', function(){
-    $('#navigation').attr('data-vertical_menu_open', true);    
-    $('#verticalNavItems').slideDown();
-    if( $('#quickInfo.ui-panel-open').length ){
-        $('#quickInfo').panel('close');
-    }
-})
-
-$( window ).resize(function() {
-    if( $(window).width() > 639 && $('#navigation').data('vertical_menu_open') ){
-        hideVerticalNavigation()
-    }
-});
-*/
 $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
     var $workspace = ui.toPage.find('#developmentContent');
     var url = ui.toPage.data('url');
@@ -115,11 +86,11 @@ $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
             _.forEach(obj.childItems, function(child) { tech_list.push(child) });
         } else { tech_list.push(obj) } 
     });
-
+    function generateURLValue(object) { object.url = encodeURIComponent(object.name) } 
+    
     if(!query){
         //-- no query, build technology list page
-        $workspace.append('<div id="developmentInfo"><h1>Development</h1><p class="notes">I\'ve had the opportunity to learn about and work with various technologies. Below you can learn more about the different things that I have experience working with and see specific examples of my past work.</p></div>');
-        function generateDisplayValues(object) { object.url = encodeURIComponent(object.name) }            
+        $workspace.append('<div class="pageHeader"><h1>Development</h1><p class="notes">I\'ve had the opportunity to learn about and work with various technologies. Below you can learn more about the different things that I have experience working with and see specific examples of my past work.</p></div>');
         var tech_blocks = [];
         $.each(tech_data, function() {            
             var $tech_class = $('<div class="ui-body"></div>');
@@ -128,14 +99,14 @@ $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
                 var $listOfChildItems = $('<ul></ul>');
                 $.each(this.childItems, function() {
                     var childObject = this;
-                    generateDisplayValues(childObject);
+                    generateURLValue(childObject);
                     $('<li></li>')
                         .append( '<h3><a href="/development?'+childObject.url+'">'+childObject.name+'</a></h3>' )
                         .appendTo( $listOfChildItems );
                     });
                 $tech_class.append( $listOfChildItems );
             } else {
-                generateDisplayValues(this);
+                generateURLValue(this);
                 $tech_class.append( '<h2><a href="/development?'+this.url+'">'+this.name+'</a></h2>' );
             }
             tech_blocks.push( $tech_class );
@@ -171,7 +142,7 @@ $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
         });            
 
         //build top
-        $workspace_top = $('<div class="devTopic_top"></div>');
+        $workspace_top = $('<div class="pageHeader"></div>');
         $workspace_top.append('<h1>'+relevantTech.name+'</h1>'); 
         if(relevantTech.notes){$workspace_top.append('<p class="notes">'+relevantTech.notes+'</p>'); }
         $workspace.append($workspace_top);
@@ -183,7 +154,8 @@ $( "body" ).one( "pagecontainerbeforetransition", function( event, ui ) {
             if(portfolioExamples.length){
                 var $principalWork = $('<div class="ui-body ui-body-a ui-corner-all"><h3>Principally Involved in Creation</h3><ul></ul></div>');              
                 $.each(portfolioExamples, function(i, obj) {
-                    $('<li><a href="/work?'+encodeURIComponent(obj.name)+'">'+obj.name+'</li>').appendTo($principalWork.children('ul'));
+                    generateURLValue(obj);
+                    $('<li><a href="/work?'+obj.url+'">'+obj.name+'</li>').appendTo($principalWork.children('ul'));
                 });
 
                 $('<div class="'+ ( (maintenanceExamples.length)?"ui-block-a":"lone" ) +'"></div>')
