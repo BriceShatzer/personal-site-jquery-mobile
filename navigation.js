@@ -33,7 +33,7 @@ function responsiveAdjustment(){
     if( viewPort > 639 && verticalMenuOpen ){
         hideVerticalNavigation();
     }
-    if( viewPort > 1280){
+    if( viewPort > 1280 ){
     	$("#quickInfo").panel('open');
    	}
 }
@@ -62,7 +62,7 @@ $( "body" )
 	//--- jQuery Mobile events
 	.on({
 		pagecontainertransition:function(){// set responsive view on intial page load 
-			responsiveAdjustment();
+			responsiveAdjustment(); 
 		},
 		pagecontainerbeforechange:function(){// close Vertical Navigation when navigating to a new page
 			hideVerticalNavigation();
@@ -80,3 +80,4 @@ $( "body" )
 $( window ).resize(function() {
 	responsiveAdjustment();	
 });
+
