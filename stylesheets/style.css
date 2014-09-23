@@ -2692,13 +2692,20 @@ span.strong {
 #aboutMeContent div.pageHeader {
   padding-bottom: 1em;
 }
-
-#aboutToggle {
+#aboutMeContent div.pageHeader a {
   color: #727272;
-}
-#aboutToggle:hover {
-  color: #333;
   text-decoration: none;
+}
+#aboutMeContent div.pageHeader a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+#aboutMeContent a {
+  text-decoration: underline;
+}
+#aboutMeContent a:hover {
+  color: #2A2A2A;
 }
 
 #aboutUnabridged, #aboutTLDR {

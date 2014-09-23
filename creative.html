@@ -14,12 +14,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
-    <script>
-    function test(fact){
-       if ( !fact ){ console.log(fact+' is false') }
-        else if ( fact ){ console.log(fact+' is true') }
-    }
-    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -45,10 +39,10 @@
     <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
         <div class="ui-body" itemscope itemtype="http://schema.org/person">
             <ul data-role="listview">
-                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
-                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
+                <li id="title"><h1 itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="/BriceShatzer_resume.pdf" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span>View Resume<span></a></li>
                 <li id="email"><span class="fa fa-fw fa-envelope"></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
-                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+                <li id="cellphone"><span class="fa fa-fw fa-mobile"></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
             <!--
                 <li style="overflow:hidden;">
                     <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
@@ -58,7 +52,7 @@
                     </div>
                 </li>
             --> 
-                <li style="" id="icons">
+                <li id="icons">
                     <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
                     <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
                     <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
@@ -68,7 +62,7 @@
             <br>
 
         </div>
-        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+        <div class="quickInfo_close-arrow"><span>Close</span></div>
     </div><!-- end header -->
 
 <section data-role="page" class="ui-responsive-panel">
@@ -77,28 +71,15 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
-//var $container = $('#creativeContent');
 var items = portfolio_creative;
 
 
-//$( "body" ).one( "pagecontainerchange", function( event, ui ) {    
 $("body").one( "pagecontainerbeforetransition", function(event, ui){
-    console.log('-----> from page = '+ui.prevPage)
-    //var incomingPage = ui.toPage;
     var $workspace = ui.toPage.find('#creativeContent');
     var url = ui.toPage.data('url');
-    //var url = ui.absUrl;
-    //url = $.mobile.path.getLocation();
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
-    console.log(query);
 
     if(!query){
-        console.log('no query');
-        
-        //var $workspace = $('section[data-url="/creative"]').find('#creativeContent');
-        //var $workspace = incomingPage.find('#creativeContent');
-        //if( !$workspace.html() ){  
-        //    console.log('workspace has no html');
             $workspace.append('<div class="pageHeader"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
 
 
@@ -113,63 +94,57 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
                 });
                 $categoryContainer.appendTo($workspace);
             });
-        //}
     } else {
         var creativeExample = _.find(items, function(item){ return item.name == query });
-        console.dir(creativeExample);
-        //var $workspace = incomingPage.find('#creativeContent');
-        //var $workspace = $('section[data-url="/creative?'+encodeURIComponent(query)+'"]').find('#creativeContent');
-        //if( !$workspace.html() ){
-            $content = $('<div id="creativeExampleDetail"></div>');
+        var $content = $('<div id="creativeExampleDetail"></div>');
 
-            $content.append('<div class="pageHeader"><h1>'+creativeExample.name+'</h1></div>'); 
+        $content.append('<div class="pageHeader"><h1>'+creativeExample.name+'</h1></div>'); 
 
-            if(creativeExample.notes){
-                if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
-                    $content.append('<div class="itemInfo"><p class="notes">'+creativeExample.notes+'</p></div>');
-                } else{ 
-                    $content.append('<div class="itemInfo">'+creativeExample.notes+'</div>');
-                    $content.find('div.itemInfo p').addClass('notes');
-                }  
+        if(creativeExample.notes){
+            if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
+                $content.append('<div class="itemInfo"><p class="notes">'+creativeExample.notes+'</p></div>');
+            } else{ 
+                $content.append('<div class="itemInfo">'+creativeExample.notes+'</div>');
+                $content.find('div.itemInfo p').addClass('notes');
+            }  
 
-            }
+        }
 
-            if(creativeExample.media){
-                var $relevantMedia = $('<div class="relevantMedia"></div>');
-                if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
-                $.each(creativeExample.media, function() {
-                    var str = this.toLowerCase();
-                    if (str.search('youtube')>0){ //build youtube
-                        console.log('build youtube');
-                        $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
-                    } else {
-                        var filename = this.substring(this.lastIndexOf('/')+1);
-                        if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
-                            $relevantMedia.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
-                        } else if ( str.search('\.pdf')>0 ) { // build pdf
-                            $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
-                        } else { // build other stuff
-                            $relevantMedia.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
-                        }
+        if(creativeExample.media){
+            var $relevantMedia = $('<div class="relevantMedia"></div>');
+            if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
+            $.each(creativeExample.media, function() {
+                var str = this.toLowerCase();
+                if (str.search('youtube')>0){ //build youtube
+                    console.log('build youtube');
+                    $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
+                } else {
+                    var filename = this.substring(this.lastIndexOf('/')+1);
+                    if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
+                        $relevantMedia.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                    } else if ( str.search('\.pdf')>0 ) { // build pdf
+                        $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
+                    } else { // build other stuff
+                        $relevantMedia.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
                     }
-                });
-                $content.append($relevantMedia);
-            }
-            $workspace.append($content);
-            $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');
-            $workspace.on('click', 'div.backbutton', function(event) {
+                }
+            });
+            $content.append($relevantMedia);
+        }
+        $workspace.append($content);
+        $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');
+        $workspace.on('click', 'div.backbutton', function(event) {
+            event.preventDefault();
+            $('body').pagecontainer('change', "/creative", {reverse:true});
+        });  
+        if(creativeExample.media){
+            $('a.image').fancybox();
+            $('a.download').on('click', function(event) {
                 event.preventDefault();
-                $('body').pagecontainer('change', "/creative", {reverse:true});
-            });  
-            if(creativeExample.media){
-                $('a.image').fancybox();
-                $('a.download').on('click', function(event) {
-                    event.preventDefault();
-                    downloadFile(event.currentTarget.href);
-                });
+                downloadFile(event.currentTarget.href);
+            });
 
-            }
-        //}
+        }
     }  
 });
 </script>

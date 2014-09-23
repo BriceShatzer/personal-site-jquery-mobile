@@ -14,12 +14,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
-    <script>
-    function test(fact){
-       if ( !fact ){ console.log(fact+' is false') }
-        else if ( fact ){ console.log(fact+' is true') }
-    }
-    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -45,10 +39,10 @@
     <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
         <div class="ui-body" itemscope itemtype="http://schema.org/person">
             <ul data-role="listview">
-                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
-                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
-                <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
-                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+                <li id="title"><h1 itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="/BriceShatzer_resume.pdf" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span>View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope"></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone"><span class="fa fa-fw fa-mobile"></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
             <!--
                 <li style="overflow:hidden;">
                     <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
@@ -58,17 +52,15 @@
                     </div>
                 </li>
             --> 
-                <li style="" id="icons">
+                <li  id="icons">
                     <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
                     <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
                     <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
                 </li>
             </ul>
-
             <br>
-
         </div>
-        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+        <div class="quickInfo_close-arrow"><span>Close</span></div>
     </div><!-- end header --> 
 
 

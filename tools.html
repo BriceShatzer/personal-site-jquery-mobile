@@ -14,12 +14,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
-    <script>
-    function test(fact){
-       if ( !fact ){ console.log(fact+' is false') }
-        else if ( fact ){ console.log(fact+' is true') }
-    }
-    </script>    
 </head>
 <body>
     <div <div data-role="header">
@@ -45,11 +39,11 @@
     <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
         <div class="ui-body" itemscope itemtype="http://schema.org/person">
             <ul data-role="listview">
-                <li id="title"><h1 style="" itemprop="name">Brice Shatzer</h1></li>
-                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span style="">View Resume<span></a></li>
-                <li id="email"><span class="fa fa-fw fa-envelope" style=""></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
-                <li id="cellphone" style=""><span class="fa fa-fw fa-mobile" style=""></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
-                <li style="" id="icons">
+                <li id="title"><h1  itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="#" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span >View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope"></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone" ><span class="fa fa-fw fa-mobile"></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+                <li id="icons">
                     <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
                     <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
                     <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
@@ -59,7 +53,7 @@
             <br>
 
         </div>
-        <div class="quickInfo_close-arrow" style=""><span>Close</span></div>
+        <div class="quickInfo_close-arrow"><span>Close</span></div>
     </div><!-- end header -->
 
 <section data-role="page" class="ui-responsive-panel">
@@ -75,43 +69,6 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
-/*
-
-    var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
-    $( "body" ).one( "pagecontainerchange", function( event, ui ) { 
-        console.log("pagecontainerchange event from tools.html");
-        
-        if( /tools/.test($.mobile.path.getLocation())  && $('#toolList')[0].innerHTML.length === 0 ){
-            console.log('building tools content');
-            $.getJSON('/tools.json', function(data) { 
-                console.log('got the tools.json');
-                console.dir(data);
-                tools_json = data; 
-                //buildToolContent();
-                //--
-                $.each(tools_json, function(){
-                    var $items = $('<div class="ui-grid-a ui-responsive"></div>');
-
-                    $.each(this.childItems, function(i,tool) {
-                        var string='';
-                        if ( i%2!==1 ){ string+='<div class="ui-block-a">' }
-                        else{ string+='<div class="ui-block-b">' }
-                        string+='<div class="ui-bar"><span class="strong">'+tool.name+'</span>';
-                        if (this.notes){string+=' - '+this.notes}
-                        string+='</div></div>';
-                        $items.append(string)
-                    });
-                    var $category =  $('<div data-role="collapsible"></div>');
-                    $category.append($items).prepend('<h3>'+this.name+'</h3>').appendTo('#toolList');
-                });
-                //--
-
-                $('section,#toolList').enhanceWithin()
-            });
-        }
-    });
-*/
-
     var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
     $("body").one( "pagecontainerbeforetransition", function(event, ui){
         var incomingPage = ui.toPage
