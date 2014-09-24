@@ -1,27 +1,16 @@
+//set jQuery Mobile defaults
 (function(){
 	$( "[data-role='header']" ).toolbar({ theme: "b" });
 	$( "[data-role='panel']" ).panel({ theme: "b" });
 	$.mobile.defaultPageTransition = "slide";
 })();
-	//var skills;
-	/*
-	function navBarIntialization(){
-		$('a.current').removeClass('current');
-		var $navItems = $('#navigation a')
-		$.each(['/development.html','/creative.html','/tools.html','#about'], function(i, url) { $navItems.eq(i).attr('href',url) });
-		if( /development.html/.test($.mobile.path.getLocation()) ){
-			$('a[href="/development.html"]').removeAttr('href').addClass('current');
-		}
-		if(/creative.html/.test($.mobile.path.getLocation()) ){
-			$('a[href="/creative.html"]').removeAttr('href').addClass('current');	
-		}
-		if(/tools.html/.test($.mobile.path.getLocation()) ){
-			$('a[href="/tools.html"]').removeAttr('href').addClass('current');	
-		} 
-	}
-	console.log("function navBarIntialization() has been fired from navigation.js");
-	*/
 
+//set google analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-55110172-1', 'briceshatzer.com');
 
 function hideVerticalNavigation(){
     $('#verticalNavItems').slideUp(200);
@@ -61,8 +50,15 @@ $( "body" )
 	})
 	//--- jQuery Mobile events
 	.on({
-		pagecontainertransition:function(){// set responsive view on intial page load 
-			responsiveAdjustment(); 
+		pagecontainertransition:function(){// set responsive view & fire google analytics on intial page load 
+			responsiveAdjustment();
+			try {
+				if ($.mobile.activePage.attr("data-url")) {
+					ga('send', 'pageview', $.mobile.activePage.attr("data-url"));	
+				} else {
+					ga('send', 'pageview');
+				}
+			} catch(e) {} 
 		},
 		pagecontainerbeforechange:function(){// close Vertical Navigation when navigating to a new page
 			hideVerticalNavigation();
