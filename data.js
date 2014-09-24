@@ -156,7 +156,7 @@ var portfolioPrincipal = [
 "tech":["HTML & CSS","SASS","JavaScript","jQuery","jQuery Mobile","Lo-Dash"],
 "link":"http://www.BriceShatzer.com",
 "role":["designer","developer"],
-"notes":"The site you are currently experiencing is created using a JavaScript data model to power views that are built using Lo-Dash & jQuery which is all wrapped in a jQuery Mobile structure. The repository for this site can be found on <a href='https://github.com/BriceShatzer/BriceShatzer.com' target='_blank'>GitHub</a>",
+"notes":"The site you are currently experiencing is created using a JavaScript data model to power views that are built using Lo-Dash & jQuery which is all wrapped in a jQuery Mobile structure. The repository for this site can be found on <a href='https://github.com/BriceShatzer/BriceShatzer.com' target='_blank'>GitHub</a>.",
 "media":[]
 }
 ];
