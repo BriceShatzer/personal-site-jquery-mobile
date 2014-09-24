@@ -74,8 +74,10 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
     var url = ui.toPage.data('url');
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
 
-    if(!query){console.log('work.html\'s pagecontainerchange event says "no query"')}
-    else{
+    if(!query){ //handle a direct navigation to the url "/work"
+        try{console.log('no query for a work example exsists, redirecting you to the homepage')}
+        finally{$('body').pagecontainer('change','/')}
+    } else {
         var portfolioItem = _.find(portfolioPrincipal, function(work){
             return work.name.toLowerCase() == query.toLowerCase()  
         });
