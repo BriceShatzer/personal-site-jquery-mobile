@@ -2713,7 +2713,7 @@ span.strong {
   color: #2A2A2A;
 }
 
-#aboutUnabridged, #aboutTLDR, #home {
+#aboutUnabridged, #aboutTLDR {
   padding: 0 1em;
 }
 
@@ -2731,6 +2731,15 @@ span.strong {
 #aboutTLDR li {
   text-indent: 5px;
   margin-bottom: 1px;
+}
+
+#home div.pageHeader {
+  padding-bottom: 1em;
+}
+
+#home p.notes {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 #home img.silhouette {
@@ -3007,6 +3016,9 @@ div.quickInfo_close-arrow span {
   font-size: 2em;
   text-align: center;
   font-weight: bold;
+}
+#quickInfo #title a, #quickInfo #title a:visited, #quickInfo #title a:hover {
+  color: #FFF;
 }
 #quickInfo #resume {
   line-height: 1.8em;
