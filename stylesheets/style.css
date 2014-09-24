@@ -2494,11 +2494,30 @@ section[data-url="/development"] #developmentContent div.ui-body {
   float: left;
   width: 70%;
 }
+@media screen and (max-width: 860px) {
+  #workExample div.itemInfo {
+    width: inherit;
+    float: none;
+    clear: none;
+  }
+}
 #workExample div.techUsed {
   float: right;
   clear: none;
   width: 20%;
   padding: 0.5em 0.8em 0.8em;
+  margin-right: 1em;
+}
+@media screen and (max-width: 860px) {
+  #workExample div.techUsed {
+    float: none;
+    margin: 0 1em;
+    width: inherit;
+  }
+}
+
+#creativeContent div.pageHeader p.notes {
+  margin-bottom: 0;
 }
 
 #creativeExampleDetail h1 {
@@ -2534,6 +2553,7 @@ section[data-url="/development"] #developmentContent div.ui-body {
   max-width: 40%;
   max-height: 200px;
   margin-right: 1em;
+  margin-bottom: 1em;
   vertical-align: middle;
   cursor: pointer;
 }

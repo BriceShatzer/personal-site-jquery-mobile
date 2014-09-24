@@ -212,16 +212,27 @@ section[data-url="/development"] #developmentContent{
 		clear:left;
 		float:left;
 		width:70%;
+		@media screen and (max-width:860px){
+			width:inherit;
+			float:none;
+			clear:none;
+		}
 	}
 	div.techUsed{
 		float:right;
 		clear:none;
 		width:20%;
 		padding: 0.5em 0.8em 0.8em;
+		margin-right: 1em;
+		@media screen and (max-width:860px){
+			float:none;
+			margin:0 1em;
+			width:inherit;
+		}
 	}
 }
 
-//div.creativeCategory
+#creativeContent div.pageHeader p.notes{margin-bottom:0}
 #creativeExampleDetail h1{float:none;margin-right:0;}
 #creativeExampleDetail p.notes, #workExample p.notes{margin-top:0.5em;}
 
@@ -244,6 +255,7 @@ section[data-url="/development"] #developmentContent{
 	max-width:40%;	
 	max-height: 200px; 
 	margin-right:1em;
+	margin-bottom:1em;
 	vertical-align: middle;
 	cursor: pointer;
 }
