@@ -2329,6 +2329,9 @@ div.ui-content p {
 div.ui-content p.notes {
   font-size: 1.1em;
 }
+div.ui-content > div h2 {
+  padding-top: 0.5em;
+}
 div.ui-content div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
   font-size: 1em;
@@ -2450,6 +2453,8 @@ section[data-url="/development"] #developmentContent h2, section[data-url="/deve
   text-align: left;
 }
 section[data-url="/development"] #developmentContent h2 {
+  padding-top: 0;
+  padding-bottom: 5px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 4px;
 }
@@ -2708,7 +2713,7 @@ span.strong {
   color: #2A2A2A;
 }
 
-#aboutUnabridged, #aboutTLDR {
+#aboutUnabridged, #aboutTLDR, #home {
   padding: 0 1em;
 }
 
@@ -2726,6 +2731,14 @@ span.strong {
 #aboutTLDR li {
   text-indent: 5px;
   margin-bottom: 1px;
+}
+
+#home img.silhouette {
+  float: right;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 1em;
+  margin-right: -2em;
 }
 
 /* navigation styling */

@@ -350,11 +350,11 @@ var tech_data = [
 			},
 			{
 			"name":"LESS",
-			"notes":""
+			"notes":"While I have worked with client-side implementations of less.js, but my preferred method is to compile to CSS using a <a href='https://sublime.wbond.net/packages/Less2Css' target='_blank'>sublime plugin</a>."
 			},
 			{	
 			"name":"SASS",
-			"notes":"SCSS syntax only"
+			"notes":"I use <a href='http://compass-style.org/' target='_blank'>compass</a> and work in the SCSS syntax only."
 			},
 			{
 			"name":"ASP / PHP",
@@ -366,7 +366,7 @@ var tech_data = [
 			},
 			{
 			"name":"jQuery Mobile",
-			"notes":""
+			"notes":"The majority of my experience has been in working with version 1.4+, but I do have limited experience with 1.3.1 & 1.3.2."
 			}
 		]
 	},
@@ -395,12 +395,12 @@ var tech_data = [
 			},
 			{	
 			"name":"jQuery UI",
-			"notes":"A set of widgets and visual effects built on top of jQuery."
+			"notes":""
 			},
 		
 			{	
 			"name":"AngularJS & Backbone.js",
-			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of these frameworks through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a>."
+			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of these frameworks through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='http://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
 			}]
 	},
 
@@ -412,11 +412,11 @@ var tech_data = [
 			},
 			{	
 			"name":"LightCMS",
-			"notes":"A white label content management system"
+			"notes":"<a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> is a white label content management and e-commerce solution."
 			},
 			{	
 			"name":"Wordpress",
-			"notes":"Arguably the most ubiquitous content management system currently in use."
+			"notes":""
 			},
 			{	
 			"name":"SiteFinity",
@@ -431,33 +431,6 @@ var tech_data = [
 			"notes":""
 			}
 		]
-	}/*,
-	{	"name":"Structured Data / Databases",
-		"childItems":[
-		{	"name":"JSON",
-			"notes":""
-		},			
-		{	"name":"CSV",
-			"notes":""
-		},
-		{	"name":"XML",
-			"notes":""
-		},
-		{	"name":"MySQL",
-			"notes":""
-		}]
-	}/*,
-	{	"name":"Other Services",
-		"childItems":[
-			{
-			"name":"MailChimp",
-			"notes":""
-			},
-			{
-			"name":"Email",
-			"notes":"I have experience in this terribly soul-crushing skill. Can I do it? Yes. Do I want to? Not really..."
-			}
-		]
-	}*/
+	}
 ];
-var url;	
+//var url;	

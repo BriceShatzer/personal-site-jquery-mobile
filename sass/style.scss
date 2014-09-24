@@ -21,7 +21,6 @@ section div.ui-panel-wrapper,body{
 //#F9F9F9  
 //darks - #1F1F1F, #2A2A2A
 
-
 .ui-header {border:none;}
 
 section.ui-page-active{
@@ -64,6 +63,7 @@ div.ui-content{
 		margin-bottom: 1em;
 	}
 	p.notes{font-size:1.1em;}
+	>div h2{padding-top:0.5em}
 	div.backbutton{
 		a{
 			@include font_droid;
@@ -178,6 +178,8 @@ div.itemInfo a{
 section[data-url="/development"] #developmentContent{
 	h2,h3{text-align:left;}
 	h2{
+		padding-top:0;
+		padding-bottom:5px;
 		border-bottom: 1px solid #DDD;
 		margin-bottom: 4px;
 	}
@@ -369,9 +371,7 @@ span.strong{
 	&:hover{color:#2A2A2A;}
 }
 
-#aboutToggle{} 
-
-#aboutUnabridged, #aboutTLDR{ padding:0 1em; }
+#aboutUnabridged, #aboutTLDR, #home{ padding:0 1em; }
 
 #aboutTLDR{
 	font-size:1.1em;
@@ -379,6 +379,14 @@ span.strong{
 	margin-bottom: 1em;
 	li:before{ content:"-"; position:relative; left:-5px;top:-1px;}
 	li{ text-indent:5px;margin-bottom:1px; }
+}
+
+#home img.silhouette{
+	float:right;
+	width:100%;
+	max-width:720px;
+	margin-top:1em;
+	margin-right:-2em;
 }
 
 @import "nav-and-sidebar";

@@ -8,18 +8,9 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <script src="/utilities/lodash.min.js"></script>
-    <script src="/utilities/jquery.min.js"></script>
-    <script src="/utilities/download.min.js"></script>
+    <script src="/utilities/scripts.js"></script>    
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-    <script src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/data.js"></script>
-    <script>
-    function test(fact){
-       if ( !fact ){ console.log(fact+' is false') }
-        else if ( fact ){ console.log(fact+' is true') }
-    }
-    </script>    
 </head>
 <body>
     <div data-role="header">
@@ -72,8 +63,6 @@
     </div><!-- end header --> 
 
 <section data-role="page" class="ui-responsive-panel" id="writing">
-<link rel="stylesheet" href="/utilities/fancybox/jquery.fancybox.css" /> 
-<script type="text/javascript" src="/utilities/fancybox/jquery.fancybox.pack.js"></script>
     <div role="main" class="ui-content" id="aboutMeContent">
             <div class="pageHeader">
             <h1>The story so far... </h1>
@@ -87,18 +76,18 @@
                     <li>Worked at a tech start-up and dug it</li>
                     <li>Graduated with a B.A. in Communication</li>
                     <li>Worked at an mature <a href='http://www.linkstechnology.com' target='_blank'>tech company</a> making websites</li> 
-                    <li>Decided to watch the World Cup and/or look for new & exciting opportunities</li>
+                    <li>Decided to watch the World Cup and look for new & exciting opportunities</li>
                     <li>I also coach <a href='http://racineunited.com/' target='_blank'>youth soccer</a></li>
                     </ul>
             </div>
 
             <div  id="aboutUnabridged">
                 <p class="notes">
-                    Originally born and raised in Iowa, I came to Wisconsin to attend <a href='http://www.carthage.edu/' target='_blank'>Carthage College</a> where I developed fundamental graphic design & audio/video production skills in while earning my Bachelor of Arts in Communication. Outside of the academic setting, I played soccer for the <a href='http://athletics.carthage.edu/index.aspx?path=msoc' target='_blank'>Red Men</a>, wrote for the <a href='http://carthagecurrent.com/' target='_blank'>school paper</a>, and was active in <a href='http://www.carthage.edu/live/profiles/931-tau-kappa-epsilon-tkes' target='_blank'>Greek life</a>. </p>
-
+                    Originally born and raised in Iowa, I came to Wisconsin to attend <a href='http://www.carthage.edu/' target='_blank'>Carthage College</a> where I developed fundamental graphic design & audio/video production skills in while earning my Bachelor of Arts in Communication. Outside of the academic setting, I played soccer for the <a href='http://athletics.carthage.edu/index.aspx?path=msoc' target='_blank'>Red Men</a>, wrote for the <a href='http://carthagecurrent.com/' target='_blank'>school paper</a>, and was active in <a href='http://www.carthage.edu/live/profiles/931-tau-kappa-epsilon-tkes' target='_blank'>Greek life</a>.
+                </p>
                 <p class="notes">
-                    Perhaps most importantly, during my collegiate career I had the opportunity to work at a small company that ran several fantasy sports related sites called <a href='http://www.worldfantasygames.com/' target='_blank'>World Fantasy Games</a>. The entrepreneurial nature of the organization meant that I tasked with wearing multiple hats. Throughout my time there I maintained social media identities, shot/edited/recorded promotional media, managed site content, wrote software design documents & manuals, and much more. I was often was pushed to work in areas where I had little or no expertise, and it really helped me grow. <br>The diverse range of responsibilities, often being forced to "learn by doing", and seeing my work directly impact the people using our site was exhilarating and cemented my interest in start-ups and entrepreneurship.</p>
-
+                    Perhaps most importantly, during my collegiate career I had the opportunity to work at a small company that ran several fantasy sports related sites called <a href='http://www.worldfantasygames.com/' target='_blank'>World Fantasy Games</a>. The entrepreneurial nature of the organization meant that I tasked with wearing multiple hats. Throughout my time there I maintained social media identities, shot/edited/recorded promotional media, managed site content, wrote software design documents & manuals, and much more. I was often was pushed to work in areas where I had little or no expertise, and it really helped me grow. <br>The diverse range of responsibilities, often being forced to "learn by doing", and seeing my work directly impact the people using our site was exhilarating and cemented my interest in start-ups and entrepreneurship.
+                </p>
                 <p class="notes">
                     As my academic career came to a close I started working for <a href='http://www.linkstechnology.com' target='_blank'>Links Technology</a> as a QA intern, testing a document management desktop application they were in the process developing. I quickly transitioned to a web design and development role, building and maintaining sites for various clients across multiple industries. This diversity allowed me learn about different organizations and ultimately work with a broad array of different technologies.
                 </p>   
@@ -111,15 +100,13 @@
                 <hr>
                 <p>Outside of work, I coach <a href='http://racineunited.com/' target='_blank'>youth soccer</a> and try to say active by playing various sports (currently soccer & sand volleyball). I also consume an unreasonable amount of caffeinated beverages.</p>
             </div>
-
-        <!-- </div>       -->
     </div>
     <script type="text/javascript">
         $('#aboutToggle').click(
             function(event) {
                 event.preventDefault();    
                 var tldr = '( see TL;DR version )'
-                var unabr = '( see Unabridged version)'
+                var unabr = '( see Unabridged version )'
                 var $aboutTLDR = $('#aboutTLDR')
                 var $aboutUnabr = $('#aboutUnabridged')
                 if($(this).text() === tldr){
