@@ -1,40 +1,92 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
-	<link href="http://fonts.googleapis.com/css?family=Droid+Sans|Lato:400,400italic,700italic" rel="stylesheet" type="text/css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<script src="/tools/underscore.min.js"></script>
-	<script src="/tools/jquery.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-
-
-<script>
-function test(fact){
-	if ( !fact ){ console.log(fact+' is false') }
-	else if ( fact ){ console.log(fact+' is true') }
-}
-</script>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BriceShatzer.com | About</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.css">        
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/utilities/scripts.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="/data.js"></script>
 </head>
-
 <body>
+    <div data-role="header">
+        <div id="navigation">
+            <span id='horziontalNavItems'>
+                <a href="/development">Development</a> | <a href="/creative">Creative & Design</a> | <a href="/writing">Writing</a> | <a href="/tools">Tools</a> | <a href="/about">About</a>
+            </span>
+            <span class='fa fa-bars' ></span>
+            <span class='label'><a href='/'>BriceShatzer.com</a></span>
+            <span id="verticalNavItems">
+                <ul>
+                    <li><a href="/development">Development</a></li>
+                    <li><a href="/creative">Creative & Design</a></li>
+                    <li><a href="/writing">Writing</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </span>
+            <div class="verticalNav_close-arrow"><span>Close</span></div>
+        </div>
+        <div class="quickInfo_open-arrow"><span>Info</span></div>
+    </div> 
+    <div id="quickInfo" data-role="panel" data-position="left" data-display="push" data-dismissible="false" data-position-fixed="true">
+        <div class="ui-body" itemscope itemtype="http://schema.org/person">
+            <ul data-role="listview">
+                <li id="title"><h1 itemprop="name">Brice Shatzer</h1></li>
+                <li id="resume"><a href="/BriceShatzer_resume.pdf" target="_blank"><span class="fa fa-fw fa-file-pdf-o"></span><span >View Resume<span></a></li>
+                <li id="email"><span class="fa fa-fw fa-envelope" ></span> <span itemprop="email">Brice.Shatzer@gmail.com</span></li>
+                <li id="cellphone"><span class="fa fa-fw fa-mobile" ></span><a href="tel:+13192392470" itemprop="telephone">319-239-2470</a></span></li>
+            <!--
+                <li style="overflow:hidden;">
+                    <span class="fa fa-graduation-cap" style="font-size:2.8em;"></span>
+                    <div style="float:right;width:9em;text-align:center;">
+                        Carthage College<br>
+                        <span style="font-size:0.8em">B.A. Communication / Digital Media</span>
+                    </div>
+                </li>
+            --> 
+                <li id="icons">
+                    <a href="http://www.linkedin.com/pub/brice-shatzer/16/690/b26/" target="_blank"><span class="fa fa-linkedin" /></a>
+                    <a href="https://twitter.com/_shatzer" target="_blank"><span class="fa fa-twitter" /></a>
+                    <a href="https://github.com/briceshatzer" target="_blank"><span class="fa fa-github" /></a>
+                </li>
+            </ul>
+
+            <br>
+
+        </div>
+        <div class="quickInfo_close-arrow" ><span>Close</span></div>
+    </div><!-- end header --> 
+
+<section data-role="page" class="ui-responsive-panel">
+    <div role="main" class="ui-content">
+            <div class="pageHeader">
+                <h1>A header</h1>
+            </div>
+            <div id="home">
+                <p class="notes">
+                    My name is Brice and I am a web designer and developer, looking for interesting and dynamic opportunities to apply my unique blend of creativity, technical knowledge and diverse set of skills.
+                </p>
+                <p class="notes">
+                    At the top of the page you will find links to a catalog of my various skills and software expertise, my resume and a way to get in contact with me.</p> 
+<p class="notes">
+                    Click on any of the icons below 
+At the top of the page you will find liks to a catalog 
+                    to begin exploring the general areas of my expertise or look at specific types of work by clicking on any of the topics found in the Portfolio section to the right. If you have any questions please do not hesitate to get in contact with me by using the Email Me link.
+                </p>
+                <img class="silhouette" src="/utilities/silhouette.png" />
+            </div>
+
+        <!-- </div>       -->
+    </div>
 
 
-<script>
-var skills;
-$.getJSON('/skills.json', function(data) { skills = data });
-</script>
-
-<section data-role="page" id="home">
-	.content goes here..like this
-
-	<i class="icon-camera-retro" style="font-size:24px;"></i>
-<section>
-
-
+</section> <!-- /page -->
 
 </body>
+<script type="text/javascript" src="/navigation.js"></script>
 </html>
