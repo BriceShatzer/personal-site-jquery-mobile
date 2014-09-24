@@ -76,7 +76,7 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
 
     if(!query){ //handle a direct navigation to the url "/work"
-        try{console.log('no query for a work example exsists, redirecting you to the homepage')}
+        try{console.log('no query for a work example exsists, redirecting you to the homepage')}catch(e) {} 
         finally{$('body').pagecontainer('change','/')}
     } else {
         var portfolioItem = _.find(portfolioPrincipal, function(work){
