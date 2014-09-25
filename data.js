@@ -230,11 +230,59 @@ var portfolioMaintained = [
 
 var portfolio_creative =[
 {
+	"name":"Schaumburg Park Foundation Site Design",
+	"category":"Graphic Design",
+	"previewSlug":"Home and interior page mock-ups for a non-profit organization.",
+	"notes":"<p>Designed for the Schaumburg Park Foundation with the goal of helping to raise awareness and solicit donations. The site was ultimately built on the LightCMS platform and can be viewed <a href='http://www.schaumburgparkfoundation.org/' target='_blank'>here</a></p>",
+	"media":["/portfolio/SPF_Homepage.jpg","/portfolio/SPF_Homepage.psd","/portfolio/SPF_InteriorPage.jpg","/portfolio/SPF_InteriorPage.psd"]
+},
+{
+	"name":"Special Use Zone Signage",
+	"category":"Graphic Design",
+	"previewSlug":"Potential signage designs for an outdoor multipurpose recreation area",
+	"notes":"<p>As a final group project for the class <a href='https://my.carthage.edu/ICS/Academics/CDM/CDM_400F__S__UG11/RB_2012_UNDG-CDM_400F__S__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Interpreting Nature\"</a>, we were required to create signage designs for the Richard Bong State Recreation Area's \"Special Use Zone\". Numerous activities like hunting, ATV trails, dog training and model airplanes/rocketry all take place within this space. This popularity has lead to altercations between groups of park goers, so we were tasked with creating signage which not only conveyed the diverse array of actives which take place, but also reminding visitors to be considerate to others also using the space.</p><p>I was responsible for creating more literal representation of the various activities that take place to contrast the more minimalistic iconography used in our other designs. Each activity image was created as an independent vector image in Adobe Illustrator before being composited together in Adobe InDesign.</p><p> This project was was presented at \"<a href='http://designconference.aiga.org/' target='_blank'>Head, Heart, Hand: AIGA Design Conference 2013</a>\" by Prof. Laura Rodman Huaracha in her talk \"Utilizing interdisciplinary heads; Teaching the visualization of ecological and conservation issues\"</p>",
+	"media":["/portfolio/Bong_MuralStyle.jpg","/portfolio/Bong_ColoredImages.jpg","/portfolio/All_SUZ_Signs.pdf"]
+},
+{
 	"name":"Beer Run: Mapping Retail Alcohol Sales Ordinances",
 	"category":"Graphic Design",
 	"previewSlug":"Visually conveying the cut-off time for alcohol sales for retailers within a 15 mile radius of Kenosha, WI",
 	"notes":"<p>As part of an assignment for the class <a href='https://my.carthage.edu/ICS/Academics/GEO/GEO_2600__UG11/RA_2011_UNDG-GEO_2600__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Mapping Your World: Introduction to Geographic Information Science\"</a>, I created a radius map to show the cut-off time for retail alcohol sales for businesses within 15 miles of Kenosha, WI.</p><p>The map was created using the ArcGIS software suite to combine mapping data extracted from the U.S. Geological Survey's Earth Resources Observation and Science Center with code and ordinance research pertaining to municipalities in Lake County, Illinois.</p><p>The complete assignment document which provides the rational behind the project and a deeper explanation detailing the creation of the map can be found below.</p>",
 	"media":["/portfolio/FinalMappingProject.png","/portfolio/GISMappingProject.pdf"]
+},
+{
+	"name":"\"Quick Pick\" Mobile App Mock-up Images",
+	"category":"Graphic Design",
+	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application",
+	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
+	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
+},
+{
+	"name":"Team Management Mobile App Mock-up Images",
+	"category":"Graphic Design",
+	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
+	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
+	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
+},
+{
+	"name":"Scarface Parody Image",
+	"category":"Graphic Design",
+	"previewSlug":"A spoof on the original poster for the movie Scarface that was used on the Iowa Hawkeye fan website BlackHeartGoldPants.com",
+	"notes":"Created for and used on the Iowa Hawkeye fan website <a href='http://www.BlackHeartGoldPants.com' target='_blank'>BlackHeartGoldPants.com</a>. When Iowa Wide Receiver <a href='http://en.wikipedia.org/wiki/Derrell_Johnson-Koulianos'>Derrell Johnson Koulianos</a> was arrested on multiple drug sale and possession charges, he instantly began to draw comparisons to Tony Montana, the criminal protagonist in the film Scarface. The image mimics the minimalist design and allegorical use of color found in the <a href='http://www.imdb.com/media/rm2378142208/tt0086250' target='_blank'>original movie poster</a> for satirical effect.",
+	"media":"/portfolio/DJK_is_Scarface.png"
+},
+{
+	"name":"Themed Article Splash Images",
+	"category":"Graphic Design",
+	"previewSlug":"A series of images created for a set of themed articles",
+	"notes":"Front page splash images that were created for a weekly article series that discussed football games of fantasy interest, with each installment revolving around a particular topic (e.g. sitcoms, '90s game shows, Hitchcock movies, etc.)",
+	"media":["/portfolio/CarmenSandiego.jpg","/portfolio/big-bang.jpg","/portfolio/hitchcock.jpg"]
+},
+{	"name":"RASA Summer Camp Brochure",
+	"category":"Graphic Design",
+	"previewSlug":"This simple brochure was created to help promote a summer soccer camp",
+	"notes":"This simple tri-fold style brochure was created to help promote a summer preseason camp for local boys high school teams hosted by the Racine Area Soccer Association and Racine United Soccer Club. Both a color and black & white version were created to allow flexibility in printing. In addition to creating the elements and design, all promotional copy was written by me.",
+	"media":["/portfolio/HSCamp2012Color.pdf","/portfolio/HSCamp2012BW.pdf"]
 },
 {
 	"name":"ILUSSSA Website/Brand Identity",
@@ -262,54 +310,6 @@ var portfolio_creative =[
 	"previewSlug":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group",
 	"notes":"A newly formed student organization held a contest in which they asked the student body to create a name and logo for the group. The idea plays off of the various \"fire\" elements that Carthage uses in their branding (i.e. <a href='http://athletics.carthage.edu/custompages/General/Carthage%20Logo.JPG' target='_blank'>Torch & Shield Athletic Logo</a>, <a href='http://www.carthage.edu/athletics/red-hots/' target='_blank'>The Mascot Torchie</a>, etc.) and brand them using fire fighting inspired elements. Below you find the a copy of the proposal that was submitted along with the individual example logos that were included in the document.",
 	"media":["/portfolio/DrummerLogoSimpleRedBrigade.jpg","/portfolio/DrummerLogoSimpleRedFire.jpg","/portfolio/DrummerLogoBandW.jpg","/portfolio/DrummerLogoMinimalist.jpg","/portfolio/CarthageDrumlineProposal.pdf"]
-},
-{
-	"name":"Special Use Zone Signage",
-	"category":"Graphic Design",
-	"previewSlug":"Potential signage designs for an outdoor multipurpose recreation area",
-	"notes":"<p>As a final group project for the class <a href='https://my.carthage.edu/ICS/Academics/CDM/CDM_400F__S__UG11/RB_2012_UNDG-CDM_400F__S__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Interpreting Nature\"</a>, we were required to create signage designs for the Richard Bong State Recreation Area's \"Special Use Zone\". Numerous activities like hunting, ATV trails, dog training and model airplanes/rocketry all take place within this space. This popularity has lead to altercations between groups of park goers, so we were tasked with creating signage which not only conveyed the diverse array of actives which take place, but also reminding visitors to be considerate to others also using the space.</p><p>I was responsible for creating more literal representation of the various activities that take place to contrast the more minimalistic iconography used in our other designs. Each activity image was created as an independent vector image in Adobe Illustrator before being composited together in Adobe InDesign.</p><p> This project was was presented at \"<a href='http://designconference.aiga.org/' target='_blank'>Head, Heart, Hand: AIGA Design Conference 2013</a>\" by Prof. Laura Rodman Huaracha in her talk \"Utilizing interdisciplinary heads; Teaching the visualization of ecological and conservation issues\"</p>",
-	"media":["/portfolio/Bong_MuralStyle.jpg","/portfolio/Bong_ColoredImages.jpg","/portfolio/All_SUZ_Signs.pdf"]
-},
-{
-	"name":"Themed Article Splash Images",
-	"category":"Graphic Design",
-	"previewSlug":"A series of images created for a set of themed articles",
-	"notes":"Front page splash images that were created for a weekly article series that discussed football games of fantasy interest, with each installment revolving around a particular topic (e.g. sitcoms, '90s game shows, Hitchcock movies, etc.)",
-	"media":["/portfolio/CarmenSandiego.jpg","/portfolio/big-bang.jpg","/portfolio/hitchcock.jpg"]
-},
-{
-	"name":"Scarface Parody Image",
-	"category":"Graphic Design",
-	"previewSlug":"A spoof on the original poster for the movie Scarface that was used on the Iowa Hawkeye fan website BlackHeartGoldPants.com",
-	"notes":"Created for and used on the Iowa Hawkeye fan website <a href='http://www.BlackHeartGoldPants.com' target='_blank'>BlackHeartGoldPants.com</a>. When Iowa Wide Receiver <a href='http://en.wikipedia.org/wiki/Derrell_Johnson-Koulianos'>Derrell Johnson Koulianos</a> was arrested on multiple drug sale and possession charges, he instantly began to draw comparisons to Tony Montana, the criminal protagonist in the film Scarface. The image mimics the minimalist design and allegorical use of color found in the <a href='http://www.imdb.com/media/rm2378142208/tt0086250' target='_blank'>original movie poster</a> for satirical effect.",
-	"media":"/portfolio/DJK_is_Scarface.png"
-},
-{
-	"name":"\"Quick Pick\" Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application",
-	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
-	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
-},
-{
-	"name":"Team Management Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
-	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
-	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
-},
-{	"name":"RASA Summer Camp Brochure",
-	"category":"Graphic Design",
-	"previewSlug":"This simple brochure was created to help promote a summer soccer camp",
-	"notes":"This simple tri-fold style brochure was created to help promote a summer preseason camp for local boys high school teams hosted by the Racine Area Soccer Association and Racine United Soccer Club. Both a color and black & white version were created to allow flexibility in printing. In addition to creating the elements and design, all promotional copy was written by me.",
-	"media":["/portfolio/HSCamp2012Color.pdf","/portfolio/HSCamp2012BW.pdf"]
-},
-{
-	"name":"Schaumburg Park Foundation Site Design",
-	"category":"Graphic Design",
-	"previewSlug":"Home and interior page mock-ups for a non-profit organization.",
-	"notes":"<p>Designed for the Schaumburg Park Foundation with the goal of helping to raise awareness and solicit donations. The site was ultimately built on the LightCMS platform and can be viewed <a href='http://www.schaumburgparkfoundation.org/' target='_blank'>here</a></p>",
-	"media":["/portfolio/SPF_Homepage.jpg","/portfolio/SPF_Homepage.psd","/portfolio/SPF_InteriorPage.jpg","/portfolio/SPF_InteriorPage.psd"]
 },
 {
 	"name":"2009 SportsBuff.com Fantasy Football Finalists",
