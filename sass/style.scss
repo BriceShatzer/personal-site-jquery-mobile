@@ -107,16 +107,17 @@ div.ui-content{
 
 div.relevantMedia, 
 div.pageHeader{
-	overflow:hidden;
 	padding:0 1em;
 }
+
+div.relevantMedia{	overflow:hidden;}
 
 div.pageHeader p.notes{
 	font-size:1.1em;
 	line-height:1.1em;
 	margin-bottom:1em;
 }
-//div.itemInfo p.notes a{
+
 div.itemInfo a{	
 	color:#727272;
 	text-decoration:underline;
@@ -189,6 +190,17 @@ section[data-url="/development"] #developmentContent{
 }
 
 #workExample{
+	div.pageHeader{
+		@media screen and (max-width:860px){
+			&:after { 
+			   content: "."; 
+			   visibility: hidden; 
+			   display: block; 
+			   height: 0; 
+			   clear: both;
+			}
+		}
+	}
 	a.siteLink{
 		float:left;
 		line-height:2.2em;
@@ -200,14 +212,6 @@ section[data-url="/development"] #developmentContent{
 			color:#333;
 		}
 	}
-	div.backbutton a {
-		margin-top: 2em;
-		clear:right;
-	}
-}
-
-#workExample{
-	a:hover{color:#727272}
 	div.itemInfo{
 		clear:left;
 		float:left;
@@ -215,7 +219,7 @@ section[data-url="/development"] #developmentContent{
 		@media screen and (max-width:860px){
 			width:inherit;
 			float:none;
-			clear:none;
+			//clear:none;
 		}
 	}
 	div.techUsed{
@@ -229,6 +233,11 @@ section[data-url="/development"] #developmentContent{
 			margin:0 1em;
 			width:inherit;
 		}
+	}		
+	a:hover{color:#727272}
+	div.backbutton a {
+		margin-top: 2em;
+		clear:right;
 	}
 }
 

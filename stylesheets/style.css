@@ -2381,8 +2381,11 @@ div.ui-content div.backbutton a span.fa {
 
 div.relevantMedia,
 div.pageHeader {
-  overflow: hidden;
   padding: 0 1em;
+}
+
+div.relevantMedia {
+  overflow: hidden;
 }
 
 div.pageHeader p.notes {
@@ -2470,6 +2473,15 @@ section[data-url="/development"] #developmentContent div.ui-body {
   }
 }
 
+@media screen and (max-width: 860px) {
+  #workExample div.pageHeader:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
 #workExample a.siteLink {
   float: left;
   line-height: 2.2em;
@@ -2481,14 +2493,6 @@ section[data-url="/development"] #developmentContent div.ui-body {
   text-decoration: none;
   color: #333;
 }
-#workExample div.backbutton a {
-  margin-top: 2em;
-  clear: right;
-}
-
-#workExample a:hover {
-  color: #727272;
-}
 #workExample div.itemInfo {
   clear: left;
   float: left;
@@ -2498,7 +2502,6 @@ section[data-url="/development"] #developmentContent div.ui-body {
   #workExample div.itemInfo {
     width: inherit;
     float: none;
-    clear: none;
   }
 }
 #workExample div.techUsed {
@@ -2514,6 +2517,13 @@ section[data-url="/development"] #developmentContent div.ui-body {
     margin: 0 1em;
     width: inherit;
   }
+}
+#workExample a:hover {
+  color: #727272;
+}
+#workExample div.backbutton a {
+  margin-top: 2em;
+  clear: right;
 }
 
 #creativeContent div.pageHeader p.notes {
