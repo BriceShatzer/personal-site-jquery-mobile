@@ -231,10 +231,24 @@ var portfolioMaintained = [
 var portfolio_creative =[
 {
 	"name":"Schaumburg Park Foundation Site Design",
-	"category":"Graphic Design",
+	"category":"UI/UX Design",
 	"previewSlug":"Home and interior page mock-ups for a non-profit organization.",
 	"notes":"<p>Designed for the Schaumburg Park Foundation with the goal of helping to raise awareness and solicit donations. The site was ultimately built on the LightCMS platform and can be viewed <a href='http://www.schaumburgparkfoundation.org/' target='_blank'>here</a></p>",
 	"media":["/portfolio/SPF_Homepage.jpg","/portfolio/SPF_Homepage.psd","/portfolio/SPF_InteriorPage.jpg","/portfolio/SPF_InteriorPage.psd"]
+},
+{
+	"name":"\"Quick Pick\" Mobile App Mock-up Images",
+	"category":"UI/UX Design",
+	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application",
+	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
+	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
+},
+{
+	"name":"Team Management Mobile App Mock-up Images",
+	"category":"UI/UX Design",
+	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
+	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
+	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
 },
 {
 	"name":"Special Use Zone Signage",
@@ -249,20 +263,6 @@ var portfolio_creative =[
 	"previewSlug":"Visually conveying the cut-off time for alcohol sales for retailers within a 15 mile radius of Kenosha, WI",
 	"notes":"<p>As part of an assignment for the class <a href='https://my.carthage.edu/ICS/Academics/GEO/GEO_2600__UG11/RA_2011_UNDG-GEO_2600__UG11_-01/9._Course_Details.jnz' target='_blank'>\"Mapping Your World: Introduction to Geographic Information Science\"</a>, I created a radius map to show the cut-off time for retail alcohol sales for businesses within 15 miles of Kenosha, WI.</p><p>The map was created using the ArcGIS software suite to combine mapping data extracted from the U.S. Geological Survey's Earth Resources Observation and Science Center with code and ordinance research pertaining to municipalities in Lake County, Illinois.</p><p>The complete assignment document which provides the rational behind the project and a deeper explanation detailing the creation of the map can be found below.</p>",
 	"media":["/portfolio/FinalMappingProject.png","/portfolio/GISMappingProject.pdf"]
-},
-{
-	"name":"\"Quick Pick\" Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"Mock-up images for a simple \"checkbox-style\" fantasy football mobile application",
-	"notes":"Mock-up images for a location aware mobile application that allowed you to quickly and easily pick a fantasy football team from a set group of players and then use that team to compete for prizes relevant to your current location.",
-	"media":["/portfolio/QuickPickApp_5.png","/portfolio/QuickPickApp_1st.jpg","/portfolio/QuickPickApp_2nd.jpg"]
-},
-{
-	"name":"Team Management Mobile App Mock-up Images",
-	"category":"Graphic Design",
-	"previewSlug":"A collection of rough user interface mock-ups that were created for a mobile application design document",
-	"notes":"These images were created as rough mock-ups for a design document that was to be used by an external development company to create an application that would allow users to manipulate their fantasy football teams using mobile devices running the iOS platform.",
-	"media":["/portfolio/iphone-edit-team.jpg","/portfolio/iphone-edit-team-infowindow.jpg","/portfolio/iphone-FA.jpg","/portfolio/iphone-FA-add.jpg","/portfolio/iphone-FA-window.jpg","/portfolio/iphone-gamecast.jpg","/portfolio/iphone-live-scoring.jpg","/portfolio/iphone-edit-team-infowindow-nogamecast.png","/portfolio/iphone-FA-window.png","/portfolio/iphone-gamecast-Home.png","/portfolio/iphone-home-.png","/portfolio/iphone-home-new.png","/portfolio/iphone-live-scoring-leaders-new.png","/portfolio/iphone-login-page.png","/portfolio/other-page.png"]
 },
 {
 	"name":"Scarface Parody Image",
