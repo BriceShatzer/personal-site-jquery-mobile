@@ -198,13 +198,13 @@ div.quickInfo_close-arrow{
 	}
 	#email{
 		line-height:1.8em;
+		a{font-weight:normal}
 		span.fa{
 			font-size:1.8em;
 			margin:0 0.4em;
 		}
 		span:not(.fa){
 			vertical-align:top;
-			font-size:0.8em;
 		}
 	}
 	#cellphone{
@@ -212,7 +212,6 @@ div.quickInfo_close-arrow{
 		span.fa{
 			font-size:2.6em;
 			margin:0 0 0 0.1em;
-
 		}
 		a{	font-weight:normal;
 			vertical-align:top;

@@ -124,14 +124,20 @@ div.itemInfo a{
 	&:hover{color:#2A2A2A !important;}
 }
 
-
+#home div.pageHeader:after{
+	content: ".";
+	visibility: hidden; 
+	display: block; 
+	height: 0; 
+	clear: both;
+}
 
 #developmentContent{
 	a:hover{color:#727272;}
 	p.notes.lone{
 		float:left;
 		margin-top:1em;	
-	}
+	}	
 	div.ui-grid-a.ui-responsive{
 	clear:both;
 		>div{padding:1em;margin-top:0.8em;}
@@ -188,7 +194,6 @@ section[data-url="/development"] #developmentContent{
 		@media screen and (max-width:992px){padding-right:2em;}
 	}
 }
-
 #workExample{
 	div.pageHeader{
 		@media screen and (max-width:860px){

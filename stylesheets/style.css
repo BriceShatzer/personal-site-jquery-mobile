@@ -2402,6 +2402,14 @@ div.itemInfo a:hover {
   color: #2A2A2A !important;
 }
 
+#home div.pageHeader:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
 #developmentContent a:hover {
   color: #727272;
 }
@@ -3066,13 +3074,15 @@ div.quickInfo_close-arrow span {
 #quickInfo #email {
   line-height: 1.8em;
 }
+#quickInfo #email a {
+  font-weight: normal;
+}
 #quickInfo #email span.fa {
   font-size: 1.8em;
   margin: 0 0.4em;
 }
 #quickInfo #email span:not(.fa) {
   vertical-align: top;
-  font-size: 0.8em;
 }
 #quickInfo #cellphone {
   line-height: 2em;
