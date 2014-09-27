@@ -148,7 +148,7 @@ var portfolioPrincipal = [
 "tech":["HTML & CSS","LightCMS","JavaScript","jQuery","jQuery UI"],
 "link":"http://redmonstowing.linkslite.com/",
 "role":["designer","developer"],
-"notes":"A site built for a Chicagoland based towing company. The site is built on the <a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> platform and uses jQuery & jQueryUI to provide novel interface interactivity. The site is structurally complete but some of the pages are missing content, and the project was ultimately never launched.",
+"notes":"A site built for a Chicagoland based towing company. The site is built on the <a href='http://redmonstowing.linkslite.com' target='_blank'>LightCMS</a> platform and uses jQuery & jQueryUI to provide novel interface interactivity. The site is structurally complete but some of the pages are missing content, and the project was ultimately never launched.",
 "media":[]
 },
 {"name":"BriceShatzer.com ",

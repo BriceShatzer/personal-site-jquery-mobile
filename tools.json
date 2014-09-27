@@ -116,9 +116,10 @@
 			"notes":"Currently, I use <a href='http://winscp.net/eng/index.php'>WinSCP</a> and the <a href='http://wbond.net/sublime_packages/sftp'>SFTP package</a> for Sublime Text, but have previous experience with <a href='https://filezilla-project.org/'>FileZilla</a> and <a href='http://www.cuteftp.com/'>CuteFTP</a>"
 		},		
 		{	"name":"Grunt",
-			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be capable stepping into an existing workflow which uses it."},
+			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be capable stepping into an existing workflow which uses it."
+		},
 		{	"name":"LiveReload",
-			"notes":"A tool used to "	
+			"notes":"A <a href='http://livereload.com/'>tool</a> which watches for file changes and then automatically refreshes the browser."	
 		},
 		{	"name":"MAMP",
 			"notes":"A local Apache, PHP, and MySQL <a href='http://www.mamp.info/en/'>development environment</a>"
