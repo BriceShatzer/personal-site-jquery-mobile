@@ -94,7 +94,10 @@ div.verticalNav_close-arrow{
 		@include navItemSpacing;
 		left:-30px
 	}
-	span.label{ bottom:10px;}
+	span.label{ 
+		//bottom:10px;
+		@media screen and (max-width:475px){right:-10em;}
+	}
 	div.verticalNav_close-arrow{
 	@include single-transition(bottom,575ms,ease-out,false);	
 		bottom:0;

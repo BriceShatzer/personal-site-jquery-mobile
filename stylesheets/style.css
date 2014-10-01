@@ -2915,8 +2915,10 @@ div.verticalNav_close-arrow span {
   margin-bottom: 12px;
   left: -30px;
 }
-#navigation[data-vertical_menu_open="true"] span.label {
-  bottom: 10px;
+@media screen and (max-width: 475px) {
+  #navigation[data-vertical_menu_open="true"] span.label {
+    right: -10em;
+  }
 }
 #navigation[data-vertical_menu_open="true"] div.verticalNav_close-arrow {
   -webkit-transition: bottom 575ms ease-out;
