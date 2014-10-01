@@ -22,7 +22,7 @@ function responsiveAdjustment(){
     if( viewPort > 639 && verticalMenuOpen ){
         hideVerticalNavigation();
     }
-    if( viewPort > 1280 ){
+    if( viewPort > 1440 ){
     	$("#quickInfo").panel('open');
    	}
 }

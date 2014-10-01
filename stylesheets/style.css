@@ -2846,7 +2846,7 @@ div[data-role="header"] span.label {
     right: 1em;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1280px) {
+@media screen and (min-width: 992px) and (max-width: 1440px) {
   div[data-role="header"] span.label {
     right: 1em;
   }
@@ -3007,7 +3007,7 @@ div.quickInfo_close-arrow span {
   transform-origin: 45% 25% 0;
   float: left;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   div.quickInfo_close-arrow {
     right: -35px;
   }
