@@ -375,7 +375,7 @@ var tech_data = [
 		"childItems":[
 			{
 			"name":"JavaScript",
-			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I have a solid understanding of object-oriented and functional programing concepts, and am comfortable debugging nearly any JavaScript related issue."
+			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I have a solid understanding of object-oriented and functional programming concepts, and am comfortable debugging nearly any JavaScript related issue."
 			},
 			{	
 			"name":"jQuery",
