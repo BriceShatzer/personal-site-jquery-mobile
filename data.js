@@ -105,7 +105,7 @@ var portfolioPrincipal = [
 },
 {"name":"The Marriott Theatre",
 "context":"Links",
-"tech":["HTML & CSS","LESS","Bootstrap","Lo-Dash","underscore.js","Adobe Business Catalyst"],
+"tech":["HTML & CSS","LESS","JavaScript","Bootstrap","Lo-Dash","underscore.js","Adobe Business Catalyst"],
 "link":"http://www.marriotttheatre.com/",
 "role":"developer",
 "notes":"The Marriot Theatre needed a solution which allowed them to connect various different collections of information in a way that was coherent and usable for site users. I was responsible for architecting and implementing the solution using <a href='http://businesscatalyst.com/' target='_blank'>Adobe Business Catalyst's</a> custom web app framework.<br> Working around the various quirks and limitations of the platform, I was able to build a system which brought the necessary data to the page in structured manner which enabled the appropriate views to be built on the client side. Below you will find an early design diagram outlining the interactions between the different data collections.",
