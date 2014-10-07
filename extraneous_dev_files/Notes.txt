@@ -93,6 +93,29 @@ Tag/Structure Ideas and Categories
 - Skills
 - Client/Purpose/Employer
 -----------------------------------
+Master, Expert, Proficient, Familiar, Beginner
+
+Languages
+- Markup
+  HTML
+    HTML5
+    xHTML
+
+
+structuring the navigation app
+
+Each "node" (regardless of where it is structurally within the app) conforms the same schema. 
+
+use a "type"/ "category" / "description" category to determine it's location within the app
+
+(in practice the view asks for a particular set of nodes based on that previously defined field) 
+
+Skills
+  Design/Asset creation, writing
+
+
+-----------------------------------
+
 
 -from home page of current briceshatzer.com
 
