@@ -2898,7 +2898,7 @@ div.verticalNav_close-arrow span {
   position: absolute;
   line-height: 30px;
   top: 5px;
-  left: -1em;
+  left: -1.2em;
 }
 
 #navigation[data-vertical_menu_open="true"] {
