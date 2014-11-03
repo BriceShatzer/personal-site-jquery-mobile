@@ -101,7 +101,7 @@
 
 		]
 	},
-	{	"name":"Web Development Tools",
+	{	"name":"Web Development Workflow Tools",
 		"childItems":[
 		{	"name":"Browser Development Tools",
 			"notes":"I am completely comfortable using the built in developer tools for <a href='https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox'>Firefox</a>, <a href='http://msdn.microsoft.com/en-us/library/dd565628.aspx'>IE</a>, and <a href='https://developer.chrome.com/devtools'>Chrome</a>(preferred) in addition to third-party tools like <a href='https://getfirebug.com/'>Firebug</a> and <a href='http://chrispederick.com/work/web-developer/'>Web Developer</a>"
@@ -116,7 +116,7 @@
 			"notes":"Currently, I use <a href='http://winscp.net/eng/index.php'>WinSCP</a> and the <a href='http://wbond.net/sublime_packages/sftp'>SFTP package</a> for Sublime Text, but have previous experience with <a href='https://filezilla-project.org/'>FileZilla</a> and <a href='http://www.cuteftp.com/'>CuteFTP</a>"
 		},		
 		{	"name":"Grunt",
-			"notes":"While I haven't used it on any projects that are currently live, I'm familiar with it and would be capable stepping into an existing workflow which uses it."
+			"notes":"I'm comfortable setting up new projects and stepping into existing workflows that use <a href='http://gruntjs.com/'>Grunt</a>."
 		},
 		{	"name":"LiveReload",
 			"notes":"A <a href='http://livereload.com/'>tool</a> which watches for file changes and then automatically refreshes the browser."	
@@ -145,7 +145,7 @@
 		}
 		]
 	},	
-	{	"name":"Workflow / Project Management",
+	{	"name":"Project Planning & Management",
 		"childItems":[
 		{	"name":"Basecamp",
 			"notes":"I have experience using the collaborative web documents, shared to-do lists, and messaging portions of this project management <a href='https://basecamp.com/'>tool</a>"
