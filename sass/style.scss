@@ -63,6 +63,9 @@ div.ui-content{
 	p.notes{font-size:1.1em;}
 	>div h2{padding-top:0.5em}
 	div.backbutton{
+			position: absolute;
+			right: 1em;
+			bottom: 0;
 		a{
 			@include font_droid;
 			font-size: 1em;
@@ -74,10 +77,11 @@ div.ui-content{
 
 			background-color: #2A2A2A;
 			background-clip: padding-box;
-			
+
 			float:right;
 			position:relative;
 			right:-2em;
+
 			padding:0.5em 1.5em 0.5em 0.75em;
 			
 			border: 1px solid rgba(0, 0, 0, 0);
@@ -369,7 +373,10 @@ span.strong{
 	h3.ui-collapsible-heading {
 		margin:0;
 		padding:0;
-		border-bottom:none; 
+		border-bottom:none;
+		a:focus{
+			@include box-shadow(rgba(0,0,0,0) 0px 0px 0px);
+		}
 	}
 	div.ui-collapsible-content a {
 		font-weight:normal;

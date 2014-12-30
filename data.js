@@ -1,4 +1,12 @@
 var portfolioPrincipal = [
+{"name":"Packback Common Front-end Components",
+"context":"Other",
+"tech":["SASS","Foundation"],
+"link":"",
+"role":"developer",
+"notes":"I was tasked with creating a set of common styles which will be used across all of <a href='http://packback.co/' target='_blank'>Packback's</a> various properties. It is derived from <a href='http://foundation.zurb.com/' target='_blank'>Foundation</a>, and can be found <a href='https://github.com/packbackbooks/frontend-common' target='_blank'>here</a>",
+"media":[]
+},
 {"name":"The Forklift Guy",
 "context":"Links",
 "tech":["HTML & CSS","LightCMS"],
@@ -162,11 +170,6 @@ var portfolioPrincipal = [
 ];
 
 var portfolioMaintained = [
-{
-	"name":"Sarah Starling Art",
-	"link":"http://sarahstarlingart.com/",
-	"tech":["html & css","squarespace"]
-},
 {
 	"name":"Health Environment Art Services",
 	"link":"http://www.healtheart.com/",
@@ -354,7 +357,7 @@ var tech_data = [
 			},
 			{	
 			"name":"SASS",
-			"notes":"I use <a href='http://compass-style.org/' target='_blank'>compass</a> and work in the SCSS syntax only."
+			"notes":"I'm comfortable using a build automation tools like <a href='http://gruntjs.com/' target='_blank'>Grunt</a> or <a href='http://gulpjs.com/' target='_blank'>Gulp</a>, or an authoring framework like <a href='http://compass-style.org/' target='_blank'>compass</a> to work in the SCSS syntax."
 			},
 			{
 			"name":"ASP / PHP",
@@ -362,6 +365,9 @@ var tech_data = [
 			},
 			{	
 			"name":"Bootstrap",
+			"notes":""
+			},
+			{"name":"Foundation",
 			"notes":""
 			},
 			{
@@ -420,10 +426,6 @@ var tech_data = [
 			},
 			{	
 			"name":"SiteFinity",
-			"notes":""
-			},
-			{	
-			"name":"Squarespace",
 			"notes":""
 			},
 			{	

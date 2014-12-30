@@ -2332,6 +2332,11 @@ div.ui-content p.notes {
 div.ui-content > div h2 {
   padding-top: 0.5em;
 }
+div.ui-content div.backbutton {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+}
 div.ui-content div.backbutton a {
   font-family: "Droid Sans", "sans-serif";
   font-size: 1em;
@@ -2722,6 +2727,11 @@ span.strong {
   margin: 0;
   padding: 0;
   border-bottom: none;
+}
+#toolList h3.ui-collapsible-heading a:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
 }
 #toolList div.ui-collapsible-content a {
   font-weight: normal;
