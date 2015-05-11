@@ -7,6 +7,14 @@ var portfolioPrincipal = [
 "notes":"I was tasked with creating a set of common styles which will be used across all of <a href='http://packback.co/' target='_blank'>Packback's</a> various properties. It is derived from <a href='http://foundation.zurb.com/' target='_blank'>Foundation</a>, and can be found <a href='https://github.com/packbackbooks/frontend-common' target='_blank'>here</a>",
 "media":[]
 },
+{"name":"Packback Books Version 2.0",
+"context":"Other",
+"tech":["AngularJS","HTML & CSS","JavaScript","SASS"],
+"link":"",
+"role":"developer",
+"notes":"Currently, I am working with <a href='http://packback.co/' target='_blank'>Packback Books</a> to help build and launch version 2 of their digital text book rental platform. The new site uses <a href='https://angularjs.org/' target='>AngularJS</a>sitting on top of a <a href='http://laravel.com/' target='_blank'>Laravel</a> back-end.",
+"media":[]
+},
 {"name":"The Forklift Guy",
 "context":"Links",
 "tech":["HTML & CSS","LightCMS"],
@@ -403,10 +411,13 @@ var tech_data = [
 			"name":"jQuery UI",
 			"notes":""
 			},
-		
+			{
+			"name":AngularJS",
+			"notes":""
+			},
 			{	
-			"name":"AngularJS & Backbone.js",
-			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of these frameworks through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='http://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
+			"name":"Backbone.js",
+			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of this framework through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='http://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
 			}]
 	},
 
