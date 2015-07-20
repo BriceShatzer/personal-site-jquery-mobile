@@ -67,10 +67,10 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
-    var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
     $("body").one( "pagecontainerbeforetransition", function(event, ui){
+        var $container = $('<div data-role="collapsibleset" data-theme="a" data-content-theme="a"></div>');
         var incomingPage = ui.toPage
-        $.getJSON('/tools.json', function(data) { 
+        $.getJSON('/data/tools.json', function(data) { 
             var tools_json = data; 
             $.each(tools_json, function(){
                 var $items = $('<div class="ui-grid-a ui-responsive"></div>');

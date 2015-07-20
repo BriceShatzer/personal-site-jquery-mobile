@@ -69,15 +69,16 @@
     </div><!-- /content -->
 
 <script type="text/javascript">
-var items = portfolio_creative;
-
-
 $("body").one( "pagecontainerbeforetransition", function(event, ui){
     var $workspace = ui.toPage.find('#creativeContent');
     var url = ui.toPage.data('url');
     var query = (/\?/.test(url)) ? decodeURIComponent(url.slice(url.indexOf('?')+1)) : false;
+    var items;
 
-    if(!query){
+    $.getJSON('/data/portfolio_creative.json', function(data) { 
+        items = data;
+    }).then( function() { //build page after creative portfolio data has loaded
+        if(!query){
             $workspace.append('<div class="pageHeader"><h1>Creative & Design</h1><p class="notes">Throughout my academic and professional career, I\'ve had the opportunity to contribute creatively to various projects. Below you will find a small sampling of that work.</p></div>');            
 
 
@@ -92,58 +93,60 @@ $("body").one( "pagecontainerbeforetransition", function(event, ui){
                 });
                 $categoryContainer.appendTo($workspace);
             });
-    } else {
-        var creativeExample = _.find(items, function(item){ return item.name == query });
-        var $content = $('<div id="creativeExampleDetail"></div>');
+        } else {
+            var creativeExample = _.find(items, function(item){ return item.name == query });
+            var $content = $('<div id="creativeExampleDetail"></div>');
 
-        $content.append('<div class="pageHeader"><h1>'+creativeExample.name+'</h1></div>'); 
+            $content.append('<div class="pageHeader"><h1>'+creativeExample.name+'</h1></div>'); 
 
-        if(creativeExample.notes){
-            if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
-                $content.append('<div class="itemInfo"><p class="notes">'+creativeExample.notes+'</p></div>');
-            } else{ 
-                $content.append('<div class="itemInfo">'+creativeExample.notes+'</div>');
-                $content.find('div.itemInfo p').addClass('notes');
-            }  
+            if(creativeExample.notes){
+                if( $.parseHTML(creativeExample.notes)[0].nodeName === "#text" ){
+                    $content.append('<div class="itemInfo"><p class="notes">'+creativeExample.notes+'</p></div>');
+                } else{ 
+                    $content.append('<div class="itemInfo">'+creativeExample.notes+'</div>');
+                    $content.find('div.itemInfo p').addClass('notes');
+                }  
 
-        }
+            }
 
-        if(creativeExample.media){
-            var $relevantMedia = $('<div class="relevantMedia"></div>');
-            if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
-            $.each(creativeExample.media, function() {
-                var str = this.toLowerCase();
-                if (str.search('youtube')>0){ //build youtube
-                    console.log('build youtube');
-                    $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
-                } else {
-                    var filename = this.substring(this.lastIndexOf('/')+1);
-                    if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
-                        $relevantMedia.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
-                    } else if ( str.search('\.pdf')>0 ) { // build pdf
-                        $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
-                    } else { // build other stuff
-                        $relevantMedia.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
+            if(creativeExample.media){
+                var $relevantMedia = $('<div class="relevantMedia"></div>');
+                if(!$.isArray(creativeExample.media)){ creativeExample.media = [creativeExample.media]}
+                $.each(creativeExample.media, function() {
+                    var str = this.toLowerCase();
+                    if (str.search('youtube')>0){ //build youtube
+                        console.log('build youtube');
+                        $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-youtube-square"></span><br>View This Video on YouTube</a></div>')
+                    } else {
+                        var filename = this.substring(this.lastIndexOf('/')+1);
+                        if ( str.search('\.jpg')>0 || str.search('\.png')>0 ) { // build images
+                            $relevantMedia.append('<a href="'+this+'" class="image"><img src="'+this+'" alt="" /></a>');
+                        } else if ( str.search('\.pdf')>0 ) { // build pdf
+                            $relevantMedia.append('<div class="media"><a href="'+this+'" target="_blank"><span class="fa fa-file-pdf-o"></span><br>'+filename+'</a></div>');
+                        } else { // build other stuff
+                            $relevantMedia.append('<div class="media"><a href="'+this+'" class="download"><span class="fa fa-file-o"></span><br>'+filename+'</a></div>');
+                        }
                     }
-                }
-            });
-            $content.append($relevantMedia);
-        }
-        $workspace.append($content);
-        $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');
-        $workspace.on('click', 'div.backbutton', function(event) {
-            event.preventDefault();
-            $('body').pagecontainer('change', "/creative", {reverse:true});
-        });  
-        if(creativeExample.media){
-            $('a.image').fancybox();
-            $('a.download').on('click', function(event) {
+                });
+                $content.append($relevantMedia);
+            }
+            $workspace.append($content);
+            $workspace.append('<div class="backbutton"><a href="/creative"><span class="fa fa-chevron-left"></span> <span>See Other Creative Work</span></a></div>');
+            $workspace.on('click', 'div.backbutton', function(event) {
                 event.preventDefault();
-                downloadFile(event.currentTarget.href);
-            });
+                $('body').pagecontainer('change', "/creative", {reverse:true});
+            });  
+            if(creativeExample.media){
+                $('a.image').fancybox();
+                $('a.download').on('click', function(event) {
+                    event.preventDefault();
+                    downloadFile(event.currentTarget.href);
+                });
 
+            }
         }
-    }  
+    //-- end of .then()
+    });  
 });
 </script>
 </section><!-- /page -->

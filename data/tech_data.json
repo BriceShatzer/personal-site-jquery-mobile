@@ -1,0 +1,94 @@
+[
+	{	"name":"Structure & Styling",
+		"childItems":[
+			{
+			"name":"HTML & CSS",
+			"notes":"I am comfortable working across various standards including HTML5, HTML 4.01 Strict/Transitional, XHTML 1.0 Strict/Transitional, and CSS 2.1 & 3. Additionally, I am competent in testing and debugging cross-browser/platform issues and have experience in the sad and depressing world of HTML email marketing."
+			},
+			{
+			"name":"LESS",
+			"notes":"While I have worked with client-side implementations of less.js, but my preferred method is to compile to CSS using a <a href='https://sublime.wbond.net/packages/Less2Css' target='_blank'>sublime plugin</a>."
+			},
+			{	
+			"name":"SASS",
+			"notes":"I'm comfortable using a build automation tools like <a href='http://gruntjs.com/' target='_blank'>Grunt</a> or <a href='http://gulpjs.com/' target='_blank'>Gulp</a>, or an authoring framework like <a href='http://compass-style.org/' target='_blank'>compass</a> to work in the SCSS syntax."
+			},
+			{
+			"name":"ASP / PHP",
+			"notes":"I have a limited amount of experience with sites built using ASP or PHP. I wouldn't be able write something from scratch, but I am comfortable tracking down root causes of client-side rendering issues"
+			},
+			{	
+			"name":"Bootstrap",
+			"notes":""
+			},
+			{"name":"Foundation",
+			"notes":""
+			},
+			{
+			"name":"jQuery Mobile",
+			"notes":"The majority of my experience has been in working with version 1.4+, but I do have limited experience with 1.3.1 & 1.3.2."
+			}
+		]
+	},
+
+	{	"name":"Client-Side Scripting",
+		"childItems":[
+			{
+			"name":"JavaScript",
+			"notes":"While I generally prefer to use a library (jQuery/Underscore/etc) for more advance scripting, I routinely use vanilla JavaScript for low-level object/value manipulation in an effort to limit necessary overhead. I have a solid understanding of object-oriented and functional programming concepts, and am comfortable debugging nearly any JavaScript related issue."
+			},
+			{	
+			"name":"jQuery",
+			"notes":"I'm completely comfortable working with this library. I have experience implementing plugins, debugging version dependency & migration issues, and writing original functionality."
+			},
+			{
+			"name":"Google Maps JavaScript API",
+			"notes":""
+			},				
+			{	
+			"name":"Underscore.js",
+			"notes":"<a href='http://underscorejs.org/' target='_blank'>Underscore.js</a> is a JavaScript library that provides functional programming helpers without extending any built-in objects. I've primarily used it as way to manipulate structured data in sites using a MVC-like design."
+			},
+			{	
+			"name":"Lo-Dash",
+			"notes":"<a href='http://lodash.com/' target='_blank'>Lo-Dash</a> is a utility JavaScript library that was forked from <a href='development.html'>underscore.js</a>. It provides the functional programming helpers of underscore.js, while adding some additional feature and increasing performance."
+			},
+			{	
+			"name":"jQuery UI",
+			"notes":""
+			},
+			{
+			"name":"AngularJS",
+			"notes":""
+			},
+			{	
+			"name":"Backbone.js",
+			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of this framework through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='http://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
+			}]
+	},
+
+	{	"name":"CMS/CRM Platforms",
+		"childItems":[
+			{	
+			"name":"Adobe Business Catalyst",
+			"notes":""
+			},
+			{	
+			"name":"LightCMS",
+			"notes":"<a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> is a white label content management and e-commerce solution."
+			},
+			{	
+			"name":"Wordpress",
+			"notes":""
+			},
+			{	
+			"name":"SiteFinity",
+			"notes":""
+			},
+			{	
+			"name":"Joomla!",
+			"notes":""
+			}
+		]
+	}
+]

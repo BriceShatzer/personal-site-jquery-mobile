@@ -238,7 +238,7 @@ var portfolioMaintained = [
 	"tech":["ASP / PHP","Wordpress"]
 }
 ];
-
+/*
 var portfolio_creative =[
 {
 	"name":"Schaumburg Park Foundation Site Design",
@@ -350,8 +350,8 @@ var portfolio_creative =[
 	"notes":"<p>\"The Fantasy Lunch\" was a daily audio podcast which featured three hosts discussing various sports stories and their possible impact in the world of fantasy sports. With the daily schedule of the show, the hosts often rotated. This meant that multiple intro version had to be created to accurately reflect who was on air for that particular day. The intros were created using an audio clip from \"The Simpsons\", a piece of music created for and owned by <a href='http://www.worldfantasygames.com/' target='_blank'>WFG</a>, and my voice.</p><p>\"The Fantasy Lunch\" can be found on <a href='http://itunes.apple.com/us/podcast/rapiddraft-coms-fantasy-lunch/id361272196' target='_blank'>iTunes</a> and on <a href='http://www.blogtalkradio.com/rdfantasylunch' target='_blank'>BlogTalkRadio</a></p>",
 	"media":["/portfolio/intro-pat-and-bdw.mp3","/portfolio/intro-pat-and-schauf.mp3","/portfolio/intro-pat-schauf-and-bdw.mp3"]
 }];
-
-
+*/
+/*
 var tech_data = [
 	{	"name":"Structure & Styling",
 		"childItems":[
@@ -412,7 +412,7 @@ var tech_data = [
 			"notes":""
 			},
 			{
-			"name":AngularJS",
+			"name":"AngularJS",
 			"notes":""
 			},
 			{	
@@ -446,3 +446,4 @@ var tech_data = [
 		]
 	}
 ];
+*/
