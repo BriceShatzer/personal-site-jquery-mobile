@@ -10,7 +10,7 @@ var portfolioPrincipal = [
 {"name":"Packback Books Version 2.0",
 "context":"Other",
 "tech":["AngularJS","HTML & CSS","JavaScript","SASS"],
-"link":"",
+"link":"https://www.packback.co/books/",
 "role":"developer",
 "notes":"Currently, I am working with <a href='http://packback.co/' target='_blank'>Packback Books</a> to help build and launch version 2 of their digital text book rental platform. The new site uses <a href='https://angularjs.org/' target='>AngularJS</a>sitting on top of a <a href='http://laravel.com/' target='_blank'>Laravel</a> back-end.",
 "media":[]
