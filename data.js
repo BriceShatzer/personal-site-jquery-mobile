@@ -12,7 +12,7 @@ var portfolioPrincipal = [
 "tech":["AngularJS","HTML & CSS","JavaScript","SASS"],
 "link":"https://www.packback.co/books/",
 "role":"developer",
-"notes":"Currently, I am working with <a href='http://packback.co/' target='_blank'>Packback Books</a> to help build and launch version 2 of their digital text book rental platform. The new site uses <a href='https://angularjs.org/' target='>AngularJS</a>sitting on top of a <a href='http://laravel.com/' target='_blank'>Laravel</a> back-end.",
+"notes":"Currently, I am working with <a href='http://packback.co/' target='_blank'>Packback Books</a> to help build and launch version 2 of their digital text book rental platform. The new site uses <a href='https://angularjs.org/' target='_blank'>AngularJS</a>sitting on top of a <a href='http://laravel.com/' target='_blank'>Laravel</a> back-end.",
 "media":[]
 },
 {"name":"The Forklift Guy",
