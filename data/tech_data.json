@@ -11,7 +11,7 @@
 			},
 			{	
 			"name":"SASS",
-			"notes":"I'm comfortable using a build automation tools like <a href='http://gruntjs.com/' target='_blank'>Grunt</a> or <a href='http://gulpjs.com/' target='_blank'>Gulp</a>, or an authoring framework like <a href='http://compass-style.org/' target='_blank'>compass</a> to work in the SCSS syntax."
+			"notes":"I'm comfortable using a build automation tools like <a href='https://gruntjs.com/' target='_blank'>Grunt</a> or <a href='https://gulpjs.com/' target='_blank'>Gulp</a>, or an authoring framework like <a href='https://compass-style.org/' target='_blank'>compass</a> to work in the SCSS syntax."
 			},
 			{
 			"name":"ASP / PHP",
@@ -47,11 +47,11 @@
 			},				
 			{	
 			"name":"Underscore.js",
-			"notes":"<a href='http://underscorejs.org/' target='_blank'>Underscore.js</a> is a JavaScript library that provides functional programming helpers without extending any built-in objects. I've primarily used it as way to manipulate structured data in sites using a MVC-like design."
+			"notes":"<a href='https://underscorejs.org/' target='_blank'>Underscore.js</a> is a JavaScript library that provides functional programming helpers without extending any built-in objects. I've primarily used it as way to manipulate structured data in sites using a MVC-like design."
 			},
 			{	
 			"name":"Lo-Dash",
-			"notes":"<a href='http://lodash.com/' target='_blank'>Lo-Dash</a> is a utility JavaScript library that was forked from <a href='development.html'>underscore.js</a>. It provides the functional programming helpers of underscore.js, while adding some additional feature and increasing performance."
+			"notes":"<a href='https://lodash.com/' target='_blank'>Lo-Dash</a> is a utility JavaScript library that was forked from <a href='development.html'>underscore.js</a>. It provides the functional programming helpers of underscore.js, while adding some additional feature and increasing performance."
 			},
 			{	
 			"name":"jQuery UI",
@@ -63,7 +63,7 @@
 			},
 			{	
 			"name":"Backbone.js",
-			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of this framework through the JavaScript course taught by <a href='http://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='http://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
+			"notes":"While I don't have any example work, I am familiar with the general concepts and idiosyncrasies of this framework through the JavaScript course taught by <a href='https://www.starterleague.com' target='_blank'>The Starter League</a> and <a href='https://roost.bocoup.com/' target='_blank'>Bocoup's Roost JavaScript Conference</a>."
 			}]
 	},
 
@@ -75,7 +75,7 @@
 			},
 			{	
 			"name":"LightCMS",
-			"notes":"<a href='http://www.lightcms.com/' target='_blank'>LightCMS</a> is a white label content management and e-commerce solution."
+			"notes":"<a href='https://www.lightcms.com/' target='_blank'>LightCMS</a> is a white label content management and e-commerce solution."
 			},
 			{	
 			"name":"Wordpress",
